@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>service 1</title>
+    <g id="service-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M50.125,40.5 L15,17.375 L15,62.875 L50.125,82.5 L85,62.75 L85,17.375 L50.125,40.5 Z M80,57.125 L55,43.375 L80,26.75 L80,57.125 Z M45.25,43.375 L20,57.125 L20,26.625 L45.25,43.375 Z M50.125,76.625 L22.625,61.375 L50.125,46.375 L77.375,61.375 L50.125,76.625 Z" id="Shape-Copy" fill="#CC8EE0" fill-rule="nonzero"></path>
+    </g>
+</svg>
