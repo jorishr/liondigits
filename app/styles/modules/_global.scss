@@ -1,0 +1,116 @@
+:root {
+    --bgColor: rgba(255, 255, 255, 1);
+    --bgColor-accent: rgba(252, 252, 252);
+    --textColor-base: rgba(26, 27, 31, 1);
+    --textColor-light: rgba(26, 27, 31, .6);
+
+    --accent: rgb(151, 0, 0);
+
+    --ff: 'Montserrat', sans-serif;
+    --fs-base: 1rem;
+    --fs-sm: .75rem;
+    --fs-md: 1.25rem;
+    --fs-lg: 1.5rem;
+    --fs-xl: 1.75rem;
+    --fs-2xl: 2rem;
+    --fs-4xl: 2.25rem;
+
+    --pd-base: 2em;
+    --pd-xs: .5em;
+    --pd-sm: 1em;
+    --pd-md: 2.5em;
+    --pd-lg: 4em;
+    --pd-xl: 6em;
+
+    //$fa-font-path: "/fontawesome/webfonts";
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%; 
+    font-family: var(--ff);
+    color: var(--textColor-base);
+}
+
+a {
+    text-decoration: none;
+    color: var(--textColor-light);
+    transition: all .3s ease-in;
+    letter-spacing: 1px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+p {
+    line-height: 1.75;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a.btn {
+    padding: var(--pd-sm) var(--pd-base);
+
+    background-color: var(--textColor-base);
+    color: var(--bgColor-accent);
+
+    text-align: center;
+
+    border-radius: 2px;
+    border: 2px solid var(--textColor-base);
+
+    &::first-letter {
+        text-transform: capitalize;
+    }
+}
+
+a.btn + a.btn {
+    background-color: var(--bgColor-accent);
+    color: var(--textColor-base);
+}
+
+noscript::before {
+    content: 'Turn on your Javascript or use a Javascript compatible browser.';
+    font-size: var(--ff-lg);
+    color: var(--bgColor);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: var(--pd-sm) var(--pd-lg);
+    background-color: var(--accent);
+}
+
+.easter-egg {
+    display: none;
+
+    &.visible {
+        display: block;
+        position: sticky;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 25%;
+        z-index: 20;
+    }
+}
