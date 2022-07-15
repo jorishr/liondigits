@@ -1,12 +1,16 @@
-body {
-    background-color: #0b214a;
+header {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    padding-top: 25px;
 }
+
 .header-container {
     display: flex;
     justify-content: space-between;
-    max-width: 94%;
     margin: auto;
-    padding-top: 25px;
+    max-width: 94%;
 
     .header-left {
 
@@ -93,7 +97,7 @@ body {
             a {
                 background-color: #003f8c;
                 color: #fff;
-                padding: 10px 20px;
+                padding: 8px 16px;
                 border-radius: 5px;
                 text-transform: capitalize;
                 border: 2px solid #003f8c;
@@ -107,7 +111,6 @@ body {
                     background-color: #e9ebee;
                     color: #2496ed;
                     border: 2px solid #e9ebee;
-
                 }
             }
         }
