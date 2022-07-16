@@ -1,7 +1,7 @@
 .testimonials {
     background-color: #003f8c;
     color: #fff;
-    padding: 2em;
+    padding: 6em 2em;
 
     h3, h4 {
         text-align: center;
@@ -10,9 +10,81 @@
 
     h3 {
         font-size: 44px;
+        color: #7eb0fb;
     }
 
     h4 {
         font-size: 28px;
+    }
+
+    .projects-container {
+        display: flex;
+        background-color: #e9ebee;
+        box-shadow: 5px 5px 25px 0 rgba(0,0,0, .25);
+        border-radius: 5px;
+        margin: 4em auto;
+
+
+        .image-container {
+            order: 2;
+            width: 70%;
+            padding: var(--pd-base) var(--pd-sm);
+        }
+
+        .legend-container {
+            order: 1;
+            width: 30%;
+            padding: var(--pd-sm) var(--pd-base);
+
+            .titles {
+                margin: 2em 0;
+
+                h3, 
+                h4 {
+                    font-weight: 600;
+                    text-align: center;
+                    line-height: 1.75;
+                }   
+                
+                h3 {
+                    color: #0b214a;
+                    font-size: 1.75em;
+                    font-weight: 600;
+                    margin-bottom: 1em;
+                }
+
+                h4 {
+                    font-size: 1em;
+                    font-weight: 400;
+                    color: #5a6774;
+                }
+
+            }
+            .links {
+                margin-bottom: 2em;
+
+                p {
+                    text-align: center;
+                    font-size: var(--fs-sm);
+                    color: #5a6774;
+                }
+
+                a.btn {
+                    display: block;
+                    max-width: calc(100% - 4em);
+                    margin: 2em auto;
+                    font-size: var(--fs-sm);
+                    transition: ease-in .3s all;
+                    background-color: transparent;
+                    color: #0b214a;
+                    border-color: #0b214a;
+                    border-radius: 5px;
+               }
+
+               a.btn:hover {
+                   transform: scale(1.025);
+               }
+            }
+        }
     }
 }
