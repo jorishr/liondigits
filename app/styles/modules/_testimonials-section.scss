@@ -28,6 +28,10 @@
             order: 2;
             width: 70%;
             padding: var(--pd-base) var(--pd-sm);
+
+            img {
+                border-radius: 5px;
+            }
         }
 
         .legend-container {
