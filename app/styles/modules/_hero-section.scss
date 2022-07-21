@@ -4,9 +4,9 @@
     height: 100vh;
 
     .background-image {
+        /* Height is extended to create space for better transition with next section */
         height: 120vh;
-/*         width: 100vw;
- */        background-size: cover;
+        background-size: cover;
     }
 
     .hero-text {
@@ -18,25 +18,17 @@
         width: 100%;
         
         h1 {
-            color: #fff;
-            font-size: 54px;
-            font-size: 72px;
+            color: var(--bgColor-secondary);
+            font-size: var(--fs-4xl);
 
-            padding-bottom: 10px;
-            margin-bottom: 2.75%;
+            margin-bottom: 3.75%;
         }
 
         h2 {
-            color: #c4f0ff;
-            font-size: 28px;
-            font-size: 24px;
+            color: var(--textColor-lightblue);
+            font-size: var(--fs-lg);
             max-width: 75%;
-            text-align: center;
-            margin: auto;
-
-            padding-bottom: 10px;
-            margin-bottom: 4.75%;
-
+            margin: 0 auto 5.75% auto;
         }
     }
 }
