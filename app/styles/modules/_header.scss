@@ -3,13 +3,13 @@ header {
     top: 0;
     z-index: 1;
     width: 99%;
-    padding-top: 25px;
+    padding-top: var(--pd-sm);
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
-    margin: auto;
+    margin: 0 auto;
     max-width: 94%;
 
     .header-left {
@@ -18,10 +18,12 @@ header {
             max-width: 80px; 
         }        
     }
+
     .header-right {
         display: flex;
         align-items: center;
 
+        /* LANGUAGE SELECTION MENU - START*/
         .header-lang {
             padding-right: 4em;
 
@@ -29,14 +31,15 @@ header {
                 position: relative;
                 
                 span {
-                    border: 1px solid;
-                    border-color: #fff;
+                    border: 1.5px solid var(--bgColor-secondary);
                     border-radius: 50%;
-                    color: #fff;
+
+                    color: var(--bgColor-secondary);
                     text-transform: uppercase;
+                    font-weight: 600;
+                    
                     padding: 10px;
                     width: 38px;
-                    font-weight: 600;
                     cursor: pointer;
 
                     &:hover ~ ul {
@@ -53,7 +56,7 @@ header {
                     margin-left: -100px;
                     width: 200px;
                     padding: 20px 0;
-                    background-color: #fff;
+                    background-color: var(--bgColor-secondary);
                     border-radius: 5%;
                     box-shadow: 0 10px 20px rgba(0, 0, 0, .10);
 
@@ -67,7 +70,7 @@ header {
                         margin-left: -7px;
                         border-style: solid;
                         border-width: 0px 7px 7px 7px;
-                        border-color: transparent transparent #fff transparent;
+                        border-color: transparent transparent var(--bgColor-secondary) transparent;
                     }
 
                     li {
@@ -77,6 +80,7 @@ header {
                         a {
                             line-height: 1.2em;
                             text-transform: capitalize;
+
                             cursor: pointer;
                         }
                         
@@ -91,27 +95,13 @@ header {
                 }
             }
         }
+        /* LANGUAGE SELECTION MENU - END*/
 
         .header-cta {
 
-            a {
-                background-color: #003f8c;
-                color: #fff;
-                padding: 8px 16px;
-                border-radius: 5px;
-                text-transform: capitalize;
-                border: 2px solid #003f8c;
-                font-size: 16px;
-                font-weight: 600;
-                line-height: 1.4em;
+            a.btn {
+                padding: var(--pd-xs) var(--pd-sm);
                 margin: auto 0;
-                transition: all .5s ease 0ms;
-
-                &:hover {
-                    background-color: #e9ebee;
-                    color: #2496ed;
-                    border: 2px solid #e9ebee;
-                }
             }
         }
     }
