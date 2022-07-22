@@ -34,6 +34,7 @@ footer {
         }
 
         .footer__nav {
+            margin: 0 auto;
 
             li {
                 padding: .75em 0;
@@ -59,13 +60,13 @@ footer {
             flex-direction: column;
 
             @include atMobile {
-                align-items: center;
                 margin-bottom: 4em;
             }
 
             .row1, .row2 {
                 display: flex;
             }
+
 
             a {
                 padding: 1.5em 1em;

@@ -19,6 +19,7 @@
         @include atMobile {
             flex-direction: column;
             transform: translate(-50%,-12.5%);
+            padding: var(--pd-md) var(--pd-xs);
         }
 
         .card {
@@ -45,7 +46,7 @@
         padding-top: 20em;
 
         @include atMobile {
-            padding-top: 55em;
+            padding-top: 67.5em;
         }
 
         p {
