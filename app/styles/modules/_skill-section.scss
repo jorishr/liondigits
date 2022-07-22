@@ -41,6 +41,10 @@
         margin: 10em auto 0 auto;
         text-align: center;
 
+        @include atMobile {
+            max-width: 100%;
+        }
+
         p {
             padding-bottom: 1.5em;
             margin-top: 1em;

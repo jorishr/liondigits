@@ -99,6 +99,10 @@ header {
 
         .header-cta {
 
+            @include atMobile {
+                display: none;
+            }
+
             a.btn {
                 padding: var(--pd-xs) var(--pd-sm);
                 margin: auto 0;

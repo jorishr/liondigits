@@ -24,10 +24,18 @@
         border-radius: 5px;
         margin: 4em auto;
 
+        @include atMobile {
+            flex-direction: column;
+        }
+
         .image-container {
             order: 2;
             width: 70%;
             padding: var(--pd-base) var(--pd-sm);
+
+            @include atMobile {
+                width: 100%;
+            }
 
             img {
                 border-radius: 5px;
@@ -38,6 +46,11 @@
             order: 1;
             width: 30%;
             padding: var(--pd-sm) var(--pd-base);
+
+            @include atMobile {
+                width: 100%;
+                padding: var(--pd-xs) var(--pd-base);
+            }
 
             .titles {
                 margin: 2em 0;
@@ -54,6 +67,10 @@
                     font-size: 1.75em;
                     font-weight: 600;
                     margin-bottom: 1em;
+
+                    @include atMobile {
+                        margin-bottom: .25em;
+                    }
                 }
 
                 h4 {

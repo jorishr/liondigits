@@ -11,9 +11,18 @@ footer {
         justify-content: space-between;
         padding: 0 2em 4em 2em;
 
+        @include atMobile {
+            flex-direction: column;
+        }
+
         .footer__logo {
             display: flex;
             align-items: flex-start;
+
+            @include atMobile {
+                justify-content: center;
+                margin-bottom: 4em;
+            }
       
             a {
                 margin-bottom: 1em;
@@ -28,6 +37,10 @@ footer {
 
             li {
                 padding: .75em 0;
+                                
+                @include atMobile {
+                    text-align: center;
+                }
 
                 a {
                     color: #7eb0fb;
@@ -44,6 +57,11 @@ footer {
         .footer__socials {
             display: flex;
             flex-direction: column;
+
+            @include atMobile {
+                align-items: center;
+                margin-bottom: 4em;
+            }
 
             .row1, .row2 {
                 display: flex;

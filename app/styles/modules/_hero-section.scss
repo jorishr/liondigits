@@ -22,6 +22,11 @@
             font-size: var(--fs-4xl);
 
             margin-bottom: 3.75%;
+
+            @include atMobile {
+                font-size: 2.5rem;
+                padding: 0 var(--pd-sm) var(--pd-xs) var(--pd-sm);
+            }
         }
 
         h2 {
@@ -29,6 +34,11 @@
             font-size: var(--fs-lg);
             max-width: 75%;
             margin: 0 auto 5.75% auto;
+
+            @include atMobile {
+                font-size: var(--fs-md);
+                padding-bottom: var(--pd-md);
+            }
         }
     }
 }
