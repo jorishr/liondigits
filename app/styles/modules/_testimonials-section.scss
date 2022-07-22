@@ -1,25 +1,18 @@
 .testimonials {
-    background-color: #003f8c;
-    color: #fff;
-    padding: 6em 2em;
-
-    h3, h4 {
-        text-align: center;
-        padding: 10px;
-    }
-
+    background-color: var(--bgColor-accent);
+    padding: var(--pd-xl) var(--pd-md);
+  
     h3 {
-        font-size: 44px;
-        color: #7eb0fb;
-    }
-
-    h4 {
-        font-size: 28px;
+        text-align: center;
+        font-size: var(--fs-2xl);
+        color: var(--accent-lightblue);
+        padding-top: var(--pd-sm);
+        margin-bottom: 4em;
     }
 
     .projects-container {
         display: flex;
-        background-color: #e9ebee;
+        background-color: var(--bgColor-secondary);
         box-shadow: 5px 5px 25px 0 rgba(0,0,0, .25);
         border-radius: 5px;
         margin: 4em auto;
@@ -51,10 +44,24 @@
                 width: 100%;
                 padding: var(--pd-xs) var(--pd-base);
             }
-
+            
             .titles {
-                margin: 2em 0;
+                
+                margin: 4em 0;
+                
+                a {
 
+                    img {
+                        max-width: 150px;
+                        margin: 0 auto 2em auto;
+                        border-radius: 5px;
+    
+                        @include atMobile {
+                            max-width: 120px;
+                        }
+                    }
+                }
+                
                 h3, 
                 h4 {
                     font-weight: 600;
@@ -63,6 +70,7 @@
                 }   
                 
                 h3 {
+                    display: none;
                     color: #0b214a;
                     font-size: 1.75em;
                     font-weight: 600;
@@ -77,6 +85,7 @@
                     font-size: 1em;
                     font-weight: 400;
                     color: #5a6774;
+                    color: var(-textColor-base);
                 }
 
             }
@@ -96,9 +105,9 @@
                     margin: 2em auto;
                     font-size: var(--fs-sm);
                     transition: ease-in .3s all;
-                    background-color: transparent;
-                    color: #0b214a;
-                    border-color: #0b214a;
+                    background-color: var(--bgColor-secondary);
+                    color: var(--accent-azureblue);
+                    border: 2px solid var(--accent-azureblue);
                     border-radius: 5px;
                }
 
@@ -108,6 +117,7 @@
             }
         }
 
+        /* Volgorde van projectcontainer content verandert alternerend */
         &:nth-of-type(2n+1) .image-container {
             order: unset;
         }
