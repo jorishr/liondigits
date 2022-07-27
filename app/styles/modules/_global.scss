@@ -89,6 +89,8 @@ a.btn {
     border-radius: 5px;
     border: 2px solid var(--accent-darkblue);
     background-color: var(--bgColor-accent);
+
+    white-space: nowrap;
     
     
     &:hover {

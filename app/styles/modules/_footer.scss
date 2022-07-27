@@ -5,6 +5,10 @@ footer {
     font-size: 16px;
     line-height: 1.9em;
 
+    @include atMobile {
+        padding: 2em 2em 0 2em;
+    }
+
     .footer__content {
         display: flex;
         flex-direction: row;
@@ -36,22 +40,29 @@ footer {
         .footer__nav {
             margin: 0 auto;
 
-            li {
-                padding: .75em 0;
-                                
+            ul {
+                
                 @include atMobile {
-                    text-align: center;
+                    padding-left: 0;
                 }
 
-                a {
-                    color: #7eb0fb;
-                    text-transform: capitalize;
-
-                    &:hover {
-                        text-decoration: underline;
+                li {
+                    padding: .75em 0;
+                                    
+                    @include atMobile {
+                        text-align: center;
                     }
-
-                }           
+    
+                    a {
+                        color: #7eb0fb;
+                        text-transform: capitalize;
+    
+                        &:hover {
+                            text-decoration: underline;
+                        }
+    
+                    }           
+                }
             }
         }
 
@@ -65,6 +76,11 @@ footer {
 
             .row1, .row2 {
                 display: flex;
+                justify-content:center;
+
+                @include atMobile {
+                    flex-wrap: wrap;
+                }
             }
 
 
@@ -77,6 +93,10 @@ footer {
 
                 &:last-child {
                     padding-right: 0;
+
+                    @include atMobile {
+                        padding-right: 1em;
+                    }
                 }
             }
         }
