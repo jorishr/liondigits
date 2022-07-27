@@ -1,13 +1,22 @@
 .skill-section {
-    margin-top: 6em;
     overflow: hidden;
     /* Hides the overflow of the carousel-container below */
+    color: var(--bgColor-secondary);
+    text-align: center;
+    padding: 10em 2em;
+    background-color: #003f8c;
+    
+    @include atMobile {
+        padding: 10em 1em;
+    }
 
     .heading {
+        padding-bottom: var(--pd-base);
+
         h4 {
             font-size: 36px;
+            margin-bottom: .5em;
         }
-
 
         .heading-icons {
             display: flex;
@@ -20,103 +29,140 @@
         }
     }
 
-    p {
-        max-width: 450px;
+    p.heading-sub {
+        max-width: 55%;
         margin: 1em auto;
         text-align: center;
+        font-size: var(--fs-md);
 
-        &.heading-sub {
-            font-size: 18px;
+        &:last-of-type {
+            margin-bottom: 4em;
         }
 
+        @include atMobile {
+            padding: 0 var(--pd-base);
+            max-width: 100%;
+        }
     }
 
     a {
-        color: #2496ed;
-    }
-
-    .about-cta {
-        padding: 2em 2em 10em 2em;
-        max-width: 50%;
-        margin: 10em auto 0 auto;
-        text-align: center;
-
-        p {
-            padding-bottom: 1.5em;
-            margin-top: 1em;
-            margin-bottom: 1em;
-        }
-        
-        a {
-            background-color: #2496ed;
-            border: 2px solid #2496ed;
-            color: #fff;
-            padding: 16px 32px;
-            border-radius: 5px;
-            text-transform: capitalize;
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 1.4em;
-            margin: auto 0;
-            transition: all .5s ease 0ms;
-
-            &:hover {
-                background-color: #e9ebee;
-                border: 2px solid #e9ebee;
-                color: #2496ed;
-            }
-        }
-
+        color: var(--accent-lightblue);
     }
 
     .carousel-container {
         margin-top: 4em;
         padding: 2em;
-/*         width: 2000px;
- */        background-color: #e9ebee;
+        background-color: #e9ebee;
         border-radius: 5px;
         box-shadow: 5px 5px 25px 0 rgba(0,0,0, .25);
 
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        
+        @include atMobile {
+            flex-direction: column;
+            padding: 2em 1em;
+        }
 
         .carousel-card {
             width: 325px;
             padding: 2em;
             border-radius: 5px;
             box-shadow: 5px 5px 25px 0 rgba(0,0,0, .25);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            @include atMobile {
+                width: 100%;
+                padding: 2em 1em;
+                margin-bottom: 4em;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
 
             h5 {
                 color: #003f8c;
-                font-size: 1.25em;
+                font-size: var(--fs-lg);
                 text-align: center;
-            }
-
-            p {
-                max-width: 250px;
-                color: #2496ed;
-            }
-
-            a {
-                display: block;
-                width: 175px;
-                border: 2px solid #2496ed;
-                color: #2496ed;
-                padding: 8px 16px;
-                border-radius: 5px;
-                text-transform: capitalize;
-                text-align: center;
-                font-size: 12px;
-                font-weight: 600;
-                line-height: 1.4em;
-                transition: all .5s ease 0ms;
-                margin: 1em auto;
+                margin-bottom: 1em;
             }
             
-            img {
-                width: 275px;
+            p {
+                font-size: var(--fs-md);
+                line-height: 1.5;
+                max-width: 250px;
+                color: var(--textColor-base);
+                margin-bottom: 2em;
+                align-self: center;
+            }
+
+            a.btn {                
+                background-color: var(--bgColor-secondary);
+                border: 2px solid var(--textColor-base);
+                color: var(--textColor-base);
+                width: calc(100% - 3em);
+                
+                margin: 0 auto;
+                font-size: var(--fs-base);
+
+                &:hover {
+                    transform: scale(1.025);
+                }
+
+                @include atMobile {
+                    margin-bottom: 2em;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            
+            a img {
+                width: 100%;
+                margin-bottom: 3em;
+
+                @include atMobile {
+                    width: 100%;
+                }
             }
         }
+    }
+
+    .cta {
+        max-width: 50%;
+        padding: 2em;
+        margin: 10em auto 0 auto;
+        text-align: center;
+
+        @include atMobile {
+            max-width: 100%;
+        }
+
+        h4 {
+            font-size: var(--fs-lg);
+        }
+
+        p {
+            font-size: var(--fs-md);
+            margin: 1em auto 4em auto;
+        }
+        
+        a {
+            background-color: var(--accent-azureblue);
+            border-color: 2px solid var(--accent-azureblue);
+            color: var(--bgColor-secondary);
+
+            &:hover {
+                background-color: var(--bgColor-secondary);
+                border-color: var(--bgColor-secondary);
+                color: var(--accent-azureblue);
+            }
+        }
+
     }
 }

@@ -5,15 +5,28 @@ footer {
     font-size: 16px;
     line-height: 1.9em;
 
+    @include atMobile {
+        padding: 2em 2em 0 2em;
+    }
+
     .footer__content {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 0 2em 4em 2em;
 
+        @include atMobile {
+            flex-direction: column;
+        }
+
         .footer__logo {
             display: flex;
             align-items: flex-start;
+
+            @include atMobile {
+                justify-content: center;
+                margin-bottom: 4em;
+            }
       
             a {
                 margin-bottom: 1em;
@@ -25,19 +38,31 @@ footer {
         }
 
         .footer__nav {
+            margin: 0 auto;
 
-            li {
-                padding: .75em 0;
+            ul {
+                
+                @include atMobile {
+                    padding-left: 0;
+                }
 
-                a {
-                    color: #7eb0fb;
-                    text-transform: capitalize;
-
-                    &:hover {
-                        text-decoration: underline;
+                li {
+                    padding: .75em 0;
+                                    
+                    @include atMobile {
+                        text-align: center;
                     }
-
-                }           
+    
+                    a {
+                        color: #7eb0fb;
+                        text-transform: capitalize;
+    
+                        &:hover {
+                            text-decoration: underline;
+                        }
+    
+                    }           
+                }
             }
         }
 
@@ -45,9 +70,19 @@ footer {
             display: flex;
             flex-direction: column;
 
+            @include atMobile {
+                margin-bottom: 4em;
+            }
+
             .row1, .row2 {
                 display: flex;
+                justify-content:center;
+
+                @include atMobile {
+                    flex-wrap: wrap;
+                }
             }
+
 
             a {
                 padding: 1.5em 1em;
@@ -58,6 +93,10 @@ footer {
 
                 &:last-child {
                     padding-right: 0;
+
+                    @include atMobile {
+                        padding-right: 1em;
+                    }
                 }
             }
         }

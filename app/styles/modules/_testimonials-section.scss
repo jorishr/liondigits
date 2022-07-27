@@ -1,33 +1,38 @@
 .testimonials {
-    background-color: #003f8c;
-    color: #fff;
-    padding: 6em 2em;
-
-    h3, h4 {
-        text-align: center;
-        padding: 10px;
+    background-color: var(--bgColor-accent);
+    padding: var(--pd-xl) var(--pd-md);
+    
+    @include atMobile {
+        padding: var(--pd-xl) var(--pd-xs);
     }
-
+  
     h3 {
-        font-size: 44px;
-        color: #7eb0fb;
-    }
-
-    h4 {
-        font-size: 28px;
+        text-align: center;
+        font-size: var(--fs-2xl);
+        color: var(--accent-lightblue);
+        padding-top: var(--pd-sm);
+        margin-bottom: 4em;
     }
 
     .projects-container {
         display: flex;
-        background-color: #e9ebee;
+        background-color: var(--bgColor-secondary);
         box-shadow: 5px 5px 25px 0 rgba(0,0,0, .25);
         border-radius: 5px;
         margin: 4em auto;
+
+        @include atMobile {
+            flex-direction: column;
+        }
 
         .image-container {
             order: 2;
             width: 70%;
             padding: var(--pd-base) var(--pd-sm);
+
+            @include atMobile {
+                width: 100%;
+            }
 
             img {
                 border-radius: 5px;
@@ -39,49 +44,50 @@
             width: 30%;
             padding: var(--pd-sm) var(--pd-base);
 
+            @include atMobile {
+                width: 100%;
+                padding: var(--pd-xs) var(--pd-base);
+            }
+            
             .titles {
-                margin: 2em 0;
+                
+                margin: 4em 0;
+                
+                a {
 
-                h3, 
-                h4 {
-                    font-weight: 600;
-                    text-align: center;
-                    line-height: 1.75;
-                }   
+                    img {
+                        max-width: 150px;
+                        margin: 0 auto 2em auto;
+                        border-radius: 5px;
+    
+                        @include atMobile {
+                            max-width: 60%;
+                        }
+                    }
+                }
                 
                 h3 {
-                    color: #0b214a;
-                    font-size: 1.75em;
-                    font-weight: 600;
-                    margin-bottom: 1em;
+                    display: none;
                 }
 
-                h4 {
-                    font-size: 1em;
-                    font-weight: 400;
-                    color: #5a6774;
+                p {
+                    text-align: center;
+                    font-size: var(--fs-md);
+                    line-height: 1.5;
                 }
-
             }
 
             .links {
                 margin-bottom: 2em;
 
-                p {
-                    text-align: center;
-                    font-size: var(--fs-sm);
-                    color: #5a6774;
-                }
-
                 a.btn {
                     display: block;
                     max-width: calc(100% - 4em);
                     margin: 2em auto;
-                    font-size: var(--fs-sm);
-                    transition: ease-in .3s all;
-                    background-color: transparent;
-                    color: #0b214a;
-                    border-color: #0b214a;
+                    font-size: var(--fs-base);
+                    background-color: var(--bgColor-secondary);
+                    color: var(--textColor-base);
+                    border: 2px solid var(--textColor-base);
                     border-radius: 5px;
                }
 
@@ -91,6 +97,7 @@
             }
         }
 
+        /* Volgorde van projectcontainer content verandert alternerend */
         &:nth-of-type(2n+1) .image-container {
             order: unset;
         }
