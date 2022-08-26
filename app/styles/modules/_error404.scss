@@ -1,0 +1,24 @@
+.error-page_container {
+    position: relative;
+    border: 2px solid red;
+
+    .background-image {
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .text {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translateY(-50%);
+        border: 2px solid green;
+    
+        padding: 8em;
+    
+        p {
+            font-size: 4em;
+            margin-bottom: 1em;
+        }
+    }
+}

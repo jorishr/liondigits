@@ -1,20 +1,15 @@
-a.backlink {
-    margin: 2em;
-    background-color: #2496ed;
-    border: 2px solid #2496ed;
-    color: #fff;
-    padding: 16px 32px;
-    border-radius: 5px;
-    text-transform: capitalize;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.4em;
-    margin: auto 0;
-    transition: all .5s ease 0ms;
+.navigation {
+    display: flex;
 
-    &:hover {
-        background-color: #e9ebee;
-        border: 2px solid #e9ebee;
-        color: #2496ed;
+    .btn {
+        margin: 1em; 
+    }
+}
+
+.calendly-inline-widget {
+    transition: all .3s ease-in;
+
+    .loader {
+        text-align: center;
     }
 }

@@ -10,24 +10,35 @@
     <meta name="author" content="Joris Raymaekers">
     <meta property="og:image" content="https://jorisr.com/portfolio-video-min.gif"/>
     <title>Lion Digits, web development</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
     <!-- Scripts and css -->
     <script defer type="text/javascript" src="scripts/app.js"></script>
     <link rel="stylesheet" href="styles/main.scss">
 </head>
-
-<a href="/" class="backlink">&#8592 terug</a>
-<div class="booking-page">
-    <!-- Calendly inline widget begin -->
-    <div class="calendly-inline-widget" style="min-width:320px;height:580px;" data-auto-load="false">
-        <script 
-            type="text/javascript" 
-            src="https://assets.calendly.com/assets/external/widget.js">
-        </script>
-        <script>
-            Calendly.initInlineWidget({
-        url: 'https://calendly.com/liondigits/30min'
-        });
-        </script>
+<body class="calendar-widget">
+    <div class="navigation">
+        <a href="/" class="btn">&#8592 terug</a>
     </div>
-    <!-- Calendly inline widget end -->
-</div>
+    <div class="booking-page">
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" style="min-width:320px;height:580px;" data-auto-load="false">
+            <div class="loader">loading...</div>
+            <script 
+                type="text/javascript" 
+                src="https://assets.calendly.com/assets/external/widget.js">
+            </script>
+            <script>
+                Calendly.initInlineWidget({
+            url: 'https://calendly.com/liondigits/30min?hide_gdpr_banner=1'
+            });
+            </script>
+        </div>
+        <!-- Calendly inline widget end -->
+    </div>
+</body>
