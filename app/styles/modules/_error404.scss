@@ -1,24 +1,30 @@
 .error-page_container {
     position: relative;
-    border: 2px solid red;
 
     .background-image {
         background-size: cover;
+        background-repeat: no-repeat;
         height: 100vh;
     }
 
-    .text {
+    .error-text {
         position: absolute;
-        top: 40%;
-        left: 0;
-        transform: translateY(-50%);
-        border: 2px solid green;
-    
-        padding: 8em;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background-color: rgba(255, 63, 115, .8);
+        padding: var(--pd-md);
+        border-radius: 5px;
     
         p {
-            font-size: 4em;
-            margin-bottom: 1em;
+            font-size: var(--fs-2xl);
+            color: var(--bgColor-secondary);
+            text-shadow: 0 1px 0 rgb(0, 0, 0);
+        }
+
+        p:last-of-type {
+            margin-bottom: 1.5em;
         }
     }
 }
