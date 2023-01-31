@@ -1,106 +1,88 @@
 .testimonials {
-    background-color: var(--bgColor-accent);
-    padding: var(--pd-xl) var(--pd-md);
-    
-    @include atMobile {
-        padding: var(--pd-xl) var(--pd-xs);
-    }
-  
-    h3 {
-        text-align: center;
-        font-size: var(--fs-2xl);
-        color: var(--accent-lightblue);
-        padding-top: var(--pd-sm);
-        margin-bottom: 4em;
-    }
+  background-color: var(--bgColor-accent);
+  padding: var(--pd-xl) var(--pd-sm);
 
-    .projects-container {
-        display: flex;
-        background-color: var(--bgColor-secondary);
-        box-shadow: 5px 5px 25px 0 rgba(0,0,0, .25);
+  h3 {
+    text-align: center;
+    font-size: var(--fs-xl);
+    color: var(--accent-lightblue);
+    color: var(--bgColor-secondary);
+    padding: var(--pd-sm) var(--pd-sm) 0;
+    margin-bottom: 5em;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--bgColor-secondary);
+    box-shadow: 5px 5px 25px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin: 0 auto 8em;
+
+    .image-container {
+      order: 2;
+      width: 100%;
+      padding: var(--pd-base) var(--pd-sm);
+
+      /* reduce width to 70% */
+      img {
         border-radius: 5px;
-        margin: 4em auto;
-
-        @include atMobile {
-            flex-direction: column;
-        }
-
-        .image-container {
-            order: 2;
-            width: 70%;
-            padding: var(--pd-base) var(--pd-sm);
-
-            @include atMobile {
-                width: 100%;
-            }
-
-            img {
-                border-radius: 5px;
-            }
-        }
-
-        .legend-container {
-            order: 1;
-            width: 30%;
-            padding: var(--pd-sm) var(--pd-base);
-
-            @include atMobile {
-                width: 100%;
-                padding: var(--pd-xs) var(--pd-base);
-            }
-            
-            .titles {
-                
-                margin: 4em 0;
-                
-                a {
-
-                    img {
-                        max-width: 150px;
-                        margin: 0 auto 2em auto;
-                        border-radius: 5px;
-    
-                        @include atMobile {
-                            max-width: 60%;
-                        }
-                    }
-                }
-                
-                h3 {
-                    display: none;
-                }
-
-                p {
-                    text-align: center;
-                    font-size: var(--fs-md);
-                    line-height: 1.5;
-                }
-            }
-
-            .links {
-                margin-bottom: 2em;
-
-                a.btn {
-                    display: block;
-                    max-width: calc(100% - 4em);
-                    margin: 2em auto;
-                    font-size: var(--fs-base);
-                    background-color: var(--bgColor-secondary);
-                    color: var(--textColor-base);
-                    border: 2px solid var(--textColor-base);
-                    border-radius: 5px;
-               }
-
-               a.btn:hover {
-                   transform: scale(1.025);
-               }
-            }
-        }
-
-        /* Volgorde van projectcontainer content verandert alternerend */
-        &:nth-of-type(2n+1) .image-container {
-            order: unset;
-        }
-
+      }
     }
+
+    .legend-container {
+      order: 1;
+      /*width: 30%;*/
+      width: 100%;
+      padding: var(--pd-xs) var(--pd-base);
+
+      .titles {
+        margin: 4em 0;
+
+        a {
+          img {
+            /* max-width: 150px; */
+            max-width: 40%;
+            margin: 0 auto 2em auto;
+            border-radius: 5px;
+          }
+        }
+
+        h3 {
+          display: none;
+        }
+
+        p {
+          text-align: center;
+          font-size: var(--fs-base);
+          line-height: 1.5;
+        }
+      }
+
+      .links {
+        margin-bottom: 2em;
+
+        a.btn {
+          display: block;
+          max-width: calc(100% - 4em);
+          margin: 2em auto;
+          font-size: var(--fs-base);
+          background-color: var(--bgColor-secondary);
+          color: var(--textColor-base);
+          border: 2px solid var(--textColor-base);
+          border-radius: 5px;
+        }
+
+        a.btn:hover {
+          transform: scale(1.025);
+        }
+      }
+    }
+
+    /* Volgorde van projectcontainer content verandert alternerend */
+    &:nth-of-type(2n + 1) .image-container {
+      order: unset;
+    }
+  }
 }
