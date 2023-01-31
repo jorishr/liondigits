@@ -1,15 +1,15 @@
 .navigation {
-    display: flex;
+  display: flex;
 
-    .btn {
-        margin: 1em; 
-    }
+  .btn {
+    margin: 3em;
+  }
 }
 
 .calendly-inline-widget {
-    transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 
-    .loader {
-        text-align: center;
-    }
+  .loader {
+    text-align: center;
+  }
 }

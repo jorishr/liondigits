@@ -1,145 +1,145 @@
 :root {
-    /* COLORS */
-    --bgColor: rgb(11,33,74, 1);
-    --bgColor-accent: rgb(0,63,140, 1);
-    --bgColor-secondary: rgb(233,235,238, 1);
-    --textColor-base: rgb(90,103,116, 1);
-    --textColor-lightblue: rgb(196,240,255,1);
-    
-    --accent-lightblue: rgb(196,240,255, 1);
-    --accent-azureblue: rgb(36,150,237);
-    --accent-alert: rgba(255, 63, 115, 1);
-    
-    /* FONTS ANDS FONT SIZES */
-    --ff: 'Poppins', sans-serif;
-    --fs-base: 1rem;
-    --fs-sm: .75rem;
-    --fs-md: 1.25rem;
-    --fs-lg: 1.5rem;
-    --fs-xl: 1.75rem;
-    --fs-2xl: 2rem;
-    --fs-4xl: 4.5rem;
+  /* COLORS */
+  --bgColor: rgb(11, 33, 74, 1);
+  --bgColor-accent: rgb(0, 63, 140, 1);
+  --bgColor-secondary: rgb(233, 235, 238, 1);
+  --textColor-base: rgb(90, 103, 116, 1);
+  --textColor-lightblue: rgb(196, 240, 255, 1);
 
-    //$fa-font-path: "/fontawesome/webfonts";
+  --accent-lightblue: rgb(196, 240, 255, 1);
+  --accent-azureblue: rgb(36, 150, 237);
+  --accent-alert: rgba(255, 63, 115, 1);
 
-    /* PADDING */
+  /* FONTS ANDS FONT SIZES */
+  --ff: "Poppins", sans-serif;
+  --fs-base: 1rem;
+  --fs-sm: 0.75rem;
+  --fs-md: 1.25rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2rem;
+  --fs-4xl: 4.5rem;
 
-    --pd-base: 2em;
-    --pd-xs: .5em;
-    --pd-sm: 1em;
-    --pd-md: 2.5em;
-    --pd-lg: 4em;
-    --pd-xl: 6em;
+  //$fa-font-path: "/fontawesome/webfonts";
+
+  /* PADDING */
+
+  --pd-base: 2em;
+  --pd-xs: 0.5em;
+  --pd-sm: 1em;
+  --pd-md: 2.5em;
+  --pd-lg: 4em;
+  --pd-xl: 6em;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    width: 100%;
-    height: 100%; 
+  width: 100%;
+  height: 100%;
 
-    font-family: var(--ff);
-    color: var(--textColor-base);
-    
-    background-color: var(--bgColor);
+  font-family: var(--ff);
+  color: var(--textColor-base);
+
+  background-color: var(--bgColor);
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 p {
-    line-height: 1.75;
+  line-height: 1.75;
 }
 
 .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* BUTTON BASE STYLES - START */
 a {
-    text-decoration: none;
-    color: var(--bgColor-accent);
-    transition: all .3s ease-in;
-    letter-spacing: 1px;
+  text-decoration: none;
+  color: var(--bgColor-accent);
+  transition: all 0.3s ease-in;
+  letter-spacing: 1px;
 }
 
 a.btn {
-    padding: var(--pd-sm) var(--pd-base);
-    
-    font-weight: 600;
-    color: var(--bgColor-secondary);
-    
-    text-align: center;
-    text-transform: capitalize;
-    
-    border-radius: 5px;
-    border: 2px solid var(--accent-darkblue);
-    background-color: var(--bgColor-accent);
+  padding: var(--pd-sm) var(--pd-base);
 
-    white-space: nowrap;
-    
-    
-    &:hover {
-        background-color: var(--bgColor-secondary);
-        border-color: var(--bgColor-secondary);
-        color: var(--accent-azureblue);
-    }
+  font-weight: 600;
+  color: var(--bgColor-secondary);
+
+  text-align: center;
+  text-transform: capitalize;
+
+  border-radius: 5px;
+  border: 2px solid var(--accent-darkblue);
+  background-color: var(--bgColor-accent);
+
+  white-space: nowrap;
+
+  &:hover {
+    background-color: var(--bgColor-secondary);
+    border-color: var(--bgColor-secondary);
+    color: var(--accent-azureblue);
+  }
 }
 /* BUTTON BASE STYLES - END */
 
 /* MEDIA QUERY MIXINS - START*/
 @mixin atMobile {
-    @media (max-width: 480px) {
-        @content;
-    }
+  @media (max-width: 480px) {
+    @content;
+  }
 }
 
 @mixin atTablet {
-    @media (min-width: 481px) and (max-width: 960px) {
-        @content;
-    }
+  @media (min-width: 481px) and (max-width: 960px) {
+    @content;
+  }
 }
 /* MEDIA QUERY MIXINS - END*/
 
 /* FEATURES */
 noscript::before {
-    content: 'Turn on your Javascript or use a Javascript compatible browser.';
-    font-size: var(--ff-lg);
-    color: var(--bgColor);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    padding: var(--pd-sm) var(--pd-lg);
-    background-color: var(--accent);
+  content: "Turn on your JavaScript or use a JavaScript compatible browser.";
+  font-size: var(--fs-md);
+  color: var(--bgColor-secondary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: var(--pd-sm) var(--pd-lg);
+  background-color: var(--accent-alert);
+  z-index: 100;
 }
 
 .easter-egg {
-    display: none;
+  display: none;
 
-    &.visible {
-        display: block;
-        position: sticky;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 25%;
-        z-index: 20;
-    }
+  &.visible {
+    display: block;
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    z-index: 20;
+  }
 }
