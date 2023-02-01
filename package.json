@@ -30,6 +30,7 @@
     "sass": "^1.53.0"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.7.0"
+    "@parcel/transformer-sass": "^2.7.0",
+    "ngrok": "^4.3.3"
   }
 }

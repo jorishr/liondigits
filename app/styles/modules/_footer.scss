@@ -1,118 +1,107 @@
 footer {
-    background-color: #002a64;
-    color: #fff;
-    padding: 4em 4em 0 4em;
-    font-size: 16px;
-    line-height: 1.9em;
+  background-color: #0e161b;
+  padding: var(--pd-2xl) var(--pd-base) 0;
+  border-top: 2px #00b4ff solid;
 
-    @include atMobile {
-        padding: 2em 2em 0 2em;
+  color: var(--accent-azureblue);
+  font-size: 16px;
+  line-height: 1.9em;
+
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .footer__logo {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+      a {
+        margin-bottom: 1em;
+
+        img {
+          width: 175px;
+        }
+      }
     }
 
-    .footer__content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 2em 4em 2em;
-
+    .footer__nav {
+      margin-bottom: var(--pd-lg);
+      ul {
         @include atMobile {
-            flex-direction: column;
+          padding-left: 0;
         }
 
-        .footer__logo {
-            display: flex;
-            align-items: flex-start;
+        li {
+          padding: 0.75em 0;
 
-            @include atMobile {
-                justify-content: center;
-                margin-bottom: 4em;
+          @include atMobile {
+            text-align: center;
+          }
+
+          a {
+            text-transform: capitalize;
+            color: var(--bgColor-secondary);
+
+            &:hover {
+              text-decoration: underline;
             }
-      
-            a {
-                margin-bottom: 1em;
-        
-                img {
-                    width: 175px;
-                }
-            }
+          }
         }
-
-        .footer__nav {
-
-            ul {
-                
-                @include atMobile {
-                    padding-left: 0;
-                }
-
-                li {
-                    padding: .75em 0;
-                                    
-                    @include atMobile {
-                        text-align: center;
-                    }
-    
-                    a {
-                        color: #7eb0fb;
-                        text-transform: capitalize;
-    
-                        &:hover {
-                            text-decoration: underline;
-                        }
-    
-                    }           
-                }
-            }
-        }
-
-        .footer__socials {
-            display: flex;
-            flex-direction: column;
-
-            @include atMobile {
-                margin-bottom: 4em;
-            }
-
-            .row1, .row2 {
-                display: flex;
-                justify-content:center;
-
-                @include atMobile {
-                    flex-wrap: wrap;
-                }
-            }
-
-
-            a {
-                padding: 1.5em 1em;
-
-                img {
-                    width: 50px;
-                }
-
-                &:last-child {
-                    padding-right: 0;
-
-                    @include atMobile {
-                        padding-right: 1em;
-                    }
-                }
-            }
-        }
+      }
     }
 
+    .footer__socials {
+      margin-bottom: 4em;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
 
-    .footer__copyright {
-        text-align: center;
-        font-size: 12px;
-        
-        hr {
-            margin-bottom: 4em;
-        }
+      a {
+        padding: 1.5em 1em;
 
-        p {
-            padding-bottom: 4em;
+        img {
+          width: 50px;
         }
-        
+      }
     }
+    .pgp-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: nowrap;
+      margin-bottom: var(--pd-lg);
+
+      p {
+        padding-right: var(--pd-base);
+      }
+
+      a {
+        &:first-of-type {
+          padding-right: var(--pd-base);
+        }
+
+        img {
+          display: inline-block;
+          height: 15px;
+          width: 15px;
+        }
+      }
+    }
+  }
+
+  .footer__copyright {
+    text-align: center;
+    font-size: 12px;
+
+    hr {
+      margin-bottom: 4em;
+    }
+
+    p {
+      padding-bottom: 4em;
+    }
+  }
 }

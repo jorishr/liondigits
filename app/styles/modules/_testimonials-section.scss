@@ -1,6 +1,6 @@
 .testimonials {
   background-color: var(--bgColor-accent);
-  padding: var(--pd-xl) var(--pd-sm);
+  padding: var(--pd-2xl) var(--pd-sm);
 
   h3 {
     text-align: center;
@@ -20,8 +20,12 @@
     border-radius: 5px;
     margin: 0 auto 8em;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     .image-container {
-      order: 2;
+      order: 1;
       width: 100%;
       padding: var(--pd-base) var(--pd-sm);
 
@@ -32,7 +36,7 @@
     }
 
     .legend-container {
-      order: 1;
+      order: 2;
       /*width: 30%;*/
       width: 100%;
       padding: var(--pd-xs) var(--pd-base);
@@ -55,7 +59,7 @@
 
         p {
           text-align: center;
-          font-size: var(--fs-base);
+          font-size: var(--fs-md);
           line-height: 1.5;
         }
       }
@@ -81,8 +85,8 @@
     }
 
     /* Volgorde van projectcontainer content verandert alternerend */
-    &:nth-of-type(2n + 1) .image-container {
+    /*     &:nth-of-type(2n + 1) .image-container {
       order: unset;
-    }
+    } */
   }
 }

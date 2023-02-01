@@ -1,0 +1,40 @@
+.profile-container {
+  text-align: center;
+  background-color: var(--accent-lightblue);
+  padding: var(--pd-2xl) var(--pd-sm);
+  color: var(--bgColor-accent);
+
+  a {
+    display: inline-block;
+    border: 2px solid var(--bgColor-accent);
+    color: var(--bgColor-accent);
+    background-color: var(--accent-darkblue);
+
+    &:hover {
+      background-color: var(--bgColor-accent);
+      border: 2px solid var(--bgColor-accent);
+      color: var(--accent-azureblue);
+    }
+  }
+
+  .text-container {
+    margin-bottom: var(--pd-lg);
+
+    p {
+      margin: 0 auto;
+      font-size: 20px;
+    }
+  }
+
+  .icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: var(--pd-lg);
+
+    img {
+      max-width: 80px;
+      margin: 1em;
+    }
+  }
+}
