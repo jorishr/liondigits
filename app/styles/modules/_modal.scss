@@ -1,0 +1,38 @@
+.modal {
+  //full screen modal assumes a parent with position: relative
+  display: none;
+
+  &--active {
+    display: block;
+  }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 95vh;
+  width: 95vw;
+
+  z-index: 3;
+  background-color: #031f30;
+
+  transition: all 5s ease-in;
+
+  .modal__content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(249, 227, 174, 30%);
+    color: #f9e3ae;
+
+    padding: var(--pd-md) var(--pd-sm);
+    text-align: center;
+
+    border-radius: 5px;
+
+    transform: scale(95vh, 95vw);
+  }
+}

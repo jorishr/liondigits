@@ -1,3 +1,55 @@
+/*
+#########################  
+Copy PGP key to clipboard 
+#########################  
+*/
+copyBtn = document.getElementById("pgp-btn-copy");
+if (copyBtn) {
+  copyBtn.addEventListener("click", function () {
+    const str = document.getElementById("pgp-txt").textContent;
+    const textArea = document.createElement("textarea");
+    textArea.style.position = "absolute";
+    textArea.style.top = "-9999px";
+    textArea.value = str.slice(5);
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+  });
+}
+
+/*
+############ 
+Modal Toggle 
+############  
+*/
+//select btn
+modalBtn = document.getElementsByClassName("modal-btn");
+modalBtns = Array.from(modalBtn);
+modalBtns.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    modal = document.getElementsByClassName("modal")[0];
+    modal.classList.toggle("modal--active");
+  });
+});
+
+/*
+############## 
+Footer credits 
+##############  
+*/
+
+footerCredits = document.getElementById("footer__credits");
+currentYear = new Date().getFullYear();
+if (currentYear > 2022) {
+  footerCredits.textContent = `\u00A9 2022 - ${currentYear} Lion Digits | Joris Raymaekers`;
+}
+/*
+###################  
+Cal.com plugin code 
+###################  
+*/
+
 (function (C, A, L) {
   let p = function (a, ar) {
     a.q.push(ar);

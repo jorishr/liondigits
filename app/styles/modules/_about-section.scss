@@ -1,5 +1,5 @@
 .about-section {
-  background-color: #e9ebee;
+  background-color: var(--bgClr-white);
   position: relative;
   padding: var(--pd-2xl) var(--pd-sm);
 
@@ -52,6 +52,10 @@
       &:first-of-type {
         margin-bottom: var(--pd-lg);
       }
+    }
+
+    a {
+      color: var(--txtClr-accent);
     }
 
     .profile-img-container {
