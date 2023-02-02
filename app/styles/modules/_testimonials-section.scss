@@ -67,23 +67,12 @@
       }
 
       &__links {
-        text-align: center;
         a.btn {
           width: 100%;
-          font-size: var(--fs-base);
-
-          background-color: unset;
-          color: var(--txtClr-base);
-          border: 2px solid var(--txtClr-base);
-          border-radius: 5px;
 
           &:first-of-type {
             margin-bottom: var(--mg-sm);
           }
-        }
-
-        a.btn:hover {
-          transform: scale(1.025);
         }
       }
     }

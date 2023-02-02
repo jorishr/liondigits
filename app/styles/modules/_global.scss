@@ -130,6 +130,29 @@ a.btn {
     color: var(--accent-azureblue);
   }
 }
+
+a.btn-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-base);
+
+  background-color: unset;
+  color: var(--txtClr-base);
+  border: 2px solid var(--txtClr-base);
+  border-radius: 5px;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    transform: scale(1.025);
+    color: var(--txtClr-base);
+    border: 2px solid var(--txtClr-base);
+  }
+}
 /* BUTTON BASE STYLES - END */
 
 /* MEDIA QUERY MIXINS - START*/
