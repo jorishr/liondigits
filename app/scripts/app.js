@@ -40,9 +40,11 @@ Footer credits
 */
 
 footerCredits = document.getElementById("footer__credits");
-currentYear = new Date().getFullYear();
-if (currentYear > 2022) {
-  footerCredits.textContent = `\u00A9 2022 - ${currentYear} Lion Digits | Joris Raymaekers`;
+if (footerCredits) {
+  currentYear = new Date().getFullYear();
+  if (currentYear > 2022) {
+    footerCredits.textContent = `\u00A9 2022 - ${currentYear} Lion Digits | Joris Raymaekers`;
+  }
 }
 /*
 ###################  
