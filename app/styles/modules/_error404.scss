@@ -1,17 +1,21 @@
-.error-page_container {
-  position: relative;
+.err {
+  &-page-container {
+    position: relative;
+  }
 
-  .background-image {
+  &__background-image {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
   }
 
-  .error-text {
+  &__txt {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    width: 80%;
 
     background-color: rgba(255, 63, 115, 0.8);
     padding: var(--pd-md);
@@ -24,7 +28,7 @@
     }
 
     p:last-of-type {
-      margin-bottom: 1.5em;
+      margin-bottom: var(--mg-base);
     }
   }
 }
