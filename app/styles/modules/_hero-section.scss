@@ -2,7 +2,12 @@
   display: block;
   position: relative;
   height: 200vh;
-  /* Height is extended to create space for better transition with next section, about-section*/
+  /* 
+  Height is extended to create space for the next intro__highlight section on vertical screen.
+  */
+  @include tablet_sm {
+    height: 150vh;
+  }
 
   .background-image {
     display: none;
@@ -31,6 +36,10 @@
         font-size: var(--fs-xl);
         margin: 0 0 var(--mg-base);
         text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+
+        @include pc_lg {
+          font-size: var(--fs-4xl);
+        }
       }
 
       h2 {
@@ -39,6 +48,14 @@
         margin: 0 auto var(--mg-lg);
         line-height: 1.5;
         text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+        @include pc_lg {
+          font-size: var(--fs-2xl);
+        }
+      }
+      a.btn {
+        @include pc_lg {
+          font-size: var(--fs-lg);
+        }
       }
     }
   }

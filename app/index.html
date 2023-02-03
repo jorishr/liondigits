@@ -42,11 +42,344 @@
     <link rel="stylesheet" href="styles/main.scss" />
   </head>
   <body>
-    <noscript></noscript>
-    <header class="header">
-      <div class="header-container">
-        <div class="header__left">
-          <div class="header__logo">
+    <div class="wrapper">
+      <noscript></noscript>
+      <header class="header">
+        <div class="header-container">
+          <div class="header__left">
+            <div class="header__logo">
+              <a href="/" title="Home">
+                <img
+                  src="images/header_v1_vertical_transparent-bg_white-blue.png"
+                  alt="Logo Liondigits"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="header__right">
+            <div class="header__right__lang-menu js-lang-btn">
+              <div class="header__right__lang-menu__icon">
+                <img src="images/Icon_translate_gray.png" alt="" />
+                <span class="js-lang-span">nl</span>
+              </div>
+              <ul class="header__right__lang-menu__options">
+                <li class="js-lang-option" data-lang="nl"><a>nederlands</a></li>
+                <li class="js-lang-option" data-lang="en"><a>english</a></li>
+                <li class="js-lang-option" data-lang="es"><a>español</a></li>
+                <li class="js-lang-option" data-lang="ca"><a>català</a></li>
+              </ul>
+            </div>
+            <div class="header__cta">
+              <a class="btn" data-cal-link="liondigits/20min"
+                >maak een afspraak</a
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="hero-container">
+        <div class="hero-text-container">
+          <div class="hero-text">
+            <h1>Nieuwe Titel Hier.</h1>
+            <h2>
+              Je website is <span>dé weg</span> naar
+              <span>méér klanten en inkomsten</span> &mdash; met LionDigits ga
+              je sneller en verder.
+            </h2>
+            <a class="btn" data-cal-link="liondigits/20min"
+              >maak een afspraak</a
+            >
+          </div>
+        </div>
+        <div
+          class="background-image"
+          style="
+            background-image: url(images/Docker_Website_hero_image_1800x900_v1.webp);
+          "
+        ></div>
+      </div>
+      <div class="intro intro-container">
+        <div class="intro__highlight">
+          <div class="intro__highlight__card-container">
+            <div class="card card1">
+              <img src="images/service-2.svg" />
+              <p>
+                Pixel-perfecte web app ontwikkeling met aandacht voor
+                best-practices in HTML5 / CSS3/ JS / ReactJS Native en meer.
+              </p>
+            </div>
+            <div class="card card2">
+              <img src="images/service-3.svg" />
+              <p>
+                Bouwen van krachtige, op maat gemaakte Wordpress content
+                management systemen & e-commerce webwinkels.
+              </p>
+            </div>
+            <div class="card card3">
+              <img src="images/service-4.svg" />
+              <p>
+                Prestatie- en SEO-optimalisatie voor sneller laden, meer
+                conversies en optimale zoekprestaties
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="intro__main">
+          <p>
+            <em>Slimme ondernemers</em> beseffen het belang van een goed
+            ontworpen aanwezigheid op het web, hoe die presentatie ervoor zorgt
+            dat hun doelgroep wordt bereikt en dat de daaruit volgende leads
+            worden omgezet in <em>extra inkomsten</em>.
+          </p>
+          <div class="profile-img-container">
+            <div class="img-container">
+              <img
+                src="images/profielfoto_red.png"
+                title="Joris Raymaekers"
+                alt="Foto Joris Raymaekers"
+              />
+            </div>
+            <p>
+              <b>Joris Raymaekers</b> heeft een ruime ervaring in het creëren
+              van relevante en gebruiksvriendelijke web applicaties en helpt
+              graag ondernemers om hun doelen te overtreffen. Neem
+              <a href="#footer">contact</a> op of boek meteen een vrijblijvende
+              online consultatie.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="cta cta--accent">
+        <div class="cta__text">
+          <h3>Geïnteresseerd? Maak een afspraak</h3>
+          <p>
+            Boek meteen vrijblijvend een gesprek online om te verkennen hoe we
+            het beste kunnen samenwerken.
+          </p>
+          <div class="cta__btn">
+            <a class="btn" data-cal-link="liondigits/20min"
+              >maak een afspraak</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="profile profile-container">
+        <div class="profile__icon-container">
+          <img
+            src="images/Icon_javascript_darkblue.png"
+            alt="JavaScript icon"
+            title="JavaScript"
+          />
+          <img
+            src="images/Icon_react_darkblue.png"
+            alt="ReactJs icon"
+            title="ReactJs"
+          />
+          <img
+            src="images/Icon_typescript_darkblue.png"
+            alt="TypeScript icon"
+            title="TypeScript"
+          />
+          <img
+            src="images/Icon_node-js_darkblue.png"
+            alt="NodeJs icon"
+            title="NodeJs"
+          />
+        </div>
+        <div class="profile__text-container">
+          <p>Meer weten over wie ik ben?</p>
+          <p>
+            Op zoek naar een overzicht van m'n technische competenties in
+            JavaScript, TypeScript, NodeJs, ReactJs en meer...?
+          </p>
+        </div>
+        <div class="profile__btn">
+          <a class="btn" href="profile.html">Lees meer...</a>
+        </div>
+      </div>
+      <div class="testimonials">
+        <h3>Voorbeelden van dingen die we al maakten...</h3>
+        <!-- Project 1 -->
+        <div class="project project-container">
+          <div class="project__img-container">
+            <img
+              src="images/catacamp-min.gif"
+              alt="Demo video of Catacamp website"
+              title="Demo video of Catacamp website"
+            />
+          </div>
+          <div class="project__legend project__legend-container">
+            <div class="project__legend__description">
+              <div class="img-container">
+                <a href="https://catacamp.jorisr.com" target="_blank"
+                  ><img
+                    src="images/catacamp_logo.png"
+                    title="Catacamp"
+                    alt="Catacamp logo"
+                /></a>
+              </div>
+              <p>
+                Web applicatie voor het oplijsten van kampeerplaatsen in
+                Catalonië. Dit project beslaat de ganse 'web stack': een backend
+                API, een desktop web app en een mobile app voor iOS en Android.
+              </p>
+            </div>
+            <div class="project__legend__links">
+              <a
+                class="btn btn-icon"
+                target="_blank"
+                href="https://catacamp.jorisr.com"
+                ><span>live website</span
+                ><img
+                  src="images/Icon_external-link_gray.png"
+                  alt="External link icon"
+              /></a>
+              <a
+                class="btn btn-icon"
+                target="_blank"
+                href="https://github.com/jorishr/catacamp"
+                ><span>technische fiche</span
+                ><img src="images/Icon_github_gray.png" alt="GitHub icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project project-container">
+          <div class="project__img-container">
+            <img
+              src="images/goudster-video-sm1-min.gif"
+              alt="Demo video of Goudster website"
+              title="Demo video of Goudster website"
+            />
+          </div>
+          <div class="project__legend project__legend-container">
+            <div class="project__legend__description">
+              <div class="img-container">
+                <a href="https://goudster.be" target="_blank"
+                  ><img
+                    src="images/logo_goudster.gif"
+                    title="Goudster"
+                    alt="Goudster logo"
+                /></a>
+              </div>
+              <p>
+                Voor het biermerk Goudster uit Halen werd een nieuwe website
+                gebouwd met een handig overzicht van de lange geschiedenis van
+                de brouwerij en een module voor online bestellingen.
+              </p>
+            </div>
+            <div class="project__legend__links">
+              <a
+                class="btn btn-icon"
+                target="_blank"
+                href="https://www.goudster.be"
+                ><span>live website</span
+                ><img
+                  src="images/Icon_external-link_gray.png"
+                  alt="External link icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="project project-container">
+          <!-- Project 3 -->
+          <div class="project__img-container">
+            <img
+              src="images/lemmensmolen_landing.png"
+              alt="Afbeelding van homepagina Brasserie Lemmensmolen"
+              title="Afbeelding van homepagina Brasserie Lemmensmolen"
+            />
+          </div>
+          <div class="project__legend project__legend-container">
+            <div class="project__legend__description">
+              <div class="img-container">
+                <a href="https://lemmensmolen.com" target="_blank"
+                  ><img
+                    src="images/lemmensmolen_logo.jpg"
+                    title="Brasserie Lemmensmolen"
+                    alt="Lemmensmolen logo"
+                /></a>
+              </div>
+              <p>
+                Het klantenbestand van Brasserie Lemmensmolen in Beverlo kreeg
+                een boost na het lanceren van een elegante website met een
+                module voor online reserveren.
+              </p>
+            </div>
+            <div class="project__legend__links">
+              <a
+                class="btn btn-icon"
+                target="_blank"
+                href="https://www.lemmensmolen.com"
+                ><span>live website</span
+                ><img
+                  src="images/Icon_external-link_gray.png"
+                  alt="External link icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="project project-container">
+          <!-- Project 4 -->
+          <div class="project__img-container">
+            <img
+              src="images/travel-site-video-min.gif"
+              alt="Demo video of travel agency website"
+              title="Demo video of travel agency website"
+            />
+          </div>
+          <div class="project__legend project__legend-container">
+            <div class="project__legend__description">
+              <div class="img-container">
+                <a href="https://travel-site.jorisr.com" target="_blank"
+                  ><img
+                    src="images/travel_agency_logo.png"
+                    title="Clear View Escape"
+                    alt="Clear View Escape logo"
+                /></a>
+              </div>
+              <p>Showcase website voor reisbureau Clear View Escape</p>
+            </div>
+            <div class="project__legend__links">
+              <a
+                class="btn btn-icon"
+                target="_blank"
+                href="https://travel-site.jorisr.com"
+                ><span>live website</span
+                ><img
+                  src="images/Icon_external-link_gray.png"
+                  alt="External link icon"
+                />
+              </a>
+              <a
+                class="btn btn-icon"
+                target="_blank"
+                href="https://github.com/jorishr/travel-site"
+                ><span>technische fiche</span
+                ><img src="images/Icon_github_gray.png" alt="Github icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cta cta--accent">
+        <div class="cta__text">
+          <h3>Geïnteresseerd? Maak een afspraak</h3>
+          <p>
+            Boek meteen vrijblijvend een gesprek online om te verkennen hoe we
+            het beste kunnen samenwerken.
+          </p>
+          <div class="cta__btn">
+            <a class="btn" data-cal-link="liondigits/20min"
+              >maak een afspraak</a
+            >
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="footer__content">
+          <div class="footer__logo">
             <a href="/" title="Home">
               <img
                 src="images/header_v1_vertical_transparent-bg_white-blue.png"
@@ -54,455 +387,152 @@
               />
             </a>
           </div>
-        </div>
-        <div class="header__right">
-          <div class="header__right__lang-menu js-lang-btn">
-            <div class="header__right__lang-menu__icon">
-              <img src="images/Icon_translate_gray.png" alt="" />
-              <span class="js-lang-span">nl</span>
-            </div>
-            <ul class="header__right__lang-menu__options">
-              <li class="js-lang-option" data-lang="nl"><a>nederlands</a></li>
-              <li class="js-lang-option" data-lang="en"><a>english</a></li>
-              <li class="js-lang-option" data-lang="es"><a>español</a></li>
-              <li class="js-lang-option" data-lang="ca"><a>català</a></li>
+          <div class="footer__nav">
+            <ul>
+              <li><p>BE 0781 815 149</p></li>
+              <li><a href="">Algemene voorwaarden</a></li>
+              <li><a href="">Privacy-beleid</a></li>
             </ul>
           </div>
-          <div class="header__cta">
-            <a class="btn" data-cal-link="liondigits/20min"
-              >maak een afspraak</a
-            >
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="hero-container">
-      <div class="hero-text-container">
-        <div class="hero-text">
-          <h1>Nieuwe Titel Hier.</h1>
-          <h2>
-            Je website is <span>dé weg</span> naar
-            <span>méér klanten en inkomsten</span> &mdash; met LionDigits ga je
-            sneller en verder.
-          </h2>
-          <a class="btn" data-cal-link="liondigits/20min">maak een afspraak</a>
-        </div>
-      </div>
-      <div
-        class="background-image"
-        style="
-          background-image: url(images/Docker_Website_hero_image_1800x900_v1.webp);
-        "
-      ></div>
-    </div>
-    <div class="about-section">
-      <div class="highlight-section">
-        <div class="about-row1">
-          <div class="card card1">
-            <img src="images/service-2.svg" />
-            <p>
-              Pixel-perfecte web app ontwikkeling met aandacht voor
-              best-practices in HTML5 / CSS3/ JS / ReactJS Native en meer.
-            </p>
-          </div>
-          <div class="card card2">
-            <img src="images/service-3.svg" />
-            <p>
-              Bouwen van krachtige, op maat gemaakte Wordpress content
-              management systemen & e-commerce webwinkels.
-            </p>
-          </div>
-          <div class="card card3">
-            <img src="images/service-4.svg" />
-            <p>
-              Prestatie- en SEO-optimalisatie voor sneller laden, meer
-              conversies en optimale zoekprestaties
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="about-row2">
-        <p>
-          <em>Slimme ondernemers</em> beseffen het belang van een goed ontworpen
-          aanwezigheid op het web, hoe die presentatie ervoor zorgt dat hun
-          doelgroep wordt bereikt en dat de daaruit volgende leads worden
-          omgezet in <em>extra inkomsten</em>.
-        </p>
-        <div class="profile-img-container">
-          <div class="img-container">
-            <img
-              src="images/profielfoto_red.png"
-              title="Joris Raymaekers"
-              alt="Foto Joris Raymaekers"
-            />
-          </div>
-          <p>
-            <b>Joris Raymaekers</b> heeft een ruime ervaring in het creëren van
-            relevante en gebruiksvriendelijke web applicaties en helpt graag
-            ondernemers om hun doelen te overtreffen. Neem
-            <a href="#footer">contact</a> op of boek meteen een vrijblijvende
-            online consultatie.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="cta cta--accent">
-      <div class="cta__text">
-        <h3>Geïnteresseerd? Maak een afspraak</h3>
-        <p>
-          Boek meteen vrijblijvend een gesprek online om te verkennen hoe we het
-          beste kunnen samenwerken.
-        </p>
-        <div class="cta__btn">
-          <a class="btn" data-cal-link="liondigits/20min">maak een afspraak</a>
-        </div>
-      </div>
-    </div>
-    <div class="profile profile-container">
-      <div class="profile__icon-container">
-        <img
-          src="images/Icon_javascript_darkblue.png"
-          alt="JavaScript icon"
-          title="JavaScript"
-        />
-        <img
-          src="images/Icon_react_darkblue.png"
-          alt="ReactJs icon"
-          title="ReactJs"
-        />
-        <img
-          src="images/Icon_typescript_darkblue.png"
-          alt="TypeScript icon"
-          title="TypeScript"
-        />
-        <img
-          src="images/Icon_node-js_darkblue.png"
-          alt="NodeJs icon"
-          title="NodeJs"
-        />
-      </div>
-      <div class="profile__text-container">
-        <p>Meer weten over wie ik ben?</p>
-        <p>
-          Op zoek naar een overzicht van m'n technische competenties in
-          JavaScript, TypeScript, NodeJs, ReactJs en meer...?
-        </p>
-      </div>
-      <div class="profile__btn">
-        <a class="btn" href="profile.html">Lees meer...</a>
-      </div>
-    </div>
-    <div class="testimonials">
-      <h3>Voorbeelden van dingen die we al maakten...</h3>
-      <!-- Project 1 -->
-      <div class="project project-container">
-        <div class="project__img-container">
-          <img
-            src="images/catacamp-min.gif"
-            alt="Demo video of Catacamp website"
-            title="Demo video of Catacamp website"
-          />
-        </div>
-        <div class="project__legend project__legend-container">
-          <div class="project__legend__description">
-            <a href="https://catacamp.jorisr.com" target="_blank"
-              ><img
-                src="images/catacamp_logo.png"
-                title="Catacamp"
-                alt="Catacamp logo"
-            /></a>
-            <p>
-              Web applicatie voor het oplijsten van kampeerplaatsen in
-              Catalonië. Dit project beslaat de ganse 'web stack': een backend
-              API, een desktop web app en een mobile app voor iOS en Android.
-            </p>
-          </div>
-          <div class="project__legend__links">
-            <a
-              class="btn btn-icon"
-              target="_blank"
-              href="https://catacamp.jorisr.com"
-              ><span>live website</span
-              ><img
-                src="images/Icon_external-link_gray.png"
-                alt="External link icon"
-            /></a>
-            <a
-              class="btn btn-icon"
-              target="_blank"
-              href="https://github.com/jorishr/catacamp"
-              ><span>technische fiche</span
-              ><img src="images/Icon_github_gray.png" alt="GitHub icon"
-            /></a>
-          </div>
-        </div>
-      </div>
-      <!-- Project 2 -->
-      <div class="project project-container">
-        <div class="project__img-container">
-          <img
-            src="images/goudster-video-sm1-min.gif"
-            alt="Demo video of Goudster website"
-            title="Demo video of Goudster website"
-          />
-        </div>
-        <div class="project__legend project__legend-container">
-          <div class="project__legend__description">
-            <a href="https://goudster.be" target="_blank"
-              ><img
-                src="images/logo_goudster.gif"
-                title="Goudster"
-                alt="Goudster logo"
-            /></a>
-            <p>
-              Voor het biermerk Goudster uit Halen werd een nieuwe website
-              gebouwd met een handig overzicht van de lange geschiedenis van de
-              brouwerij en een module voor online bestellingen.
-            </p>
-          </div>
-          <div class="project__legend__links">
-            <a
-              class="btn btn-icon"
-              target="_blank"
-              href="https://www.goudster.be"
-              ><span>live website</span
-              ><img
-                src="images/Icon_external-link_gray.png"
-                alt="External link icon"
-            /></a>
-          </div>
-        </div>
-      </div>
-      <div class="project project-container">
-        <!-- Project 3 -->
-        <div class="project__img-container">
-          <img
-            src="images/lemmensmolen_landing.png"
-            alt="Afbeelding van homepagina Brasserie Lemmensmolen"
-            title="Afbeelding van homepagina Brasserie Lemmensmolen"
-          />
-        </div>
-        <div class="project__legend project__legend-container">
-          <div class="project__legend__description">
-            <a href="https://lemmensmolen.com" target="_blank"
-              ><img
-                src="images/lemmensmolen_logo.jpg"
-                title="Brasserie Lemmensmolen"
-                alt="Lemmensmolen logo"
-            /></a>
-            <p>
-              Het klantenbestand van Brasserie Lemmensmolen in Beverlo kreeg een
-              boost na het lanceren van een elegante website met een module voor
-              online reserveren.
-            </p>
-          </div>
-          <div class="project__legend__links">
-            <a
-              class="btn btn-icon"
-              target="_blank"
-              href="https://www.lemmensmolen.com"
-              ><span>live website</span
-              ><img
-                src="images/Icon_external-link_gray.png"
-                alt="External link icon"
-            /></a>
-          </div>
-        </div>
-      </div>
-      <div class="project project-container">
-        <!-- Project 4 -->
-        <div class="project__img-container">
-          <img
-            src="images/travel-site-video-min.gif"
-            alt="Demo video of travel agency website"
-            title="Demo video of travel agency website"
-          />
-        </div>
-        <div class="project__legend project__legend-container">
-          <div class="project__legend__description">
-            <a href="https://travel-site.jorisr.com" target="_blank"
-              ><img
-                src="images/travel_agency_logo.png"
-                title="Clear View Escape"
-                alt="Clear View Escape logo"
-            /></a>
-            <p>Showcase website voor reisbureau Clear View Escape</p>
-          </div>
-          <div class="project__legend__links">
-            <a
-              class="btn btn-icon"
-              target="_blank"
-              href="https://travel-site.jorisr.com"
-              ><span>live website</span
-              ><img
-                src="images/Icon_external-link_gray.png"
-                alt="External link icon"
+          <div class="footer__socials">
+            <a target="_blank" href="mailto:joris@liondigits.com">
+              <img
+                src="images/social_icon_email.png"
+                alt="Email"
+                title="Email"
+              />
+            </a>
+            <a target="_blank" href="tel:+32468578564">
+              <img
+                src="images/social_icon_tel-be.png"
+                alt="Tel.BE"
+                title="Telephone BE"
+              />
+            </a>
+            <a target="_blank" href="tel:+34665234503">
+              <img
+                src="images/social_icon_tel-es.png"
+                alt="Tel.ES"
+                title="Telephone ES"
+              />
+            </a>
+            <a href="skype:joris.raymaekers?call">
+              <img
+                src="images/social_icon_skype.png"
+                title="Skype"
+                alt="Skype"
               />
             </a>
             <a
-              class="btn btn-icon"
               target="_blank"
-              href="https://github.com/jorishr/travel-site"
-              ><span>technische fiche</span
-              ><img src="images/Icon_github_gray.png" alt="Github icon"
-            /></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="cta cta--accent">
-      <div class="cta__text">
-        <h3>Geïnteresseerd? Maak een afspraak</h3>
-        <p>
-          Boek meteen vrijblijvend een gesprek online om te verkennen hoe we het
-          beste kunnen samenwerken.
-        </p>
-        <div class="cta__btn">
-          <a class="btn" data-cal-link="liondigits/20min">maak een afspraak</a>
-        </div>
-      </div>
-    </div>
-    <footer id="footer">
-      <div class="footer__content">
-        <div class="footer__logo">
-          <a href="/" title="Home">
-            <img
-              src="images/header_v1_vertical_transparent-bg_white-blue.png"
-              alt="Logo Liondigits"
-            />
-          </a>
-        </div>
-        <div class="footer__nav">
-          <ul>
-            <li><p>BE 0781 815 149</p></li>
-            <li><a href="">Algemene voorwaarden</a></li>
-            <li><a href="">Privacy-beleid</a></li>
-          </ul>
-        </div>
-        <div class="footer__socials">
-          <a target="_blank" href="mailto:joris@liondigits.com">
-            <img src="images/social_icon_email.png" alt="Email" title="Email" />
-          </a>
-          <a target="_blank" href="tel:+32468578564">
-            <img
-              src="images/social_icon_tel-be.png"
-              alt="Tel.BE"
-              title="Telephone BE"
-            />
-          </a>
-          <a target="_blank" href="tel:+34665234503">
-            <img
-              src="images/social_icon_tel-es.png"
-              alt="Tel.ES"
-              title="Telephone ES"
-            />
-          </a>
-          <a href="skype:joris.raymaekers?call">
-            <img src="images/social_icon_skype.png" title="Skype" alt="Skype" />
-          </a>
-          <a
-            target="_blank"
-            href="http://www.linkedin.com/in/joris-raymaekers/"
-          >
-            <img
-              src="images/social_icon_li_512x512.png"
-              alt="Linked-In"
-              title="Linked-In"
-            />
-          </a>
-          <a target="_blank" href="https://www.twitter.com/liondigits/">
-            <img
-              src="images/social_icon_tw_512x512.png"
-              title="Twitter"
-              alt="Twitter"
-            />
-          </a>
-          <a target="_blank" href="http://www.github.com/jorishr">
-            <img
-              src="images/social_icon_github.png"
-              alt="Github"
-              title="Github"
-            />
-          </a>
-          <a target="_blank" href="http://www.codepen.io/jorishr">
-            <img
-              src="images/social_icon_codepen.png"
-              title="Codepen"
-              alt="Codepen"
-            />
-          </a>
-        </div>
-        <div class="pgp">
-          <div class="pgp__txt">
-            <p id="pgp-txt">PGP: 08AD 0252 59CQ 316D</p>
-            <div class="pgp__txt__btns">
-              <a class="js-pgp-btn-copy"
-                ><img
-                  src="images/Icon_content-copy_azureblue.png"
-                  title="Copy to clipboard"
-                />
-              </a>
-              <a class="modal-btn"
-                ><img
-                  src="images/Icon_question-circle_azureblue.png"
-                  title="What is this?"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="pgp__info modal">
-            <div class="modal__content-container">
-              <h2>Versleutelde communicatie</h2>
+              href="http://www.linkedin.com/in/joris-raymaekers/"
+            >
               <img
-                class="modal-close modal-btn"
-                src="images/Icon_close_white.png"
-                alt="Close Modal"
+                src="images/social_icon_li_512x512.png"
+                alt="Linked-In"
+                title="Linked-In"
               />
-              <div class="txt-container">
-                <p>
-                  Je kan mij zowel gewone standaard (e-mail)berichten sturen als
-                  versleutelde berichten. De meest gebruiksvriendelijke manier
-                  om mij <em>versleutelde</em> berichten te versturen is via de
-                  <a href="" title="" target="_blank">Signal App.</a>
-                </p>
-                <p>
-                  Gebruik je net als ik
-                  <a
-                    href="https://proton.me"
-                    title="Proton Mail"
-                    target="_blank"
-                    >ProtonMail</a
-                  >
-                  voor je e-mail? Dan hoef je niets bijzonder te doen en worden
-                  je berichten automatisch versleuteld.
-                </p>
-                <p>
-                  Gebruik je een andere e-mail dienstverlener dan kan je gebruik
-                  maken van mijn publieke sleutel om een bericht te
-                  versleutelen. De 16 digits die je ziet op de homepagina is een
-                  <em>digitale vingerafdruk</em>. De volledige publieke sleutel
-                  kan je hieronder downloaden of kopiëren via het klembord.
-                </p>
-                <p>
-                  Niet vertrouwd met PGP? Wil je meer leren over het
-                  versleutelen van berichten of bestanden? Lees hier
-                  <a href="" title="" target="_blank"> een introductie.</a>
-                  Of boek een afspraak met mij en ik help je op weg.
-                </p>
+            </a>
+            <a target="_blank" href="https://www.twitter.com/liondigits/">
+              <img
+                src="images/social_icon_tw_512x512.png"
+                title="Twitter"
+                alt="Twitter"
+              />
+            </a>
+            <a target="_blank" href="http://www.github.com/jorishr">
+              <img
+                src="images/social_icon_github.png"
+                alt="Github"
+                title="Github"
+              />
+            </a>
+            <a target="_blank" href="http://www.codepen.io/jorishr">
+              <img
+                src="images/social_icon_codepen.png"
+                title="Codepen"
+                alt="Codepen"
+              />
+            </a>
+          </div>
+          <div class="pgp">
+            <div class="pgp__txt">
+              <p id="pgp-txt">PGP: 08AD 0252 59CQ 316D</p>
+              <div class="pgp__txt__btns">
+                <a class="js-pgp-btn-copy"
+                  ><img
+                    src="images/Icon_content-copy_azureblue.png"
+                    title="Copy to clipboard"
+                  />
+                </a>
+                <a class="modal-btn"
+                  ><img
+                    src="images/Icon_question-circle_azureblue.png"
+                    title="What is this?"
+                  />
+                </a>
               </div>
-              <div class="link-container">
-                <a class="btn" href="">Download Publieke Sleutel</a>
-                <a class="btn" href="">Publieke Sleutel Kopiëren</a>
+            </div>
+            <div class="pgp__info modal">
+              <div class="modal__content-container">
+                <h3>Versleutelde communicatie</h3>
+                <img
+                  class="modal-close modal-btn"
+                  src="images/Icon_close_white.png"
+                  alt="Close Modal"
+                />
+                <div class="txt-container">
+                  <p>
+                    Je kan mij zowel gewone standaard (e-mail)berichten sturen
+                    als versleutelde berichten. De meest gebruiksvriendelijke
+                    manier om mij <em>versleutelde</em> berichten te versturen
+                    is via de
+                    <a href="" title="" target="_blank">Signal App.</a>
+                  </p>
+                  <p>
+                    Gebruik je net als ik
+                    <a
+                      href="https://proton.me"
+                      title="Proton Mail"
+                      target="_blank"
+                      >ProtonMail</a
+                    >
+                    voor je e-mail? Dan hoef je niets bijzonder te doen en
+                    worden je berichten automatisch versleuteld.
+                  </p>
+                  <p>
+                    Gebruik je een andere e-mail dienstverlener dan kan je
+                    gebruik maken van mijn publieke sleutel om een bericht te
+                    versleutelen. De 16 digits die je ziet op de homepagina is
+                    een
+                    <em>digitale vingerafdruk</em>. De volledige publieke
+                    sleutel kan je hieronder downloaden of kopiëren via het
+                    klembord.
+                  </p>
+                  <p>
+                    Niet vertrouwd met PGP? Wil je meer leren over het
+                    versleutelen van berichten of bestanden?
+                  </p>
+                  <p>
+                    Lees hier
+                    <a href="" title="" target="_blank"> een introductie.</a>
+                    Of boek een afspraak met mij en ik help je op weg.
+                  </p>
+                </div>
+                <div class="link-container">
+                  <a class="btn" href="">Download Publieke Sleutel</a>
+                  <a class="btn" href="">Publieke Sleutel Kopiëren</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer__copyright">
-        <hr />
-        <!-- Generated by JS -->
-        <p id="footer__credits"></p>
-      </div>
-    </footer>
+        <div class="footer__copyright">
+          <hr />
+          <!-- Generated by JS -->
+          <p id="footer__credits"></p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

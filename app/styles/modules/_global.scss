@@ -49,6 +49,7 @@ Values between -1 and 5. Check:
   --pd-lg: 4em;
   --pd-xl: 6em;
   --pd-2xl: 8em;
+  --pd-4xl: 16em;
 
   /* MARGINS */
   --mg-base: 2em;
@@ -92,11 +93,57 @@ img {
 p {
   line-height: 1.75;
 }
-
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
+/* MEDIA QUERY MIXINS - START*/
+@mixin mobile_md {
+  @media (min-width: 375px) {
+    @content;
+  }
 }
+@mixin mobile_lg {
+  @media (min-width: 425px) {
+    @content;
+  }
+}
+
+@mixin tablet_sm {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+@mixin tablet_md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin pc_sm {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin pc_md {
+  @media (min-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin pc_lg {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+@mixin pc_xl {
+  @media (min-width: 2560px) {
+    @content;
+  }
+}
+/* MEDIA QUERY MIXINS - END*/
+
+/* .wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+} */
 
 /* ANCHOR & BUTTON BASE STYLES - START */
 a {
@@ -150,6 +197,11 @@ a.btn-icon {
   img {
     width: 20px;
     height: 20px;
+
+    @include pc_lg {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &:hover {
@@ -159,20 +211,6 @@ a.btn-icon {
   }
 }
 /* BUTTON BASE STYLES - END */
-
-/* MEDIA QUERY MIXINS - START*/
-@mixin atMobile {
-  @media (max-width: 480px) {
-    @content;
-  }
-}
-
-@mixin atTablet {
-  @media (min-width: 481px) and (max-width: 960px) {
-    @content;
-  }
-}
-/* MEDIA QUERY MIXINS - END*/
 
 /* FEATURES */
 noscript::before {

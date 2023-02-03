@@ -6,10 +6,6 @@
   padding: 10em 2em;
   background-color: #003f8c;
 
-  @include atMobile {
-    padding: 10em 1em;
-  }
-
   .heading {
     padding-bottom: var(--pd-base);
 
@@ -38,11 +34,6 @@
     &:last-of-type {
       margin-bottom: 4em;
     }
-
-    @include atMobile {
-      padding: 0 var(--pd-base);
-      max-width: 100%;
-    }
   }
 
   a {
@@ -60,11 +51,6 @@
     flex-direction: row;
     justify-content: space-evenly;
 
-    @include atMobile {
-      flex-direction: column;
-      padding: 2em 1em;
-    }
-
     .carousel-card {
       width: 325px;
       padding: 2em;
@@ -73,16 +59,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-
-      @include atMobile {
-        width: 100%;
-        padding: 2em 1em;
-        margin-bottom: 4em;
-
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-      }
 
       h5 {
         color: #003f8c;
@@ -112,23 +88,11 @@
         &:hover {
           transform: scale(1.025);
         }
-
-        @include atMobile {
-          margin-bottom: 2em;
-
-          &:last-of-type {
-            margin-bottom: 0;
-          }
-        }
       }
 
       a img {
         width: 100%;
         margin-bottom: 3em;
-
-        @include atMobile {
-          width: 100%;
-        }
       }
     }
   }
@@ -138,10 +102,6 @@
     padding: 2em;
     margin: 10em auto 0 auto;
     text-align: center;
-
-    @include atMobile {
-      max-width: 100%;
-    }
 
     h4 {
       font-size: var(--fs-lg);

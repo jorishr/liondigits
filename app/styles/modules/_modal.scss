@@ -16,8 +16,6 @@
   z-index: 3;
   background-color: #031f30;
 
-  transition: all 5s ease-in;
-
   .modal__content-container {
     position: absolute;
     top: 0;
@@ -28,11 +26,24 @@
     background-color: rgba(249, 227, 174, 30%);
     color: #f9e3ae;
 
-    padding: var(--pd-md) var(--pd-sm);
-    text-align: center;
+    padding: var(--pd-base) var(--pd-sm);
 
     border-radius: 5px;
 
-    transform: scale(95vh, 95vw);
+    .modal-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 33px;
+      max-width: 10%;
+      padding: var(--pd-xs);
+      cursor: pointer;
+      z-index: 100;
+
+      @include pc_sm {
+        width: 66px;
+        max-width: unset;
+      }
+    }
   }
 }
