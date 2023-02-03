@@ -73,16 +73,37 @@ footer {
         align-items: center;
         margin-bottom: var(--pd-lg);
 
+        p {
+          margin-bottom: var(--pd-xs);
+        }
+
         &__btns {
           a {
             &:first-of-type {
               margin-right: var(--pd-base);
+              transition: all 2s ease-in;
+
+              &::before {
+                display: none;
+                content: "Copied!";
+                text-align: center;
+                position: relative;
+                top: -3px;
+                left: -9px;
+              }
+              &.js-copied {
+                &:first-of-type {
+                  &::before {
+                    display: inline-block;
+                  }
+                }
+              }
             }
 
             img {
               display: inline-block;
-              height: 15px;
-              width: 15px;
+              height: 18px;
+              width: 18px;
             }
           }
         }
