@@ -31,12 +31,13 @@
     &__img-container {
       order: 1;
       width: 100%;
-      padding: var(--pd-base) var(--pd-sm) 0;
 
+      padding: var(--pd-base) var(--pd-sm) 0;
       margin-bottom: var(--mg-lg);
 
       img {
         border-radius: 5px;
+        box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
       }
     }
 
@@ -56,6 +57,7 @@
             max-width: 50%;
             margin: 0 auto var(--mg-lg) auto;
             border-radius: 5px;
+            box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
           }
         }
 

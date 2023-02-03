@@ -120,6 +120,7 @@ a.btn {
 
   border-radius: 5px;
   border: 2px solid var(--accent-darkblue);
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.25);
 
   color: var(--txtClr-white);
   background-color: var(--bgClr-accent);
@@ -135,12 +136,16 @@ a.btn-icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   font-size: var(--fs-base);
+  white-space: normal;
 
   background-color: unset;
   color: var(--txtClr-base);
   border: 2px solid var(--txtClr-base);
   border-radius: 5px;
+
+  padding: var(--pd-sm);
 
   img {
     width: 20px;

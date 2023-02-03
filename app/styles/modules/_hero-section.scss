@@ -30,6 +30,7 @@
         color: var(--txtClr-white);
         font-size: var(--fs-xl);
         margin: 0 0 var(--mg-base);
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
       }
 
       h2 {
@@ -37,6 +38,7 @@
         font-size: var(--fs-base);
         margin: 0 auto var(--mg-lg);
         line-height: 1.5;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
       }
     }
   }
