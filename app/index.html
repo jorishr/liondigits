@@ -43,7 +43,7 @@
   </head>
   <body>
     <noscript></noscript>
-    <header>
+    <header class="header">
       <div class="header-container">
         <div class="header__left">
           <div class="header__logo">
@@ -56,17 +56,18 @@
           </div>
         </div>
         <div class="header__right">
-          <ul class="header__lang-menu">
-            <li>
-              <span>nl</span>
-              <ul class="lang-menu__options">
-                <li><a>nederlands</a></li>
-                <li><a>english</a></li>
-                <li><a>español</a></li>
-                <li><a>català</a></li>
-              </ul>
-            </li>
-          </ul>
+          <div class="header__right__lang-menu js-lang-btn">
+            <div class="header__right__lang-menu__icon">
+              <img src="images/Icon_translate_gray.png" alt="" />
+              <span class="js-lang-span">nl</span>
+            </div>
+            <ul class="header__right__lang-menu__options">
+              <li class="js-lang-option" data-lang="nl"><a>nederlands</a></li>
+              <li class="js-lang-option" data-lang="en"><a>english</a></li>
+              <li class="js-lang-option" data-lang="es"><a>español</a></li>
+              <li class="js-lang-option" data-lang="ca"><a>català</a></li>
+            </ul>
+          </div>
           <div class="header__cta">
             <a class="btn" data-cal-link="liondigits/20min"
               >maak een afspraak</a
