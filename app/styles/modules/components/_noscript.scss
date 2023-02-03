@@ -1,0 +1,17 @@
+noscript::before {
+  content: "Turn on your JavaScript or use a JavaScript compatible browser.";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  font-size: var(--fs-md);
+  text-align: center;
+
+  padding: var(--pd-sm) var(--pd-lg);
+
+  background-color: var(--accent-alert);
+  color: var(--bgClr-white);
+
+  z-index: 5;
+}
