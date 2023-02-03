@@ -56,6 +56,10 @@ footer {
       a {
         padding: 1.5em 1em;
 
+        &:hover {
+          transform: scale(1.015);
+        }
+
         img {
           width: 50px;
         }
