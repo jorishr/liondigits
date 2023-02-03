@@ -10,6 +10,7 @@
     transform: translateX(-50%);
     z-index: 2;
     width: 99%;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
 
     .about-row1 {
       border-radius: 5px;
@@ -70,7 +71,8 @@
         width: 45%;
         height: width;
         overflow: hidden;
-        box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.35);
+        box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
+
         img {
           width: 117%;
         }
