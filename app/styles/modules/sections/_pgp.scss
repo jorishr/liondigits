@@ -14,14 +14,19 @@
         &:first-of-type {
           margin-right: var(--pd-base);
           transition: all 2s ease-in;
+          position: relative;
 
           &::before {
             display: none;
             content: "Copied!";
-            text-align: center;
-            position: relative;
-            top: -3px;
-            left: -9px;
+            position: absolute;
+            bottom: -24px;
+            left: -27px;
+
+            @include pc_lg {
+              bottom: -39px;
+              left: -45px;
+            }
           }
           &.js-copied {
             &:first-of-type {
