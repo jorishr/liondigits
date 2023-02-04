@@ -11,7 +11,7 @@ a {
   }
 }
 
-a.btn {
+.btn {
   padding: var(--pd-sm) var(--pd-base);
 
   font-weight: 600;
@@ -25,42 +25,57 @@ a.btn {
   color: var(--txtClr-white);
   background-color: var(--bgClr-accent);
 
+  @include mobile_md {
+    padding: var(--pd-sm) var(--pd-base);
+  }
+  @include pc_lg {
+    font-size: var(--fs-xl);
+  }
+  @include pc_xl {
+    font-size: var(--fs-2xl);
+  }
+
   &:hover {
     background-color: var(--bgClr-white);
     border-color: var(--bgClr-white);
     color: var(--accent-azureblue);
   }
-}
 
-a.btn-icon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  &-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  font-size: var(--fs-base);
-  white-space: normal;
+    white-space: normal;
 
-  background-color: unset;
-  color: var(--txtClr-base);
-  border: 2px solid var(--txtClr-base);
-  border-radius: 5px;
+    background-color: unset;
+    color: var(--txtClr-base);
 
-  padding: var(--pd-sm);
+    border: 2px solid var(--txtClr-base);
+    border-radius: 5px;
 
-  img {
-    width: 20px;
-    height: 20px;
+    padding: var(--pd-sm);
 
-    @include pc_lg {
-      width: 40px;
-      height: 40px;
+    @include mobile_lg {
+      padding: var(--pd-sm) var(--pd-base);
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+
+      @include pc_lg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.025);
+      color: var(--txtClr-base);
+      border: 2px solid var(--txtClr-base);
     }
   }
-
-  &:hover {
-    transform: scale(1.025);
-    color: var(--txtClr-base);
-    border: 2px solid var(--txtClr-base);
-  }
 }
+
 /* BUTTON BASE STYLES - END */

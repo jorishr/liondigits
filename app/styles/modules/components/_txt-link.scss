@@ -1,0 +1,31 @@
+.txt-link {
+  &--lightblue {
+    color: var(--txtClr-lightblue);
+  }
+
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+    margin: 6px 6px 0;
+
+    @include tablet_sm {
+      width: 18px;
+      height: 18px;
+      margin: 8px 6px 0;
+    }
+    @include pc_lg {
+      width: 24px;
+      height: 24px;
+      margin: 12px 9px 0;
+    }
+    @include pc_lg {
+      width: 30px;
+      height: 30px;
+      margin: 12px 9px 0;
+    }
+  }
+}
