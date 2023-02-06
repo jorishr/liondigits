@@ -6,3 +6,4 @@ deploy-update.sh
 /.parcel-cache
 .parcel-cache
 pubkey.txt
+*.pdf
