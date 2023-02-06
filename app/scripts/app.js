@@ -6,7 +6,9 @@ import {
 } from "./modules/language.js";
 import { modalToggle } from "./modules/modal.js";
 import { clipboardCopy } from "./modules/clipboard.js";
-
+import { setPrivacyAnchorLink } from "./modules/anchor.js";
+import { setCollapseBtns } from "./modules/collapse.js";
+import { setAddress, setCompanyInfo, setPgpInfo } from "./modules/print.js";
 // Important: Make sure to add `data-cal-link="liondigits/20min"` attribute to the element you want to open Cal on click
 calFn(window, "https://app.cal.com/embed/embed.js", "init");
 Cal("init", { origin: "https://app.cal.com" });
@@ -21,6 +23,11 @@ modalToggle();
 clipboardCopy();
 setLangSpan();
 langMenuOptions();
+setPrivacyAnchorLink();
+setCollapseBtns();
+setAddress();
+setCompanyInfo();
+setPgpInfo();
 /*
 ############## 
 Footer credits 
