@@ -1,59 +1,95 @@
 .about {
-  &-section-container {
+  &__outer-container {
     background-color: var(--bgClr-white);
     width: 95%;
     border-radius: 5px;
 
     padding: var(--pd-base) var(--pd-sm);
-    margin: 0 auto var(--mg-2xl);
+    margin: var(--mg-base) auto;
 
     @include mobile_lg {
       padding: var(--pd-base) var(--pd-base);
     }
     @include tablet_md {
-      padding: var(--pd-md) var(--pd-md);
-    }
-
-    h2 {
-      margin-bottom: var(--mg-sm);
-      text-align: center;
+      padding: var(--pd-lg) var(--pd-lg);
     }
   }
 
-  &__img-container {
-    margin: 0 auto var(--mg-base);
-    width: 5.5em;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
+  &__inner-container {
+    @include tablet_md {
+      max-width: 50em;
+    }
 
-    img {
-      width: 116%;
+    @include pc_lg {
+      font-size: var(--fs-xl);
+    }
+    @include pc_xl {
+      font-size: var(--fs-2xl);
     }
   }
 
-  &__txt {
+  &__title {
+    margin-bottom: var(--mg-base);
+    text-align: center;
+
+    @include tablet_md {
+      text-align: left;
+      margin-bottom: var(--mg-base);
+    }
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: var(--mg-base);
+
+    @include tablet_md {
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-bottom: var(--mg-base);
+    }
+
+    &__img-container {
+      width: 5.5em;
+      overflow: hidden;
+      border-radius: 50%;
+      box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
+      margin: 0 auto var(--mg-base);
+
+      @include tablet_md {
+        margin: 0 var(--mg-base) 0 0;
+      }
+
+      img {
+        width: 116%;
+      }
+    }
+
+    p {
+      @include tablet_md {
+        align-self: center;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__txt-box {
     margin-bottom: var(--mg-sm);
 
-    &__name {
-      font-weight: bold;
-    }
     p {
       margin-bottom: var(--mg-xs);
     }
-    p:first-of-type {
-      text-align: center;
-      margin-bottom: var(--mg-sm);
-    }
-    p:nth-of-type(3) {
-      margin-bottom: var(--mg-sm);
-    }
-    span {
-      white-space: nowrap;
-    }
+
     .txt-link {
-      color: var(--txtClr-accent);
+      color: var(--txtClr-base);
       text-decoration: underline;
+
+      span {
+        white-space: nowrap;
+      }
     }
   }
 
@@ -68,7 +104,7 @@
       border-radius: 5px;
       font-size: var(--fs-sm);
 
-      padding: var(--pd-sm) var(--pd-sm);
+      padding: var(--pd-sm);
       margin-bottom: var(--mg-base);
 
       @include mobile_lg {
@@ -77,56 +113,77 @@
         align-items: flex-start;
         text-align: left;
         padding: var(--pd-sm) var(--pd-sm);
+        margin: 0 var(--mg-base) var(--mg-base) var(--mg-sm);
       }
 
+      @include pc_lg {
+        font-size: var(--fs-md);
+      }
+      @include pc_xl {
+        font-size: var(--fs-xl);
+      }
+    }
+    &__img-container {
       img {
         width: 8.1em;
         border-radius: 5px;
       }
     }
+    &__desc {
+      &-container {
+        padding: var(--pd-sm) var(--pd-xs);
+        text-align: center;
 
-    &-desc-container {
-      padding: var(--pd-sm) var(--pd-xs);
-      text-align: center;
-
-      @include mobile_lg {
-        padding: 0 var(--pd-sm);
-        text-align: left;
-        p:first-of-type {
-          margin-bottom: var(--mg-xs);
+        @include mobile_lg {
+          padding: 0 var(--pd-sm);
           text-align: left;
+          p:first-of-type {
+            margin-bottom: var(--mg-xs);
+            text-align: left;
+          }
         }
       }
-    }
-
-    &__link {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      font-size: var(--fs-xs);
-
-      @include mobile_lg {
-        text-align: left;
-        flex-direction: row;
-        align-items: flex-start;
+      &__txt {
+        margin-bottom: var(--mg-sm);
       }
 
-      span {
-        white-space: unset;
+      &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        font-size: var(--fs-xs);
+        color: var(--txtClr-base);
 
         @include mobile_lg {
-          align-self: center;
+          text-align: left;
+          flex-direction: row;
+          align-items: flex-start;
         }
-      }
 
-      img {
-        width: 2.4em;
-        margin: 0 0 var(--mg-sm);
+        @include pc_lg {
+          font-size: var(--fs-base);
+        }
+        @include pc_xl {
+          font-size: var(--fs-md);
+        }
 
-        @include mobile_lg {
-          margin: 0 var(--mg-sm) 0 0;
-          align-self: center;
+        span {
+          white-space: unset;
+
+          @include mobile_lg {
+            align-self: center;
+          }
+        }
+
+        img {
+          width: 2.4em;
+          margin: 0 0 var(--mg-sm);
+
+          @include mobile_lg {
+            margin: 0 var(--mg-sm) 0 0;
+            align-self: center;
+          }
         }
       }
     }
@@ -155,7 +212,6 @@
 }
 
 .skill-section {
-  display: none;
   overflow: hidden;
   /* Hides the overflow of the carousel-container below */
   color: var(--bgClr-white);
