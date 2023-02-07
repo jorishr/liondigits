@@ -265,42 +265,64 @@
         <div class="footer__nav">
           <ul>
             <li><p class="company-num"></p></li>
-            <li><a href="">Algemene voorwaarden</a></li>
+            <li><a href="conditions.html">Algemene voorwaarden</a></li>
             <li><a href="privacy.html">Privacy-beleid</a></li>
           </ul>
         </div>
         <div class="footer__socials">
-          <a target="_blank" href="mailto:joris@liondigits.com">
+          <a
+            class="js-social-link"
+            data-link="email_jr"
+            target="_blank"
+            href="mailto:"
+          >
             <img src="images/social_icon_email.png" alt="Email" title="Email" />
           </a>
-          <a target="_blank" href="tel:+32468578564">
+          <a
+            class="js-social-link"
+            data-link="tel_be"
+            target="_blank"
+            href="tel:"
+          >
             <img
               src="images/social_icon_tel-be.png"
               alt="Tel.BE"
               title="Telephone BE"
             />
           </a>
-          <a target="_blank" href="tel:+34665234503">
+          <a
+            class="js-social-link"
+            data-link="tel_es"
+            target="_blank"
+            href="tel:"
+          >
             <img
               src="images/social_icon_tel-es.png"
               alt="Tel.ES"
               title="Telephone ES"
             />
           </a>
-          <a target="_blank" href="https://signal.me/#p/+32468578564">
+          <a
+            class="js-social-link"
+            data-link="signal"
+            target="_blank"
+            href="https://signal.org"
+          >
             <img
               src="images/social_icon_signal.png"
               alt="Signal Messenger App"
               title="Signal Messenger App"
             />
           </a>
-          <a href="skype:joris.raymaekers?call">
+          <a class="js-social-link" data-link="skype" href="skype:">
             <img src="images/social_icon_skype.png" title="Skype" alt="Skype" />
           </a>
           <a
             style="display: none"
+            class="js-social-link"
+            data-link="linkedin"
             target="_blank"
-            href="http://www.linkedin.com/in/joris-raymaekers/"
+            href="http://www.linkedin.com/"
           >
             <img
               src="images/social_icon_li_512x512.png"
@@ -310,8 +332,10 @@
           </a>
           <a
             style="display: none"
+            class="js-social-link"
+            data-link="twitter"
             target="_blank"
-            href="https://www.twitter.com/liondigits/"
+            href="https://www.twitter.com/"
           >
             <img
               src="images/social_icon_tw_512x512.png"
@@ -319,14 +343,24 @@
               alt="Twitter"
             />
           </a>
-          <a target="_blank" href="http://www.github.com/jorishr">
+          <a
+            class="js-social-link"
+            data-link="github"
+            target="_blank"
+            href="http://www.github.com/"
+          >
             <img
               src="images/social_icon_github.png"
               alt="Github"
               title="Github"
             />
           </a>
-          <a target="_blank" href="http://www.codepen.io/jorishr">
+          <a
+            class="js-social-link"
+            data-link="codepen"
+            target="_blank"
+            href="http://www.codepen.io"
+          >
             <img
               src="images/social_icon_codepen.png"
               title="Codepen"
@@ -336,7 +370,7 @@
         </div>
         <div class="pgp">
           <div class="pgp__txt">
-            <p id="pgp-txt"></p>
+            <p id="pgp-txt">PGP: 08AD 0252 59CQ 316D</p>
             <div class="pgp__txt__btns">
               <a class="js-btn-copy js-data-long_id"
                 ><img
@@ -366,8 +400,9 @@
                   versleutelde berichten. De meest gebruiksvriendelijke manier
                   om mij <em>versleutelde</em> berichten te versturen is via de
                   <a
-                    class="txt-link txt-link--lightblue"
-                    href="https://signal.me/#p/+32468578564"
+                    class="txt-link txt-link--lightblue js-social-link"
+                    data-link="signal"
+                    href="https://signal.org"
                     title="Signal Messenger App"
                     target="_blank"
                     ><span class="txt-link__txt">Signal Messenger App</span>
@@ -388,7 +423,7 @@
                     ><img
                       class="txt-link__icon"
                       src="images/Icon_external-link_gray.png"
-                      alt="Proton Mail Logo" /></a
+                      alt="External link icon" /></a
                   >voor je e-mail? Dan hoef je niets bijzonder te doen en worden
                   je berichten automatisch versleuteld.
                 </p>
