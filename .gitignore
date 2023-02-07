@@ -7,3 +7,4 @@ deploy-update.sh
 .parcel-cache
 pubkey.txt
 *.pdf
+*-workspace
