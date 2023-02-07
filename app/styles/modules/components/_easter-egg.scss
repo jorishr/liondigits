@@ -1,0 +1,13 @@
+.easter-egg {
+  display: none;
+
+  &--visible {
+    display: block;
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    z-index: 5;
+  }
+}

@@ -38,7 +38,7 @@
     <meta name="theme-color" content="#ffffff" />
     <title>Lion Digits, web development</title>
     <!-- Scripts and css -->
-    <script defer type="text/javascript" src="scripts/app.js"></script>
+    <script defer type="module" src="scripts/app.js"></script>
     <link rel="stylesheet" href="styles/main.scss" />
   </head>
   <body>
@@ -59,7 +59,7 @@
           <div class="header__right">
             <div class="header__right__lang-menu js-lang-btn">
               <div class="header__right__lang-menu__icon">
-                <img src="images/Icon_translate_gray.png" alt="" />
+                <img src="images/Icon_translate_lightblue.png" alt="" />
                 <span class="js-lang-span">nl</span>
               </div>
               <ul class="header__right__lang-menu__options">
@@ -389,9 +389,9 @@
           </div>
           <div class="footer__nav">
             <ul>
-              <li><p>BE 0781 815 149</p></li>
-              <li><a href="">Algemene voorwaarden</a></li>
-              <li><a href="">Privacy-beleid</a></li>
+              <li><p class="company-num"></p></li>
+              <li><a href="conditions.html">Algemene voorwaarden</a></li>
+              <li><a href="privacy.html">Privacy-beleid</a></li>
             </ul>
           </div>
           <div class="footer__socials">
@@ -416,6 +416,13 @@
                 title="Telephone ES"
               />
             </a>
+            <a target="_blank" href="https://signal.me/#p/+32468578564">
+              <img
+                src="images/social_icon_signal.png"
+                alt="Signal Messenger App"
+                title="Signal Messenger App"
+              />
+            </a>
             <a href="skype:joris.raymaekers?call">
               <img
                 src="images/social_icon_skype.png"
@@ -424,6 +431,7 @@
               />
             </a>
             <a
+              style="display: none"
               target="_blank"
               href="http://www.linkedin.com/in/joris-raymaekers/"
             >
@@ -433,7 +441,11 @@
                 title="Linked-In"
               />
             </a>
-            <a target="_blank" href="https://www.twitter.com/liondigits/">
+            <a
+              style="display: none"
+              target="_blank"
+              href="https://www.twitter.com/liondigits/"
+            >
               <img
                 src="images/social_icon_tw_512x512.png"
                 title="Twitter"
@@ -459,7 +471,7 @@
             <div class="pgp__txt">
               <p id="pgp-txt">PGP: 08AD 0252 59CQ 316D</p>
               <div class="pgp__txt__btns">
-                <a class="js-pgp-btn-copy"
+                <a class="js-btn-copy js-data-long_id"
                   ><img
                     src="images/Icon_content-copy_azureblue.png"
                     title="Copy to clipboard"
@@ -487,17 +499,31 @@
                     als versleutelde berichten. De meest gebruiksvriendelijke
                     manier om mij <em>versleutelde</em> berichten te versturen
                     is via de
-                    <a href="" title="" target="_blank">Signal App.</a>
+                    <a
+                      class="txt-link txt-link--lightblue"
+                      href="https://signal.me/#p/+32468578564"
+                      title="Signal Messenger App"
+                      target="_blank"
+                      ><span class="txt-link__txt">Signal Messenger App</span>
+                      <img
+                        class="txt-link__icon"
+                        src="images/social_icon_signal-lightblue.png"
+                        alt="Signal Messenger App Logo" /></a
+                    >.
                   </p>
                   <p>
                     Gebruik je net als ik
                     <a
+                      class="txt-link txt-link--lightblue"
                       href="https://proton.me"
                       title="Proton Mail"
                       target="_blank"
-                      >ProtonMail</a
-                    >
-                    voor je e-mail? Dan hoef je niets bijzonder te doen en
+                      ><span class="txt-link__txt">ProtonMail</span
+                      ><img
+                        class="txt-link__icon"
+                        src="images/Icon_external-link_gray.png"
+                        alt="External link icon" /></a
+                    >voor je e-mail? Dan hoef je niets bijzonder te doen en
                     worden je berichten automatisch versleuteld.
                   </p>
                   <p>
@@ -515,13 +541,35 @@
                   </p>
                   <p>
                     Lees hier
-                    <a href="" title="" target="_blank"> een introductie.</a>
+                    <a
+                      class="txt-link txt-link--lightblue"
+                      href="/"
+                      title="PGP introduction article"
+                      target="_blank"
+                    >
+                      <span class="txt-link__txt">een introductie</span
+                      ><img
+                        class="txt-link__icon"
+                        src="images/Icon_external-link_gray.png"
+                        alt="External link icon"
+                      />.</a
+                    >
                     Of boek een afspraak met mij en ik help je op weg.
                   </p>
                 </div>
                 <div class="link-container">
-                  <a class="btn" href="">Download Publieke Sleutel</a>
-                  <a class="btn" href="">Publieke Sleutel Kopiëren</a>
+                  <a class="btn btn-icon" href="pubkey.txt" download
+                    >Download Publieke Sleutel
+                    <img
+                      src="images/Icon_download-gray.png"
+                      alt="Public key icon"
+                  /></a>
+                  <a class="btn btn-icon js-btn-copy js-data-pubkey"
+                    >Publieke Sleutel Kopiëren
+                    <img
+                      src="images/Icon_content-copy-gray.png"
+                      alt="Public key icon"
+                  /></a>
                 </div>
               </div>
             </div>

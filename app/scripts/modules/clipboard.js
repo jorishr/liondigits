@@ -4,25 +4,38 @@ Copy PGP key to clipboard
 #########################  
 */
 export function clipboardCopy() {
-  const copyBtn = document.getElementsByClassName("js-pgp-btn-copy")[0];
-  if (copyBtn) {
-    copyBtn.addEventListener("click", function () {
-      const str = document.getElementById("pgp-txt").textContent;
-      const textArea = document.createElement("textarea");
+  const copyBtns = document.getElementsByClassName("js-btn-copy");
+  if (copyBtns) {
+    const btnsArr = Array.from(copyBtns);
+    btnsArr.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        let str = "";
+        if (btn.classList.contains("js-data-long_id")) {
+          str = document.getElementById("pgp-txt").textContent.slice(5);
+        } else {
+          str = getPubkey();
+        }
 
-      textArea.style.position = "absolute";
-      textArea.style.top = "-9999px";
-      textArea.value = str.slice(5);
-      document.body.appendChild(textArea);
+        const textArea = document.createElement("textarea");
 
-      textArea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textArea);
+        textArea.style.position = "absolute";
+        textArea.style.top = "-9999px";
+        textArea.value = str;
+        document.body.appendChild(textArea);
 
-      copyBtn.classList.add("js-copied");
-      setTimeout(function () {
-        copyBtn.classList.remove("js-copied");
-      }, 2000);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+
+        btn.classList.add("js-copied");
+        setTimeout(function () {
+          btn.classList.remove("js-copied");
+        }, 2500);
+      });
     });
   }
+}
+
+function getPubkey() {
+  return "Here comes the public key";
 }

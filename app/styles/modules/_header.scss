@@ -6,6 +6,11 @@
   margin: 0 auto;
   padding-top: var(--pd-sm);
 
+  &--privacy-page {
+    position: static;
+    margin-bottom: var(--mg-base);
+  }
+
   &-container {
     display: flex;
     justify-content: space-between;
@@ -49,7 +54,7 @@
           }
         }
         span {
-          color: var(--txtClr-base);
+          color: var(--txtClr-lightblue);
           cursor: pointer;
         }
       }

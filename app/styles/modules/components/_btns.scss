@@ -1,0 +1,104 @@
+/* ANCHOR & BUTTON BASE STYLES - START */
+a {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn {
+  padding: var(--pd-sm) var(--pd-base);
+
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+
+  border-radius: 5px;
+  border: 2px solid var(--accent-darkblue);
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.25);
+
+  color: var(--txtClr-white);
+  background-color: var(--bgClr-accent);
+
+  @include mobile_md {
+    padding: var(--pd-sm) var(--pd-base);
+  }
+  @include pc_lg {
+    font-size: var(--fs-xl);
+  }
+  @include pc_xl {
+    font-size: var(--fs-2xl);
+  }
+
+  &:hover {
+    background-color: var(--bgClr-white);
+    border-color: var(--bgClr-white);
+    color: var(--accent-azureblue);
+  }
+
+  &-icon {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    white-space: normal;
+
+    background-color: unset;
+    color: var(--txtClr-base);
+
+    border: 2px solid var(--txtClr-base);
+    border-radius: 5px;
+
+    padding: var(--pd-sm);
+
+    @include mobile_lg {
+      padding: var(--pd-sm) var(--pd-base);
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+
+      @include pc_lg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.025);
+      color: var(--txtClr-base);
+      border: 2px solid var(--txtClr-base);
+    }
+
+    &::after {
+      display: none;
+      content: "Copied!";
+      position: absolute;
+      top: -21px;
+      right: 3px;
+      background-color: var(--accent-azureblue);
+      color: var(--txtClr-white);
+      border-radius: 5px;
+      padding: var(--pd-xs);
+    }
+    &.js-copied {
+      &::after {
+        display: inline-block;
+      }
+    }
+
+    &--dwnld-conditions {
+      max-width: 30em;
+      margin-bottom: var(--mg-base);
+    }
+  }
+}
+
+/* BUTTON BASE STYLES - END */

@@ -125,18 +125,9 @@
         a.btn {
           width: 100%;
 
-          @include mobile_md {
-            padding: var(--pd-sm) var(--pd-base);
-          }
-          @include pc_lg {
-            font-size: var(--fs-xl);
-          }
-          @include pc_xl {
-            font-size: var(--fs-2xl);
-          }
-
           &:first-of-type {
             margin-bottom: var(--mg-sm);
+
             @include pc_sm {
               margin-bottom: var(--mg-base);
             }
