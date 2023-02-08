@@ -13,6 +13,9 @@ const contactInfo = {
   codepen: "https://codepen.io/jorishr",
   twitter: "https://twitter.com/liondigits",
   linkedin: "https://www.linkedin.com/company/lion-digits",
+  url: "https://liondigits.com",
+  onion:
+    "http://liondig7n77kkvnwmg4nyah3as53qi75mgbs3fiua76zmxo7krakdhid.onion/",
 };
 
 export function setAnchorLinks() {
