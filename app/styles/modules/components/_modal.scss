@@ -10,8 +10,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  height: 95vh;
-  width: 95vw;
+  height: 95%;
+  width: 95%;
 
   z-index: 3;
   background-color: #031f30;
@@ -33,16 +33,13 @@
     .modal-close {
       position: absolute;
       top: 0;
-      right: 0;
-      width: 33px;
-      max-width: 10%;
+      left: 0;
+      width: 2em;
       padding: var(--pd-xs);
       cursor: pointer;
-      z-index: 100;
-
-      @include pc_sm {
-        width: 66px;
-        max-width: unset;
+      z-index: 5;
+      @include pc_md {
+        width: 3em;
       }
     }
   }
