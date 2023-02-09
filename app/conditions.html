@@ -82,16 +82,18 @@
         <p class="txt__version">
           Versie 1.0, <em>Laatst aangepast op 01-03-2022</em>
         </p>
-        <p style="margin-bottom: 1em">
-          Download hier de algemene voorwaarden van Lion Digits:
-        </p>
-        <a
-          class="btn btn-icon btn-icon--dwnld-conditions"
-          href="algemene_voorwaarden_lion_digits_v1.0.pdf"
-          download
-          >Download Algemene Voorwaarden
-          <img src="images/Icon_download-gray.png" alt="Download icon"
-        /></a>
+        <div class="main__download-box">
+          <p style="margin-bottom: 1em">
+            Download hier de algemene voorwaarden van Lion Digits:
+          </p>
+          <a
+            class="btn btn-icon btn--outline-gray btn-icon--dwnld-conditions"
+            href="algemene_voorwaarden_lion_digits_v1.0.pdf"
+            download
+            >Download Algemene Voorwaarden
+            <img src="images/Icon_download-gray.png" alt="Download icon"
+          /></a>
+        </div>
         <div class="txt__intro">
           <p>
             Op deze pagina leest u over de algemene voorwaarden van Lion Digits.
@@ -388,12 +390,12 @@
           </div>
           <div class="pgp__info modal">
             <div class="modal__content-container">
-              <h3>Versleutelde communicatie</h3>
               <img
                 class="modal-close modal-btn"
                 src="images/Icon_close_white.png"
                 alt="Close Modal"
               />
+              <h3>Versleutelde communicatie</h3>
               <div class="txt-container">
                 <p>
                   Je kan mij zowel gewone standaard (e-mail)berichten sturen als
@@ -457,13 +459,17 @@
                 </p>
               </div>
               <div class="link-container">
-                <a class="btn btn-icon" href="pubkey.txt" download
+                <a
+                  class="btn btn--lightblue btn-icon"
+                  href="pubkey.txt"
+                  download
                   >Download Publieke Sleutel
                   <img
                     src="images/Icon_download-gray.png"
                     alt="Public key icon"
                 /></a>
-                <a class="btn btn-icon js-btn-copy js-data-pubkey"
+                <a
+                  class="btn btn--lightblue btn-icon btn-copy js-btn-copy js-data-pubkey"
                   >Publieke Sleutel Kopiëren
                   <img
                     src="images/Icon_content-copy-gray.png"

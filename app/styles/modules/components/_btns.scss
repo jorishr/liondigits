@@ -41,6 +41,23 @@ a {
     color: var(--accent-azureblue);
   }
 
+  &--outline-gray {
+    background-color: transparent;
+    border: 2px solid var(--txtClr-base);
+    color: var(--txtClr-base);
+
+    &:hover {
+      transform: scale(1.025);
+      border-color: var(--txtClr-base);
+      color: var(--txtClr-base);
+    }
+  }
+
+  &--lightblue {
+    background-color: var(--bgClr-lightblue);
+    color: var(--txtClr-base);
+  }
+
   &-icon {
     position: relative;
     display: flex;
@@ -48,9 +65,6 @@ a {
     align-items: center;
 
     white-space: normal;
-
-    background-color: unset;
-    color: var(--txtClr-base);
 
     border: 2px solid var(--txtClr-base);
     border-radius: 5px;
@@ -70,13 +84,9 @@ a {
         height: 40px;
       }
     }
+  }
 
-    &:hover {
-      transform: scale(1.025);
-      color: var(--txtClr-base);
-      border: 2px solid var(--txtClr-base);
-    }
-
+  &-copy {
     &::after {
       display: none;
       content: "Copied!";
@@ -88,15 +98,11 @@ a {
       border-radius: 5px;
       padding: var(--pd-xs);
     }
+
     &.js-copied {
       &::after {
         display: inline-block;
       }
-    }
-
-    &--dwnld-conditions {
-      max-width: 30em;
-      margin-bottom: var(--mg-base);
     }
   }
 }

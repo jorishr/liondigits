@@ -26,6 +26,11 @@
       font-size: var(--fs-2xl);
     }
   }
+
+  &__download-box {
+    max-width: 30em;
+    margin-bottom: var(--mg-base);
+  }
 }
 
 .txt {

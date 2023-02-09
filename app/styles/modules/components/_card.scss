@@ -37,11 +37,4 @@
   &__img-link {
     margin-bottom: var(--mg-base);
   }
-  &__btn {
-    &--outline {
-      background-color: unset;
-      color: var(--txtClr-base);
-      border: 2px solid var(--txtClr-base);
-    }
-  }
 }
