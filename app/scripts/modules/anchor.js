@@ -15,7 +15,7 @@ const contactInfo = {
   linkedin: "https://www.linkedin.com/company/lion-digits",
   url: "https://liondigits.com",
   onion:
-    "http://liondig7n77kkvnwmg4nyah3as53qi75mgbs3fiua76zmxo7krakdhid.onion/",
+    "http://liondig7n77kkvnwmg4nyah3as53qi75mgbs3fiua76zmxo7krakdhid.onion",
 };
 
 export function setAnchorLinks() {
@@ -46,6 +46,10 @@ function getLinkData(link) {
       return `${contactInfo.github}`;
     case "codepen":
       return `${contactInfo.codepen}`;
+    case "url":
+      return `${contactInfo.url}`;
+    case "onion":
+      return `${contactInfo.onion}`;
   }
 }
 
@@ -82,5 +86,14 @@ export function setPgpInfo() {
   const el = document.getElementById("pgp-txt");
   if (el) {
     el.textContent = `PGP: ${contactInfo.pgp}`;
+  }
+}
+
+export function setOnionAddress() {
+  const links = document.querySelectorAll(".js-onion-link");
+  if (links) {
+    links.forEach((link) => {
+      link.textContent = contactInfo.onion.slice(7);
+    });
   }
 }

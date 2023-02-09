@@ -10,6 +10,7 @@ import {
   setPrivacyAnchorLink,
   setAnchorLinks,
   setAddress,
+  setOnionAddress,
   setCompanyInfo,
   setPgpInfo,
 } from "./modules/anchor.js";
@@ -31,6 +32,7 @@ langMenuOptions();
 setPrivacyAnchorLink();
 setCollapseBtns();
 setAddress();
+setOnionAddress();
 setCompanyInfo();
 setPgpInfo();
 setAnchorLinks();
