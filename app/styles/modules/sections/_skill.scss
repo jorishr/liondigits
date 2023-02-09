@@ -40,6 +40,9 @@
       //text-align: left;
       margin-bottom: var(--mg-base);
     }
+    @include pc_lg {
+      font-size: var(--fs-3xl);
+    }
   }
 
   &__heading {
@@ -139,19 +142,23 @@
 
   &__heading {
     margin-bottom: var(--mg-lg);
-    @include pc_lg {
-      font-size: var(--fs-xl);
-    }
 
     @include tablet_md {
       max-width: 50em;
       margin: 0 auto var(--mg-lg);
+    }
+    @include pc_lg {
+      font-size: var(--fs-xl);
     }
 
     &__title {
       font-size: var(--fs-2xl);
       text-align: center;
       margin-bottom: var(--mg-sm);
+
+      @include pc_lg {
+        font-size: var(--fs-3xl);
+      }
     }
 
     &__icons {
@@ -177,7 +184,7 @@
       margin-bottom: var(--mg-base);
 
       @include pc_lg {
-        font-size: var(--fs-xl);
+        font-size: var(--fs-2xl);
       }
     }
   }
