@@ -1,8 +1,8 @@
 import { calFn } from "./modules/cal.js";
 import {
   langMenuToggle,
-  setLangSpan,
   langMenuOptions,
+  setTxtContent,
 } from "./modules/language.js";
 import { modalToggle } from "./modules/modal.js";
 import { clipboardCopy } from "./modules/clipboard.js";
@@ -16,18 +16,21 @@ import {
 } from "./modules/anchor.js";
 import { setCollapseBtns } from "./modules/collapse.js";
 // Important: Make sure to add `data-cal-link="liondigits/20min"` attribute to the element you want to open Cal on click
-calFn(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", { origin: "https://app.cal.com" });
-Cal("ui", {
-  theme: "dark",
-  styles: { branding: { brandColor: "#003F8C" } },
-  hideEventTypeDetails: false,
-});
+try {
+  calFn(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", { origin: "https://app.cal.com" });
+  Cal("ui", {
+    theme: "dark",
+    styles: { branding: { brandColor: "#003F8C" } },
+    hideEventTypeDetails: false,
+  });
+} catch (e) {
+  console.log("Calendar unable to loaded");
+}
 
 langMenuToggle();
 modalToggle();
 clipboardCopy();
-setLangSpan();
 langMenuOptions();
 setPrivacyAnchorLink();
 setCollapseBtns();
@@ -36,6 +39,7 @@ setOnionAddress();
 setCompanyInfo();
 setPgpInfo();
 setAnchorLinks();
+setTxtContent();
 /*
 ############## 
 Footer credits 

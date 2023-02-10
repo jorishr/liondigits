@@ -1,3 +1,6 @@
+import { data_lang_nl, data_lang_en } from "./data_lang";
+import { getCookie, setCookie, formatLangStr } from "./helper";
+
 /*
 ############# 
 Language menu 
@@ -7,45 +10,22 @@ export function langMenuToggle() {
   const langBtn = document.getElementsByClassName("js-lang-btn")[0];
   if (langBtn) {
     langBtn.addEventListener("click", function () {
-      //toggle class menu--active
       const langMenu = document.getElementsByClassName(
         "header__right__lang-menu__options"
       )[0];
       langMenu.classList.toggle("header__right__lang-menu__options--active");
+      setTimeout(() => {
+        if (
+          langMenu.classList.contains(
+            "header__right__lang-menu__options--active"
+          )
+        ) {
+          langMenu.classList.remove(
+            "header__right__lang-menu__options--active"
+          );
+        }
+      }, 5000);
     });
-  }
-}
-//get browser language
-//set span text to browser language
-
-//arr has multiple vals
-function checkLangPref() {
-  const langPrefArr = navigator.languages;
-  const langOptions = ["nl", "en", "es", "ca"];
-  if (langPrefArr.length < 1) {
-  } else if (langPrefArr.length === 1) {
-    const lang = langPrefArr[0].slice(0, 2);
-    if (langOptions.includes(lang)) {
-      return lang;
-    } else return "";
-  } else {
-    for (let i = 0; i < langPrefArr.length; i++) {
-      const lang = langPrefArr[i].slice(0, 2);
-      if (langOptions.includes(lang)) {
-        return lang;
-      }
-    }
-    return "";
-  }
-}
-
-export function setLangSpan(val = "") {
-  const langSpan = document.getElementsByClassName("js-lang-span")[0];
-  if (val === "") {
-    const userPref = checkLangPref();
-    langSpan.textContent = userPref;
-  } else {
-    langSpan.textContent = val;
   }
 }
 
@@ -55,7 +35,63 @@ export function langMenuOptions() {
   );
   langOptions.forEach((option) => {
     option.addEventListener("click", function () {
-      setLangSpan(option.dataset.lang);
+      setCookie("language", option.dataset.lang);
+      setTxtContent(option.dataset.lang);
     });
   });
+}
+
+/*
+############################# 
+Get and set document language  
+#############################  
+*/
+export function setTxtContent(langPref) {
+  const txt_nl = data_lang_nl;
+  const txt_en = data_lang_en;
+
+  let setLang = langPref;
+  if (!setLang) {
+    setLang = getLangPref();
+  }
+
+  const txtElems = document.querySelectorAll(".txt-id");
+  txtElems.forEach((elem) => {
+    elem.textContent = eval("txt_" + [setLang])[elem.dataset.txt_id];
+  });
+  document.documentElement.lang = eval("txt_" + [setLang])["document_lang"];
+  document.title = eval("txt_" + [setLang])["document_title"];
+  document
+    .querySelector('meta[name="description"]')
+    .setAttribute("content", eval("txt_" + [setLang])["document_desc"]);
+}
+
+function getLangPref() {
+  const langCookie = getCookie("language");
+  if (langCookie) {
+    return langCookie;
+  }
+  if (!langCookie) {
+    const browserLang = getBrowserLangPref();
+    setCookie("language", browserLang);
+    return browserLang;
+  }
+  const langDefault = "nl";
+  return langDefault;
+}
+
+function getBrowserLangPref() {
+  const browserLangs = navigator.languages;
+  const langSupportedOptions = ["nl", "en", "es", "ca"];
+  const langDefault = "nl";
+  if (browserLangs.length < 1) {
+    return langDefault;
+  } else {
+    for (let i = 0; i < browserLangs.length; i++) {
+      const lang = formatLangStr(browserLangs[i]);
+      if (langSupportedOptions.includes(lang)) {
+        return lang;
+      } else return langDefault;
+    }
+  }
 }
