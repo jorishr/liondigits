@@ -18,14 +18,13 @@
 
           &::before {
             display: none;
-            content: "Copied!";
+            content: "Gekopieerd";
             position: absolute;
-            bottom: -24px;
-            left: -27px;
+            bottom: -1.5em;
+            left: -1em;
 
             @include pc_lg {
-              bottom: -39px;
-              left: -45px;
+              bottom: -2em;
             }
           }
           &.js-copied {
