@@ -36,7 +36,7 @@ function getLinkData(link) {
 }
 
 export function setPrivacyAnchorLink() {
-  const anchor = document.getElementsByClassName("anchor-link__privacy")[0];
+  const anchor = document.getElementsByClassName("js-anchor-link__privacy")[0];
   if (anchor) {
     const messageSubject = encodeURI("Vraag over privacy");
     const messageBody = encodeURI(
