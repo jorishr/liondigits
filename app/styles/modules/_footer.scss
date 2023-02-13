@@ -47,6 +47,16 @@
             text-decoration: underline;
           }
         }
+
+        &:first-of-type {
+          a {
+            color: var(--accent-azureblue);
+            &:hover {
+              text-decoration: none;
+              cursor: default;
+            }
+          }
+        }
       }
     }
   }
