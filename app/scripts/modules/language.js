@@ -61,6 +61,7 @@ export function setTxtContent(langPref) {
   });
   setPseudoElemTxt(langSrc);
   setTitleAttributeTxt(langSrc);
+  setAltAttributeTxt(langSrc);
   setDocumentProperties(langSrc);
 }
 
@@ -80,10 +81,16 @@ function setPseudoElemTxt(langObj) {
 }
 
 function setTitleAttributeTxt(langObj) {
-  //select anchors and images with title attribute
   const elems = document.querySelectorAll("a[title], img[title]");
   elems.forEach((elem) => {
-    elem.setAttribute("title", langObj[elem.dataset.txt_id]);
+    elem.setAttribute("title", langObj[elem.dataset.txt_id__title]);
+  });
+}
+
+function setAltAttributeTxt(langObj) {
+  const elems = document.querySelectorAll("a[alt], img[alt]");
+  elems.forEach((elem) => {
+    elem.setAttribute("alt", langObj[elem.dataset.txt_id__alt]);
   });
 }
 
