@@ -59,12 +59,17 @@ export function setTxtContent(langPref) {
   txtElems.forEach((elem) => {
     elem.textContent = langSrc[elem.dataset.txt_id];
   });
-  document.documentElement.lang = langSrc["document_lang"];
-  document.title = langSrc["document_title"];
+  setPseudoElemTxt(langSrc);
+  setTitleAttributeTxt(langSrc);
+  setDocumentProperties(langSrc);
+}
+
+function setDocumentProperties(langObj) {
+  document.documentElement.lang = langObj["document_lang"];
+  document.title = langObj["document_title"];
   document
     .querySelector('meta[name="description"]')
-    .setAttribute("content", langSrc["document_desc"]);
-  setPseudoElemTxt(langSrc);
+    .setAttribute("content", langObj["document_desc"]);
 }
 
 function setPseudoElemTxt(langObj) {
@@ -72,6 +77,14 @@ function setPseudoElemTxt(langObj) {
   // the css variable sets the content of the pseudo element
   // this needs to be a string when computed, so we need to wrap it in quotes
   document.documentElement.style.setProperty("--pseudoTxt_001", `\"${val}\"`);
+}
+
+function setTitleAttributeTxt(langObj) {
+  //select anchors and images with title attribute
+  const elems = document.querySelectorAll("a[title], img[title]");
+  elems.forEach((elem) => {
+    elem.setAttribute("title", langObj[elem.dataset.txt_id]);
+  });
 }
 
 function getLangPref() {
