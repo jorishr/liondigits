@@ -18,7 +18,7 @@
 
           &::before {
             display: none;
-            content: "Gekopieerd";
+            content: var(--pseudoTxt_001);
             position: absolute;
             bottom: -1.5em;
             left: -1em;

@@ -54,16 +54,24 @@ export function setTxtContent(langPref) {
   if (!setLang) {
     setLang = getLangPref();
   }
-
+  const langSrc = eval("txt_" + [setLang]);
   const txtElems = document.querySelectorAll(".txt-id");
   txtElems.forEach((elem) => {
-    elem.textContent = eval("txt_" + [setLang])[elem.dataset.txt_id];
+    elem.textContent = langSrc[elem.dataset.txt_id];
   });
-  document.documentElement.lang = eval("txt_" + [setLang])["document_lang"];
-  document.title = eval("txt_" + [setLang])["document_title"];
+  document.documentElement.lang = langSrc["document_lang"];
+  document.title = langSrc["document_title"];
   document
     .querySelector('meta[name="description"]')
-    .setAttribute("content", eval("txt_" + [setLang])["document_desc"]);
+    .setAttribute("content", langSrc["document_desc"]);
+  setPseudoElemTxt(langSrc);
+}
+
+function setPseudoElemTxt(langObj) {
+  const val = langObj["pseudo_elem_001"];
+  // the css variable sets the content of the pseudo element
+  // this needs to be a string when computed, so we need to wrap it in quotes
+  document.documentElement.style.setProperty("--pseudoTxt_001", `\"${val}\"`);
 }
 
 function getLangPref() {

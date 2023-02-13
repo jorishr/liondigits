@@ -89,7 +89,7 @@ a {
   &-copy {
     &::after {
       display: none;
-      content: "Copied!";
+      content: var(--pseudoTxt_001);
       position: absolute;
       top: -21px;
       right: 3px;
