@@ -58,9 +58,11 @@ export function setAddress() {
 }
 
 export function setCompanyInfo() {
-  const el = document.getElementsByClassName("company-num")[0];
-  if (el) {
-    el.textContent = contactInfo.company_num;
+  const elems = document.querySelectorAll(".company-num");
+  if (elems) {
+    elems.forEach((el) => {
+      el.textContent = contactInfo.company_num;
+    });
   }
 }
 

@@ -4,7 +4,7 @@
     padding: var(--pd-base) var(--pd-sm);
     background-color: var(--bgClr-white);
     width: 95%;
-    margin: 0 auto var(--mg-2xl);
+    margin: var(--mg-base) auto var(--mg-2xl);
     border-radius: 5px;
 
     @include mobile_lg {
