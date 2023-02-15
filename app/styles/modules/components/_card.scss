@@ -61,9 +61,24 @@
       border-radius: 5px;
     }
   }
-  &__btn {
+
+  &__link-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    margin: 0 auto;
     max-width: 30em;
-    margin-left: auto;
-    margin-right: auto;
+  }
+
+  &__tooltip {
+    align-self: center;
+    img {
+      width: 1em;
+
+      @include tablet_md {
+        width: 1.5em;
+      }
+    }
   }
 }

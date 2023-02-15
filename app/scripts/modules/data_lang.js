@@ -8,6 +8,14 @@ export const data_lang_nl = {
   document_desc: "Website van Lion Digits, door Joris Raymaekers.",
   document_title: "Lion Digits, web ontwikkeling",
   pseudo_elem_001: "Gekopieerd!",
+  tooltip_001:
+    "De speler krijgt een willekeurige landvlag voorgeschoteld en vier mogelijke antwoorden. Probeer de juiste te kiezen. Game statusbeheer gebouwd met ReactJs en gegevens opgehaald uit de REST-Countries-API.",
+  tooltip_002:
+    "Single page app voor taakbeheer met aangepaste JSON API. Voornaamste UI-functie: selecteer meerdere items (shift-toets), verwijder en update een aangepaste selectie van taken. Applicatie gebouwd met NodeJs, Express & MongoDb. API-eindpunten voor GET / POST / PUT / DELETE-verzoeken. AJAX-verzoeken met jQuery.",
+  tooltip_003:
+    "Verberg een tekstbericht in een afbeelding. Codeer en decodeer een afbeelding naar keuze. Gebouwd met Python en ReactJs.",
+  tooltip_004:
+    "Tap, klik of typ willekeurig op je toetsenbord. Elke toetsaanslag produceert een vuurwerk van willekeurig gegenereerde geluiden en kleuren. Applicatie gebouwd met de bibliotheken PaperJs en HowlerJs.",
   100: "nl",
   101: "Nieuwe Titel Hier.",
   102: "Je website is dé weg naar méér klanten en inkomsten",
@@ -87,6 +95,7 @@ export const data_lang_nl = {
   529: "Lees het privacy-beleid",
   530: "Ondernemingsnummer",
   531: "Bekijk code snippet op mijn Github profiel",
+  532: "Technische details...",
   600: "Lion Digits logo",
   601: "Vertalen icoon",
   602: "Driehoek icoon",
@@ -129,6 +138,14 @@ export const data_lang_en = {
   document_title: "Lion Digits, web development",
   document_desc: "Website Lion Digits, by Joris Raymaekers.",
   pseudo_elem_001: "Copied!",
+  tooltip_001:
+    "The player is presented a random country flag and four possible answers. Try and pick the correct one. Game state management built with ReactJs and data fetched from the REST countries API.",
+  tooltip_002:
+    "Single page task manager with custom JSON API. Main UI feature: select multiple (shift key), delete and update a custom selection of tasks.Application built with NodeJs, Express & MongoDb. API endpoints for GET / POST / PUT / DELETE requests. AJAX requests with jQuery.",
+  tooltip_003:
+    "Hide a text message in an image. Encrypt and decrypt an image of your choice. Built with Python and ReactJs.",
+  tooltip_004:
+    "Tap, click or type randomly on your keyboard. Each keystroke produces a fireworks of randomly generated sounds and colors. Application built with the libraries PaperJs and HowlerJs.",
   100: "en",
   101: "New Title Here.",
   102: "Your online presence is the gateway to more customers and revenue",
@@ -208,6 +225,7 @@ export const data_lang_en = {
   529: "Read the privacy policy",
   530: "Registered Company number",
   531: "See code snippet on my Github profile",
+  532: "Technical details...",
   600: "Lion Digits logo",
   601: "Translate icon",
   602: "Triangle icon",

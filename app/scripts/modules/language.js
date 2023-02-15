@@ -94,7 +94,7 @@ function setAltAttributeTxt(langObj) {
   });
 }
 
-function getLangPref() {
+export function getLangPref() {
   const langCookie = getCookie("language");
   if (langCookie) {
     return langCookie;

@@ -4,7 +4,7 @@ import {
   langMenuOptions,
   setTxtContent,
 } from "./modules/language.js";
-import { modalToggle } from "./modules/modal.js";
+import { modalToggle, tooltipToggle } from "./modules/toggles.js";
 import { clipboardCopy } from "./modules/clipboard.js";
 import {
   setPrivacyAnchorLink,
@@ -32,6 +32,7 @@ try {
 processHeaderHeight();
 langMenuToggle();
 modalToggle();
+tooltipToggle();
 clipboardCopy();
 langMenuOptions();
 setPrivacyAnchorLink();
