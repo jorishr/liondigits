@@ -86,6 +86,19 @@ a {
     }
   }
 
+  &--inside-list {
+    white-space: normal;
+    font-size: var(--fs-xs);
+    padding: var(--pd-xs) var(--pd-sm);
+    @include mobile_md {
+      font-size: var(--fs-sm);
+      padding: var(--pd-sm) var(--pd-base);
+    }
+    @include pc_sm {
+      font-size: var(--fs-base);
+    }
+  }
+
   &-copy {
     &::after {
       display: none;
