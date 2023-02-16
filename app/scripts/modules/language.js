@@ -1,6 +1,8 @@
-import { data_lang_nl, data_lang_en } from "./data_lang";
 import { getCookie, setCookie, formatLangStr } from "./helper";
-
+import txt_data_nl from "./data/txt_data_nl.json";
+import txt_data_en from "./data/txt_data_en.json";
+import txt_data_es from "./data/txt_data_es.json";
+import txt_data_ca from "./data/txt_data_ca.json";
 /*
 ############# 
 Language menu 
@@ -14,17 +16,6 @@ export function langMenuToggle() {
         "header__right__lang-menu__options"
       )[0];
       langMenu.classList.toggle("header__right__lang-menu__options--active");
-      setTimeout(() => {
-        if (
-          langMenu.classList.contains(
-            "header__right__lang-menu__options--active"
-          )
-        ) {
-          langMenu.classList.remove(
-            "header__right__lang-menu__options--active"
-          );
-        }
-      }, 5000);
     });
   }
 }
@@ -47,8 +38,10 @@ Get and set document language
 #############################  
 */
 export function setTxtContent(langPref) {
-  const txt_nl = data_lang_nl;
-  const txt_en = data_lang_en;
+  const txt_nl = txt_data_nl;
+  const txt_en = txt_data_en;
+  const txt_es = txt_data_es;
+  const txt_ca = txt_data_ca;
 
   let setLang = langPref;
   if (!setLang) {
@@ -62,7 +55,7 @@ export function setTxtContent(langPref) {
   setPseudoElemTxt(langSrc);
   setTitleAttributeTxt(langSrc);
   setAltAttributeTxt(langSrc);
-  setDocumentProperties(langSrc);
+  //setDocumentProperties(langSrc);
 }
 
 function setDocumentProperties(langObj) {

@@ -4,7 +4,7 @@ import {
   langMenuOptions,
   setTxtContent,
 } from "./modules/language.js";
-import { modalToggle, tooltipToggle } from "./modules/toggles.js";
+import { modalToggle, tooltipToggle, tooltipClose } from "./modules/toggles.js";
 import { clipboardCopy } from "./modules/clipboard.js";
 import {
   setPrivacyAnchorLink,
@@ -33,6 +33,7 @@ processHeaderHeight();
 langMenuToggle();
 modalToggle();
 tooltipToggle();
+tooltipClose();
 clipboardCopy();
 langMenuOptions();
 setPrivacyAnchorLink();
