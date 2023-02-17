@@ -7,7 +7,6 @@ import {
 import { modalToggle, tooltipToggle, tooltipClose } from "./modules/toggles.js";
 import { clipboardCopy } from "./modules/clipboard.js";
 import {
-  setPrivacyAnchorLink,
   setAnchorLinks,
   setAddress,
   setOnionAddress,
@@ -36,7 +35,6 @@ tooltipToggle();
 tooltipClose();
 clipboardCopy();
 langMenuOptions();
-setPrivacyAnchorLink();
 setCollapseBtns();
 setAddress();
 setOnionAddress();

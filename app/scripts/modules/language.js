@@ -3,6 +3,8 @@ import txt_data_nl from "./data/txt_data_nl.json";
 import txt_data_en from "./data/txt_data_en.json";
 import txt_data_es from "./data/txt_data_es.json";
 import txt_data_ca from "./data/txt_data_ca.json";
+import txt_data_addendum from "./data/addendum.json";
+import contactInfo from "./data/contact.json";
 /*
 ############# 
 Language menu 
@@ -38,6 +40,7 @@ Get and set document language
 #############################  
 */
 export function setTxtContent(langPref) {
+  // Import language data
   const txt_nl = txt_data_nl;
   const txt_en = txt_data_en;
   const txt_es = txt_data_es;
@@ -47,44 +50,60 @@ export function setTxtContent(langPref) {
   if (!setLang) {
     setLang = getLangPref();
   }
-  const langSrc = eval("txt_" + [setLang]);
-  const txtElems = document.querySelectorAll(".txt-id");
+  const data = eval("txt_" + [setLang]);
+  const txtElems = document.querySelectorAll("[data-txt_id]");
   txtElems.forEach((elem) => {
-    elem.textContent = langSrc[elem.dataset.txt_id];
+    elem.textContent = data[elem.dataset.txt_id];
   });
-  setPseudoElemTxt(langSrc);
-  setTitleAttributeTxt(langSrc);
-  setAltAttributeTxt(langSrc);
-  //setDocumentProperties(langSrc);
+  setDocumentLang(setLang);
+  setLangIconTxt(setLang);
+  setPseudoElemTxt(setLang);
+  setEmailSubjectTxt(setLang);
+  setTitleAttributeTxt(data);
+  setAltAttributeTxt(data);
 }
 
-function setDocumentProperties(langObj) {
-  document.documentElement.lang = langObj["document_lang"];
-  document.title = langObj["document_title"];
-  document
-    .querySelector('meta[name="description"]')
-    .setAttribute("content", langObj["document_desc"]);
+function setDocumentLang(setLang) {
+  document.documentElement.lang = setLang;
 }
 
-function setPseudoElemTxt(langObj) {
-  const val = langObj["pseudo_elem_001"];
-  // the css variable sets the content of the pseudo element
-  // this needs to be a string when computed, so we need to wrap it in quotes
+function setLangIconTxt(setLang) {
+  const langIcon = document.querySelector(".js-lang-span");
+  langIcon.textContent = setLang;
+}
+
+function setPseudoElemTxt(setLang) {
+  const txtData = txt_data_addendum;
+  const val = txtData[setLang].pseudo_txt_copy;
   document.documentElement.style.setProperty("--pseudoTxt_001", `\"${val}\"`);
 }
 
-function setTitleAttributeTxt(langObj) {
+function setTitleAttributeTxt(data) {
   const elems = document.querySelectorAll("a[title], img[title]");
   elems.forEach((elem) => {
-    elem.setAttribute("title", langObj[elem.dataset.txt_id__title]);
+    elem.setAttribute("title", data[elem.dataset.txt_id__title]);
   });
 }
 
-function setAltAttributeTxt(langObj) {
+function setAltAttributeTxt(data) {
   const elems = document.querySelectorAll("a[alt], img[alt]");
   elems.forEach((elem) => {
-    elem.setAttribute("alt", langObj[elem.dataset.txt_id__alt]);
+    elem.setAttribute("alt", data[elem.dataset.txt_id__alt]);
   });
+}
+
+function setEmailSubjectTxt(setLang) {
+  const anchor = document.getElementsByClassName("js-anchor-link__privacy")[0];
+  if (anchor) {
+    const txtData = txt_data_addendum;
+    const subject = txtData[setLang].email_privacy.subject;
+    const body = txtData[setLang].email_privacy.body;
+
+    const message = `mailto:${contactInfo.email_info}?subject=${encodeURI(
+      subject
+    )}&body=${encodeURI(body)}`;
+    anchor.setAttribute("href", message);
+  }
 }
 
 export function getLangPref() {

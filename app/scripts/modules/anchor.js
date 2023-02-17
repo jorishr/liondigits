@@ -1,4 +1,4 @@
-import { contactInfo } from "./data_contact.js";
+import contactInfo from "./data/contact.json";
 
 export function setAnchorLinks() {
   const links = document.getElementsByClassName("js-social-link");
@@ -32,18 +32,6 @@ function getLinkData(link) {
       return `${contactInfo.url}`;
     case "onion":
       return `${contactInfo.onion}`;
-  }
-}
-
-export function setPrivacyAnchorLink() {
-  const anchor = document.getElementsByClassName("js-anchor-link__privacy")[0];
-  if (anchor) {
-    const messageSubject = encodeURI("Vraag over privacy");
-    const messageBody = encodeURI(
-      "Beste,\n\nIk heb een vraag over het privacy policy van jullie website."
-    );
-    const message = `mailto:${contactInfo.email_info}?subject=${messageSubject}&body=${messageBody}`;
-    anchor.setAttribute("href", message);
   }
 }
 
