@@ -191,7 +191,7 @@
   "289": "La informació d'aquest lloc pot contenir contingut incrustat (per exemple, vídeos, imatges, missatges, etc.). El contingut incrustat d'altres llocs es comporta exactament igual que si el visitant hagués visitat aquest altre lloc. Aquests llocs poden recopilar dades sobre vostè, utilitzar galetes, incrustar un seguiment addicional de tercers i controlar la teva interacció amb aquest contingut incrustat, inclòs l'enregistrament d'interaccions amb el contingut incrustat en aquest lloc.",
   "290": "Accedir a la informació personal i a les dades de contacte",
   "291": "Tots els visitants tenen l'oportunitat de veure, canviar o suprimir tota la informació personal proporcionada a Lion Digits.",
-  "292": "Correu electrònic",
+  "292": "correu electrònic",
   "293": "← Inici",
   "294": "Lloc web Lion Digits de Joris Raymaekers.",
   "295": "Lion Digits, desenvolupament web",
@@ -316,5 +316,9 @@
   "414": "Detalls tècnics...",
   "415": "Icona de signe d'interrogació",
   "416": "Lloc web Lion Digits de Joris Raymaekers.",
-  "417": "Lion Digits, desenvolupament web"
+  "417": "Lion Digits, desenvolupament web",
+  "418": "Llegeix més sobre la política de privadesa,",
+  "419": "Pots enviar preguntes o sol·licituds sobre el tractament de les teves dades a través de",
+  "420": "o envia una carta a l'adreça següent.",
+  "421": "Aquest lloc web, i altres com Goudster o Agència de viatges, es van dissenyar amb AdobeXd i després es van convertir a codi HTML5, (S)CSS i JavaScript. Es presta especial atenció a un enfocament de primer mòbil i a una divisió lògica del codi en seccions i components. Un exemple de com es veu això a la pràctica es pot trobar al codi font d'aquest lloc web"
 }

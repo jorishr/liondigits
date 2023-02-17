@@ -221,7 +221,7 @@
   "319": "Administrar y optimizar todo ese código generalmente se realiza con una de las siguientes herramientas:",
   "320": "ejemplo",
   "321": "Los diseños y las animaciones visuales se pueden realizar en todos los colores y configuraciones posibles. Puede encontrar una selección de ejemplos y experimentos en mi Codepen:",
-  "322": "Mini-proyectos front-end de Codepen",
+  "322": "Mini-proyectos front-end en Codepen",
   "323": "Las colecciones incluyen: formularios con validación del lado del cliente, galerías de imágenes con filtrado de elementos DOM, modales y animaciones CSS",
   "324": "Perfil Codepen",
   "325": "Aplicaciones web de una sola página en multiple plataformas",
@@ -316,5 +316,9 @@
   "414": "Detalles técnicos...",
   "415": "Icono de signo de interrogación",
   "416": "Sitio web Lion Digits de Joris Raymaekers.",
-  "417": "Lion Digits, desarrollo web"
+  "417": "Lion Digits, desarrollo web",
+  "418": "Leer más sobre la política de privacidad,",
+  "419": "Puede enviar preguntas o solicitudes relacionadas con el procesamiento de sus datos a través de",
+  "420": "o envíe una carta a la siguiente dirección.",
+  "421": "Este sitio web, y otros como Goudster o Travel Agency, fueron diseñados con AdobeXd y luego convertidos a código HTML5, (S)CSS y JavaScript. Se presta especial atención a un enfoque móvil primero y una división lógica del código en secciones y componentes. Puede encontrar un ejemplo de cómo se ve esto exactamente en la práctica en el código fuente de este sitio web en este"
 }
