@@ -8,3 +8,4 @@ deploy-update.sh
 pubkey.txt
 *.pdf
 *-workspace
+.prettierignore

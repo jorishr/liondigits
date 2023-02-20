@@ -1,5 +1,5 @@
 noscript::before {
-  content: "Turn on your JavaScript or use a JavaScript compatible browser.";
+  content: var(--pseudoTxt_002);
   position: fixed;
   top: 0;
   left: 0;
