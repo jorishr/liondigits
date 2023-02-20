@@ -1,6 +1,6 @@
 .footer {
   position: relative; //see modal class
-  background-color: #0e161b;
+  background-color: var(--bgClr-darkest); //#0e161b;
   padding: var(--pd-2xl) var(--pd-base) 0;
   border-top: 6px #00b4ff solid;
 

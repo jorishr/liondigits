@@ -1,16 +1,18 @@
-.hero-container {
-  display: block;
-  position: relative;
-  top: var(--height-header); //vertically center container using layout.js
-  height: 200vh;
-  /* 
-  Height is extended to create space for the next intro__highlight section on vertical screen.
-  */
-  @include tablet_sm {
-    height: 150vh;
+.hero {
+  &-container {
+    display: block;
+    position: relative;
+    top: var(--height-header); //vertically center container using layout.js
+    height: 200vh;
+    /* 
+    Height is extended to create space for the next intro__highlight section on vertical screen.
+    */
+    @include tablet_sm {
+      height: 150vh;
+    }
   }
 
-  .background-image {
+  &__background-image {
     display: none;
     position: absolute;
     top: 0;
@@ -21,11 +23,11 @@
     z-index: -1;
   }
 
-  .hero-text-container {
+  &__text-container {
     position: relative;
     height: 100vh;
 
-    .hero-text {
+    &__text {
       position: absolute;
       top: 50%;
       left: 50%;

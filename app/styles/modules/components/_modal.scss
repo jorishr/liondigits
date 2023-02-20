@@ -18,7 +18,7 @@
   box-shadow: 5px 5px 5px 5em rgb(233, 235, 238, 0.6);
   border-radius: 5px;
 
-  .modal__content-container {
+  &__content-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -29,20 +29,8 @@
     color: #f9e3ae;
 
     padding: var(--pd-base) var(--pd-sm);
-
-    .modal-close {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 2em;
-      padding: var(--pd-xs);
-      cursor: pointer;
-      z-index: 5;
-      @include pc_md {
-        width: 3em;
-      }
-    }
   }
+
   &__btn-close {
     font-size: var(--fs-xl);
     padding: 0.03em 0.24em;
