@@ -4,7 +4,7 @@ import {
   langMenuOptions,
   setTxtContent,
 } from "./modules/language.js";
-import { modalToggle, tooltipToggle, tooltipClose } from "./modules/toggles.js";
+import { btnClose, targetToggle } from "./modules/toggles.js";
 import { clipboardCopy } from "./modules/clipboard.js";
 import {
   setAnchorLinks,
@@ -30,9 +30,8 @@ try {
 
 processHeaderHeight();
 langMenuToggle();
-modalToggle();
-tooltipToggle();
-tooltipClose();
+targetToggle();
+btnClose();
 clipboardCopy();
 langMenuOptions();
 setCollapseBtns();

@@ -43,4 +43,18 @@
       }
     }
   }
+  &__btn-close {
+    font-size: var(--fs-xl);
+    padding: 0.03em 0.24em;
+    color: var(--txtClr-white);
+    background-color: var(--txtClr-base);
+
+    @include pc_lg {
+      font-size: var(--fs-3xl);
+    }
+
+    &:hover {
+      color: var(--txtClr-lightblue);
+    }
+  }
 }

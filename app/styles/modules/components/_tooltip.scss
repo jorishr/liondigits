@@ -24,18 +24,13 @@
     font-size: var(--fs-base);
   }
 
-  &__close-btn {
-    position: absolute;
-    left: 0.2em;
-    top: -0.2em;
-    z-index: 5;
+  &__btn-close {
+    top: -0.18em;
     font-size: var(--fs-xl);
-    padding: 0;
     color: var(--txtClr-base);
 
     &:hover {
       color: var(--txtClr-white);
-      text-decoration: none;
       cursor: pointer;
     }
   }

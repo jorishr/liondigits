@@ -1,43 +1,28 @@
-/*
-############ 
-Modal Toggle 
-############  
-*/
-export function modalToggle() {
-  const modalBtn = document.getElementsByClassName("modal-btn");
-  const modalBtns = Array.from(modalBtn);
-  modalBtns.forEach((btn) => {
+export function btnClose() {
+  const btns = document.querySelectorAll(".js-btn-close");
+  btns.forEach((btn) => {
     btn.addEventListener("click", function () {
-      const modal = document.getElementsByClassName("modal")[0];
-      modal.classList.toggle("modal--active");
+      const parent = btn.parentElement;
+      const baseClass = parent.classList[0];
+      parent.classList.remove(`${baseClass}--active`);
     });
   });
 }
 
-/*
-###############
-Tooltip Toggles 
-###############
-*/
-export function tooltipToggle() {
-  const btns = document.querySelectorAll(".js-tooltip-toggle");
+export function targetToggle() {
+  const btns = document.querySelectorAll(".js-target-toggle");
   if (btns) {
     btns.forEach((btn) => {
       btn.addEventListener("click", function () {
-        const num = btn.dataset.tooltip_id.slice(2);
-        const tooltip = document.querySelectorAll(".tooltip")[num - 1];
-        tooltip.classList.toggle("tooltip--active");
+        const targetId = btn.dataset.target;
+        const targetList = document.querySelectorAll(`[data-target_id]`);
+        for (let i = 0; i < targetList.length; i++) {
+          if (targetList[i].dataset.target_id === targetId) {
+            const baseClass = targetList[i].classList[0];
+            targetList[i].classList.toggle(`${baseClass}--active`);
+          }
+        }
       });
     });
   }
-}
-
-export function tooltipClose() {
-  const btns = document.querySelectorAll(".js-tooltip-close");
-  btns.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      const tooltip = btn.parentElement;
-      tooltip.classList.remove("tooltip--active");
-    });
-  });
 }
