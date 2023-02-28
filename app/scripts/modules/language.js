@@ -53,7 +53,17 @@ export function setTxtContent(langPref) {
   const data = eval("txt_" + [setLang]);
   const txtElems = document.querySelectorAll("[data-txt_id]");
   txtElems.forEach((elem) => {
-    elem.textContent = data[elem.dataset.txt_id];
+    const idArr = eval(elem.dataset.txt_id);
+    if (elem.childNodes.length === 0) {
+      elem.textContent = data[idArr[0]];
+    } else {
+      const textNodes = Array.from(elem.childNodes).filter(
+        (node) => node.nodeType === 3 && node.textContent.trim().length > 0
+      );
+      for (let i = 0; i < idArr.length; i++) {
+        textNodes[i].textContent = data[idArr[i]];
+      }
+    }
   });
   setDocumentLang(setLang);
   setLangIconTxt(setLang);
