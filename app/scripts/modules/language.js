@@ -1,10 +1,10 @@
 import { getCookie, setCookie, formatLangStr } from "./helper";
-import txt_data_nl from "./data/txt_data_nl.json";
-import txt_data_en from "./data/txt_data_en.json";
-import txt_data_es from "./data/txt_data_es.json";
-import txt_data_ca from "./data/txt_data_ca.json";
-import txt_data_addendum from "./data/addendum.json";
-import contactInfo from "./data/contact.json";
+import txt_data_nl from "../../data/txt_data_nl.json";
+import txt_data_en from "../../data/txt_data_en.json";
+import txt_data_es from "../../data/txt_data_es.json";
+import txt_data_ca from "../../data/txt_data_ca.json";
+import txt_data_addendum from "../../data/addendum.json";
+import contactInfo from "../../data/contact.json";
 /*
 ############# 
 Language menu 

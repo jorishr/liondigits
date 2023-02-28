@@ -1,4 +1,4 @@
-import contactInfo from "./data/contact.json";
+import contactInfo from "../../data/contact.json";
 
 export function setAnchorLinks() {
   const links = document.getElementsByClassName("js-social-link");
