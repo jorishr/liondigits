@@ -67,7 +67,7 @@ export function setTxtContent(langPref) {
   });
   setDocumentLang(setLang);
   setLangIconTxt(setLang);
-  setPseudoElemTxt(setLang);
+  setPseudoElemTxt(setLang, "pseudo_txt_copy");
   setEmailSubjectTxt(setLang);
   setTitleAttributeTxt(data);
   setAltAttributeTxt(data);
@@ -82,10 +82,10 @@ function setLangIconTxt(setLang) {
   langIcon.textContent = setLang;
 }
 
-function setPseudoElemTxt(setLang) {
+function setPseudoElemTxt(setLang, target) {
   const txtData = txt_data_addendum;
-  const val = txtData[setLang].pseudo_txt_copy;
-  document.documentElement.style.setProperty("--pseudoTxt_001", `\"${val}\"`);
+  const val = txtData[setLang][target];
+  document.documentElement.style.setProperty(`--${target}`, `\"${val}\"`);
 }
 
 function setTitleAttributeTxt(data) {

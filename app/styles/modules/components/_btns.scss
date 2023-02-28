@@ -101,7 +101,7 @@ a {
   &-copy {
     &::after {
       display: none;
-      content: var(--pseudoTxt_001);
+      content: var(--pseudo_txt_copy);
       position: absolute;
       top: -21px;
       right: 3px;
