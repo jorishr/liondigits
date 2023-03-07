@@ -1,126 +1,94 @@
-.skill-section {
-  overflow: hidden;
-  /* Hides the overflow of the carousel-container below */
-  color: var(--bgClr-white);
-  text-align: center;
-  padding: 10em 2em;
-  background-color: #003f8c;
-
-  .heading {
-    padding-bottom: var(--pd-base);
-
-    h4 {
-      font-size: 36px;
-      margin-bottom: 0.5em;
-    }
-
-    .heading-icons {
-      display: flex;
-      justify-content: center;
-
-      img {
-        max-width: 40px;
-        margin: 1em;
-      }
-    }
-  }
-
-  p.heading-sub {
-    max-width: 55%;
-    margin: 1em auto;
-    text-align: center;
+.skill {
+  &-section-container {
+    overflow: hidden;
+    /* Hides the overflow of the carousel-container below */
+    color: var(--bgClr-white);
+    background-color: #003f8c;
+    padding: var(--pd-xl) var(--pd-sm);
     font-size: var(--fs-md);
 
-    &:last-of-type {
-      margin-bottom: 4em;
+    @include tablet_sm {
+      padding: var(--pd-2xl) var(--pd-base);
     }
   }
 
-  a {
-    color: var(--accent-lightblue);
-  }
+  &__heading {
+    margin-bottom: var(--mg-lg);
 
-  .carousel-container {
-    margin-top: 4em;
-    padding: 2em;
-    background-color: #e9ebee;
-    border-radius: 5px;
-    box-shadow: 5px 5px 25px 0 rgba(0, 0, 0, 0.25);
+    @include tablet_md {
+      max-width: 50em;
+      margin: 0 auto var(--mg-lg);
+    }
+    @include pc_lg {
+      font-size: var(--fs-xl);
+    }
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    &__title {
+      font-size: var(--fs-2xl);
+      text-align: center;
+      margin-bottom: var(--mg-sm);
 
-    .carousel-card {
-      width: 325px;
-      padding: 2em;
-      border-radius: 5px;
-      box-shadow: 5px 5px 25px 0 rgba(0, 0, 0, 0.25);
+      @include pc_lg {
+        font-size: var(--fs-3xl);
+      }
+    }
+
+    &__icons {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-evenly;
+      margin-bottom: var(--mg-md);
 
-      h5 {
-        color: #003f8c;
-        font-size: var(--fs-lg);
-        text-align: center;
-        margin-bottom: 1em;
+      @include tablet_md {
+        max-width: 24em;
+        margin: 0 auto var(--mg-md);
       }
 
-      p {
-        font-size: var(--fs-md);
-        line-height: 1.5;
-        max-width: 250px;
-        color: var(--txtClr-base);
-        margin-bottom: 2em;
-        align-self: center;
+      img {
+        max-width: 3em;
       }
+    }
 
-      a.btn {
-        background-color: var(--bgClr-white);
-        border: 2px solid var(--txtClr-base);
-        color: var(--txtClr-base);
-        width: calc(100% - 3em);
+    &__sub {
+      text-align: center;
+      font-size: var(--fs-xl);
 
-        margin: 0 auto;
-        font-size: var(--fs-base);
+      margin-bottom: var(--mg-base);
 
-        &:hover {
-          transform: scale(1.025);
-        }
+      @include pc_lg {
+        font-size: var(--fs-2xl);
       }
+    }
 
-      a img {
-        width: 100%;
-        margin-bottom: 3em;
-      }
+    &__intro {
+      margin-bottom: var(--mg-xs);
     }
   }
 
-  .cta {
-    max-width: 50%;
-    padding: 2em;
-    margin: 10em auto 0 auto;
-    text-align: center;
+  &__section {
+    margin-bottom: var(--mg-2xl);
 
-    h4 {
-      font-size: var(--fs-lg);
+    @include tablet_md {
+      max-width: 50em;
+      margin: 0 auto var(--mg-2xl);
+    }
+    @include pc_lg {
+      font-size: var(--fs-xl);
     }
 
-    p {
-      font-size: var(--fs-md);
-      margin: 1em auto 4em auto;
+    &__heading {
+      text-align: center;
+      margin-bottom: var(--mg-base);
+
+      h3 {
+        font-style: italic;
+        font-weight: 300;
+      }
     }
-
-    a {
-      background-color: var(--accent-azureblue);
-      border-color: 2px solid var(--accent-azureblue);
-      color: var(--bgClr-white);
-
-      &:hover {
-        background-color: var(--bgClr-white);
-        border-color: var(--bgClr-white);
-        color: var(--accent-azureblue);
+    &__txt-block {
+      margin-bottom: var(--mg-base);
+      p {
+        margin-bottom: var(--mg-xs);
       }
     }
   }

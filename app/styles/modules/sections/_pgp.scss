@@ -18,14 +18,13 @@
 
           &::before {
             display: none;
-            content: "Copied!";
+            content: var(--pseudo_txt_copy);
             position: absolute;
-            bottom: -24px;
-            left: -27px;
+            bottom: -1.5em;
+            left: -1em;
 
             @include pc_lg {
-              bottom: -39px;
-              left: -45px;
+              bottom: -2em;
             }
           }
           &.js-copied {
@@ -58,7 +57,7 @@
 
       @include tablet_sm {
         font-size: var(--fs-md);
-        padding: var(--pd-md) var(--pd-base);
+        padding: var(--pd-lg) var(--pd-base);
       }
       @include pc_lg {
         font-size: var(--fs-xl);
@@ -66,6 +65,7 @@
       @include pc_xl {
         font-size: var(--fs-2xl);
       }
+
       h3 {
         margin-bottom: var(--mg-sm);
         text-align: center;
@@ -73,10 +73,7 @@
 
       .txt-container {
         margin: 0 auto var(--mg-base);
-        max-width: 600px;
-        @include pc_lg {
-          max-width: 800px;
-        }
+        max-width: 50em;
 
         p {
           margin-bottom: var(--mg-xs);
@@ -91,16 +88,13 @@
         display: flex;
         flex-direction: column;
         max-width: 500px;
-        margin: 0 auto;
+        margin: 0 auto var(--mg-lg);
 
         @include pc_lg {
           max-width: 700px;
         }
 
         a.btn {
-          background-color: var(--bgClr-lightblue);
-          color: var(--txtClr-base);
-
           &:first-of-type {
             margin-bottom: var(--mg-base);
           }

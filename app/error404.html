@@ -1,24 +1,13 @@
-<!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Scripts and css -->
-    <script defer type="module" src="scripts/app.js"></script>
-    <link rel="stylesheet" href="styles/main.scss" />
-  </head>
-  <body>
-    <div class="err err-page-container">
-      <div class="err__txt">
-        <p>Hela, opgepast!</p>
-        <p>Hier hoor je niet te zijn...</p>
-        <a href="/" class="btn">terug</a>
-      </div>
-      <div
-        class="err__background-image"
-        style="background-image: url(images/error404.png)"
-      ></div>
-    </div>
-  </body>
-</html>
+<include src="./app/_header.html"></include>
+<section class="err err-page-container">
+  <div class="err__txt">
+    <p class data-txt_id="[199]">Hela, opgepast!</p>
+    <p class data-txt_id="[200]">Hier hoor je niet te zijn...</p>
+    <a href="/" class="btn" data-txt_id="[201]">terug</a>
+  </div>
+  <div
+    class="err__background-image"
+    style="background-image: url(images/error404.png)"
+  ></div>
+</section>
+<include src="./app/_footer.html"></include>

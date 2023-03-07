@@ -1,0 +1,30 @@
+{
+  "nl": {
+    "email_privacy": {
+      "subject": "Vraag over privacy-beleid",
+      "body": "Beste,\n\nIk heb een vraag over het privacy policy van jullie website."
+    },
+    "pseudo_txt_copy": "Gekopieerd!"
+  },
+  "en": {
+    "email_privacy": {
+      "subject": "Question about privacy-policy",
+      "body": "Dear,\n\nI have a question about your website's privacy policy."
+    },
+    "pseudo_txt_copy": "Copied!"
+  },
+  "es": {
+    "email_privacy": {
+      "subject": "Pregunta sobre la política de privacidad",
+      "body": "Estimado/a:\n\nTengo una pregunta sobre la política de privacidad de su sitio web."
+    },
+    "pseudo_txt_copy": "Copiado!"
+  },
+  "ca": {
+    "email_privacy": {
+      "subject": "Pregunta sobre la política de privadesa",
+      "body": "Benvolgut/da,\n\nTinc una pregunta sobre la política de privadesa del vostre lloc web."
+    },
+    "pseudo_txt_copy": "Copiat!"
+  }
+}

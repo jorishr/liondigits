@@ -1,6 +1,7 @@
 .err {
   &-page-container {
     position: relative;
+    top: var(--height-header); //see layout.js
   }
 
   &__background-image {
@@ -23,7 +24,7 @@
 
     p {
       font-size: var(--fs-2xl);
-      color: var(--bgClr-white);
+      color: var(--txtClr-white);
       text-shadow: 0 1px 0 rgb(0, 0, 0);
     }
 

@@ -1,0 +1,10 @@
+.list-in-txt {
+  list-style-type: disc;
+  margin-bottom: var(--mg-xs);
+  li {
+    margin-bottom: var(--mg-xs);
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

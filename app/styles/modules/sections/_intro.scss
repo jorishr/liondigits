@@ -25,7 +25,7 @@
       transform: translate(-50%, -50%);
     }
 
-    &__card-container {
+    &__inner-container {
       border-radius: 5px;
       display: flex;
       flex-direction: column;
@@ -48,40 +48,40 @@
       @include pc_sm {
         padding: var(--pd-lg) var(--pd-md);
       }
+    }
 
-      .card {
-        display: flex;
-        flex-direction: column;
-        padding: var(--pd-base) 0;
-        text-align: center;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      padding: var(--pd-base) 0;
+      text-align: center;
 
-        @include tablet_md {
-          padding: var(--pd-base) var(--pd-sm);
-        }
-        @include pc_sm {
-          padding: var(--pd-base) var(--pd-md);
-        }
-        @include pc_md {
-          padding: var(--pd-base) var(--pd-lg);
-        }
-        @include pc_md {
-          padding: var(--pd-base) var(--pd-md);
-        }
+      @include tablet_md {
+        padding: var(--pd-base) var(--pd-sm);
+      }
+      @include pc_sm {
+        padding: var(--pd-base) var(--pd-md);
+      }
+      @include pc_md {
+        padding: var(--pd-base) var(--pd-lg);
+      }
+      @include pc_md {
+        padding: var(--pd-base) var(--pd-md);
+      }
 
-        & > p {
-          padding: 0;
-          font-size: var(--fs-md);
+      & > p {
+        padding: 0;
+        font-size: var(--fs-md);
 
-          @include pc_lg {
-            font-size: var(--fs-xl);
-          }
+        @include pc_lg {
+          font-size: var(--fs-xl);
         }
+      }
 
-        img {
-          width: 80px;
-          align-self: center;
-          padding-bottom: 1em;
-        }
+      img {
+        width: 5.5em;
+        align-self: center;
+        padding-bottom: 1em;
       }
     }
   }

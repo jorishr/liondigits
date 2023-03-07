@@ -1,484 +1,185 @@
-<!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Site description -->
-    <meta name="theme-color" content="rgba(26, 27, 31, .6)" />
-    <meta
-      name="description"
-      content="Website Lion Digits by Joris Raymaekers."
-    />
-    <meta name="author" content="Joris Raymaekers" />
-    <meta
-      property="og:image"
-      content="https://jorisr.com/portfolio-video-min.gif"
-    />
-    <!-- Favicons -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicon-16x16.png"
-    />
-    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#2b5797" />
-    <meta name="theme-color" content="#ffffff" />
-    <title>Lion Digits, web development</title>
-    <!-- Scripts and css -->
-    <script defer type="module" src="scripts/app.js"></script>
-    <link rel="stylesheet" href="styles/main.scss" />
-  </head>
-  <body>
-    <noscript></noscript>
-    <header class="header header--privacy-page">
-      <div class="header-container">
-        <div class="header__left">
-          <div class="header__logo">
-            <a href="/" title="Home">
-              <img
-                src="images/header_v1_vertical_transparent-bg_white-blue.png"
-                alt="Logo Liondigits"
-              />
-            </a>
-          </div>
-        </div>
-        <div class="header__right">
-          <div class="header__right__lang-menu js-lang-btn">
-            <div class="header__right__lang-menu__icon">
-              <img src="images/Icon_translate_lightblue.png" alt="" />
-              <span class="js-lang-span">nl</span>
-            </div>
-            <ul class="header__right__lang-menu__options">
-              <li class="js-lang-option" data-lang="nl"><a>nederlands</a></li>
-              <li class="js-lang-option" data-lang="en"><a>english</a></li>
-              <li class="js-lang-option" data-lang="es"><a>español</a></li>
-              <li class="js-lang-option" data-lang="ca"><a>català</a></li>
-            </ul>
-          </div>
-          <div class="header__cta">
-            <a class="btn" data-cal-link="liondigits/20min"
-              >maak een afspraak</a
-            >
-          </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="main__content-container">
-        <h2>Algemene voorwaarden</h2>
-        <p class="txt__version">
-          Versie 1.0, <em>Laatst aangepast op 01-03-2022</em>
-        </p>
-        <p style="margin-bottom: 1em">
-          Download hier de algemene voorwaarden van Lion Digits:
-        </p>
-        <a
-          class="btn btn-icon btn-icon--dwnld-conditions"
-          href="algemene_voorwaarden_lion_digits_v1.0.pdf"
-          download
-          >Download Algemene Voorwaarden
-          <img src="images/Icon_download-gray.png" alt="Download icon"
-        /></a>
-        <div class="txt__intro">
-          <p>
-            Op deze pagina leest u over de algemene voorwaarden van Lion Digits.
-            De beschrijvingen op deze pagina zijn indicatief. Download de
-            volledige algemene voorwaarden voor een compleet overzicht.
+<include src="./app/_header.html"></include>
+<main>
+  <div class="main__content-container">
+    <h2 class data-txt_id="[163]">Algemene voorwaarden</h2>
+    <p class="txt__version" data-txt_id="[443]">
+      Versie 1.0,<span>&nbsp;</span>
+      <em class data-txt_id="[164]">Laatst aangepast op 01-03-2022</em>
+    </p>
+    <div class="main__download-box">
+      <p style="margin-bottom: 1em" class data-txt_id="[165]">
+        Download hier de algemene voorwaarden van Lion Digits:
+      </p>
+      <a
+        class="btn btn-icon btn--outline-gray btn-icon--dwnld-conditions"
+        href="algemene_voorwaarden_lion_digits_v1.0.pdf"
+        download
+        ><span data-txt_id="[166]">Download Algemene Voorwaarden</span>
+        <img
+          src="images/Icon_download-gray.png"
+          alt="Download icoon"
+          data-txt_id__alt="195"
+      /></a>
+    </div>
+    <div class="txt__intro">
+      <p class data-txt_id="[167]">
+        Op deze pagina leest u over de algemene voorwaarden van Lion Digits. De
+        beschrijvingen op deze pagina zijn indicatief. Download de volledige
+        algemene voorwaarden voor een compleet overzicht.
+      </p>
+      <div class="txt__section">
+        <h3 class="btn-collapse" data-txt_id="[168]">Bedrijfsgegevens</h3>
+        <div class="txt__collapse">
+          <p class data-txt_id="[169]">
+            Lion Digits: ICT consulent en ontwikkelaar van websites,
+            webapplicaties en software, en grafisch ontwerp met maatschappelijke
+            zetel te:
           </p>
-          <div class="txt__section">
-            <h3 class="btn-collapse" class="open">Bedrijfsgegevens</h3>
-            <div class="txt__collapse">
-              <p>
-                Lion Digits: ICT consulent en ontwikkelaar van websites,
-                webapplicaties en software, en grafisch ontwerp met
-                maatschappelijke zetel te:
-              </p>
-              <address class="main-address"></address>
-              <br />
-              <p>en ondernemingsnummer:</p>
-              <p class="company-num"></p>
-            </div>
-          </div>
-          <div class="txt__section">
-            <h3 class="btn-collapse">Offertes</h3>
-            <div class="txt__collapse">
-              <p>
-                Alle offertes en prijsopgaven door Lion Digits zijn geheel
-                vrijblijvend t.a.v. de opdrachtgever.
-              </p>
-              <p>
-                Adviezen, voorstellen en offertes gedaan door Lion Digits zijn
-                persoonlijk gericht aan de opdrachtgever. Het is niet toegestaan
-                om zonder toestemming van Lion Digits, deze ter inzage te
-                verstrekken aan andere partijen of om deze te gebruiken anders
-                dan ter beoordeling van de aanbieding.
-              </p>
-              <p>
-                Lion Digits is slechts aan de offertes gebonden indien de
-                aanvaarding ervan door de opdrachtgever schriftelijk binnen 14
-                dagen wordt bevestigd.
-              </p>
-              <p>
-                Een overeenkomst komt tot stand van zodra de offerte door de
-                opdrachtgever ondertekend ontvangen wordt door Lion Digits, en
-                zodra de vooruitbetaling van 25% op het totaalbedrag ontvangen
-                is.
-              </p>
-              <p>
-                Enkel als er op de offerte vermeld staat dat er geen
-                vooruitbetaling verwacht wordt, komt de overeenkomst tot stand
-                van zodra de offerte door de opdrachtgever ondertekend ontvangen
-                wordt.
-              </p>
-            </div>
-          </div>
-          <div class="txt__section">
-            <h3 class="btn-collapse">Garantie</h3>
-            <div class="txt__collapse">
-              <p>
-                Na het opleveren van een project start een garantieperiode van
-                30 kalenderdagen. Deze garantieperiode laat toe om fouten of
-                bugs op te lossen binnen de offerte.
-              </p>
-              <p>
-                Het recht op garantie vervalt als de klant toegang wenst tot een
-                account die structurele wijzigingen kan doorvoeren aan de
-                website of aan de code, zoals een superuser account van een
-                website, toegang tot het core bestandssysteem door middel van
-                (S)FTP of toegang met schrijfrechten tot de gebruikte
-                databasesystemen.
-              </p>
-              <p>
-                Binnen het kader van een onderhoudscontract kunnen bijkomende
-                garanties worden bepaald.
-              </p>
-            </div>
-          </div>
-          <div class="txt__section">
-            <h3 class="btn-collapse">Aansprakelijkheden</h3>
-            <div class="txt__collapse">
-              <p>
-                In geval van toerekenbare tekortkoming in de nakoming van de
-                overeenkomst is Lion Digits slechts aansprakelijk voor
-                vervangende schadevergoeding tot het factuurbedrag. Iedere
-                aansprakelijkheid van Lion Digits voor enige andere vorm van
-                schade is uitgesloten, daaronder begrepen vergoeding van
-                indirecte schade, gevolgschade of schade wegens gederfde omzet
-                of winst.
-              </p>
-            </div>
-          </div>
-          <div class="txt__section">
-            <h3 class="btn-collapse">Prijzen</h3>
-            <div class="txt__collapse">
-              <p>
-                Alle opgegeven prijzen zijn exclusief BTW, tenzij nadrukkelijk
-                anders vermeld staat.
-              </p>
-              <p>
-                Extra wensen van de opdrachtgever die niet van tevoren zijn
-                afgesproken zullen resulteren in meerwerk waarvoor Lion Digits
-                naar evenredigheid zal moeten worden vergoed.
-              </p>
-              <p>
-                Alle prijzen worden worden jaarlijks geïndexeerd, tenzij door
-                onderlinge overeenstemming tussen de partijen schriftelijk
-                anders is bepaald.
-              </p>
-            </div>
-          </div>
-          <div class="txt__section">
-            <h3 class="btn-collapse">Betaling</h3>
-            <div class="txt__collapse">
-              <p>
-                Na afronding van de opdracht zal Lion Digits een factuur sturen
-                voor het met de overeenkomst gemoeide bedrag, verminderd met een
-                eventueel eerder voldane vooruitbetaling. De opdrachtgever dient
-                binnen 14 dagen na de factuurdatum het verschuldigde bedrag te
-                voldoen.
-              </p>
-              <p>
-                Indien de opdrachtgever de betalingstermijn heeft overschreden,
-                wordt door Lion Digits een aanmaning tot betaling verstuurd. De
-                kosten van een aanmaning, t.w.v. € 30,00 excl btw, worden in
-                rekening gebracht aan de opdrachtgever.
-              </p>
-              <p>
-                Wanneer de opdrachtgever binnen 14 dagen na het verzenden van de
-                eerste aanmaning nog niet aan zijn verplichtingen heeft voldaan,
-                dan wordt de inning uitbesteed. Alle kosten hieruit
-                voortvloeiend zijn voor rekening van de opdrachtgever. Indien
-                het gaat om een website of andere online diensten dan worden
-                deze eveneens na dezelfde overschrijdingstermijn van 14 dagen
-                offline gehaald. Kosten voor het nadien eventueel terug online
-                brengen van de website zijn volledig voor de opdrachtgever.
-              </p>
-            </div>
-          </div>
-          <div class="txt__section">
-            <h3 class="btn-collapse">Privacy</h3>
-            <div class="txt__collapse">
-              <p>
-                Lion Digits verzamelt en verwerkt de persoons- en
-                bedrijfsgegevens die het van de opdrachtgever ontvangt met als
-                doel de uitvoering van de overeenkomst, het klantenbeheer, de
-                aankopen, de boekhouding en direct marketingactiviteiten. De
-                rechtsgronden zijn de uitvoering van een overeenkomst, het
-                vervullen van wettelijke en reglementaire verplichtingen en/of
-                het gerechtvaardigd belang.
-              </p>
-              <p>
-                Lees meer over het privacybeleid,
-                <a href="privacy.html" title="Privacy policy">hier</a>.
-              </p>
-            </div>
-          </div>
+          <address class="main-address"></address>
+          <br />
+          <p class data-txt_id="[170]">en ondernemingsnummer:</p>
+          <p class="company-num"></p>
         </div>
       </div>
-      <div class="nav__btn">
-        <a class="btn" href="/">&larr; Home</a>
-      </div>
-    </main>
-    <footer id="footer">
-      <div class="footer__content">
-        <div class="footer__logo">
-          <a href="/" title="Home">
-            <img
-              src="images/header_v1_vertical_transparent-bg_white-blue.png"
-              alt="Logo Liondigits"
-            />
-          </a>
-        </div>
-        <div class="footer__nav">
-          <ul>
-            <li><p class="company-num"></p></li>
-            <li><a href="conditions.html">Algemene voorwaarden</a></li>
-            <li><a href="privacy.html">Privacy-beleid</a></li>
-          </ul>
-        </div>
-        <div class="footer__socials">
-          <a
-            class="js-social-link"
-            data-link="email_jr"
-            target="_blank"
-            href="mailto:"
-          >
-            <img src="images/social_icon_email.png" alt="Email" title="Email" />
-          </a>
-          <a
-            class="js-social-link"
-            data-link="tel_be"
-            target="_blank"
-            href="tel:"
-          >
-            <img
-              src="images/social_icon_tel-be.png"
-              alt="Tel.BE"
-              title="Telephone BE"
-            />
-          </a>
-          <a
-            class="js-social-link"
-            data-link="tel_es"
-            target="_blank"
-            href="tel:"
-          >
-            <img
-              src="images/social_icon_tel-es.png"
-              alt="Tel.ES"
-              title="Telephone ES"
-            />
-          </a>
-          <a
-            class="js-social-link"
-            data-link="signal"
-            target="_blank"
-            href="https://signal.org"
-          >
-            <img
-              src="images/social_icon_signal.png"
-              alt="Signal Messenger App"
-              title="Signal Messenger App"
-            />
-          </a>
-          <a class="js-social-link" data-link="skype" href="skype:">
-            <img src="images/social_icon_skype.png" title="Skype" alt="Skype" />
-          </a>
-          <a
-            style="display: none"
-            class="js-social-link"
-            data-link="linkedin"
-            target="_blank"
-            href="http://www.linkedin.com/"
-          >
-            <img
-              src="images/social_icon_li_512x512.png"
-              alt="Linked-In"
-              title="Linked-In"
-            />
-          </a>
-          <a
-            style="display: none"
-            class="js-social-link"
-            data-link="twitter"
-            target="_blank"
-            href="https://www.twitter.com/"
-          >
-            <img
-              src="images/social_icon_tw_512x512.png"
-              title="Twitter"
-              alt="Twitter"
-            />
-          </a>
-          <a
-            class="js-social-link"
-            data-link="github"
-            target="_blank"
-            href="http://www.github.com/"
-          >
-            <img
-              src="images/social_icon_github.png"
-              alt="Github"
-              title="Github"
-            />
-          </a>
-          <a
-            class="js-social-link"
-            data-link="codepen"
-            target="_blank"
-            href="http://www.codepen.io"
-          >
-            <img
-              src="images/social_icon_codepen.png"
-              title="Codepen"
-              alt="Codepen"
-            />
-          </a>
-        </div>
-        <div class="pgp">
-          <div class="pgp__txt">
-            <p id="pgp-txt">PGP: 08AD 0252 59CQ 316D</p>
-            <div class="pgp__txt__btns">
-              <a class="js-btn-copy js-data-long_id"
-                ><img
-                  src="images/Icon_content-copy_azureblue.png"
-                  title="Copy to clipboard"
-                />
-              </a>
-              <a class="modal-btn"
-                ><img
-                  src="images/Icon_question-circle_azureblue.png"
-                  title="What is this?"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="pgp__info modal">
-            <div class="modal__content-container">
-              <h3>Versleutelde communicatie</h3>
-              <img
-                class="modal-close modal-btn"
-                src="images/Icon_close_white.png"
-                alt="Close Modal"
-              />
-              <div class="txt-container">
-                <p>
-                  Je kan mij zowel gewone standaard (e-mail)berichten sturen als
-                  versleutelde berichten. De meest gebruiksvriendelijke manier
-                  om mij <em>versleutelde</em> berichten te versturen is via de
-                  <a
-                    class="txt-link txt-link--lightblue js-social-link"
-                    data-link="signal"
-                    href="https://signal.org"
-                    title="Signal Messenger App"
-                    target="_blank"
-                    ><span class="txt-link__txt">Signal Messenger App</span>
-                    <img
-                      class="txt-link__icon"
-                      src="images/social_icon_signal-lightblue.png"
-                      alt="Signal Messenger App Logo" /></a
-                  >.
-                </p>
-                <p>
-                  Gebruik je net als ik
-                  <a
-                    class="txt-link txt-link--lightblue"
-                    href="https://proton.me"
-                    title="Proton Mail"
-                    target="_blank"
-                    ><span class="txt-link__txt">ProtonMail</span
-                    ><img
-                      class="txt-link__icon"
-                      src="images/Icon_external-link_gray.png"
-                      alt="External link icon" /></a
-                  >voor je e-mail? Dan hoef je niets bijzonder te doen en worden
-                  je berichten automatisch versleuteld.
-                </p>
-                <p>
-                  Gebruik je een andere e-mail dienstverlener dan kan je gebruik
-                  maken van mijn publieke sleutel om een bericht te
-                  versleutelen. De 16 digits die je ziet op de homepagina is een
-                  <em>digitale vingerafdruk</em>. De volledige publieke sleutel
-                  kan je hieronder downloaden of kopiëren via het klembord.
-                </p>
-                <p>
-                  Niet vertrouwd met PGP? Wil je meer leren over het
-                  versleutelen van berichten of bestanden?
-                </p>
-                <p>
-                  Lees hier
-                  <a
-                    class="txt-link txt-link--lightblue"
-                    href="/"
-                    title="PGP introduction article"
-                    target="_blank"
-                  >
-                    <span class="txt-link__txt">een introductie</span
-                    ><img
-                      class="txt-link__icon"
-                      src="images/Icon_external-link_gray.png"
-                      alt="External link icon"
-                    />.</a
-                  >
-                  Of boek een afspraak met mij en ik help je op weg.
-                </p>
-              </div>
-              <div class="link-container">
-                <a class="btn btn-icon" href="pubkey.txt" download
-                  >Download Publieke Sleutel
-                  <img
-                    src="images/Icon_download-gray.png"
-                    alt="Public key icon"
-                /></a>
-                <a class="btn btn-icon js-btn-copy js-data-pubkey"
-                  >Publieke Sleutel Kopiëren
-                  <img
-                    src="images/Icon_content-copy-gray.png"
-                    alt="Public key icon"
-                /></a>
-              </div>
-            </div>
-          </div>
+      <div class="txt__section">
+        <h3 class="btn-collapse" data-txt_id="[171]">Offertes</h3>
+        <div class="txt__collapse">
+          <p class data-txt_id="[172]">
+            Alle offertes en prijsopgaven door Lion Digits zijn geheel
+            vrijblijvend t.a.v. de opdrachtgever.
+          </p>
+          <p class data-txt_id="[173]">
+            Adviezen, voorstellen en offertes gedaan door Lion Digits zijn
+            persoonlijk gericht aan de opdrachtgever. Het is niet toegestaan om
+            zonder toestemming van Lion Digits, deze ter inzage te verstrekken
+            aan andere partijen of om deze te gebruiken anders dan ter
+            beoordeling van de aanbieding.
+          </p>
+          <p class data-txt_id="[174]">
+            Lion Digits is slechts aan de offertes gebonden indien de
+            aanvaarding ervan door de opdrachtgever schriftelijk binnen 14 dagen
+            wordt bevestigd.
+          </p>
+          <p class data-txt_id="[175]">
+            Een overeenkomst komt tot stand van zodra de offerte door de
+            opdrachtgever ondertekend ontvangen wordt door Lion Digits, en zodra
+            de vooruitbetaling van 25% op het totaalbedrag ontvangen is.
+          </p>
+          <p class data-txt_id="[176]">
+            Enkel als er op de offerte vermeld staat dat er geen vooruitbetaling
+            verwacht wordt, komt de overeenkomst tot stand van zodra de offerte
+            door de opdrachtgever ondertekend ontvangen wordt.
+          </p>
         </div>
       </div>
-      <div class="footer__copyright">
-        <hr />
-        <!-- Generated by JS -->
-        <p id="footer__credits"></p>
+      <div class="txt__section">
+        <h3 class="btn-collapse" data-txt_id="[177]">Garantie</h3>
+        <div class="txt__collapse">
+          <p class data-txt_id="[178]">
+            Na het opleveren van een project start een garantieperiode van 30
+            kalenderdagen. Deze garantieperiode laat toe om fouten of bugs op te
+            lossen binnen de offerte.
+          </p>
+          <p class data-txt_id="[179]">
+            Het recht op garantie vervalt als de klant toegang wenst tot een
+            account die structurele wijzigingen kan doorvoeren aan de website of
+            aan de code, zoals een superuser account van een website, toegang
+            tot het core bestandssysteem door middel van (S)FTP of toegang met
+            schrijfrechten tot de gebruikte databasesystemen.
+          </p>
+          <p class data-txt_id="[180]">
+            Binnen het kader van een onderhoudscontract kunnen bijkomende
+            garanties worden bepaald.
+          </p>
+        </div>
       </div>
-    </footer>
-  </body>
-</html>
+      <div class="txt__section">
+        <h3 class="btn-collapse" data-txt_id="[181]">Aansprakelijkheden</h3>
+        <div class="txt__collapse">
+          <p class data-txt_id="[182]">
+            In geval van toerekenbare tekortkoming in de nakoming van de
+            overeenkomst is Lion Digits slechts aansprakelijk voor vervangende
+            schadevergoeding tot het factuurbedrag. Iedere aansprakelijkheid van
+            Lion Digits voor enige andere vorm van schade is uitgesloten,
+            daaronder begrepen vergoeding van indirecte schade, gevolgschade of
+            schade wegens gederfde omzet of winst.
+          </p>
+        </div>
+      </div>
+      <div class="txt__section">
+        <h3 class="btn-collapse" data-txt_id="[183]">Prijzen</h3>
+        <div class="txt__collapse">
+          <p class data-txt_id="[184]">
+            Alle opgegeven prijzen zijn exclusief BTW, tenzij nadrukkelijk
+            anders vermeld staat.
+          </p>
+          <p class data-txt_id="[185]">
+            Extra wensen van de opdrachtgever die niet van tevoren zijn
+            afgesproken zullen resulteren in meerwerk waarvoor Lion Digits naar
+            evenredigheid zal moeten worden vergoed.
+          </p>
+          <p class data-txt_id="[186]">
+            Alle prijzen worden worden jaarlijks geïndexeerd, tenzij door
+            onderlinge overeenstemming tussen de partijen schriftelijk anders is
+            bepaald.
+          </p>
+        </div>
+      </div>
+      <div class="txt__section">
+        <h3 class="btn-collapse" data-txt_id="[187]">Betaling</h3>
+        <div class="txt__collapse">
+          <p class data-txt_id="[188]">
+            Na afronding van de opdracht zal Lion Digits een factuur sturen voor
+            het met de overeenkomst gemoeide bedrag, verminderd met een
+            eventueel eerder voldane vooruitbetaling. De opdrachtgever dient
+            binnen 14 dagen na de factuurdatum het verschuldigde bedrag te
+            voldoen.
+          </p>
+          <p class data-txt_id="[189]">
+            Indien de opdrachtgever de betalingstermijn heeft overschreden,
+            wordt door Lion Digits een aanmaning tot betaling verstuurd. De
+            kosten van een aanmaning, t.w.v. € 30,00 excl btw, worden in
+            rekening gebracht aan de opdrachtgever.
+          </p>
+          <p class data-txt_id="[190]">
+            Wanneer de opdrachtgever binnen 14 dagen na het verzenden van de
+            eerste aanmaning nog niet aan zijn verplichtingen heeft voldaan, dan
+            wordt de inning uitbesteed. Alle kosten hieruit voortvloeiend zijn
+            voor rekening van de opdrachtgever. Indien het gaat om een website
+            of andere online diensten dan worden deze eveneens na dezelfde
+            overschrijdingstermijn van 14 dagen offline gehaald. Kosten voor het
+            nadien eventueel terug online brengen van de website zijn volledig
+            voor de opdrachtgever.
+          </p>
+        </div>
+      </div>
+      <div class="txt__section">
+        <h3 class="btn-collapse" data-txt_id="[191]">Privacy</h3>
+        <div class="txt__collapse">
+          <p class data-txt_id="[192]">
+            Lion Digits verzamelt en verwerkt de persoons- en bedrijfsgegevens
+            die het van de opdrachtgever ontvangt met als doel de uitvoering van
+            de overeenkomst, het klantenbeheer, de aankopen, de boekhouding en
+            direct marketingactiviteiten. De rechtsgronden zijn de uitvoering
+            van een overeenkomst, het vervullen van wettelijke en reglementaire
+            verplichtingen en/of het gerechtvaardigd belang.
+          </p>
+          <p>
+            <span data-txt_id="[418]">Lees meer over het privacybeleid, </span>
+            <a
+              class="txt-link"
+              href="privacy.html"
+              title="Lees het privacy-beleid"
+              data-txt_id__title="196"
+              ><span data-txt_id="[423]">hier</span></a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav__btn">
+    <a class="btn" href="/" data-txt_id="[194]">&larr; Home</a>
+  </div>
+</main>
+<include src="./app/_footer.html"></include>
