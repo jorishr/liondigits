@@ -69,8 +69,19 @@ export function setTxtContent(langPref) {
   setLangIconTxt(setLang);
   setPseudoElemTxt(setLang, "pseudo_txt_copy");
   setEmailSubjectTxt(setLang);
-  setTitleAttributeTxt(data);
-  setAltAttributeTxt(data);
+  setAttributeTxt(data, "title");
+  setAttributeTxt(data, "alt");
+  setAttributeTxt(data, "placeholder");
+  setAttributeTxt(data, "meta");
+}
+
+function setAttributeTxt(data, target) {
+  const elems = document.querySelectorAll(`[data-txt_id__${target}]`);
+  let name = target;
+  if (target === "meta") name = "content";
+  elems.forEach((elem) => {
+    elem.setAttribute(name, data[elem.dataset[`txt_id__${target}`]]);
+  });
 }
 
 function setDocumentLang(setLang) {
@@ -86,20 +97,6 @@ function setPseudoElemTxt(setLang, target) {
   const txtData = txt_data_addendum;
   const val = txtData[setLang][target];
   document.documentElement.style.setProperty(`--${target}`, `\"${val}\"`);
-}
-
-function setTitleAttributeTxt(data) {
-  const elems = document.querySelectorAll("a[title], img[title]");
-  elems.forEach((elem) => {
-    elem.setAttribute("title", data[elem.dataset.txt_id__title]);
-  });
-}
-
-function setAltAttributeTxt(data) {
-  const elems = document.querySelectorAll("a[alt], img[alt]");
-  elems.forEach((elem) => {
-    elem.setAttribute("alt", data[elem.dataset.txt_id__alt]);
-  });
 }
 
 function setEmailSubjectTxt(setLang) {
