@@ -1,0 +1,50 @@
+.cta {
+  text-align: center;
+  padding: var(--pd-2xl) var(--pd-sm);
+
+  @include tablet_md {
+    max-width: 66%;
+    margin: 0 auto;
+  }
+
+  @include pc_lg {
+    font-size: var(--fs-xl);
+  }
+  @include pc_xl {
+    font-size: var(--fs-2xl);
+    max-width: 57%;
+  }
+
+  &--base {
+    color: var(--txtClr-base);
+  }
+
+  &--accent {
+    color: var(--txtClr-lightblue);
+  }
+
+  &__text {
+    h3 {
+      font-size: var(--fs-lg);
+      margin-bottom: var(--mg-base);
+
+      @include pc_lg {
+        font-size: var(--fs-2xl);
+      }
+    }
+
+    p {
+      font-size: var(--fs-md);
+      margin-bottom: var(--mg-lg);
+      @include pc_lg {
+        font-size: var(--fs-xl);
+      }
+    }
+
+    a {
+      @include pc_lg {
+        font-size: var(--fs-xl);
+      }
+    }
+  }
+}

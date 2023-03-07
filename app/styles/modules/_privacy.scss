@@ -1,0 +1,98 @@
+//note: these styles apply to both privacy page and conditions page
+.main {
+  &__content-container {
+    padding: var(--pd-base) var(--pd-sm);
+    background-color: var(--bgClr-white);
+    width: 95%;
+    margin: var(--mg-base) auto var(--mg-2xl);
+    border-radius: 5px;
+
+    @include mobile_lg {
+      padding: var(--pd-base) var(--pd-base);
+    }
+
+    @include tablet_md {
+      p,
+      h3,
+      h4 {
+        max-width: 50em;
+      }
+    }
+
+    @include pc_lg {
+      font-size: var(--fs-xl);
+    }
+    @include pc_xl {
+      font-size: var(--fs-2xl);
+    }
+  }
+
+  &__download-box {
+    max-width: 30em;
+    margin-bottom: var(--mg-base);
+  }
+}
+
+.txt {
+  &__section-container {
+    padding: 0 var(--pd-base);
+  }
+
+  &__version {
+    margin-bottom: var(--mg-base);
+  }
+
+  &__intro {
+    p {
+      margin-bottom: var(--mg-sm);
+    }
+  }
+
+  &__section {
+    margin-bottom: var(--mg-xs);
+
+    h3 {
+      &:hover {
+        cursor: pointer;
+      }
+
+      &::before {
+        content: "|";
+        font-weight: bold;
+        float: left;
+        margin-right: 5px;
+      }
+      &::after {
+        content: "\002B";
+        color: var(--txtClr-accent);
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+      }
+      &.open {
+        &::after {
+          content: "\2212";
+        }
+      }
+    }
+
+    a {
+      color: var(--txtClr-accent);
+      font-weight: bold;
+    }
+  }
+
+  &__collapse {
+    display: none;
+    padding: var(--pd-sm) var(--pd-sm);
+
+    &.open {
+      display: block;
+    }
+  }
+}
+
+.nav__btn {
+  margin: 0 auto var(--mg-2xl);
+  text-align: center;
+}

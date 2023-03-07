@@ -5,3 +5,7 @@ deploy-update.sh
 .cache
 /.parcel-cache
 .parcel-cache
+pubkey.txt
+*.pdf
+*-workspace
+.prettierignore

@@ -1,8 +1,7 @@
 {
   "name": "liondigits",
   "version": "1.0.0",
-  "description": "Website Liondigits",
-  "main": "index.html",
+  "description": "Website Lion Digits",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx parcel app/index.html"
@@ -11,25 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/jorishr/liondigits.git"
   },
-  "author": "Joris Raymaekers <joris@jorisr.com> (jorisr.com)",
+  "author": "Joris Raymaekers <joris@liondigits.com> (liondigits.com)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jorishr/liondigits/issues"
   },
   "homepage": "https://github.com/jorishr/liondigits#readme",
-  "dependencies": {
-    "autoprefixer": "^10.4.7",
-    "del": "^6.1.1",
-    "gulp": "^4.0.2",
-    "gulp-cssnano": "^2.1.3",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^8.0.0",
-    "gulp-postcss": "^9.0.1",
-    "gulp-terser": "^2.1.0",
-    "parcel-bundler": "^1.12.5",
-    "sass": "^1.53.0"
-  },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.7.0"
+    "@parcel/transformer-sass": "^2.8.3",
+    "ngrok": "^4.3.3",
+    "parcel": "^2.8.3",
+    "posthtml-include": "^1.7.4"
   }
 }

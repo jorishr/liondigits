@@ -1,0 +1,144 @@
+.testimonials {
+  background-color: var(--bgClr-accent);
+  padding: var(--pd-2xl) var(--pd-sm);
+
+  @include pc_lg {
+    font-size: var(--fs-xl);
+  }
+  @include pc_xl {
+    font-size: var(--fs-2xl);
+  }
+
+  h3 {
+    text-align: center;
+    font-size: var(--fs-xl);
+    color: var(--bgClr-white);
+
+    padding: var(--pd-sm) var(--pd-sm) 0;
+    margin-bottom: var(--mg-lg);
+
+    @include pc_lg {
+      font-size: var(--fs-2xl);
+    }
+    @include pc_xl {
+      font-size: var(--fs-3xl);
+    }
+  }
+
+  .project {
+    &-container {
+      display: flex;
+      flex-direction: column;
+
+      background-color: var(--bgClr-white);
+      box-shadow: 5px 5px 25px 0 rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+
+      padding: var(--pd-xs) var(--pd-xs) var(--pd-lg);
+      margin: 0 auto var(--mg-2xl);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__img-container {
+      order: 1;
+      width: 100%;
+
+      padding: var(--pd-base) var(--pd-sm) 0;
+      margin-bottom: var(--mg-lg);
+
+      img {
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    &__legend {
+      &-container {
+        order: 2;
+        width: 100%;
+        padding: var(--pd-xs) var(--pd-sm);
+
+        @include pc_sm {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          padding: var(--pd-lg) var(--pd-base);
+        }
+      }
+
+      &__description {
+        margin-bottom: var(--mg-lg);
+        padding: var(--pd-xs) var(--pd-sm);
+
+        @include pc_sm {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 50%;
+
+          padding: var(--pd-xs) var(--pd-base);
+          margin-bottom: 0;
+        }
+        .img-container {
+          margin: 0 auto var(--mg-lg);
+          text-align: center;
+          max-width: 45%;
+          a {
+            img {
+              border-radius: 5px;
+              box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+              margin: 0 auto;
+
+              @include pc_sm {
+                max-width: 100%;
+              }
+            }
+          }
+        }
+
+        p {
+          text-align: center;
+          font-size: var(--fs-md);
+          line-height: 1.5;
+
+          @include pc_lg {
+            font-size: var(--fs-xl);
+          }
+          @include pc_xl {
+            font-size: var(--fs-2xl);
+          }
+        }
+      }
+
+      &__links {
+        @include tablet_sm {
+          max-width: 66%;
+          margin: 0 auto;
+        }
+        @include pc_sm {
+          width: 33%;
+        }
+
+        a.btn {
+          width: 100%;
+
+          &:first-of-type {
+            margin-bottom: var(--mg-sm);
+
+            @include pc_sm {
+              margin-bottom: var(--mg-base);
+            }
+          }
+        }
+      }
+    }
+
+    /* Volgorde van projectcontainer content verandert alternerend */
+    /*     &:nth-of-type(2n + 1) .image-container {
+      order: unset;
+    } */
+  }
+}

@@ -1,0 +1,65 @@
+.hero {
+  &-container {
+    display: block;
+    position: relative;
+    top: var(--height-header); //vertically center container using layout.js
+    height: 200vh;
+    /* 
+    Height is extended to create space for the next intro__highlight section on vertical screen.
+    */
+    @include tablet_sm {
+      height: 150vh;
+    }
+  }
+
+  &__background-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 150vh;
+
+    background-size: 100%;
+    z-index: -1;
+  }
+
+  &__text-container {
+    position: relative;
+    height: 100vh;
+
+    &__text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      h1 {
+        color: var(--txtClr-white);
+        font-size: var(--fs-xl);
+        margin: 0 0 var(--mg-base);
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+
+        @include pc_lg {
+          font-size: var(--fs-4xl);
+        }
+      }
+
+      h2 {
+        color: var(--txtClr-lightblue);
+        font-size: var(--fs-base);
+        margin: 0 auto var(--mg-lg);
+        line-height: 1.5;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+        @include pc_lg {
+          font-size: var(--fs-2xl);
+        }
+      }
+      a.btn {
+        @include pc_lg {
+          font-size: var(--fs-lg);
+        }
+      }
+    }
+  }
+}

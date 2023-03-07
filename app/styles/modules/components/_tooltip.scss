@@ -1,0 +1,37 @@
+.tooltip {
+  display: none;
+  &--active {
+    display: block;
+  }
+  position: relative;
+  top: -20em;
+  width: 99%;
+  max-width: 30em;
+
+  background-color: var(--bgClr-dark);
+
+  padding: var(--pd-base) var(--pd-base);
+  margin: 0 auto;
+
+  border-radius: 5px;
+
+  font-size: var(--fs-sm);
+
+  @include tablet_md {
+    top: -25em;
+  }
+  @include pc_sm {
+    font-size: var(--fs-base);
+  }
+
+  &__btn-close {
+    top: -0.18em;
+    font-size: var(--fs-xl);
+    color: var(--txtClr-base);
+
+    &:hover {
+      color: var(--txtClr-white);
+      cursor: pointer;
+    }
+  }
+}
