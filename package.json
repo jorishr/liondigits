@@ -1,9 +1,8 @@
 {
-  "name": "liondigits",
+  "name": "liondigits.com",
   "version": "1.0.0",
-  "description": "Website Lion Digits",
+  "description": "Website of Lion Digits, by Joris Raymaekers",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx parcel app/index.html"
   },
   "repository": {
@@ -11,7 +10,6 @@
     "url": "git+https://github.com/jorishr/liondigits.git"
   },
   "author": "Joris Raymaekers <joris@liondigits.com> (liondigits.com)",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/jorishr/liondigits/issues"
   },
