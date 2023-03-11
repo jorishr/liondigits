@@ -45,6 +45,7 @@ export function setTxtContent(langPref) {
   const txt_en = txt_data_en;
   const txt_es = txt_data_es;
   const txt_ca = txt_data_ca;
+  console.log(txt_ca[456]);
 
   let setLang = langPref;
   if (!setLang) {
@@ -58,7 +59,7 @@ export function setTxtContent(langPref) {
       elem.textContent = data[idArr[0]];
     } else {
       const textNodes = Array.from(elem.childNodes).filter(
-        (node) => node.nodeType === 3 && node.textContent.trim().length > 0
+        (node) => node.nodeType === 3 && node.textContent.trim().length
       );
       for (let i = 0; i < idArr.length; i++) {
         textNodes[i].textContent = data[idArr[i]];
