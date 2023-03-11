@@ -81,4 +81,20 @@
       }
     }
   }
+  &__list {
+    text-align: left;
+    padding: 0;
+
+    li {
+      margin-bottom: var(--mg-base);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .txt-link {
+      color: var(--bgClr-base);
+      text-decoration: underline;
+      white-space: nowrap;
+    }
+  }
 }

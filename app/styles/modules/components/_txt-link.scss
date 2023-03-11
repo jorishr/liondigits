@@ -5,7 +5,7 @@
 
   display: inline-flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 
   &__icon {
     width: 0.9em;
@@ -19,5 +19,8 @@
     @include pc_lg {
       margin: 0 9px 0;
     }
+  }
+  span {
+    word-wrap: break-word;
   }
 }
