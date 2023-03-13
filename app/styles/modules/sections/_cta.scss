@@ -47,4 +47,12 @@
       }
     }
   }
+  &__options {
+    padding: var(--pd-lg) 0 0;
+    a {
+      text-decoration: underline;
+      color: var(--txtClr-lightblue);
+      font-size: var(--fs-sm);
+    }
+  }
 }
