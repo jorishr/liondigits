@@ -45,7 +45,6 @@ export function setTxtContent(langPref) {
   const txt_en = txt_data_en;
   const txt_es = txt_data_es;
   const txt_ca = txt_data_ca;
-  console.log(txt_ca[456]);
 
   let setLang = langPref;
   if (!setLang) {
