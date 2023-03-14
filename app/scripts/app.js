@@ -15,7 +15,7 @@ import {
 } from "./modules/anchor.js";
 import { setCollapseBtns } from "./modules/collapse.js";
 import { processHeaderHeight } from "./modules/layout.js";
-import scroll from "./modules/scroll.js";
+import { scrollIndicator, scrollDown } from "./modules/scroll.js";
 
 // Important: Make sure to add `data-cal-link="liondigits/20min"` attribute to the element you want to open Cal on click
 try {
@@ -43,7 +43,8 @@ setCompanyInfo();
 setPgpInfo();
 setAnchorLinks();
 setTxtContent();
-scroll();
+scrollIndicator();
+scrollDown();
 /*
 ############## 
 Footer credits 
