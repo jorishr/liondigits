@@ -14,3 +14,18 @@ export function formatLangStr(str) {
   }
   return str;
 }
+
+export function throttle(fn, delay) {
+  let flag = true;
+  return function () {
+    let args = arguments;
+    let context = this;
+    if (flag) {
+      fn.apply(context, args);
+      flag = false;
+      setTimeout(() => {
+        flag = true;
+      }, delay);
+    }
+  };
+}
