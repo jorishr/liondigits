@@ -52,7 +52,7 @@
         line-height: 1.5;
         text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
         @include pc_lg {
-          font-size: var(--fs-2xl);
+          font-size: var(--fs-3xl);
         }
       }
       a.btn {
