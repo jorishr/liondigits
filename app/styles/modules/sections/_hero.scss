@@ -7,20 +7,28 @@
     /* 
     Height is extended to create space for the next intro__highlight section on vertical screen.
     */
+
+    background-color: rgba(11, 33, 74, 0.95);
+
     @include tablet_sm {
       height: 150vh;
     }
   }
 
-  &__background-image {
+  &__bg-img {
     display: none;
     position: absolute;
     top: 0;
     width: 100%;
-    height: 150vh;
+    height: 100%;
 
-    background-size: 100%;
+    background-image: url("../images/logo/liondigits_logo_v1_gold_transparent-bg.png");
+    background-size: cover;
     z-index: -1;
+
+    @include pc_sm {
+      display: block;
+    }
   }
 
   &__text-container {
@@ -37,8 +45,12 @@
       h1 {
         color: var(--txtClr-white);
         font-size: var(--fs-xl);
-        margin: 0 0 var(--mg-base);
+        margin: 0 0 var(--mg-sm);
         text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+
+        @include pc_sm {
+          font-size: var(--fs-2xl);
+        }
 
         @include pc_lg {
           font-size: var(--fs-4xl);
@@ -51,6 +63,10 @@
         margin: 0 auto var(--mg-lg);
         line-height: 1.5;
         text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+
+        @include pc_sm {
+          font-size: var(--fs-md);
+        }
         @include pc_lg {
           font-size: var(--fs-3xl);
         }
