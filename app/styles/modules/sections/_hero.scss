@@ -42,6 +42,19 @@
       transform: translate(-50%, -50%);
       text-align: center;
 
+      p {
+        font-size: var(--fs-md);
+        margin-bottom: var(--mg-sm);
+
+        @include pc_sm {
+          font-size: var(--fs-xl);
+        }
+
+        @include pc_lg {
+          font-size: var(--fs-3xl);
+        }
+      }
+
       h1 {
         color: var(--txtClr-white);
         font-size: var(--fs-xl);
