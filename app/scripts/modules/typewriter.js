@@ -10,7 +10,7 @@ export function typewriterEffect() {
   });
 
   typewriter
-    .pauseFor(2000)
+    .pauseFor(1500)
     //.pasteString("<span style='font-size: var(--fs-xl);'>LION </span>")
     .typeString("<span>01101100 01101001</span>")
     .pauseFor(300)
