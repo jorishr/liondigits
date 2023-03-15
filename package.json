@@ -19,7 +19,8 @@
     "ngrok": "^4.3.3",
     "parcel": "^2.8.3",
     "posthtml-include": "^1.7.4",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "website-text-translator": "^0.1.1"
   },
   "dependencies": {
     "typewriter-effect": "^2.19.0"
