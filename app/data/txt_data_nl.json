@@ -2,9 +2,6 @@
   "100": "Algemene voorwaarden",
   "101": "Privacy-beleid",
   "102": "Versleutelde communicatie",
-  "103": "Je kan mij zowel gewone standaard (e-mail)berichten sturen als versleutelde berichten. De meest gebruiksvriendelijke manier om mij",
-  "104": "versleutelde",
-  "105": "berichten te versturen is via de",
   "106": "Signal Messenger App",
   "107": "Gebruik je net als ik",
   "108": "ProtonMail",
@@ -342,5 +339,12 @@
   "473": " Analyse, hulp en advies voor jouw aanwezigheid op het web: IT als hefboom om je zakelijke impact te vergroten. ",
   "474": "Demo video",
   "475": "Demo video",
-  "476": "Demo video"
+  "476": "Demo video",
+  "477": "Signal",
+  "478": " De meest gebruiksvriendelijke manier om versleutelde berichten te verzenden is via de ",
+  "479": ". Deze gratis en open source berichten-app biedt end-to-end encryptie om berichten, foto's, video's en oproepen te verzenden. Signal vraagt alleen je telefoonnummer wanneer je jou voor het eerst bij de service registreert. Er worden geen metadata rondom communicatie bewaard. Met de app kunnen berichten ook automatisch worden gewist zodra ze zijn gelezen. ",
+  "480": "Voeg mij toe als contactpersoon in Signal",
+  "481": "ProtonMail",
+  "482": "E-mail",
+  "483": "PGP: Pretty Good Privacy"
 }
