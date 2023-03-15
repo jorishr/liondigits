@@ -1,7 +1,8 @@
 {
   "address": "Lion Digits\r\nHulshoekstraat 48\r\n3560 Lummen\r\n(BE)",
   "company_num": "BE 0781 815 149",
-  "pgp": "08AD 0252 59CQ 316D",
+  "pgp_long_id": "C00A 50D2 30AE 0BD1",
+  "pgp_fingerprint": "A6EE 1148 5FF8 3B2E 161B F7AC C00A 50D2 30AE 0BD1",
   "email_jr": "joris@liondigits.com",
   "email_info": "info@liondigits.com",
   "tel_be": "+32468578564",

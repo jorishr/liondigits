@@ -27,26 +27,37 @@
 
     &__inner-container {
       border-radius: 5px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-
       background-color: #fff;
 
       padding: var(--pd-md) var(--pd-base);
+
+      h3 {
+        text-align: center;
+        font-size: var(--pd-base);
+        margin-bottom: var(--mg-base);
+      }
 
       @include tablet_sm {
         padding: var(--pd-xl) var(--pd-md);
       }
 
       @include tablet_md {
-        flex-direction: row;
-        justify-content: space-evenly;
         padding: var(--pd-md) var(--pd-base);
       }
 
       @include pc_sm {
         padding: var(--pd-lg) var(--pd-md);
+      }
+    }
+
+    &__item-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      @include tablet_md {
+        flex-direction: row;
+        justify-content: space-evenly;
       }
     }
 

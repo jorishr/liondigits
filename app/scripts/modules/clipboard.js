@@ -1,3 +1,4 @@
+import contact from "../../data/contact.json";
 /*
 #########################  
 Copy PGP key to clipboard 
@@ -11,9 +12,9 @@ export function clipboardCopy() {
       btn.addEventListener("click", function () {
         let str = "";
         if (btn.classList.contains("js-data-long_id")) {
-          str = document.getElementById("pgp-txt").textContent.slice(5);
+          str = contact.pgp_long_id;
         } else {
-          str = getPubkey();
+          str = contact.pgp_fingerprint;
         }
 
         const textArea = document.createElement("textarea");
@@ -34,8 +35,4 @@ export function clipboardCopy() {
       });
     });
   }
-}
-
-function getPubkey() {
-  return "Here comes the public key";
 }

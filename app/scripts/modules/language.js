@@ -115,7 +115,12 @@ function setEmailSubjectTxt(setLang) {
 
 export function getLangPref() {
   const langCookie = getCookie("language");
-  if (langCookie) {
+  const isValid =
+    langCookie === "nl" ||
+    langCookie === "en" ||
+    langCookie === "es" ||
+    langCookie === "ca";
+  if (langCookie && isValid) {
     return langCookie;
   }
   if (!langCookie) {
