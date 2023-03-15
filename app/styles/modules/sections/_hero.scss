@@ -90,13 +90,26 @@
         align-items: center;
         justify-content: center;
 
+        @include tablet_md {
+          flex-direction: row;
+        }
+
         a.btn {
           &:first-of-type {
-            margin-bottom: var(--mg-base);
-          }
+            margin-bottom: var(--mg-xs);
 
-          @include pc_lg {
-            font-size: var(--fs-lg);
+            @include mobile_md {
+              margin-bottom: var(--mg-base);
+            }
+
+            @include tablet_md {
+              margin-bottom: 0;
+              margin-right: var(--mg-base);
+            }
+
+            @include pc_lg {
+              font-size: var(--fs-lg);
+            }
           }
         }
       }
