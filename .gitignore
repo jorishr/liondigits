@@ -7,6 +7,10 @@ deploy-update.sh
 /.parcel-cache
 .parcel-cache
 pubkey.txt
+pubkey.txt.asc
+pubkey_liondigits.txt
+pubkey_liondigits.txt.asc
+pubkey_liondigits.asc
 *.pdf
 *-workspace
 .prettierignore
