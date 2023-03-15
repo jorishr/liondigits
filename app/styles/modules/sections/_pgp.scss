@@ -67,13 +67,18 @@
       }
 
       h3 {
-        margin-bottom: var(--mg-sm);
+        margin-bottom: var(--mg-base);
         text-align: center;
       }
 
       .txt-container {
         margin: 0 auto var(--mg-base);
         max-width: 50em;
+
+        h3 {
+          margin-bottom: var(--mg-xs);
+          text-align: left;
+        }
 
         p {
           margin-bottom: var(--mg-xs);
