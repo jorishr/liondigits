@@ -41,10 +41,16 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
+      padding-top: var(--pd-base);
 
       p {
+        //js-typewriter-effect
         font-size: var(--fs-md);
         margin-bottom: var(--mg-sm);
+
+        @include mobile_md {
+          font-size: var(--fs-lg);
+        }
 
         @include pc_sm {
           font-size: var(--fs-xl);
