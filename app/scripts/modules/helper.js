@@ -3,7 +3,12 @@ export function setCookie(key, val) {
 }
 export function getCookie(key) {
   if (document.cookie) {
-    return document.cookie.slice(key.length + 1);
+    const cookieObj = document.cookie.split(";").reduce((acc, curr) => {
+      const [key, val] = curr.split("=");
+      acc[key.trim()] = val.trim();
+      return acc;
+    }, {});
+    return cookieObj[key];
   }
 }
 

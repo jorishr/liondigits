@@ -37,11 +37,13 @@ export function scrollIndicator() {
 
 export function scrollDown() {
   const scrollDown = document.querySelector(".scroll-down");
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 0) {
-      scrollDown.classList.add("hide");
-    } else {
-      scrollDown.classList.remove("hide");
-    }
-  });
+  if (scrollDown) {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 0) {
+        scrollDown.classList.add("hide");
+      } else {
+        scrollDown.classList.remove("hide");
+      }
+    });
+  }
 }
