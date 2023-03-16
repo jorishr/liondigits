@@ -1,4 +1,5 @@
 .consent {
+  display: none;
   z-index: 5;
   position: fixed;
   bottom: 0;
@@ -6,10 +7,13 @@
   width: 100%;
   background-color: var(--bgClr-dark);
 
-  display: flex;
   flex-direction: column;
 
   padding: var(--pd-base);
+
+  &--active {
+    display: flex;
+  }
 
   @include tablet_md {
     flex-direction: row;

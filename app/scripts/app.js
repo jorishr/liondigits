@@ -17,6 +17,7 @@ import { setCollapseBtns } from "./modules/collapse.js";
 import { processHeaderHeight } from "./modules/layout.js";
 import { scrollIndicator, scrollDown } from "./modules/scroll.js";
 import { typewriterEffect } from "./modules/typewriter.js";
+import consent from "./modules/consent.js";
 
 // Important: Make sure to add `data-cal-link="liondigits/20min"` attribute to the element you want to open Cal on click
 try {
@@ -47,6 +48,7 @@ setTxtContent();
 scrollIndicator();
 scrollDown();
 typewriterEffect();
+consent();
 /*
 ############## 
 Footer credits 
