@@ -1,0 +1,43 @@
+.consent {
+  z-index: 5;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bgClr-dark);
+
+  display: flex;
+  flex-direction: column;
+
+  padding: var(--pd-base);
+
+  @include tablet_md {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  p {
+    align-self: center;
+    color: var(--txtClr-white);
+    margin-bottom: var(--mg-sm);
+
+    @include tablet_md {
+      margin-bottom: 0;
+    }
+    @include pc_lg {
+      font-size: var(--fs-2xl);
+    }
+  }
+
+  .btn {
+    width: 66%;
+
+    @include mobile_lg {
+      width: 45%;
+    }
+
+    @include tablet_md {
+      width: unset;
+    }
+  }
+}
