@@ -23,6 +23,7 @@
     "website-text-translator": "^0.1.1"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "typewriter-effect": "^2.19.0"
   }
 }

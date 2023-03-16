@@ -99,26 +99,4 @@
       text-decoration: underline;
     }
   }
-
-  &__trivia {
-    display: none;
-    h2 {
-      margin-bottom: 0;
-    }
-
-    &__txt-desktop {
-      display: none;
-
-      &.has_keyboard {
-        display: block;
-      }
-    }
-    &__txt-mobile {
-      display: none;
-
-      &.has_touch {
-        display: block;
-      }
-    }
-  }
 }
