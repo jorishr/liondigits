@@ -29,6 +29,7 @@ The website uses JavaScript modules to perform the following tasks:
 - set link text, contact information and addresses
 - layout helper functions to set header-height and handle toggle buttons
 - handle the [Cal](https://cal.com/) calendar widget
+- scroll animations via [AOS library](https://michalsnik.github.io/aos/)
 
 ### Server
 
