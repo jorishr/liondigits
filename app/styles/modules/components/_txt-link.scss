@@ -1,0 +1,26 @@
+.txt-link {
+  &--lightblue {
+    color: var(--txtClr-lightblue);
+  }
+
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  &__icon {
+    width: 0.9em;
+    height: 0.9em;
+    margin: 0 6px 0;
+    align-self: center;
+
+    @include pc_lg {
+      margin: 0 9px 0;
+    }
+    @include pc_lg {
+      margin: 0 9px 0;
+    }
+  }
+  span {
+    word-wrap: break-word;
+  }
+}

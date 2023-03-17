@@ -1,0 +1,17 @@
+noscript::before {
+  content: var(--pseudo_txt_no-js);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  font-size: var(--fs-md);
+  text-align: center;
+
+  padding: var(--pd-sm) var(--pd-lg);
+
+  background-color: var(--accent-alert);
+  color: var(--bgClr-white);
+
+  z-index: 5;
+}

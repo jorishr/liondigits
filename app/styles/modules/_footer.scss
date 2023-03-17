@@ -1,118 +1,117 @@
-footer {
-    background-color: #002a64;
-    color: #fff;
-    padding: 4em 4em 0 4em;
-    font-size: 16px;
-    line-height: 1.9em;
+.footer {
+  position: relative; //see modal class
+  background-color: var(--bgClr-darkest); //#0e161b;
+  padding: var(--pd-2xl) var(--pd-base) 0;
+  border-top: 6px #00b4ff solid;
 
-    @include atMobile {
-        padding: 2em 2em 0 2em;
+  color: var(--accent-azureblue);
+  line-height: 1.9em;
+
+  @include pc_lg {
+    font-size: var(--fs-xl);
+  }
+  @include pc_xl {
+    font-size: var(--fs-2xl);
+  }
+
+  &__logo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: var(--mg-sm);
+
+    img {
+      width: 175px;
+
+      @include pc_lg {
+        width: 325px;
+      }
     }
+  }
 
-    .footer__content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 2em 4em 2em;
+  &__nav {
+    margin-bottom: var(--mg-lg);
 
-        @include atMobile {
-            flex-direction: column;
-        }
+    ul {
+      padding-left: 0;
 
-        .footer__logo {
-            display: flex;
-            align-items: flex-start;
-
-            @include atMobile {
-                justify-content: center;
-                margin-bottom: 4em;
-            }
-      
-            a {
-                margin-bottom: 1em;
-        
-                img {
-                    width: 175px;
-                }
-            }
-        }
-
-        .footer__nav {
-
-            ul {
-                
-                @include atMobile {
-                    padding-left: 0;
-                }
-
-                li {
-                    padding: .75em 0;
-                                    
-                    @include atMobile {
-                        text-align: center;
-                    }
-    
-                    a {
-                        color: #7eb0fb;
-                        text-transform: capitalize;
-    
-                        &:hover {
-                            text-decoration: underline;
-                        }
-    
-                    }           
-                }
-            }
-        }
-
-        .footer__socials {
-            display: flex;
-            flex-direction: column;
-
-            @include atMobile {
-                margin-bottom: 4em;
-            }
-
-            .row1, .row2 {
-                display: flex;
-                justify-content:center;
-
-                @include atMobile {
-                    flex-wrap: wrap;
-                }
-            }
-
-
-            a {
-                padding: 1.5em 1em;
-
-                img {
-                    width: 50px;
-                }
-
-                &:last-child {
-                    padding-right: 0;
-
-                    @include atMobile {
-                        padding-right: 1em;
-                    }
-                }
-            }
-        }
-    }
-
-
-    .footer__copyright {
+      li {
+        padding: var(--pd-sm) 0;
         text-align: center;
-        font-size: 12px;
-        
-        hr {
-            margin-bottom: 4em;
+
+        a {
+          text-transform: capitalize;
+          color: var(--bgClr-white);
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
 
-        p {
-            padding-bottom: 4em;
+        &:first-of-type {
+          a {
+            color: var(--accent-azureblue);
+            &:hover {
+              text-decoration: none;
+              cursor: default;
+            }
+          }
         }
-        
+      }
     }
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-bottom: var(--mg-lg);
+
+    a {
+      padding: 1.5em 1em;
+
+      &:hover {
+        transform: scale(1.015);
+      }
+
+      img {
+        width: 50px;
+
+        @include pc_lg {
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  &__onion {
+    text-align: center;
+    margin-bottom: var(--mg-lg);
+
+    &__link {
+      word-break: break-all;
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: var(--fs-sm);
+
+    @include pc_lg {
+      font-size: var(--fs-md);
+    }
+    @include pc_xl {
+      font-size: var(--fs-xl);
+    }
+
+    hr {
+      margin-bottom: 4em;
+    }
+
+    p {
+      padding-bottom: 4em;
+    }
+  }
 }

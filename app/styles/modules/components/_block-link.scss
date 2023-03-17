@@ -1,0 +1,106 @@
+.block-link {
+  &-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    font-size: var(--fs-sm);
+
+    padding: var(--pd-sm);
+    margin-bottom: var(--mg-base);
+
+    @include mobile_lg {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+
+      padding: var(--pd-sm) var(--pd-sm);
+      margin: 0 var(--mg-base) var(--mg-base) var(--mg-sm);
+    }
+
+    @include pc_lg {
+      font-size: var(--fs-md);
+    }
+    @include pc_xl {
+      font-size: var(--fs-xl);
+    }
+  }
+  &__img-container {
+    img {
+      width: 8.1em;
+      border-radius: 5px;
+    }
+  }
+  &__desc {
+    &-container {
+      padding: var(--pd-sm) var(--pd-xs);
+      text-align: center;
+
+      @include mobile_lg {
+        padding: 0 var(--pd-sm);
+        text-align: left;
+        p:first-of-type {
+          margin-bottom: var(--mg-xs);
+          text-align: left;
+        }
+      }
+    }
+    &__txt {
+      margin-bottom: var(--mg-sm);
+    }
+
+    &__url {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      font-size: var(--fs-xs);
+      color: var(--txtClr-base);
+
+      @include mobile_lg {
+        text-align: left;
+        flex-direction: row;
+        align-items: flex-start;
+        font-size: var(--fs-sm);
+      }
+
+      @include pc_lg {
+        font-size: var(--fs-base);
+      }
+      @include pc_xl {
+        font-size: var(--fs-md);
+      }
+
+      span {
+        white-space: unset;
+
+        @include mobile_lg {
+          align-self: center;
+        }
+      }
+
+      img {
+        width: 2.4em;
+        margin: 0 0 var(--mg-sm);
+
+        @include mobile_lg {
+          margin: 0 var(--mg-sm) 0 0;
+          align-self: center;
+        }
+      }
+    }
+  }
+  &__link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+}

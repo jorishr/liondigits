@@ -1,0 +1,40 @@
+.scroll-indicator {
+  position: fixed;
+  right: 0.5em;
+  bottom: 0.5em;
+
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
+
+  background-color: var(--bgClr-white);
+  padding: var(--pd-sm);
+
+  z-index: 5;
+  opacity: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.reveal {
+    opacity: 1;
+  }
+
+  &__arrow {
+    height: 20px;
+    z-index: 1;
+  }
+
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: #00b4ff;
+    height: 0;
+    width: 100%;
+
+    z-index: -1;
+  }
+}

@@ -1,0 +1,110 @@
+.pgp {
+  &__txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--pd-lg);
+
+    p {
+      margin-bottom: var(--pd-xs);
+    }
+
+    &__btns {
+      a {
+        &:first-of-type {
+          margin-right: var(--pd-base);
+          transition: all 2s ease-in;
+          position: relative;
+
+          &::before {
+            display: none;
+            content: var(--pseudo_txt_copy);
+            position: absolute;
+            bottom: -1.5em;
+            left: -1em;
+
+            @include pc_lg {
+              bottom: -2em;
+            }
+          }
+          &.js-copied {
+            &:first-of-type {
+              &::before {
+                display: inline-block;
+              }
+            }
+          }
+        }
+
+        img {
+          display: inline-block;
+          height: 18px;
+          width: 18px;
+
+          @include pc_lg {
+            height: 36px;
+            width: 36px;
+          }
+        }
+      }
+    }
+  }
+
+  &__info {
+    .modal__content-container {
+      font-size: var(--fs-base);
+      overflow-y: auto;
+
+      @include tablet_sm {
+        font-size: var(--fs-md);
+        padding: var(--pd-lg) var(--pd-base);
+      }
+      @include pc_lg {
+        font-size: var(--fs-xl);
+      }
+      @include pc_xl {
+        font-size: var(--fs-2xl);
+      }
+
+      h3 {
+        margin-bottom: var(--mg-base);
+        text-align: center;
+      }
+
+      .txt-container {
+        margin: 0 auto var(--mg-base);
+        max-width: 50em;
+
+        h3 {
+          margin-bottom: var(--mg-xs);
+          text-align: left;
+        }
+
+        p {
+          margin-bottom: var(--mg-xs);
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .link-container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        margin: 0 auto var(--mg-lg);
+
+        @include pc_lg {
+          max-width: 700px;
+        }
+
+        a.btn {
+          &:first-of-type {
+            margin-bottom: var(--mg-base);
+          }
+        }
+      }
+    }
+  }
+}

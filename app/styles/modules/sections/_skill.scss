@@ -1,0 +1,140 @@
+.skill {
+  &-section-container {
+    overflow: hidden;
+    /* Hides the overflow of the carousel-container below */
+    color: var(--bgClr-white);
+    background-color: #003f8c;
+    padding: var(--pd-xl) var(--pd-sm);
+    font-size: var(--fs-md);
+
+    @include tablet_sm {
+      padding: var(--pd-2xl) var(--pd-base);
+    }
+  }
+
+  &__heading {
+    margin-bottom: var(--mg-lg);
+
+    @include tablet_md {
+      max-width: 50em;
+      margin: 0 auto var(--mg-lg);
+    }
+    @include pc_lg {
+      font-size: var(--fs-xl);
+    }
+
+    &__title {
+      font-size: var(--fs-2xl);
+      text-align: center;
+      margin-bottom: var(--mg-sm);
+
+      @include pc_lg {
+        font-size: var(--fs-3xl);
+      }
+    }
+
+    &__icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-bottom: var(--mg-md);
+
+      @include tablet_md {
+        max-width: 24em;
+        margin: 0 auto var(--mg-md);
+      }
+
+      img {
+        max-width: 3em;
+      }
+    }
+
+    &__sub {
+      text-align: center;
+      font-size: var(--fs-xl);
+
+      margin-bottom: var(--mg-base);
+
+      @include pc_lg {
+        font-size: var(--fs-2xl);
+      }
+    }
+
+    &__intro {
+      margin-bottom: var(--mg-xs);
+    }
+
+    &__feature {
+      &-container {
+        display: flex;
+        flex-direction: column;
+      }
+      ul {
+        margin-bottom: var(--mg-base);
+      }
+      img {
+        width: 45%;
+        margin: 0 auto var(--mg-base);
+      }
+
+      @include tablet_md {
+        &-container {
+          flex-direction: row;
+          justify-content: left;
+          flex-flow: row-reverse;
+          padding: var(--pd-base) 0;
+        }
+        img {
+          width: 33%;
+          height: 33%;
+          margin-right: var(--mg-base);
+          margin-bottom: 0;
+          align-self: center;
+        }
+        ul {
+          margin-bottom: 0;
+        }
+      }
+      @include pc_sm {
+        img {
+          width: 21%;
+          height: 21%;
+        }
+      }
+      @include pc_lg {
+        img {
+          width: 18%;
+          height: 18%;
+        }
+      }
+    }
+  }
+
+  &__section {
+    margin-bottom: var(--mg-2xl);
+
+    @include tablet_md {
+      max-width: 50em;
+      margin: 0 auto var(--mg-2xl);
+    }
+    @include pc_lg {
+      font-size: var(--fs-xl);
+    }
+
+    &__heading {
+      text-align: center;
+      margin-bottom: var(--mg-base);
+
+      h3 {
+        font-style: italic;
+        font-weight: 300;
+      }
+    }
+    &__txt-block {
+      margin-bottom: var(--mg-base);
+      p {
+        margin-bottom: var(--mg-xs);
+      }
+    }
+  }
+}

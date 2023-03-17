@@ -1,0 +1,48 @@
+.modal {
+  //full screen modal assumes a parent with position: relative
+  display: none;
+
+  &--active {
+    display: block;
+  }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 95%;
+  width: 95%;
+
+  z-index: 6;
+  background-color: #031f30;
+  box-shadow: 5px 5px 5px 5em rgb(233, 235, 238, 0.6);
+  border-radius: 5px;
+
+  &__content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(249, 227, 174, 30%);
+    color: #f9e3ae;
+
+    padding: var(--pd-base) var(--pd-sm);
+  }
+
+  &__btn-close {
+    font-size: var(--fs-xl);
+    padding: 0.03em 0.24em;
+    color: var(--txtClr-white);
+    background-color: var(--txtClr-base);
+
+    @include pc_lg {
+      font-size: var(--fs-3xl);
+    }
+
+    &:hover {
+      color: var(--txtClr-lightblue);
+    }
+  }
+}
