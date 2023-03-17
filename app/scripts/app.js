@@ -18,6 +18,8 @@ import { processHeaderHeight } from "./modules/layout.js";
 import { scrollIndicator, scrollDown } from "./modules/scroll.js";
 import { typewriterEffect } from "./modules/typewriter.js";
 import consent from "./modules/consent.js";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Important: Make sure to add `data-cal-link="liondigits/20min"` attribute to the element you want to open Cal on click
 try {
@@ -49,6 +51,7 @@ scrollIndicator();
 scrollDown();
 typewriterEffect();
 consent();
+AOS.init();
 /*
 ############## 
 Footer credits 
