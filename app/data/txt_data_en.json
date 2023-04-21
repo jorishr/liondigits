@@ -22,7 +22,7 @@
   "123": ", or a browser with built-in support for Onion addresses such as",
   "124": "Brave Browser",
   "125": "The link to Lion Digits is:",
-  "126": "This site can also be reached via a Tor Onion URL:",
+  "126": "This site can also be reached via the Tor Network:",
   "127": "Lion Digits logo",
   "128": "Enterprise number",
   "129": "Email Joris Raymaekers",
@@ -341,5 +341,9 @@
   "483": "PGP: Pretty Good Privacy",
   "484": " This website uses cookies to provide an optimal experience. ",
   "485": "More info...",
-  "486": "Got it"
+  "486": "Got it",
+  "487": "business icon",
+  "488": "Key icon",
+  "489": "Tor Network icon",
+  "490": "Onion-service URL"
 }

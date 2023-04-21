@@ -22,7 +22,7 @@
   "123": ", o un navegador amb suport integrat per a adreces de Onion com",
   "124": "Brave browser",
   "125": "L'enllaç a Lion Digits és:",
-  "126": "També es pot accedir a aquest lloc mitjançant un URL de Tor Onion:",
+  "126": "També es pot accedir a aquest lloc mitjançant la xarxa Tor:",
   "127": "Logotip de Lion Digits",
   "128": "Número d'empresa",
   "129": "Envia un correu electrònic a Joris Raymaekers",
@@ -341,5 +341,9 @@
   "483": "PGP: Pretty Good Privacy",
   "484": " Aquest lloc web utilitza cookies per oferir una experiència òptima. ",
   "485": "Més informació...",
-  "486": "Entès"
+  "486": "Entès",
+  "487": "icona de negoci",
+  "488": "Icona de clau",
+  "489": "Icona Tor Network",
+  "490": "URL del servei Onion"
 }
