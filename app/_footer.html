@@ -11,11 +11,17 @@
   <nav class="footer__nav">
     <ul>
       <li>
-        <a
-          class="company-num"
-          title="Ondernemingsnummer"
-          data-txt_id__title="128"
-        ></a>
+        <div class="company__container">
+          <img
+            src="images/icons/icon_business-azureblue.png"
+            alt="Business icoon"
+          />
+          <a
+            class="company-num"
+            title="Ondernemingsnummer"
+            data-txt_id__title="128"
+          ></a>
+        </div>
       </li>
       <li>
         <a href="profile.html" data-txt_id="[466]">Over mij & diensten</a>
@@ -167,9 +173,12 @@
     </a>
   </section>
   <section class="pgp">
-    <div class="pgp__txt">
-      <p id="pgp-txt"></p>
-      <div class="pgp__txt__btns">
+    <div class="pgp__box">
+      <div class="pgp__box__txt-container">
+        <img src="images/icons/icon_pgp-key.png" alt="Sleutel icoon" />
+        <p id="pgp-txt"></p>
+      </div>
+      <div class="pgp__box__btns">
         <a
           class="js-btn-copy js-data-long_id"
           title="Kopiëren naar klembord"
@@ -397,9 +406,15 @@
   </section>
   <section class="footer__onion">
     <p class="footer__onion__title" data-txt_id="[126]">
-      Deze site is ook bereikbaar via een Tor Onion URL:
+      Deze site is ook bereikbaar via het Tor Netwerk:
     </p>
-    <p class="footer__onion__link js-onion-link"></p>
+    <a href="" class="txt-link js-onion-link">
+      <img
+        class="txt-link__icon"
+        src="images/logo/tor_onion_logo-lightblue.png"
+        alt="Tor Netwerk icoon"
+      /><span class="txt-link__txt">Onion-service URL</span>
+    </a>
   </section>
   <section class="footer__copyright">
     <hr />

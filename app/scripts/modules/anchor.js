@@ -65,7 +65,7 @@ export function setOnionAddress() {
   const links = document.querySelectorAll(".js-onion-link");
   if (links) {
     links.forEach((link) => {
-      link.textContent = contactInfo.onion.slice(7);
+      link.setAttribute("href", `${contactInfo.onion}`);
     });
   }
 }

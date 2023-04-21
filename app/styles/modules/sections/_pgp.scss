@@ -1,12 +1,20 @@
 .pgp {
-  &__txt {
+  &__box {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: var(--pd-lg);
 
-    p {
+    &__txt-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin-bottom: var(--pd-xs);
+
+      img {
+        width: 1em;
+        margin-right: 0.75em;
+      }
     }
 
     &__btns {
