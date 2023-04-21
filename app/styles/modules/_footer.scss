@@ -137,4 +137,23 @@
       padding-bottom: 4em;
     }
   }
+
+  .Matthew6 {
+    z-index: -1;
+
+    position: absolute;
+    top: 10em;
+    margin: 0 auto;
+    padding: var(--pd-base);
+
+    max-width: 25em;
+
+    background-color: var(--bgClr);
+    border-radius: 0.5em;
+
+    h4 {
+      text-align: center;
+      margin-bottom: var(--mg-sm);
+    }
+  }
 }
