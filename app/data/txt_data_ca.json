@@ -102,14 +102,12 @@
   "218": "Vols saber més sobre qui sóc?",
   "219": "Busques competències tècniques en JavaScript, TypeScript, NodeJs, ReactJs i més...?",
   "220": "Llegeix més...",
-  "222": "Aplicació web per enllistar llocs d'acampada a Catalunya. Aquest projecte cobreix tota la \"web stack\": una API de back-end, una aplicació web i una aplicació mòbil per a iOS i Android.",
   "223": "lloc web en directe",
   "224": "fitxa tècnica",
   "225": "Es va crear un nou lloc web per a la marca de cervesa Goudster de Halen, amb una visió general pràctica de la llarga història de la cerveseria i un mòdul per a comandes en línia.",
   "226": "lloc web en directe",
   "227": "La base de clients de la Brasserie Lemmensmolen de Beverlo va obtenir un impuls considerable després de llançar un elegant lloc web amb un mòdul de reserves en línia.",
   "228": "lloc web en directe",
-  "229": "Lloc web d'aparador per a l'agència de viatges Clear View Escape",
   "230": "lloc web en directe",
   "231": "fitxa tècnica",
   "232": "Interessat? Demanar hora",
@@ -324,7 +322,7 @@
   "469": "Sobre mi i serveis IT",
   "470": "Què puc fer per tu...",
   "471": " Desenvolupament d'aplicacions web amb perfectes píxels i especial atenció a les millors pràctiques, privadesa i seguretat.",
-  "472": " Programació freelance amb les eines del web: HTML, CSS, JavaScript, ReactJs, React Native i NodeJs (o Python).",
+  "472": " Programació freelance amb les eines del web: HTML, CSS, JavaScript, ReactJs i NodeJs (o Python).",
   "473": " Anàlisi, ajuda i assessorament per a la teva presència web: les TIC com a palanca per augmentar l'impacte del teu negoci.",
   "474": "Vídeo de demostració",
   "475": "Vídeo de demostració",
@@ -364,5 +362,7 @@
   "509": " El procés català de transició nacional en curs està transformant progressivament el panorama polític català.",
   "510": "doorbraak.be/het-huiswerk-van-de-catalanen-0/",
   "511": "Exemples d'èxits amb clients satisfets...",
-  "512": "Llegeix més..."
+  "512": "Llegeix més...",
+  "513": " Aplicació web per a la llista de parcel·les d'acampada a Catalunya. Aquest projecte cobreix tota la \"full web stack\": una API backend amb base de dades i una aplicació web de front-end. Feu clic a la fitxa tècnica per a més detalls.",
+  "514": " Lloc web d'aparador per a l'agència de viatges Clear View Escape. Feu clic a la fitxa tècnica per a més detalls."
 }

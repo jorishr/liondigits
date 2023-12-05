@@ -102,14 +102,12 @@
   "218": "Want to know more about who I am?",
   "219": "Looking for technical skills in JavaScript, TypeScript, NodeJs, ReactJs and more...?",
   "220": "Read more...",
-  "222": "Web application for listing camping sites in Catalonia. This project covers the entire 'web stack': a backend API, a desktop web app and a mobile app for iOS and Android.",
   "223": "live website",
   "224": "technical file",
   "225": "A new website was built for the beer brand Goudster from Halen, with a handy overview of the brewery's long history and a module for ordering online.",
   "226": "live website",
   "227": "The customer base of Brasserie Lemmensmolen in Beverlo got a boost after launching an elegant website with an online reservation module.",
   "228": "live website",
-  "229": "Showcase website for travel agency Clear View Escape",
   "230": "live website",
   "231": "technical file",
   "232": "Interested? Make an appointment",
@@ -324,7 +322,7 @@
   "469": "About me & IT services",
   "470": "What I can do for you...",
   "471": " Pixel-perfect web app development with special attention to best practices, privacy and security.",
-  "472": " Freelance programming with the tools of the web: HTML, CSS, JavaScript, ReactJs, React Native and NodeJs (or Python).",
+  "472": " Freelance programming with the tools of the web: HTML, CSS, JavaScript, ReactJs and NodeJs (or Python).",
   "473": " Analysis, help and advice for your web presence: IT as leverage to increase your business impact.",
   "474": "Demo video",
   "475": "Demo video",
@@ -364,5 +362,7 @@
   "509": " The ongoing Catalan process of national transition is gradually transforming the Catalan political landscape.",
   "510": "doorbraak.be/het-huiswerk-van-de-catalanen-0/",
   "511": "Examples of successful projects with satisfied customers...",
-  "512": "Read more..."
+  "512": "Read more...",
+  "513": " Web application for listing camping pitches in Catalonia. This project covers the entire 'full web stack': a backend API with database and a front-end web app. Click through to the technical sheet for more details.",
+  "514": " Showcase website for travel agency Clear View Escape. Click through to the technical sheet for more details."
 }

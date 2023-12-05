@@ -102,14 +102,12 @@
   "218": "Meer weten over wie ik ben?",
   "219": "Op zoek naar technische competenties in JavaScript, TypeScript, NodeJs, ReactJs en meer...?",
   "220": "Lees meer...",
-  "222": "Web applicatie voor het oplijsten van kampeerplaatsen in Catalonië. Dit project beslaat de ganse 'web stack': een backend API, een desktop web app en een mobile app voor iOS en Android.",
   "223": "live website",
   "224": "technische fiche",
   "225": "Voor het biermerk Goudster uit Halen werd een nieuwe website gebouwd met een handig overzicht van de lange geschiedenis van de brouwerij en een module voor online bestellingen.",
   "226": "live website",
   "227": "Het klantenbestand van Brasserie Lemmensmolen in Beverlo kreeg een boost na het lanceren van een elegante website met een module voor online reserveren.",
   "228": "live website",
-  "229": "Showcase website voor reisbureau Clear View Escape",
   "230": "live website",
   "231": "technische fiche",
   "232": "Geïnteresseerd? Maak een afspraak",
@@ -324,7 +322,7 @@
   "469": "Over mij & IT diensten",
   "470": "Wat ik kan doen voor jou...",
   "471": " Pixel-perfecte web app ontwikkeling met speciale aandacht voor best-practices, privacy en beveiliging. ",
-  "472": " Freelance programmeerwerk met de tools van het web: HTML, CSS, JavaScript, ReactJs, React Native en NodeJs (of Python). ",
+  "472": " Freelance programmeerwerk met de tools van het web: HTML, CSS, JavaScript, ReactJs en NodeJs (of Python). ",
   "473": " Analyse, hulp en advies voor jouw aanwezigheid op het web: IT als hefboom om je zakelijke impact te vergroten. ",
   "474": "Demo video",
   "475": "Demo video",
@@ -364,5 +362,7 @@
   "509": " Het voortschrijdende Catalaanse proces van nationale transitie transformeert geleidelijk aan het Catalaanse politieke landschap. ",
   "510": "doorbraak.be/het-huiswerk-van-de-catalanen-0/",
   "511": "Voorbeelden van succesvolle realisaties met tevreden klanten...",
-  "512": "Lees meer..."
+  "512": "Lees meer...",
+  "513": " Web applicatie voor het oplijsten van kampeerplaatsen in Catalonië. Dit project beslaat de ganse 'full web stack': een backend API met database en een front-end web app. Klik door naar de technische fiche voor meer details. ",
+  "514": " Showcase website voor reisbureau Clear View Escape. Klik door naar de technische fiche voor meer details. "
 }

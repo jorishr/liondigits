@@ -102,14 +102,12 @@
   "218": "¿Quieres saber más sobre quién soy?",
   "219": "¿Buscas competencias técnicas en JavaScript, TypeScript, NodeJs, ReactJs y más...?",
   "220": "Leer más...",
-  "222": "Aplicación web de cotización de sitios de camping en Cataluña. Este proyecto cubre todo el 'web stack': una API de back-end, una aplicación web y una aplicación móvil para iOS y Android.",
   "223": "sitio web en vivo",
   "224": "archivo técnico",
   "225": "Se creó un nuevo sitio web para la marca de cerveza Goudster de Halen, con una descripción visual de la larga historia de la cervecería y un módulo para pedidos en línea.",
   "226": "sitio web en vivo",
   "227": "La base de clientes de Brasserie Lemmensmolen en Beverlo recibió un impulso considerable después de lanzar un elegante sitio web con un módulo de reserva online.",
   "228": "sitio web en vivo",
-  "229": "Sitio web de exhibición para la agencia de viajes Clear View Escape",
   "230": "sitio web en vivo",
   "231": "archivo técnico",
   "232": "¿Interesado? Haz una cita online",
@@ -324,7 +322,7 @@
   "469": "Sobre mí y servicios TI",
   "470": "Qué puedo hacer por ti...",
   "471": " Desarrollo de aplicaciones web con perfectas píxeles y especial atención a las mejores prácticas, privacidad y seguridad.",
-  "472": " Programación freelance con las herramientas de la web: HTML, CSS, JavaScript, ReactJs, React Native y NodeJs (o Python).",
+  "472": " Programación freelance con las herramientas de la web: HTML, CSS, JavaScript, ReactJs y NodeJs (o Python).",
   "473": " Análisis, ayuda y asesoramiento para su presencia en la web: TI como palanca para aumentar el impacto de tu negocio.",
   "474": "vídeo de demostración",
   "475": "vídeo de demostración",
@@ -364,5 +362,7 @@
   "509": " El actual proceso catalán de transición nacional está transformando gradualmente el panorama político catalán.",
   "510": "doorbraak.be/het-huiswerk-van-de-catalanen-0/",
   "511": "Ejemplos de proyectos exitosos con clientes satisfechos...",
-  "512": "Leer más..."
+  "512": "Leer más...",
+  "513": " Aplicación web para el listado de parcelas de camping en Cataluña. Este proyecto cubre toda la 'full web stack': una API de backend con base de datos y una aplicación web de front-end. Haga clic en la hoja técnica para obtener más detalles.",
+  "514": " Sitio web de exhibición para la agencia de viajes Clear View Escape. Haga clic en la hoja técnica para obtener más detalles."
 }
