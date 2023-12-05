@@ -93,10 +93,46 @@
     p {
       margin-bottom: var(--mg-xs);
     }
+  }
 
-    .txt-link {
-      color: var(--txtClr-base);
-      text-decoration: underline;
+  &__expandable-section {
+    display: none;
+    animation: slide-up 500ms forwards, fade-out 1000ms forwards;
+
+    &--active {
+      display: block;
+      animation: slide-up 500ms forwards, fade-in 1000ms forwards;
     }
+  }
+
+  &__btn-expand:hover {
+    cursor: pointer;
+  }
+}
+
+/* Animations*/
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
