@@ -27,6 +27,7 @@
     h3 {
       font-size: var(--fs-lg);
       margin-bottom: var(--mg-base);
+      color: var(--bgClr-white);
 
       @include pc_lg {
         font-size: var(--fs-2xl);
