@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.1] - 2023-12
+
+### Changed
+
+- major layout and text changes to the profile section
+- re-ordering of the homepage sections to better match user expectations
+- minor text changes to the homepage
+
 ## [1.1.0] - 2023-03-17
 
 ### Added
