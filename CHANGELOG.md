@@ -8,7 +8,8 @@ All notable changes to this project will be documented in this file.
 
 - major layout and text changes to the profile section
 - re-ordering of the homepage sections to better match user expectations
-- minor text changes to the homepage
+- multiple text and translation changes to convey a clearer message
+- minor style issue fixes
 
 ## [1.1.0] - 2023-03-17
 
