@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.1] - 2023-12
+## [1.1.1] - 2023-12-05
 
 ### Changed
 
@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - re-ordering of the homepage sections to better match user expectations
 - multiple text and translation changes to convey a clearer message
 - minor style issue fixes
+- minor bug fixes
 
 ## [1.1.0] - 2023-03-17
 

@@ -16,6 +16,8 @@ The website was translated using the [website-text-translator](https://www.npmjs
 
 Run the following command: `npx wtt help` to checkout the options. The current config can be found in `wtt.config.json`.
 
+WTT works best with Node v18.
+
 ### HTML components
 
 The PostHTML-include package is used to include and re-use (partial) HTML files into various pages. This components are start with underscore, `_header.html` for example.
