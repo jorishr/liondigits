@@ -37,8 +37,8 @@
   "138": "Skype logo",
   "139": "Bekijk mijn profiel op Linked-In",
   "140": "Linked-In logo",
-  "141": "Bekijk mijn profiel op Twitter",
-  "142": "Twitter logo",
+  "141": "Bekijk mijn profiel op X",
+  "142": "X logo",
   "143": "Bekijk de code die ik schrijf op Github",
   "144": "Github logo",
   "145": "Bekijk mijn visuele creaties op Codepen",
@@ -364,5 +364,9 @@
   "511": "Voorbeelden van succesvolle realisaties met tevreden klanten...",
   "512": "Lees meer...",
   "513": " Web applicatie voor het oplijsten van kampeerplaatsen in Catalonië. Dit project beslaat de ganse 'full web stack': een backend API met database en een front-end web app. Klik door naar de technische fiche voor meer details. ",
-  "514": " Showcase website voor reisbureau Clear View Escape. Klik door naar de technische fiche voor meer details. "
+  "514": " Showcase website voor reisbureau Clear View Escape. Klik door naar de technische fiche voor meer details. ",
+  "515": "Bekijk mijn profiel op Nostr",
+  "516": "Nostr logo",
+  "517": "Bekijk mijn profiel op Instagram",
+  "518": "Instagram logo"
 }

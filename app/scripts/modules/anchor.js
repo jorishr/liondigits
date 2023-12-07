@@ -32,6 +32,14 @@ function getLinkData(link) {
       return `${contactInfo.url}`;
     case "onion":
       return `${contactInfo.onion}`;
+    case "x":
+      return `${contactInfo.x}`;
+    case "instagram":
+      return `${contactInfo.instagram}`;
+    case "linkedin":
+      return `${contactInfo.linkedin}`;
+    case "nostr":
+      return `nostr:${contactInfo.nostr}`;
   }
 }
 
