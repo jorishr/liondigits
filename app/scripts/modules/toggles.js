@@ -20,6 +20,9 @@ export function targetToggle() {
           if (targetList[i].dataset.target_id === targetId) {
             const baseClass = targetList[i].classList[0];
             targetList[i].classList.toggle(`${baseClass}--active`);
+            if (btn.dataset.btn_expand) {
+              btn.style.display = "none";
+            }
           }
         }
       });

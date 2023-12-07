@@ -11,14 +11,21 @@
   <nav class="footer__nav">
     <ul>
       <li>
-        <a
-          class="company-num"
-          title="Ondernemingsnummer"
-          data-txt_id__title="128"
-        ></a>
+        <div class="company__container">
+          <img
+            src="images/icons/icon_business-azureblue.png"
+            alt="Business icoon"
+            data-txt_id__alt="487"
+          />
+          <a
+            class="company-num"
+            title="Ondernemingsnummer"
+            data-txt_id__title="128"
+          ></a>
+        </div>
       </li>
       <li>
-        <a href="profile.html" data-txt_id="[466]">Over mij & diensten</a>
+        <a href="profile.html" data-txt_id="[466]">Over mij & IT diensten</a>
       </li>
       <li>
         <a href="conditions.html" data-txt_id="[100]">Algemene voorwaarden</a>
@@ -28,7 +35,7 @@
       </li>
     </ul>
   </nav>
-  <section class="footer__socials" id="footer__contact" data-aos="flip-up">
+  <section class="footer__socials" id="footer__contact" data-aos="slide-up">
     <a
       class="js-social-link"
       data-link="email_jr"
@@ -104,38 +111,6 @@
       />
     </a>
     <a
-      style="display: none"
-      class="js-social-link"
-      data-link="linkedin"
-      href="http://www.linkedin.com/"
-      title="Bekijk mijn profiel op Linked-In"
-      target="_blank"
-      rel="noopener noreferrer"
-      data-txt_id__title="139"
-    >
-      <img
-        src="images/icons/social_icon_li_512x512.png"
-        alt="Linked-In logo"
-        data-txt_id__alt="140"
-      />
-    </a>
-    <a
-      style="display: none"
-      class="js-social-link"
-      data-link="twitter"
-      href="https://www.twitter.com/"
-      title="Bekijk mijn profiel op Twitter"
-      target="_blank"
-      rel="noopener noreferrer"
-      data-txt_id__title="141"
-    >
-      <img
-        src="images/icons/social_icon_tw_512x512.png"
-        alt="Twitter logo"
-        data-txt_id__alt="142"
-      />
-    </a>
-    <a
       class="js-social-link"
       data-link="github"
       href="http://www.github.com/"
@@ -165,11 +140,82 @@
         data-txt_id__alt="146"
       />
     </a>
+    <a
+      style="display: none"
+      class="js-social-link"
+      data-link="linkedin"
+      href="http://www.linkedin.com/"
+      title="Bekijk mijn profiel op Linked-In"
+      target="_blank"
+      rel="noopener noreferrer"
+      data-txt_id__title="139"
+    >
+      <img
+        src="images/icons/social_icon_li_512x512.png"
+        alt="Linked-In logo"
+        data-txt_id__alt="140"
+      />
+    </a>
+    <a
+      style="display: none"
+      class="js-social-link"
+      data-link="x"
+      href="https://www.x.com/"
+      title="Bekijk mijn profiel op X"
+      target="_blank"
+      rel="noopener noreferrer"
+      data-txt_id__title="141"
+    >
+      <img
+        src="images/icons/social_icon_x.png"
+        alt="X logo"
+        data-txt_id__alt="142"
+      />
+    </a>
+    <a
+      style="display: none"
+      class="js-social-link"
+      data-link="nostr"
+      href="https://www.primal.net/"
+      title="Bekijk mijn profiel op Nostr"
+      target="_blank"
+      rel="noopener noreferrer"
+      data-txt_id__title="515"
+    >
+      <img
+        src="images/icons/social_icon_nostr.png"
+        alt="Nostr logo"
+        data-txt_id__alt="516"
+      />
+    </a>
+    <a
+      style="display: none"
+      class="js-social-link"
+      data-link="instagram"
+      href="https://www.instagram.com/"
+      title="Bekijk mijn profiel op Instagram"
+      target="_blank"
+      rel="noopener noreferrer"
+      data-txt_id__title="517"
+    >
+      <img
+        src="images/icons/social_icon_ig_512x512.png"
+        alt="Instagram logo"
+        data-txt_id__alt="518"
+      />
+    </a>
   </section>
   <section class="pgp">
-    <div class="pgp__txt">
-      <p id="pgp-txt"></p>
-      <div class="pgp__txt__btns">
+    <div class="pgp__box">
+      <div class="pgp__box__txt-container">
+        <img
+          src="images/icons/icon_pgp-key.png"
+          alt="Sleutel icoon"
+          data-txt_id__alt="488"
+        />
+        <p id="pgp-txt"></p>
+      </div>
+      <div class="pgp__box__btns">
         <a
           class="js-btn-copy js-data-long_id"
           title="Kopiëren naar klembord"
@@ -185,7 +231,7 @@
           data-txt_id__title="149"
           data-target="001"
           ><img
-            src="images/icons/icon_question-circle_azureblue.png"
+            src="images/icons/icon_info-circle_azureblue.png"
             alt="Vraagteken icoon"
             data-txt_id__alt="150"
         /></a>
@@ -390,20 +436,47 @@
           <p class data-txt_id="[125]">
             De link naar Lion Digits is vervolgens:
           </p>
-          <p class="footer__onion__link js-onion-link"></p>
+          <a href="" class="txt-link txt-link--lightblue js-onion-link">
+            <img
+              class="txt-link__icon"
+              src="images/logo/tor_onion_logo-lightblue.png"
+              alt="Tor Netwerk icoon"
+              data-txt_id__alt="489"
+            /><span class="txt-link__txt" data-txt_id="[490]"
+              >Onion-service URL</span
+            >
+          </a>
         </div>
       </div>
     </div>
   </section>
   <section class="footer__onion">
     <p class="footer__onion__title" data-txt_id="[126]">
-      Deze site is ook bereikbaar via een Tor Onion URL:
+      Deze site is ook bereikbaar via het Tor Netwerk:
     </p>
-    <p class="footer__onion__link js-onion-link"></p>
+    <a href="" class="txt-link js-onion-link">
+      <img
+        class="txt-link__icon"
+        src="images/logo/tor_onion_logo-lightblue.png"
+        alt="Tor Netwerk icoon"
+        data-txt_id__alt="489"
+      /><span class="txt-link__txt" data-txt_id="[490]">Onion-service URL</span>
+    </a>
   </section>
   <section class="footer__copyright">
     <hr />
-
     <p id="footer__credits"></p>
+  </section>
+
+  <section class="Matthew6" id="hidden-section" data-nosnippet>
+    <h4 data-txt_id="[491]">Mattheus 6</h4>
+    <p data-txt_id="[492]">
+      9 Gij dan bidt aldus: Onze Vader, Die in de hemelen zijt! Uw Naam worde
+      geheiligd. 10 Uw Koninkrijk kome. Uw wil geschiede, gelijk in den hemel
+      alzo ook op de aarde. 11 Geef ons heden ons dagelijks brood. 12 En vergeef
+      ons onze schulden, gelijk ook wij vergeven onzen schuldenaren. 13 En leid
+      ons niet in verzoeking, maar verlos ons van den boze. Want Uw is het
+      Koninkrijk, en de kracht, en de heerlijkheid, in der eeuwigheid, amen.
+    </p>
   </section>
 </footer>

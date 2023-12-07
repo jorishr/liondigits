@@ -32,6 +32,14 @@ function getLinkData(link) {
       return `${contactInfo.url}`;
     case "onion":
       return `${contactInfo.onion}`;
+    case "x":
+      return `${contactInfo.x}`;
+    case "instagram":
+      return `${contactInfo.instagram}`;
+    case "linkedin":
+      return `${contactInfo.linkedin}`;
+    case "nostr":
+      return `nostr:${contactInfo.nostr}`;
   }
 }
 
@@ -65,7 +73,7 @@ export function setOnionAddress() {
   const links = document.querySelectorAll(".js-onion-link");
   if (links) {
     links.forEach((link) => {
-      link.textContent = contactInfo.onion.slice(7);
+      link.setAttribute("href", `${contactInfo.onion}`);
     });
   }
 }

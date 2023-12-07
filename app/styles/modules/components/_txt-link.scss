@@ -1,11 +1,14 @@
 .txt-link {
-  &--lightblue {
-    color: var(--txtClr-lightblue);
-  }
-
+  color: var(--txtClr-base);
+  text-decoration: underline;
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
+
+  &--lightblue {
+    color: var(--txtClr-lightblue);
+    text-decoration: none;
+  }
 
   &__icon {
     width: 0.9em;
