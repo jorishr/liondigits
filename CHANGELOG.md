@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.2] - 2023-12-06
+
+### Changed
+
+- improved meta tags
+- multiple copy and translation improvements
+- information icon changes
+- social media icon changes: twitter to x
+- improved robots.txt and sitemap.xml
+
+### Added
+
+- open graph image for social sharing
+- social media icons for instagram and nostr
+
+### Bug fixes
+
+- various dead links removed and replaced
+
 ## [1.1.1] - 2023-12-05
 
 ### Changed
