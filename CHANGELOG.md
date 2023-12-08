@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.3] - 2023-12-08
+
+### Changed
+
+- updates to the deployment script and related links and resources
+
 ## [1.1.2] - 2023-12-06
 
 ### Changed
