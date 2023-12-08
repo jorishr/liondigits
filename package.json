@@ -16,8 +16,13 @@
   },
   "homepage": "https://github.com/jorishr/liondigits#readme",
   "engines": {
-    "node": "18.19.2"
+    "node": "<=18.13.0"
   },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "maintained node versions"
+  ],
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
     "ngrok": "^4.3.3",

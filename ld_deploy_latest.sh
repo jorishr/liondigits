@@ -6,7 +6,7 @@ set -e
 DIR_PATH_BASE="/var/www/liondigits.com"
 BACKUP_FOLDER="$DIR_PATH_BASE/backup/backup_$(date +%Y-%m-%d_%H-%M)"
 mkdir -p "$BACKUP_FOLDER"
-cp -r "$DIR_PATH_BASE/public/*" "$BACKUP_FOLDER"
+cp -r "$DIR_PATH_BASE/webapp/*" "$BACKUP_FOLDER"
 
 ## Clone repo
 GITHUB_REPO_URL="https://github.com/jorishr/liondigits.git"  
@@ -24,7 +24,7 @@ cd "$NEW_RELEASE_FOLDER"
 npm install
 npm run build
 
-rm -rf "$DIR_PATH_BASE/public/*"
+rm -rf "$DIR_PATH_BASE/webapp/*"
 
 # File name hashing from build task make errror404 file name dynamic. Error404 filename in NGINX is static.
 ERROR404_HTML=$(find "$NEW_RELEASE_FOLDER/dist" -type f -name "error404*.html" -print -quit)
@@ -40,15 +40,16 @@ fi
 ## copy the robots.txt and sitemap.xml files; not part of the build process
 for file in "$NEW_RELEASE_FOLDER/app/{sitemap.xml,robots.txt}"; do
     if [ -f "$file" ]; then
-        cp "$file" "$DIR_PATH_BASE/public"
-        echo "Copied $file to $DIR_PATH_BASE/public."
+        cp "$file" "$DIR_PATH_BASE/webapp"
+        echo "Copied $file to $DIR_PATH_BASE/webapp."
     else
         echo "Error: $file not found."
     fi
 done
 
 ## copy the files from build folder to final destination
-cp "$NEW_RELEASE_FOLDER/dist/*" "$DIR_PATH_BASE/public"
+cp "$NEW_RELEASE_FOLDER/dist/*" "$DIR_PATH_BASE/webapp"
 
 ## clean up
 rm -rf "$NEW_RELEASE_FOLDER"
+nvm use default
