@@ -14,8 +14,11 @@ NEW_RELEASE_FOLDER="$DIR_PATH_BASE/new_release"
 
 git clone "$GITHUB_REPO_URL" "$NEW_RELEASE_FOLDER" 
 
+RECOMMENDED_NODE_VERSION=$(jq -r '.engines.node' package.json)
+
 [ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh"
-nvm use 18
+
+nvm use "$RECOMMENDED_NODE_VERSION" || nvm use 18
 
 cd "$NEW_RELEASE_FOLDER"
 npm install
