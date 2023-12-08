@@ -1,6 +1,7 @@
 # Website Lion Digits
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/jorishr/liondigits)
+![node-current](https://img.shields.io/node/v/:packageName)
 
 Website for [liondigits.com](https://liondigits.com), by Joris Raymaekers.
 
