@@ -37,11 +37,10 @@
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      margin-bottom: var(--mg-md);
+      margin: var(--mg-sm) auto var(--mg-md);
 
       @include tablet_md {
         max-width: 24em;
-        margin: 0 auto var(--mg-md);
       }
 
       img {
@@ -140,6 +139,15 @@
       h3 {
         font-style: italic;
         font-weight: 300;
+      }
+    }
+    &__article {
+      &__topic {
+        margin-bottom: var(--mg-base);
+
+        p {
+          margin-bottom: var(--mg-xs);
+        }
       }
     }
     &__txt-block {
