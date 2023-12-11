@@ -150,6 +150,10 @@
         }
       }
     }
+
+    &__card {
+      margin-bottom: var(--mg-lg);
+    }
     &__txt-block {
       margin-bottom: var(--mg-base);
       p {
