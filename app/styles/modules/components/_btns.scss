@@ -123,18 +123,3 @@ a {
     }
   }
 }
-
-// base style for close btn for modals and tooltips
-.btn-close {
-  position: absolute;
-  top: 0.15em;
-  left: 0.21em;
-  z-index: 5;
-  padding: 0;
-  border-radius: 5px;
-
-  &:hover {
-    text-decoration: none;
-    cursor: pointer;
-  }
-}

@@ -2,9 +2,9 @@ export function btnClose() {
   const btns = document.querySelectorAll(".js-btn-close");
   btns.forEach((btn) => {
     btn.addEventListener("click", function () {
-      const parent = btn.parentElement;
+      const parent = btn.parentElement.parentElement;
       const baseClass = parent.classList[0];
-      parent.classList.remove(`${baseClass}--active`);
+      animateClose(parent, baseClass);
     });
   });
 }
@@ -20,6 +20,12 @@ export function targetToggle() {
           if (targetList[i].dataset.target_id === targetId) {
             const baseClass = targetList[i].classList[0];
             targetList[i].classList.toggle(`${baseClass}--active`);
+            window.addEventListener("click", (e) => {
+              if (e.target === targetList[i]) {
+                animateClose(targetList[i], baseClass);
+                return;
+              }
+            });
             if (btn.dataset.btn_expand) {
               btn.style.display = "none";
             }
@@ -28,4 +34,17 @@ export function targetToggle() {
       });
     });
   }
+}
+
+// close with animation
+function animateClose(target, baseClass) {
+  target.classList.add(`${baseClass}--closing`);
+  target.addEventListener(
+    "animationend",
+    () => {
+      target.classList.remove(`${baseClass}--active`);
+      target.classList.remove(`${baseClass}--closing`);
+    },
+    { once: true }
+  );
 }
