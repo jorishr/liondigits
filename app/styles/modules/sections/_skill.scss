@@ -1,8 +1,6 @@
 .skill {
   &-section-container {
-    overflow: hidden;
-    /* Hides the overflow of the carousel-container below */
-    color: var(--bgClr-white);
+    color: var(--txtClr-white);
     background-color: #003f8c;
     padding: var(--pd-xl) var(--pd-sm);
     font-size: var(--fs-md);
@@ -13,7 +11,7 @@
   }
 
   &__heading {
-    margin-bottom: var(--mg-lg);
+    position: relative;
 
     @include tablet_md {
       max-width: 50em;
@@ -26,25 +24,9 @@
     &__title {
       font-size: var(--fs-2xl);
       text-align: center;
-      margin-bottom: var(--mg-sm);
 
       @include pc_lg {
         font-size: var(--fs-3xl);
-      }
-    }
-
-    &__icons {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      margin: var(--mg-sm) auto var(--mg-md);
-
-      @include tablet_md {
-        max-width: 24em;
-      }
-
-      img {
-        max-width: 3em;
       }
     }
 
@@ -60,62 +42,88 @@
     }
 
     &__intro {
-      margin-bottom: var(--mg-xs);
+      text-align: center;
+      font-style: italic;
+      font-weight: 300;
+
+      margin-bottom: var(--mg-base);
     }
 
-    &__feature {
-      &-container {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-      }
+    &__nav {
+      position: relative;
+      top: 0;
+
+      width: 100%;
+
+      border-radius: 5px;
+
+      padding: var(--pd-base) var(--pd-xs);
+      margin-bottom: var(--mg-2xl);
+
+      transition: all ease-in 800ms;
+
       ul {
-        margin-bottom: var(--mg-base);
-        list-style-type: none;
+        padding: 0;
+        text-align: center;
 
         li {
-          margin-bottom: var(--mg-base);
-        }
+          display: inline-block;
+          margin-bottom: var(--mg-xs);
+          a {
+            font-size: var(--fs-base);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
 
-        p:nth-child(1) {
-          //color: var(--txtClr-lightblue);
-          font-weight: 600;
-          font-size: var(--fs-lg);
+            color: var(--txtClr-white);
+            background-color: var(--bgClr-gold);
+
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
+
+            padding: var(--pd-sm) var(--pd-base);
+            margin-right: var(--mg-xs);
+
+            transform: scale(1);
+            transition: all ease-in-out 250ms;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            &:hover {
+              transform: scale(1.025);
+              color: var(--txtClr-lightblue);
+            }
+          }
         }
       }
-      img {
-        width: 45%;
-        margin: 0 auto var(--mg-base);
-      }
+      &__onScroll {
+        position: fixed;
+        top: unset;
+        bottom: 0;
+        left: 0;
 
-      @include tablet_md {
-        &-container {
-          flex-direction: row;
-          justify-content: left;
-          flex-flow: row-reverse;
-          padding: var(--pd-base) 0;
-        }
-        img {
-          width: 33%;
-          height: 33%;
-          margin-right: var(--mg-base);
-          margin-bottom: 0;
-          align-self: center;
-        }
+        z-index: 5;
+        transform: scale(1);
+        transition: transform ease-in 800ms;
+
+        border-radius: 5px 5px 0 0;
+        background-color: rgb(11, 33, 74, 0.95);
+
+        padding: var(--pd-sm) var(--pd-xs);
+        margin-bottom: 0;
+
         ul {
-          margin-bottom: 0;
-        }
-      }
-      @include pc_sm {
-        img {
-          width: 21%;
-          height: 21%;
-        }
-      }
-      @include pc_lg {
-        img {
-          width: 18%;
-          height: 18%;
+          li {
+            a {
+              font-size: var(--fs-sm);
+            }
+
+            a.active {
+              color: var(--txtClr-gold);
+              background-color: var(--bgClr--accent);
+            }
+          }
         }
       }
     }
@@ -134,16 +142,23 @@
 
     &__heading {
       text-align: center;
-      margin-bottom: var(--mg-base);
+      margin-bottom: var(--mg-lg);
 
       h3 {
         font-style: italic;
         font-weight: 300;
       }
+
+      &__icon-container {
+        margin-top: var(--mg-sm);
+      }
     }
     &__article {
       &__topic {
         margin-bottom: var(--mg-base);
+        h4 {
+          margin-bottom: var(--mg-xs);
+        }
 
         p {
           margin-bottom: var(--mg-xs);
@@ -153,15 +168,6 @@
 
     &__card {
       margin-bottom: var(--mg-lg);
-    }
-    &__txt-block {
-      margin-bottom: var(--mg-base);
-      p {
-        margin-bottom: var(--mg-xs);
-      }
-    }
-    &--fun-zone {
-      position: relative;
     }
   }
 }
