@@ -98,6 +98,24 @@
     p {
       margin-bottom: var(--mg-xs);
     }
+    .highlight-first-char::first-letter {
+      @include highlight-first-char;
+    }
+    @include pc_md {
+      .highlight-first-char::first-letter {
+        @include highlight-first-char-md;
+      }
+    }
+    @include pc_lg {
+      .highlight-first-char::first-letter {
+        @include highlight-first-char-lg;
+      }
+    }
+    @include pc_xl {
+      .highlight-first-char::first-letter {
+        @include highlight-first-char-xl;
+      }
+    }
   }
 
   &__expandable-section {

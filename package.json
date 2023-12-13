@@ -4,7 +4,8 @@
   "description": "Website of Lion Digits, by Joris Raymaekers",
   "scripts": {
     "dev": "npx parcel app/index.html",
-    "build": "npx parcel build app/index.html"
+    "build": "npx parcel build app/index.html",
+    "ngrok": "npx ngrok http http://localhost:1234"
   },
   "repository": {
     "type": "git",
