@@ -30,9 +30,6 @@ a {
   @include pc_lg {
     font-size: var(--fs-xl);
   }
-  @include pc_xl {
-    font-size: var(--fs-2xl);
-  }
 
   &:hover {
     background-color: var(--bgClr-white);

@@ -1,8 +1,13 @@
 .list-in-txt {
   list-style-type: disc;
   margin-bottom: var(--mg-xs);
+  overflow: hidden;
+
   li {
     margin-bottom: var(--mg-xs);
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+
     &:last-of-type {
       margin-bottom: 0;
     }

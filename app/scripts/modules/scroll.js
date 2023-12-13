@@ -76,7 +76,7 @@ export function navHighlightOnScroll() {
         const sectionHeight = section.offsetHeight;
         const sectionTop = section.offsetTop - 50;
         const sectionId = section.getAttribute("id");
-        const navLink = document.querySelector(`a[href*="${sectionId}"]`);
+        const navLink = document.querySelector(`li[id*="${sectionId}"]`);
         if (
           currentScrollY > sectionTop &&
           currentScrollY <= sectionTop + sectionHeight

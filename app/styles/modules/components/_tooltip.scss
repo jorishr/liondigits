@@ -41,6 +41,10 @@
 
     padding: var(--pd-md);
 
+    p {
+      margin-bottom: var(--mg-xs);
+    }
+
     @include tablet_md {
       max-width: 55ch;
     }
@@ -48,10 +52,10 @@
     @include pc_sm {
       font-size: var(--fs-base);
       padding: var(--pd-base) var(--pd-base);
+    }
 
-      p {
-        margin-bottom: var(--mg-xs);
-      }
+    @include pc_lg {
+      font-size: var(--fs-md);
     }
 
     &__btn-close {
@@ -69,6 +73,10 @@
 
       @include pc_sm {
         font-size: var(--fs-2xl);
+      }
+
+      @include pc_lg {
+        font-size: var(--fs-3xl);
       }
     }
   }
