@@ -9,6 +9,8 @@ export function btnClose() {
   });
 }
 
+// data-targets:
+// 001: pgp modal; 002: expand about section; 003: btc modal
 export function targetToggle() {
   const btns = document.querySelectorAll(".js-target-toggle");
   if (btns) {
