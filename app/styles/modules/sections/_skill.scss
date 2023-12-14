@@ -1,110 +1,205 @@
 .skill {
-  &-section-container {
-    overflow: hidden;
-    /* Hides the overflow of the carousel-container below */
-    color: var(--bgClr-white);
-    background-color: #003f8c;
-    padding: var(--pd-xl) var(--pd-sm);
+  &__content-container {
+    width: 95%;
+
     font-size: var(--fs-md);
 
-    @include tablet_sm {
-      padding: var(--pd-2xl) var(--pd-base);
-    }
-  }
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
 
-  &__heading {
-    margin-bottom: var(--mg-lg);
+    color: var(--txtClr-white);
+    background-color: #003f8c;
+
+    padding: var(--pd-lg) var(--pd-sm);
+    margin: 0 auto var(--mg-2xl);
+
+    @include mobile_lg {
+      padding: var(--pd-lg) var(--pd-base);
+    }
 
     @include tablet_md {
-      max-width: 50em;
-      margin: 0 auto var(--mg-lg);
+      padding: var(--pd-lg) var(--pd-lg);
     }
+
     @include pc_lg {
       font-size: var(--fs-xl);
     }
 
-    &__title {
+    @include pc_xl {
       font-size: var(--fs-2xl);
+    }
+  }
+
+  &__heading {
+    position: relative;
+
+    @include tablet_md {
+      margin: 0 auto var(--mg-lg);
+    }
+
+    &__title {
       text-align: center;
-      margin-bottom: var(--mg-sm);
+      font-size: var(--fs-2xl);
+
+      margin-bottom: var(--mg-xs);
 
       @include pc_lg {
         font-size: var(--fs-3xl);
       }
     }
 
-    &__icons {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      margin-bottom: var(--mg-md);
-
-      @include tablet_md {
-        max-width: 24em;
-        margin: 0 auto var(--mg-md);
-      }
-
-      img {
-        max-width: 3em;
-      }
-    }
-
-    &__sub {
+    &__subtitle {
       text-align: center;
-      font-size: var(--fs-xl);
+      font-style: italic;
+      font-size: var(--fs-md);
+      font-weight: 300;
 
       margin-bottom: var(--mg-base);
 
       @include pc_lg {
+        font-size: var(--fs-xl);
+      }
+
+      @include pc_xl {
         font-size: var(--fs-2xl);
       }
     }
 
-    &__intro {
-      margin-bottom: var(--mg-xs);
-    }
+    &__nav {
+      position: relative;
+      top: 0;
 
-    &__feature {
-      &-container {
-        display: flex;
-        flex-direction: column;
-      }
-      ul {
-        margin-bottom: var(--mg-base);
-      }
-      img {
-        width: 45%;
-        margin: 0 auto var(--mg-base);
-      }
+      width: 100%;
 
-      @include tablet_md {
-        &-container {
-          flex-direction: row;
-          justify-content: left;
-          flex-flow: row-reverse;
-          padding: var(--pd-base) 0;
-        }
-        img {
-          width: 33%;
-          height: 33%;
-          margin-right: var(--mg-base);
-          margin-bottom: 0;
-          align-self: center;
-        }
-        ul {
-          margin-bottom: 0;
-        }
-      }
-      @include pc_sm {
-        img {
-          width: 21%;
-          height: 21%;
-        }
-      }
+      border-radius: 5px;
+
+      padding: var(--pd-base) var(--pd-xs);
+      margin-bottom: var(--mg-2xl);
+
+      transition: all ease-in 800ms;
+
       @include pc_lg {
-        img {
-          width: 18%;
-          height: 18%;
+        max-width: 78ch;
+        margin: 0 auto;
+      }
+      /*
+      # Base styles for the nav menu as shown before scrolling past it */
+      ul {
+        padding: 0;
+        text-align: center;
+
+        li {
+          display: inline-block;
+          margin-bottom: var(--mg-xs);
+
+          a {
+            width: 14em;
+            font-size: var(--fs-base);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-transform: capitalize;
+            word-wrap: break-word;
+
+            color: var(--txtClr-white);
+            background-color: var(--bgClr-gold);
+
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
+
+            padding: var(--pd-sm) var(--pd-base);
+
+            transform: scale(1);
+            transition: all ease-in-out 250ms;
+
+            &:hover {
+              transform: scale(1.025);
+              color: var(--txtClr-lightblue);
+            }
+
+            @include mobile_md {
+              width: 18em;
+            }
+            @include tablet_sm {
+              width: 21em;
+            }
+            @include pc_lg {
+              font-size: var(--fs-md);
+            }
+          }
+        }
+      }
+      /* 
+      # Upon scrolling past the nav bar is re-located to bottom of the screen
+      # - On mobile and tablet screens only one <li> element is shown, the one 
+      # that corresponds to the active section. See also scroll.js
+      # - On desktop screens all <li> elements are visible
+      # - The color patterns differ slightly 
+      */
+      &__onScroll {
+        position: fixed;
+        top: unset;
+        bottom: 0;
+        left: 0;
+        max-width: unset;
+
+        z-index: 5;
+        transform: scale(1);
+        transition: transform ease-in 800ms;
+
+        border-radius: 5px 5px 0 0;
+        background-color: rgba(3, 31, 48, 0.95);
+
+        padding: var(--pd-sm) var(--pd-xs);
+        margin-bottom: 0;
+
+        @include pc_sm {
+          background-color: rgb(11, 33, 74, 0.95);
+        }
+
+        ul {
+          li {
+            display: none;
+
+            &.active {
+              display: inline-block;
+
+              a {
+                font-size: var(--fs-sm);
+                padding: var(--pd-xs) var(--pd-sm);
+                color: var(--txtClr-gold);
+                background-color: var(--bgClr);
+              }
+            }
+
+            @include pc_sm {
+              display: inline-block;
+
+              a {
+                font-size: var(--fs-sm);
+                padding: var(--pd-xs) var(--pd-sm);
+                color: var(--txtClr-gold);
+                background-color: var(--bgClr-gold);
+              }
+
+              &.active {
+                a {
+                  background-color: unset;
+                }
+              }
+            }
+
+            @include pc_lg {
+              a {
+                font-size: var(--fs-md);
+              }
+
+              &.active {
+                a {
+                  font-size: var(--fs-md);
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -114,27 +209,56 @@
     margin-bottom: var(--mg-2xl);
 
     @include tablet_md {
-      max-width: 50em;
       margin: 0 auto var(--mg-2xl);
     }
+
     @include pc_lg {
       font-size: var(--fs-xl);
     }
 
+    @include pc_xl {
+      font-size: var(--fs-2xl);
+    }
+
     &__heading {
       text-align: center;
-      margin-bottom: var(--mg-base);
+      word-break: break-word;
 
-      h3 {
+      margin-bottom: var(--mg-md);
+
+      &__title {
+        margin-bottom: var(--mg-xs);
+      }
+
+      &__subtitle {
         font-style: italic;
         font-weight: 300;
       }
-    }
-    &__txt-block {
-      margin-bottom: var(--mg-base);
-      p {
-        margin-bottom: var(--mg-xs);
+
+      &__icon-container {
+        margin-top: var(--mg-sm);
       }
+    }
+    &__article {
+      max-width: 78ch;
+      overflow: hidden;
+      margin: 0 auto;
+
+      &__topic {
+        margin-bottom: var(--mg-base);
+        h4 {
+          margin-bottom: var(--mg-xs);
+        }
+
+        p {
+          margin-bottom: var(--mg-xs);
+        }
+      }
+    }
+
+    &__card {
+      max-width: 78ch;
+      margin: 0 auto var(--mg-lg);
     }
   }
 }

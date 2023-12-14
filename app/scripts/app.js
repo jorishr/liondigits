@@ -15,7 +15,12 @@ import {
 } from "./modules/anchor.js";
 import { setCollapseBtns } from "./modules/collapse.js";
 import { processHeaderHeight } from "./modules/layout.js";
-import { scrollIndicator, scrollDown } from "./modules/scroll.js";
+import {
+  scrollIndicator,
+  scrollDown,
+  stickyNavOnScroll,
+  navHighlightOnScroll,
+} from "./modules/scroll.js";
 import { typewriterEffect } from "./modules/typewriter.js";
 import consent from "./modules/consent.js";
 import AOS from "aos";
@@ -49,6 +54,8 @@ setAnchorLinks();
 setTxtContent();
 scrollIndicator();
 scrollDown();
+stickyNavOnScroll();
+navHighlightOnScroll();
 typewriterEffect();
 consent();
 AOS.init();

@@ -1,0 +1,14 @@
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 auto var(--mg-sm);
+
+  @include tablet_md {
+    max-width: 24em;
+  }
+
+  img {
+    max-width: 3em;
+  }
+}

@@ -14,7 +14,7 @@ Values between -1 and 5. Check:
   --bgClr-accent: rgb(0, 63, 140, 1); //#003f8c
   --bgClr-white: rgb(233, 235, 238, 1); //#e9ebee
   --bgClr-lightblue: rgb(196, 240, 255, 1); //#c4f0ff
-  --bgClr-gold: rgba(249, 227, 174, 30%); //#f9e3ae
+  --bgClr-gold: rgba(249, 227, 174, 25%); //#f9e3ae
   --bgClr-dark: rgba(3, 31, 48, 1); //#031f30
   --bgClr-darkest: rgba(14, 22, 27, 1); //#0e161b
   --bgClr-alert: rgba(255, 63, 115, 0.8);
@@ -23,7 +23,7 @@ Values between -1 and 5. Check:
   --txtClr-accent: rgb(0, 63, 140, 1);
   --txtClr-white: rgb(233, 235, 238, 1); //#e9ebee
   --txtClr-lightblue: rgb(196, 240, 255, 1); //#c4f0ff
-  --txtClr-gold: rgb(196, 240, 255, 1); //#f9e3ae
+  --txtClr-gold: rgb(249, 227, 174, 1); //#f9e3ae
 
   --accent-azureblue: rgb(36, 150, 237);
   //--accent-azureblue: rgba(0, 180, 255); //#00b4ff
@@ -85,6 +85,7 @@ body {
   color: var(--txtClr-base);
 
   background-color: var(--bgClr);
+  overflow-x: hidden;
 }
 
 ul {

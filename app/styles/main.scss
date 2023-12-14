@@ -1,10 +1,13 @@
 @import "./modules/global";
 @import "./modules/media-queries";
 @import "./modules/components/noscript";
+@import "./modules/components/wrapper";
 @import "./modules/components/btns";
+@import "./modules/components/animations";
 @import "./modules/components/modal";
 @import "./modules/components/txt-link";
 @import "./modules/components/block-link";
+@import "./modules/components/icon-container";
 @import "./modules/components/list-in-txt.scss";
 @import "./modules/components/card.scss";
 @import "./modules/components/hs-list";
@@ -20,8 +23,10 @@
 @import "./modules/sections/profile";
 @import "./modules/sections/testimonials";
 @import "./modules/sections/about";
+@import "./modules/sections/services";
 @import "./modules/sections/skill";
 @import "./modules/sections/pgp";
+@import "./modules/sections/fun-zone";
 @import "./modules/footer";
 @import "./modules/error404";
 @import "./modules/privacy";

@@ -1,6 +1,9 @@
 .txt-link {
   color: var(--txtClr-base);
   text-decoration: underline;
+  white-space: nowrap;
+  overflow: hidden;
+
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -19,11 +22,5 @@
     @include pc_lg {
       margin: 0 9px 0;
     }
-    @include pc_lg {
-      margin: 0 9px 0;
-    }
-  }
-  span {
-    word-wrap: break-word;
   }
 }

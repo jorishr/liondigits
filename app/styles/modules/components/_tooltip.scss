@@ -1,37 +1,83 @@
 .tooltip {
   display: none;
+
   &--active {
     display: block;
+    animation: fade-in 500ms forwards;
   }
-  position: relative;
-  top: -20em;
-  width: 99%;
-  max-width: 30em;
 
-  background-color: var(--bgClr-dark);
+  &--closing {
+    display: block;
+    animation: fade-out 500ms forwards;
+  }
 
-  padding: var(--pd-base) var(--pd-base);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 6;
+  overflow-y: auto;
+
+  background-color: rgba(196, 240, 255, 0.75);
+
   margin: 0 auto;
-
-  border-radius: 5px;
 
   font-size: var(--fs-sm);
 
-  @include tablet_md {
-    top: -25em;
-  }
-  @include pc_sm {
-    font-size: var(--fs-base);
-  }
+  &__content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-  &__btn-close {
-    top: -0.18em;
-    font-size: var(--fs-xl);
-    color: var(--txtClr-base);
+    width: 85%;
 
-    &:hover {
-      color: var(--txtClr-white);
-      cursor: pointer;
+    background-color: var(--bgClr-dark);
+    color: var(--txtClr-white);
+
+    border-radius: 5px;
+
+    padding: var(--pd-md);
+
+    p {
+      margin-bottom: var(--mg-xs);
+    }
+
+    @include tablet_md {
+      max-width: 55ch;
+    }
+
+    @include pc_sm {
+      font-size: var(--fs-base);
+      padding: var(--pd-base) var(--pd-base);
+    }
+
+    @include pc_lg {
+      font-size: var(--fs-md);
+    }
+
+    &__btn-close {
+      position: absolute;
+      top: -0.21em;
+      right: 0.18em;
+
+      font-size: var(--fs-xl);
+      color: var(--txtClr-base);
+
+      &:hover {
+        color: var(--txtClr-white);
+        cursor: pointer;
+      }
+
+      @include pc_sm {
+        font-size: var(--fs-2xl);
+      }
+
+      @include pc_lg {
+        font-size: var(--fs-3xl);
+      }
     }
   }
 }
