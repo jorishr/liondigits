@@ -52,6 +52,7 @@ export function stickyNavOnScroll() {
   const navBar = document.querySelector(".skill__heading__nav");
   const sectionElemStart = document.querySelector("#skill-section_1");
   const sectionElemEnd = document.querySelector(".fun-zone");
+
   if (navBar) {
     const sectionStart = sectionElemStart.offsetTop;
     const sectionEnd = sectionElemEnd.offsetTop;

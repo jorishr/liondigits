@@ -14,7 +14,7 @@ import {
   setPgpInfo,
 } from "./modules/anchor.js";
 import { setCollapseBtns } from "./modules/collapse.js";
-import { processHeaderHeight } from "./modules/layout.js";
+import { processHeaderHeight, processMenuHeight } from "./modules/layout.js";
 import {
   scrollIndicator,
   scrollDown,
@@ -40,6 +40,7 @@ try {
 }
 
 processHeaderHeight();
+processMenuHeight();
 langMenuToggle();
 targetToggle();
 btnClose();
