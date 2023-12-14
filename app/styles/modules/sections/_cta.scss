@@ -1,59 +1,65 @@
 .cta {
+  width: 95%;
   text-align: center;
-  padding: var(--pd-2xl) var(--pd-sm);
 
-  @include tablet_md {
-    max-width: 66%;
-    margin: 0 auto;
-  }
+  padding: var(--pd-2xl) var(--pd-sm);
+  margin: 0 auto;
 
   @include pc_lg {
     font-size: var(--fs-xl);
   }
-  @include pc_xl {
-    font-size: var(--fs-2xl);
-    max-width: 57%;
+
+  &__content-container {
+    margin: 0 auto;
+
+    @include tablet_md {
+      max-width: 55ch;
+    }
+
+    @include pc_lg {
+      max-width: 78ch;
+    }
   }
 
-  &--base {
-    color: var(--txtClr-base);
-  }
+  &__heading {
+    margin-bottom: var(--mg-sm);
 
-  &--accent {
-    color: var(--txtClr-lightblue);
-  }
-
-  &__text {
-    h3 {
-      font-size: var(--fs-lg);
-      margin-bottom: var(--mg-base);
+    &__title {
+      font-size: var(--fs-xl);
       color: var(--bgClr-white);
 
       @include pc_lg {
-        font-size: var(--fs-2xl);
-      }
-    }
-
-    p {
-      font-size: var(--fs-md);
-      margin-bottom: var(--mg-lg);
-      @include pc_lg {
-        font-size: var(--fs-xl);
-      }
-    }
-
-    a {
-      @include pc_lg {
-        font-size: var(--fs-xl);
+        font-size: var(--fs-3xl);
       }
     }
   }
-  &__options {
-    padding: var(--pd-lg) 0 0;
-    a {
-      text-decoration: underline;
-      color: var(--txtClr-lightblue);
-      font-size: var(--fs-sm);
+
+  &__text {
+    font-size: var(--fs-md);
+    color: var(--txtClr-lightblue);
+
+    margin-bottom: var(--mg-lg);
+
+    @include pc_lg {
+      font-size: var(--fs-xl);
+    }
+  }
+
+  &__link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__link {
+    width: 15em;
+
+    &:first-of-type {
+      margin-bottom: var(--mg-base);
+    }
+
+    @include pc_lg {
+      font-size: var(--fs-xl);
     }
   }
 }
