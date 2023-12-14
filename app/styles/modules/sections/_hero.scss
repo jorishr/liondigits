@@ -1,125 +1,159 @@
 .hero {
-  &-container {
-    display: block;
-    position: relative;
-    top: var(--height-header); //vertically center container using layout.js
-    height: 200vh;
-    /* 
-    Height is extended to create space for the next intro__highlight section on vertical screen.
-    */
+  /* 
+  Height of this section is extended to create space for the highlights section that needs to partially float between the hero and the intro section.
+  */
 
-    background-color: rgba(11, 33, 74, 0.95);
+  //see layout.js
+  height: calc(166vh - var(--height-header));
 
-    @include tablet_sm {
-      height: 150vh;
-    }
+  @include tablet_md {
+    height: calc(133vh - var(--height-header));
   }
 
-  &__bg-img {
-    display: none;
+  &__position-container {
     position: absolute;
-    top: 0;
+    top: calc((-1) * (var(--height-header)));
+    left: 0;
+
+    /* Note that there is a slight overflow issue here; it interferes with the scrollbar probably; Hidden with overflow-x on <body> */
     width: 100%;
-    height: 100%;
+    height: calc(100vh - ((-1) * (var(--height-header))));
+  }
 
-    background-image: url("../images/logo/liondigits_logo_v1_gold_transparent-bg.png");
-    background-size: cover;
-    z-index: -1;
+  &__content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 
-    @include pc_sm {
-      display: block;
+    width: 100vw;
+
+    padding: 0 var(--pd-sm);
+
+    @include mobile_lg {
+      padding: 0 var(--pd-base);
+    }
+
+    @include tablet_sm {
+      padding: 0 var(--pd-lg);
+    }
+
+    @include tablet_md {
+      padding: 0 var(--pd-2xl);
     }
   }
 
   &__text-container {
-    position: relative;
-    height: 100vh;
+    width: 100%;
+    text-align: center;
+  }
 
-    &__text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      padding-top: var(--pd-base);
+  &__typewriter {
+    font-size: var(--fs-md);
+    margin-bottom: var(--mg-sm);
 
-      p {
-        //js-typewriter-effect
-        font-size: var(--fs-md);
+    @include mobile_md {
+      font-size: var(--fs-lg);
+    }
+
+    @include pc_sm {
+      font-size: var(--fs-xl);
+    }
+
+    @include pc_lg {
+      font-size: var(--fs-3xl);
+    }
+
+    @include pc_xl {
+      font-size: var(--fs-4xl);
+    }
+  }
+
+  &__title {
+    color: var(--txtClr-white);
+    font-size: var(--fs-xl);
+
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    margin: 0 0 var(--mg-sm);
+
+    @include pc_sm {
+      font-size: var(--fs-2xl);
+    }
+
+    @include pc_lg {
+      font-size: var(--fs-4xl);
+    }
+  }
+
+  &__subtitle {
+    color: var(--txtClr-lightblue);
+
+    font-size: var(--fs-base);
+    font-weight: 400;
+    line-height: 1.5;
+
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+
+    margin: 0 auto var(--mg-lg);
+
+    @include pc_sm {
+      font-size: var(--fs-md);
+      max-width: 55ch;
+    }
+    @include pc_lg {
+      font-size: var(--fs-3xl);
+    }
+  }
+
+  &__link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include pc_sm {
+      flex-direction: row-reverse;
+    }
+
+    .btn {
+      width: 18em;
+
+      &:first-of-type {
         margin-bottom: var(--mg-sm);
 
-        @include mobile_md {
-          font-size: var(--fs-lg);
-        }
-
         @include pc_sm {
-          font-size: var(--fs-xl);
-        }
-
-        @include pc_lg {
-          font-size: var(--fs-3xl);
-        }
-      }
-
-      h1 {
-        color: var(--txtClr-white);
-        font-size: var(--fs-xl);
-        margin: 0 0 var(--mg-sm);
-        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
-
-        @include pc_sm {
-          font-size: var(--fs-2xl);
-        }
-
-        @include pc_lg {
-          font-size: var(--fs-4xl);
-        }
-      }
-
-      h2 {
-        color: var(--txtClr-lightblue);
-        font-size: var(--fs-base);
-        font-weight: 400;
-        line-height: 1.5;
-        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
-        margin: 0 auto var(--mg-lg);
-
-        @include pc_sm {
-          font-size: var(--fs-md);
-        }
-        @include pc_lg {
-          font-size: var(--fs-3xl);
-        }
-      }
-      &__btns {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        @include tablet_md {
-          flex-direction: row;
-        }
-
-        a.btn {
-          &:first-of-type {
-            margin-bottom: var(--mg-xs);
-
-            @include mobile_md {
-              margin-bottom: var(--mg-base);
-            }
-
-            @include tablet_md {
-              margin-bottom: 0;
-              margin-right: var(--mg-base);
-            }
-
-            @include pc_lg {
-              font-size: var(--fs-lg);
-            }
-          }
+          margin-left: var(--mg-sm);
+          margin-bottom: unset;
         }
       }
     }
+  }
+
+  &__bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+  }
+
+  &__bg__overlay {
+    width: 100%;
+    height: 110%;
+    background-color: rgba(11, 33, 74, 0.95);
+    z-index: 0;
+  }
+
+  &__bg__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    z-index: -1;
+
+    background-image: url("../images/logo/liondigits_logo_v1_gold_transparent-bg.png");
+    background-size: cover;
   }
 }
