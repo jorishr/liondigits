@@ -65,6 +65,15 @@
       }
     }
 
+    &__nav-container {
+      /* 
+      This functions as placeholder when the nav bar is lifted out of the page flow; this prevents a "jump" in the layout.
+      The height variable is set via layout.js 
+      */
+      min-height: var(--menu-height);
+      margin-bottom: var(--mg-2xl);
+    }
+
     &__nav {
       position: relative;
       top: 0;
@@ -74,9 +83,8 @@
       border-radius: 5px;
 
       padding: var(--pd-base) var(--pd-xs);
-      margin-bottom: var(--mg-2xl);
 
-      transition: all ease-in 800ms;
+      transition: all ease-in 500ms;
 
       @include pc_lg {
         max-width: 78ch;
@@ -109,7 +117,6 @@
             padding: var(--pd-sm) var(--pd-base);
 
             transform: scale(1);
-            transition: all ease-in-out 250ms;
 
             &:hover {
               transform: scale(1.025);
@@ -143,8 +150,6 @@
         max-width: unset;
 
         z-index: 5;
-        transform: scale(1);
-        transition: transform ease-in 800ms;
 
         border-radius: 5px 5px 0 0;
         background-color: rgba(3, 31, 48, 0.95);

@@ -6,3 +6,11 @@ export function processHeaderHeight() {
     `-${headerHeight}px`
   );
 }
+export function processMenuHeight() {
+  const menu = document.querySelector(".skill__heading__nav");
+  const menuHeight = menu.offsetHeight;
+  document.documentElement.style.setProperty(
+    "--menu-height",
+    `${menuHeight}px`
+  );
+}
