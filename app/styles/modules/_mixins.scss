@@ -43,6 +43,11 @@
     @content;
   }
 }
+@mixin pc_2xl {
+  @media (min-width: 5121px) {
+    @content;
+  }
+}
 /* MEDIA QUERY MIXINS - END*/
 
 @mixin highlight-first-char {
