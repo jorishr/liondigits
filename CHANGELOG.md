@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1] - 2023-12-15
+
+- Hotfix for issue #79. Fixes faulty modal toggle in production code due to SASS compilation bug.
+
 ## [1.2.0] - 2023-12-15
 
 - major overhaul of the profile page
