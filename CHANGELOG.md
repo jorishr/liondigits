@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2023-12-15
+
+- major overhaul of the profile page
+- improved responsiveness for large screens
+- minor UI changes for better readability
+- additional modal added
+- various bug fixes and code refactoring
+
 ## [1.1.3] - 2023-12-08
 
 ### Changed

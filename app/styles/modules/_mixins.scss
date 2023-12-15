@@ -1,0 +1,82 @@
+/* MEDIA QUERY MIXINS - START*/
+@mixin mobile_md {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+@mixin mobile_lg {
+  @media (min-width: 425px) {
+    @content;
+  }
+}
+
+@mixin tablet_sm {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+@mixin tablet_md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin pc_sm {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin pc_md {
+  @media (min-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin pc_lg {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+@mixin pc_xl {
+  @media (min-width: 2560px) {
+    @content;
+  }
+}
+@mixin pc_2xl {
+  @media (min-width: 5121px) {
+    @content;
+  }
+}
+/* MEDIA QUERY MIXINS - END*/
+
+@mixin highlight-first-char {
+  text-transform: uppercase;
+
+  float: left;
+
+  font-size: var(--fs-4xl);
+  font-family: "Monaco", "Helvetica Neue";
+  font-weight: 600;
+
+  line-height: 0.95;
+  margin-right: 5px;
+}
+
+@mixin highlight-first-char-md {
+  @include highlight-first-char;
+  font-size: 5.5rem;
+  line-height: 0.75;
+}
+
+@mixin highlight-first-char-lg {
+  @include highlight-first-char;
+  font-size: 6.5rem;
+  line-height: 0.8;
+}
+
+@mixin highlight-first-char-xl {
+  @include highlight-first-char;
+  font-size: 8.5rem;
+  line-height: 0.81;
+}

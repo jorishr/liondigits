@@ -20,8 +20,9 @@
       margin: 0 auto var(--pd-lg);
     }
     p {
-      margin: 0 auto;
       font-size: var(--fs-md);
+
+      margin: 0 auto;
       @include pc_lg {
         font-size: var(--fs-xl);
       }

@@ -97,6 +97,125 @@
     }
   }
 
+  &__btc {
+    position: relative;
+
+    &__link-container {
+      display: flex;
+      justify-content: center;
+
+      margin: 0 auto var(--mg-lg);
+    }
+
+    &__logo {
+      width: 10em;
+      margin-right: var(--mg-base);
+    }
+
+    &__icon {
+      display: inline-block;
+      height: 1.15em;
+      width: 1.15em;
+      align-self: center;
+    }
+
+    &__modal {
+      &__content-container {
+        background-color: white;
+        color: var(--txtClr-base);
+
+        @include mobile_lg {
+          padding: var(--pd-md) var(--pd-base);
+        }
+
+        @include tablet_md {
+          padding: var(--pd-lg) var(--pd-md);
+        }
+
+        @include pc_sm {
+          padding: var(--pd-xl) var(--pd-lg);
+        }
+
+        @include pc_md {
+          font-size: var(--fs-md);
+        }
+
+        @include pc_lg {
+          font-size: var(--fs-lg);
+        }
+
+        @include pc_lg {
+          font-size: var(--fs-xl);
+        }
+      }
+
+      &__btn-close {
+        &:hover {
+          color: var(--txtClr-orange);
+        }
+      }
+
+      &__image-container {
+        width: 6em;
+        margin: 0 auto var(--mg-lg);
+      }
+
+      &__txt-container {
+        h3 {
+          font-size: var(--fs-lg);
+          margin-bottom: var(--mg-sm);
+
+          @include pc_md {
+            font-size: var(--fs-xl);
+          }
+          @include pc_lg {
+            font-size: var(--fs-2xl);
+          }
+          @include pc_xl {
+            font-size: var(--fs-3xl);
+          }
+        }
+        p {
+          margin-bottom: var(--mg-xs);
+        }
+
+        @include pc_sm {
+          max-width: 78ch;
+          margin: 0 auto;
+        }
+
+        .highlight-first-char::first-letter {
+          @include highlight-first-char;
+          line-height: 0.77;
+        }
+        @include pc_md {
+          .highlight-first-char::first-letter {
+            @include highlight-first-char-md;
+          }
+        }
+        @include pc_lg {
+          .highlight-first-char::first-letter {
+            @include highlight-first-char-lg;
+          }
+        }
+        @include pc_xl {
+          .highlight-first-char::first-letter {
+            @include highlight-first-char-xl;
+            line-height: 0.6;
+          }
+        }
+      }
+
+      &__list {
+        li {
+          p:first-of-type {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
   &__onion {
     display: flex;
     flex-direction: column;
