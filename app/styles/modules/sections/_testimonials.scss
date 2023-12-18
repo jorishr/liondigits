@@ -12,7 +12,7 @@
   h3 {
     text-align: center;
     font-size: var(--fs-xl);
-    color: var(--bgClr-white);
+    color: var(--txtClr-white);
 
     padding: var(--pd-sm) var(--pd-sm) 0;
     margin-bottom: var(--mg-lg);
@@ -30,7 +30,7 @@
       display: flex;
       flex-direction: column;
 
-      background-color: var(--bgClr-white);
+      background-color: var(--bgClr-lightgray);
       box-shadow: 5px 5px 25px 0 rgba(0, 0, 0, 0.25);
       border-radius: 5px;
 

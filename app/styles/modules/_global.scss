@@ -12,7 +12,8 @@ Values between -1 and 5. Check:
   /* COLORS */
   --bgClr: rgb(11, 33, 74, 1);
   --bgClr-accent: rgb(0, 63, 140, 1); //#003f8c
-  --bgClr-white: rgb(233, 235, 238, 1); //#e9ebee
+  --bgClr-white: rgba(255, 255, 255, 1); //#ffffff
+  --bgClr-lightgray: rgba(235, 237, 238, 1); //#ebedee
   --bgClr-lightblue: rgb(196, 240, 255, 1); //#c4f0ff
   --bgClr-gold: rgba(249, 227, 174, 25%); //#f9e3ae
   --bgClr-dark: rgba(3, 31, 48, 1); //#031f30
@@ -21,7 +22,8 @@ Values between -1 and 5. Check:
 
   --txtClr-base: rgb(90, 103, 116, 1);
   --txtClr-accent: rgb(0, 63, 140, 1);
-  --txtClr-white: rgb(233, 235, 238, 1); //#e9ebee
+  --txtClr-white: rgb(255, 255, 255, 1); //#ffffff
+  --txtClr-lightgray: rgba(235, 237, 238, 1); //#ebedee
   --txtClr-lightblue: rgb(196, 240, 255, 1); //#c4f0ff
   --txtClr-gold: rgb(249, 227, 174, 1); //#f9e3ae
   --txtClr-orange: rgba(247, 147, 26, 1); //#f7931a

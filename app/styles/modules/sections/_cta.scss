@@ -26,7 +26,7 @@
 
     &__title {
       font-size: var(--fs-xl);
-      color: var(--bgClr-white);
+      color: var(--txtClr-white);
 
       @include pc_lg {
         font-size: var(--fs-3xl);
