@@ -1,5 +1,7 @@
 export function setCookie(key, val) {
-  document.cookie = `${key}=${val};max-age=${60 * 60 * 24 * 7};Secure`;
+  document.cookie = `${key}=${val};max-age=${
+    60 * 60 * 24 * 7
+  };Secure;SameSite=Strict`;
 }
 export function getCookie(key) {
   if (document.cookie) {
