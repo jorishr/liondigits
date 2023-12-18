@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.2] - 2023-12-18
+
+- Minor style and script changes, fixes and improvements
+- Tooling: updated deploy script
+
 ## [1.2.1] - 2023-12-15
 
 - Hotfix for issue #79. Fixes faulty modal toggle in production code due to SASS compilation bug.
