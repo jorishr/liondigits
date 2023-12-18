@@ -172,7 +172,7 @@
                 font-size: var(--fs-sm);
                 padding: var(--pd-xs) var(--pd-sm);
                 color: var(--txtClr-gold);
-                background-color: var(--bgClr);
+                background-color: var(--bgClr-gold);
               }
             }
 
@@ -183,7 +183,6 @@
                 font-size: var(--fs-sm);
                 padding: var(--pd-xs) var(--pd-sm);
                 color: var(--txtClr-gold);
-                background-color: var(--bgClr-gold);
               }
 
               &.active {
