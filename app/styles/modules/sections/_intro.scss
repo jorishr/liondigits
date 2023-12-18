@@ -1,8 +1,11 @@
 .intro {
   &-container {
-    background-color: var(--bgClr-white);
     position: relative;
+
+    background-color: var(--bgClr-lightgray);
+
     padding: var(--pd-2xl) var(--pd-sm);
+
     @include pc_lg {
       font-size: var(--fs-xl);
     }
@@ -27,7 +30,7 @@
 
     &__inner-container {
       border-radius: 5px;
-      background-color: #fff;
+      background-color: var(--bgClr-white);
 
       padding: var(--pd-md) var(--pd-base);
 

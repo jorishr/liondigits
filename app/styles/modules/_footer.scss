@@ -52,7 +52,7 @@
 
         a {
           text-transform: capitalize;
-          color: var(--bgClr-white);
+          color: var(--txtClr-white);
 
           &:hover {
             text-decoration: underline;
@@ -132,7 +132,7 @@
       }
 
       &__content-container {
-        background-color: white;
+        background-color: var(--bgClr-white);
         color: var(--txtClr-base);
 
         @include mobile_lg {
