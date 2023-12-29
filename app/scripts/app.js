@@ -25,6 +25,7 @@ import { typewriterEffect } from "./modules/typewriter.js";
 import consent from "./modules/consent.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import setFooterCredits from "./modules/set-footer-credits.js";
 
 // Important: Make sure to add `data-cal-link="liondigits/20min"` attribute to the element you want to open Cal on click
 try {
@@ -60,16 +61,4 @@ navHighlightOnScroll();
 typewriterEffect();
 consent();
 AOS.init();
-/*
-############## 
-Footer credits 
-##############  
-*/
-
-const footerCredits = document.getElementById("footer__credits");
-if (footerCredits) {
-  const currentYear = new Date().getFullYear();
-  if (currentYear > 2022) {
-    footerCredits.textContent = `\u00A9 2022 - ${currentYear} Lion Digits | Joris Raymaekers`;
-  }
-}
+setFooterCredits();
