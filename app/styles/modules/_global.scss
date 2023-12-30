@@ -93,6 +93,7 @@ body {
 
 ul {
   list-style-type: none;
+  padding: 0;
 }
 
 img {
@@ -103,4 +104,15 @@ img {
 
 p {
   line-height: 1.75;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

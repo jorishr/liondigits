@@ -205,46 +205,59 @@
       />
     </a>
   </section>
-  <section class="pgp">
-    <div class="pgp__box">
-      <div class="pgp__box__txt-container">
+  <section class="footer__pgp">
+    <div class="footer__pgp__link-container">
+      <div class="footer__pgp__key">
         <img
+          class="footer__pgp__key__icon"
           src="images/icons/icon_pgp-key.png"
           alt="Sleutel icoon"
           data-txt_id__alt="488"
         />
-        <p id="pgp-txt"></p>
+        <p class="footer__pgp__key__key-text" id="pgp-key-txt"></p>
       </div>
-      <div class="pgp__box__btns">
+      <div class="footer__pgp__btns">
         <a
-          class="js-btn-copy js-data-long_id"
+          class="footer__pgp__btns__copy js-btn-copy js-data-long_id"
           title="Kopiëren naar klembord"
           data-txt_id__title="147"
-          ><img
+        >
+          <img
+            class="footer__pgp__btns__icon"
             src="images/icons/icon_content-copy_azureblue.png"
             alt="Kopiëren naar klembord icoon"
             data-txt_id__alt="148"
-        /></a>
+          />
+        </a>
         <a
-          class="modal-btn js-target-toggle"
+          class="footer__pgp__btns__info modal-btn js-target-toggle"
           title="Wat is dit?"
           data-txt_id__title="149"
           data-target="001"
-          ><img
+        >
+          <img
+            class="footer__pgp__btns__icon"
             src="images/icons/icon_info-circle_azureblue.png"
             alt="Vraagteken icoon"
             data-txt_id__alt="150"
-        /></a>
+          />
+        </a>
       </div>
     </div>
-    <div class="modal pgp__info" data-target_id="001">
-      <div class="modal__content-container">
+    <div class="modal footer__pgp__modal" data-target_id="001">
+      <div
+        class="modal__content-container footer__pgp__modal__content-container"
+      >
         <span class="btn-close modal__content-container__btn-close js-btn-close"
           >&times;</span
         >
-        <h3 class data-txt_id="[102]">Versleutelde communicatie</h3>
-        <div class="txt-container">
-          <h3 data-txt_id="[477]">Signal</h3>
+        <h2 class="footer__pgp__modal__title" data-txt_id="[102]">
+          Versleutelde communicatie
+        </h2>
+        <div class="txt-container footer__pgp__modal__txt-container">
+          <h3 class="footer__pgp__modal__section-title" data-txt_id="[477]">
+            Signal
+          </h3>
           <p data-txt_id="[519]">
             De meest gebruiksvriendelijke manier om versleutelde berichten te
             verzenden is via de Signal Messenger app:
@@ -254,6 +267,8 @@
               href="https://signal.org"
               target="_blank"
               rel="noopener noreferrer"
+              title="Signal Messenger"
+              data-txt_id__title="690"
               ><span class="txt-link__txt" data-txt_id="[520]">Signal</span
               ><img
                 class="txt-link__icon"
@@ -280,6 +295,8 @@
               href="https://signal.org"
               target="_blank"
               rel="noopener noreferrer"
+              title="Signal contact toevoegen"
+              data-txt_id__title="691"
               ><span class="txt-link__txt" data-txt_id="[523]"
                 >Signal Contact</span
               ><img
@@ -290,8 +307,10 @@
             /></a>
           </p>
         </div>
-        <div class="txt-container">
-          <h3 data-txt_id="[481]">ProtonMail</h3>
+        <div class="txt-container footer__pgp__modal__txt-container">
+          <h3 class="footer__pgp__modal__section-title" data-txt_id="[481]">
+            ProtonMail
+          </h3>
           <p>
             <span class data-txt_id="[107]">Gebruik je net als ik</span>
             <a
@@ -299,6 +318,8 @@
               href="https://proton.me"
               target="_blank"
               rel="noopener noreferrer"
+              title="Naar ProtonMail Website"
+              data-txt_id__title="692"
               ><span class="txt-link__txt" data-txt_id="[108]">ProtonMail</span
               ><img
                 class="txt-link__icon"
@@ -331,8 +352,10 @@
             </a>
           </p>
         </div>
-        <div class="txt-container">
-          <h3 data-txt_id="[483]">PGP: Pretty Good Privacy</h3>
+        <div class="txt-container footer__pgp__modal__txt-container">
+          <h3 class="footer__pgp__modal__section-title" data-txt_id="[483]">
+            PGP: Pretty Good Privacy
+          </h3>
           <p>
             <span class data-txt_id="[110]"
               >Gebruik je een andere e-mail dienstverlener dan kan je gebruik
@@ -372,29 +395,33 @@
             >
           </p>
         </div>
-        <div class="link-container">
+        <div class="link-container footer__pgp__modal__btn-container">
           <a
             class="btn btn--lightblue btn-icon"
             href="https://liondigits.com/.well-known/pubkey_liondigits.asc"
             download
-            ><span class data-txt_id="[117]">Download Publieke Sleutel</span
             ><img
               src="images/icons/icon_download-gray.png"
               alt="Download icoon"
               data-txt_id__alt="156"
-          /></a>
-          <a
-            class="btn btn--lightblue btn-icon btn-copy js-btn-copy js-data-pubkey"
-            ><span class data-txt_id="[118]"
-              >PGP Vingerafdruk Kopi&#xEB;ren</span
-            ><img
+            />
+            <span class data-txt_id="[117]">Download Publieke Sleutel</span>
+          </a>
+          <a class="btn btn-icon btn--lightblue js-btn-copy js-data-pubkey">
+            <img
               src="images/icons/icon_content-copy-gray.png"
               alt="Kopiëren naar klembord icoon"
               data-txt_id__alt="157"
-          /></a>
+            />
+            <span class data-txt_id="[118]"
+              >PGP Vingerafdruk Kopi&#xEB;ren</span
+            >
+          </a>
         </div>
-        <h3 class data-txt_id="[119]">TOR ondersteuning</h3>
-        <div class="txt-container">
+        <h2 class="footer__pgp__modal__title" data-txt_id="[119]">
+          TOR ondersteuning
+        </h2>
+        <div class="txt-container footer__pgp__modal__txt-container">
           <p class data-txt_id="[120]">
             Deze website is ook beschikbaar via het TOR netwerk (The Onion
             Router). Verbindingen via TOR maken het zeer lastig om jouw locatie
@@ -410,6 +437,8 @@
               href="https://www.torproject.org/"
               target="_blank"
               rel="noopener noreferrer"
+              title="Download Tor Browser"
+              data-txt_id__title="693"
               ><span data-txt_id="[122]">Tor Browser</span
               ><img
                 class="txt-link__icon"
@@ -425,6 +454,8 @@
               href="http://brave.com"
               target="_blank"
               rel="noopener noreferrer"
+              title="Download Brave Browser"
+              data-txt_id__title="694"
               ><span data-txt_id="[124]">Brave Browser</span
               ><img
                 class="txt-link__icon"
@@ -433,10 +464,17 @@
                 data-txt_id__alt="159" /></a
             >.
           </p>
-          <p class data-txt_id="[125]">
-            De link naar Lion Digits is vervolgens:
+          <p data-txt_id="[695]">
+            TOR of Onion links zijn lange combinaties van cijfers en letters die
+            eindigen met een ".onion". Het adres van Lion Digits kan je
+            herkennen aan de eerste zes karakters: "http://liondig... .onion":
           </p>
-          <a href="" class="txt-link txt-link--lightblue js-onion-link">
+          <a
+            href
+            class="txt-link txt-link--lightblue js-onion-link"
+            title="Open deze Onion link in een browser met TOR ondersteuning"
+            data-txt_id__title="696"
+          >
             <span class="txt-link__txt" data-txt_id="[490]"
               >Onion-service URL</span
             ><img
@@ -519,6 +557,8 @@
                   class="txt-link txt-link--orange"
                   href="https://learn.saylor.org/course/view.php?id=468"
                   target="_blank"
+                  title="Saylor Academy"
+                  data-txt_id__title="697"
                   ><span data-txt_id="[539]">[Saylor Academy]</span
                   ><img
                     class="txt-link__icon"
@@ -540,6 +580,8 @@
                   class="txt-link txt-link--orange"
                   href="http://liondigits.com/.public-docs/saylor_academy_cert-prdv151-joris_raymaekers.pdf"
                   target="_blank"
+                  title="Certificaat Joris Raymaekers"
+                  data-txt_id__title="698"
                   ><span data-txt_id="[541]">certificaat</span
                   ><img
                     class="txt-link__icon"
@@ -558,6 +600,8 @@
                   class="txt-link txt-link--orange"
                   href="https://casebitcoin.com/bitcoin-is"
                   target="_blank"
+                  title="Website Case Bitcoin"
+                  data-txt_id__title="699"
                   ><span data-txt_id="[543]">[Case Bitcoin]</span
                   ><img
                     class="txt-link__icon"
@@ -580,6 +624,8 @@
                   class="txt-link txt-link--orange"
                   href="https://casebitcoin.com/critiques"
                   target="_blank"
+                  title="Kritiek op bitcoin"
+                  data-txt_id__title="700"
                   ><span data-txt_id="[545]">kritieken</span
                   ><img
                     class="txt-link__icon"
@@ -599,6 +645,7 @@
               class="txt-link txt-link--orange"
               href="https://liondigits.com/bitcoin/bitcoin.pdf"
               target="_blank"
+              title="Bitcoin white paper"
               data-txt_id="[550]"
               >hier<img
                 class="txt-link__icon"
@@ -611,12 +658,16 @@
       </div>
     </div>
   </section>
-
   <section class="footer__onion">
     <p class="footer__onion__title" data-txt_id="[126]">
       Deze site is ook bereikbaar via het Tor Netwerk:
     </p>
-    <a href="" class="txt-link js-onion-link">
+    <a
+      href=""
+      class="txt-link js-onion-link"
+      title="Open deze Onion link in een browser met TOR ondersteuning"
+      data-txt_id__title="696"
+    >
       <img
         class="txt-link__icon"
         src="images/logo/tor_onion_logo-lightblue.png"

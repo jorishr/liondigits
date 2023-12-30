@@ -63,7 +63,7 @@ export function setCompanyInfo() {
 }
 
 export function setPgpInfo() {
-  const el = document.getElementById("pgp-txt");
+  const el = document.getElementById("pgp-key-txt");
   if (el) {
     el.textContent = `PGP: ${contactInfo.pgp_long_id}`;
   }

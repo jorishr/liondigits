@@ -18,7 +18,6 @@
   "122": "Navegador Tor",
   "123": ", o un navegador con soporte incorporado para direcciones Onion como",
   "124": "Brave browser",
-  "125": "El enlace a Lion Digits es:",
   "126": "Este sitio también es accesible a través de la Red Tor:",
   "127": "Logotipo de Lion Digits",
   "128": "Número de empresa",
@@ -483,5 +482,16 @@
   "686": "Ver el código en Github",
   "687": "Ver el código en Github",
   "688": "Creación y gestión de sitios web en Wordpress.",
-  "689": "Mira el blog de Vincent Driesen"
+  "689": "Mira el blog de Vincent Driesen",
+  "690": "Signal Messenger",
+  "691": "Agregar contacto de Signal",
+  "692": "Al sitio web de ProtonMail",
+  "693": "Descargar el navegador Tor",
+  "694": "Descargar el navegador Brave",
+  "695": " Los enlaces TOR o Onion son combinaciones largas de números y letras que terminan con \".onion\". Puedes reconocer la dirección de Lion Digits por los primeros seis caracteres: \"http://liondig... .onion\":",
+  "696": "Abra este enlace de Onion en un navegador compatible con TOR",
+  "697": "Academia Saylor",
+  "698": "Certificado de Joris Raymaekers",
+  "699": "Web de Case Bitcoin",
+  "700": "Críticas al bitcoin"
 }
