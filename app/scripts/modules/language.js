@@ -14,17 +14,15 @@ export function langMenuToggle() {
   const langBtn = document.getElementsByClassName("js-lang-btn")[0];
   if (langBtn) {
     langBtn.addEventListener("click", function () {
-      const langMenu = document.getElementsByClassName(
-        "header__right__lang-menu__options"
-      )[0];
-      langMenu.classList.toggle("header__right__lang-menu__options--active");
+      const langMenu = document.getElementsByClassName("lang-menu__list")[0];
+      langMenu.classList.toggle("lang-menu__list--active");
     });
   }
 }
 
 export function langMenuOptions() {
   const langOptions = Array.from(
-    document.getElementsByClassName("js-lang-option")
+    document.getElementsByClassName("lang-menu__option")
   );
   langOptions.forEach((option) => {
     option.addEventListener("click", function () {

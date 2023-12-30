@@ -33,7 +33,8 @@ Values between -1 and 5. Check:
   --accent-alert: rgba(255, 63, 115, 1);
 
   /* FONTS ANDS FONT SIZES */
-  --ff: "Poppins", sans-serif;
+  --ff: Poppins, "Open Sans", sans-serif;
+  --ff-secondary: Georgia, serif;
   --fs-base: 1rem;
   --fs-xs: 0.625rem;
   --fs-sm: 0.75rem;
@@ -75,6 +76,10 @@ Values between -1 and 5. Check:
   box-sizing: border-box;
   margin: 0;
 }
+html,
+body {
+  padding: 0;
+}
 
 html {
   scroll-behavior: smooth;
@@ -85,6 +90,7 @@ body {
   height: 100%;
 
   font-family: var(--ff);
+  font-size: var(--fs-base);
   color: var(--txtClr-base);
 
   background-color: var(--bgClr);
@@ -100,6 +106,13 @@ img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
 }
 
 p {
