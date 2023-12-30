@@ -4,8 +4,8 @@
   position: fixed;
   bottom: 0;
   left: 0;
+  right: 0;
 
-  width: 100%;
   z-index: 5;
 
   background-color: var(--bgClr-dark);
@@ -29,7 +29,6 @@
 
     @include tablet_md {
       flex-direction: row;
-      //justify-content: space-evenly;
     }
 
     p {
