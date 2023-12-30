@@ -1,10 +1,10 @@
 export function processHeaderHeight() {
   const header = document.querySelector(".header");
   if (header) {
-    const headerHeight = header.offsetHeight;
+    const heightHeader = header.offsetHeight;
     document.documentElement.style.setProperty(
-      "--header-height",
-      `-${headerHeight}px`
+      "--height-header",
+      `-${heightHeader}px`
     );
   }
 }
