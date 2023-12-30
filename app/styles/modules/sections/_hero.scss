@@ -5,18 +5,27 @@
 
   //see layout.js
   height: calc(166vh - var(--height-header));
+  width: 100%;
+
+  @include mobile_md {
+    height: calc(145vh - var(--height-header));
+  }
 
   @include tablet_md {
     height: calc(133vh - var(--height-header));
+  }
+
+  @include pc_lg {
+    height: calc(111vh - var(--height-header));
   }
 
   &__position-container {
     position: absolute;
     top: calc((-1) * (var(--height-header)));
     left: 0;
+    right: 0;
 
     /* Note that there is a slight overflow issue here; it interferes with the scrollbar probably; Hidden with overflow-x on <body> */
-    width: 100%;
     height: calc(100vh - ((-1) * (var(--height-header))));
   }
 
@@ -27,7 +36,7 @@
     transform: translate(-50%, -50%);
     z-index: 1;
 
-    width: 100vw;
+    width: 100%;
 
     padding: 0 var(--pd-sm);
 
@@ -42,6 +51,14 @@
     @include tablet_md {
       padding: 0 var(--pd-2xl);
     }
+
+    @include pc_lg {
+      padding: 0 var(--pd-4xl);
+    }
+
+    @include pc_xl {
+      padding: 0 var(--pd-8xl);
+    }
   }
 
   &__text-container {
@@ -51,7 +68,9 @@
 
   &__typewriter {
     font-size: var(--fs-md);
-    margin-bottom: var(--mg-sm);
+    color: var(--txtClr-lightblue);
+
+    margin-bottom: var(--mg-xs);
 
     @include mobile_md {
       font-size: var(--fs-lg);
@@ -59,6 +78,34 @@
 
     @include pc_sm {
       font-size: var(--fs-xl);
+    }
+
+    @include pc_lg {
+      font-size: var(--fs-2xl);
+    }
+
+    @include pc_xl {
+      font-size: var(--fs-3xl);
+    }
+
+    @include pc_2xl {
+      font-size: var(--fs-4xl);
+    }
+  }
+
+  &__title {
+    color: var(--txtClr-white);
+    font-size: var(--fs-xl);
+
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    margin: 0 0 var(--mg-xs);
+
+    @include mobile_md {
+      font-size: var(--fs-2xl);
+    }
+
+    @include pc_sm {
+      font-size: var(--fs-2xl);
     }
 
     @include pc_lg {
@@ -70,38 +117,32 @@
     }
   }
 
-  &__title {
-    color: var(--txtClr-white);
-    font-size: var(--fs-xl);
-
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
-    margin: 0 0 var(--mg-sm);
-
-    @include pc_sm {
-      font-size: var(--fs-2xl);
-    }
-
-    @include pc_lg {
-      font-size: var(--fs-4xl);
-    }
-  }
-
   &__subtitle {
-    color: var(--txtClr-lightblue);
+    color: var(--txtClr-white);
 
     font-size: var(--fs-base);
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.5;
 
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
 
+    padding: 0 var(--pd-base);
     margin: 0 auto var(--mg-lg);
+
+    @include mobile_md {
+      font-size: var(--fs-md);
+    }
 
     @include pc_sm {
       font-size: var(--fs-md);
       max-width: 55ch;
     }
+
     @include pc_lg {
+      font-size: var(--fs-2xl);
+    }
+
+    @include pc_xl {
       font-size: var(--fs-3xl);
     }
   }
@@ -116,16 +157,34 @@
       flex-direction: row-reverse;
     }
 
-    .btn {
-      width: 18em;
+    @include pc_lg {
+      /* pushes the scroll down indicator further down */
+      margin-bottom: 4em;
+    }
+  }
 
-      &:first-of-type {
-        margin-bottom: var(--mg-sm);
+  &__link {
+    font-size: var(--fs-sm);
+    width: 18em;
 
-        @include pc_sm {
-          margin-left: var(--mg-sm);
-          margin-bottom: unset;
-        }
+    @include mobile_md {
+      font-size: var(--fs-base);
+    }
+
+    @include pc_lg {
+      font-size: var(--fs-md);
+    }
+
+    @include pc_xl {
+      font-size: var(--fs-lg);
+    }
+
+    &:first-of-type {
+      margin-bottom: var(--mg-sm);
+
+      @include pc_sm {
+        margin-left: var(--mg-sm);
+        margin-bottom: unset;
       }
     }
   }
