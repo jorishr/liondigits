@@ -122,6 +122,11 @@ h4 {
 
 p {
   line-height: 1.75;
+  margin-bottom: var(--mg-xs);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 a {

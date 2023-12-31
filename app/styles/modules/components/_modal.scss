@@ -12,12 +12,10 @@
   }
 
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 100%;
-  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
   z-index: 6;
   overflow-y: auto;
@@ -37,25 +35,30 @@
     background-color: var(--bgClr-dark);
     color: var(--txtClr-gold);
 
-    box-shadow: 5px 5px 5px 5em rgb(233, 235, 238, 0.6);
+    box-shadow: 5px 5px 5px 8em rgb(233, 235, 238, 0.6);
     border-radius: 5px;
 
     &__btn-close {
       position: absolute;
-      top: 0.21em;
-      right: 0.21em;
-      padding: 0;
-      border-radius: 5px;
-
-      font-size: var(--fs-xl);
-
-      padding: 0.03em 0.24em;
+      top: 0;
+      right: 0;
+      transform: translateX(-50%);
 
       color: var(--txtClr-white);
-      background-color: var(--txtClr-base);
+      font-size: var(--fs-md);
+
+      padding: 0;
+
+      @include pc_sm {
+        font-size: var(--fs-xl);
+      }
 
       @include pc_lg {
         font-size: var(--fs-3xl);
+      }
+
+      @include pc_2xl {
+        font-size: var(--fs-6xl);
       }
 
       &:hover {

@@ -1,17 +1,23 @@
 .footer {
   position: relative; //see modal class
-  background-color: var(--bgClr-darkest); //#0e161b;
-  padding: var(--pd-2xl) var(--pd-base) 0;
-  border-top: 6px #00b4ff solid;
 
   color: var(--accent-azureblue);
-  line-height: 1.9em;
+
+  background-color: var(--bgClr-darkest); //#0e161b;
+  border-top: 6px #00b4ff solid;
+
+  padding: var(--pd-2xl) var(--pd-base) 0;
 
   @include pc_lg {
     font-size: var(--fs-xl);
   }
+
   @include pc_xl {
     font-size: var(--fs-2xl);
+  }
+
+  @include pc_2xl {
+    font-size: var(--fs-4xl);
   }
 
   &__logo {
@@ -25,6 +31,10 @@
 
       @include pc_lg {
         width: 325px;
+      }
+
+      @include pc_2xl {
+        width: 650px;
       }
     }
   }
@@ -93,6 +103,10 @@
         @include pc_lg {
           width: 100px;
         }
+
+        @include pc_2xl {
+          width: 200px;
+        }
       }
     }
   }
@@ -113,7 +127,7 @@
 
       &__icon {
         width: 1em;
-        margin-right: 0.75em;
+        margin-right: var(--mg-xs);
       }
     }
 
@@ -150,11 +164,6 @@
         display: inline-block;
         height: 1.125em;
         width: 1.125em;
-
-        @include pc_lg {
-          height: 2.25em;
-          width: 2.25em;
-        }
       }
     }
 
@@ -172,21 +181,13 @@
       }
 
       &__section-title {
-        margin-bottom: var(--mg-xs);
         text-align: left;
+        margin-bottom: var(--mg-xs);
       }
 
       &__txt-container {
+        max-width: 81ch;
         margin: 0 auto var(--mg-base);
-        max-width: 54em;
-
-        p {
-          margin-bottom: var(--mg-xs);
-
-          &:last-of-type {
-            margin-bottom: 0;
-          }
-        }
       }
 
       &__btn-container {
@@ -199,9 +200,11 @@
 
         margin: 0 auto var(--mg-lg);
 
-        // these btns have long text, especially in some translations
-        // tone down the font-size on small mobile screens
-        // base styles see __btns.scss
+        /*  
+            These btns have long text, especially in some translations.
+            Tone down the font-size on small mobile screens.
+            Base styles see __btns.scss. 
+        */
         & a {
           font-size: var(--fs-xs);
           justify-content: space-evenly;
@@ -214,8 +217,24 @@
           @include mobile_lg {
             font-size: var(--fs-sm);
           }
+
           @include tablet_md {
             font-size: var(--fs-base);
+            width: 100%;
+          }
+
+          @include pc_lg {
+            font-size: var(--fs-lg);
+            width: 84%;
+          }
+
+          @include pc_xl {
+            font-size: var(--fs-xl);
+            width: 87%;
+          }
+
+          @include pc_2xl {
+            font-size: var(--fs-4xl);
             width: 100%;
           }
         }
@@ -285,12 +304,18 @@
           font-size: var(--fs-lg);
         }
 
-        @include pc_lg {
+        @include pc_xl {
           font-size: var(--fs-xl);
+        }
+
+        @include pc_2xl {
+          font-size: var(--fs-2xl);
         }
       }
 
       &__btn-close {
+        color: var(--txtClr-base);
+
         &:hover {
           color: var(--txtClr-orange);
         }
@@ -315,9 +340,6 @@
           @include pc_xl {
             font-size: var(--fs-3xl);
           }
-        }
-        p {
-          margin-bottom: var(--mg-xs);
         }
 
         @include pc_sm {
