@@ -1,12 +1,13 @@
-$base: 0.6rem;
-
 .scroll-down-indicator {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--pd-sm);
+
   opacity: 1;
+
   transition: opacity 0.6s ease-in-out;
+
+  padding: var(--pd-sm);
 
   &.hide {
     opacity: 0;
@@ -15,11 +16,22 @@ $base: 0.6rem;
 
 .chevron {
   position: absolute;
-  width: $base * 3.5;
-  height: $base * 0.8;
+  width: 0.6rem * 3.5;
+  height: 0.6rem * 0.8;
   opacity: 0;
   transform: scale(0.3);
   animation: move-chevron 3s ease-out infinite;
+
+  @include pc_lg {
+    width: 1rem * 3.5;
+    height: 1rem * 0.8;
+    animation: move-chevron--lg 3s ease-out infinite;
+  }
+
+  @include pc_2xl {
+    width: 2rem * 3.5;
+    height: 2rem * 0.8;
+  }
 }
 
 .chevron:first-child {
@@ -49,22 +61,4 @@ $base: 0.6rem;
   right: 0;
   width: 50%;
   transform: skewY(-30deg);
-}
-
-@keyframes move-chevron {
-  25% {
-    opacity: 1;
-  }
-  33.3% {
-    opacity: 1;
-    transform: translateY($base * 3.8);
-  }
-  66.6% {
-    opacity: 1;
-    transform: translateY($base * 5.2);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY($base * 8) scale(0.5);
-  }
 }

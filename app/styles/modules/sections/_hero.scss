@@ -19,6 +19,10 @@
     height: calc(111vh - var(--height-header));
   }
 
+  @include pc_xl {
+    height: calc(100vh - var(--height-header));
+  }
+
   &__position-container {
     position: absolute;
     top: calc((-1) * (var(--height-header)));
@@ -59,11 +63,21 @@
     @include pc_xl {
       padding: 0 var(--pd-8xl);
     }
+
+    @include pc_xl {
+      padding: 0 var(--pd-16xl);
+    }
   }
 
   &__text-container {
     width: 100%;
     text-align: center;
+
+    margin: 0 auto var(--mg-lg); // distance with link container
+
+    @include pc_2xl {
+      margin: 0 auto var(--mg-4xl);
+    }
   }
 
   &__typewriter {
@@ -89,7 +103,7 @@
     }
 
     @include pc_2xl {
-      font-size: var(--fs-4xl);
+      font-size: var(--fs-6xl);
     }
   }
 
@@ -115,6 +129,10 @@
     @include pc_xl {
       font-size: var(--fs-4xl);
     }
+
+    @include pc_2xl {
+      font-size: var(--fs-8xl);
+    }
   }
 
   &__subtitle {
@@ -126,8 +144,8 @@
 
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
 
-    padding: 0 var(--pd-base);
-    margin: 0 auto var(--mg-lg);
+    padding: 0 var(--pd-base); // limits the width
+    margin: 0 auto;
 
     @include mobile_md {
       font-size: var(--fs-md);
@@ -145,6 +163,11 @@
     @include pc_xl {
       font-size: var(--fs-3xl);
     }
+
+    @include pc_2xl {
+      font-size: var(--fs-6xl);
+      padding: 0 var(--pd-xl);
+    }
   }
 
   &__link-container {
@@ -159,7 +182,11 @@
 
     @include pc_lg {
       /* pushes the scroll down indicator further down */
-      margin-bottom: 4em;
+      margin-bottom: var(--mg-lg);
+    }
+
+    @include pc_2xl {
+      margin-bottom: var(--mg-2xl);
     }
   }
 
@@ -176,7 +203,11 @@
     }
 
     @include pc_xl {
-      font-size: var(--fs-lg);
+      font-size: var(--fs-2xl);
+    }
+
+    @include pc_2xl {
+      font-size: var(--fs-4xl);
     }
 
     &:first-of-type {
