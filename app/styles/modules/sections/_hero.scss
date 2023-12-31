@@ -3,34 +3,34 @@
   Height of this section is extended to create space for the highlights section that needs to partially float between the hero and the intro section.
   */
 
-  //see layout.js
-  height: calc(166vh - var(--height-header));
+  height: 166vh;
   width: 100%;
 
   @include mobile_md {
-    height: calc(145vh - var(--height-header));
+    height: 145vh;
   }
 
   @include tablet_md {
-    height: calc(133vh - var(--height-header));
-  }
-
-  @include pc_lg {
-    height: calc(111vh - var(--height-header));
+    height: 133vh;
   }
 
   @include pc_xl {
-    height: calc(100vh - var(--height-header));
+    height: 115vh;
   }
 
   &__position-container {
+    /* 
+      Container position is set based on the height of the header.
+      See layout.js
+    */
+
     position: absolute;
-    top: calc((-1) * (var(--height-header)));
+    top: var(--height-header);
     left: 0;
     right: 0;
 
     /* Note that there is a slight overflow issue here; it interferes with the scrollbar probably; Hidden with overflow-x on <body> */
-    height: calc(100vh - ((-1) * (var(--height-header))));
+    height: calc(100vh - (var(--height-header)));
   }
 
   &__content-container {
