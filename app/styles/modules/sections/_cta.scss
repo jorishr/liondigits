@@ -1,24 +1,27 @@
 .cta {
-  width: 95%;
   text-align: center;
 
-  padding: var(--pd-2xl) var(--pd-sm);
+  font-size: var(--fs-base-plus);
+
+  padding: var(--pd-xl) var(--pd-xs);
   margin: 0 auto;
 
+  @include mobile_md {
+    padding: var(--pd-xl) var(--pd-sm);
+  }
   @include pc_lg {
     font-size: var(--fs-xl);
+  }
+  @include pc_xl {
+    font-size: var(--fs-2xl);
+  }
+  @include pc_2xl {
+    font-size: var(--fs-4xl);
   }
 
   &__content-container {
     margin: 0 auto;
-
-    @include tablet_md {
-      max-width: 55ch;
-    }
-
-    @include pc_lg {
-      max-width: 78ch;
-    }
+    max-width: 45ch;
   }
 
   &__heading {
@@ -29,20 +32,21 @@
       color: var(--txtClr-white);
 
       @include pc_lg {
+        font-size: var(--fs-2xl);
+      }
+      @include pc_xl {
         font-size: var(--fs-3xl);
+      }
+      @include pc_2xl {
+        font-size: var(--fs-6xl);
       }
     }
   }
 
   &__text {
-    font-size: var(--fs-md);
     color: var(--txtClr-lightblue);
 
     margin-bottom: var(--mg-lg);
-
-    @include pc_lg {
-      font-size: var(--fs-xl);
-    }
   }
 
   &__link-container {
@@ -52,14 +56,24 @@
   }
 
   &__link {
-    width: 15em;
+    width: 95%;
+    font-size: var(--fs-base);
+
+    @include mobile_lg {
+      width: 18em;
+    }
+    @include pc_lg {
+      font-size: var(--fs-lg);
+    }
+    @include pc_xl {
+      font-size: var(--fs-xl);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-3xl);
+    }
 
     &:first-of-type {
       margin-bottom: var(--mg-base);
-    }
-
-    @include pc_lg {
-      font-size: var(--fs-xl);
     }
   }
 }
