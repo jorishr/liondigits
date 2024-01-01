@@ -1,55 +1,85 @@
 .intro {
-  &-container {
-    position: relative;
+  position: relative;
 
-    background-color: var(--bgClr-lightgray);
+  background-color: var(--bgClr-lightgray);
 
+  padding: var(--pd-2xl) var(--pd-xs);
+
+  @include mobile_md {
     padding: var(--pd-2xl) var(--pd-sm);
+  }
 
-    @include pc_lg {
-      font-size: var(--fs-xl);
-    }
+  @include pc_lg {
+    font-size: var(--fs-xl);
+  }
+
+  @include pc_2xl {
+    font-size: var(--fs-4xl);
   }
 
   &__highlight {
-    /* This section depends on hero-section height on mobile screens*/
+    /* 
+        The positioning is tricky on mobile devices with limited screen height. But the negative top margins is a good enough result.
+        From tablet_md onwards, the positioning is straightforward.
+    */
     position: relative;
     margin-top: -67.5vh;
-    left: 50%;
-    transform: translateX(-50%);
+
     z-index: 2;
-    width: 99%;
+
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
 
     @include tablet_md {
       position: absolute;
       margin-top: 0;
       top: 0;
+      left: 50%;
       transform: translate(-50%, -50%);
+
+      width: 96%;
     }
 
-    &__inner-container {
+    &__content-container {
       border-radius: 5px;
       background-color: var(--bgClr-white);
 
-      padding: var(--pd-md) var(--pd-base);
+      padding: var(--pd-md) var(--pd-xs);
 
-      h3 {
-        text-align: center;
-        font-size: var(--pd-base);
-        margin-bottom: var(--mg-base);
+      @include mobile_md {
+        padding: var(--pd-base) var(--pd-sm);
       }
 
       @include tablet_sm {
-        padding: var(--pd-xl) var(--pd-md);
+        padding: var(--pd-lg) var(--pd-md);
       }
 
       @include tablet_md {
-        padding: var(--pd-md) var(--pd-base);
+        padding: var(--pd-lg) var(--pd-md);
       }
 
       @include pc_sm {
         padding: var(--pd-lg) var(--pd-md);
+      }
+    }
+
+    &__title {
+      font-size: var(--fs-lg);
+      text-transform: capitalize;
+      text-align: center;
+
+      margin-bottom: var(--mg-md);
+
+      @include pc_sm {
+        margin-bottom: var(--mg-lg);
+      }
+      @include pc_lg {
+        font-size: var(--fs-2xl);
+      }
+      @include pc_xl {
+        font-size: var(--fs-3xl);
+      }
+      @include pc_2xl {
+        font-size: var(--fs-6xl);
       }
     }
 
@@ -58,7 +88,7 @@
       flex-direction: column;
       justify-content: space-evenly;
 
-      @include tablet_md {
+      @include pc_sm {
         flex-direction: row;
         justify-content: space-evenly;
       }
@@ -67,35 +97,45 @@
     &__item {
       display: flex;
       flex-direction: column;
-      padding: var(--pd-base) 0;
       text-align: center;
 
+      padding: 0;
+
+      margin: 0 0 var(--mg-lg);
+
       @include tablet_md {
-        padding: var(--pd-base) var(--pd-sm);
-      }
-      @include pc_sm {
-        padding: var(--pd-base) var(--pd-md);
-      }
-      @include pc_md {
-        padding: var(--pd-base) var(--pd-lg);
-      }
-      @include pc_md {
-        padding: var(--pd-base) var(--pd-md);
+        max-width: 55ch;
+        margin: 0 auto var(--mg-lg);
       }
 
-      & > p {
+      @include pc_sm {
+        max-width: 45ch;
+        margin: 0 var(--mg-base) 0 0;
+
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+
+      &__icon {
+        width: 5.5em;
+        align-self: center;
+        margin-bottom: var(--mg-base);
+      }
+
+      &__text {
         padding: 0;
         font-size: var(--fs-md);
 
         @include pc_lg {
           font-size: var(--fs-xl);
         }
-      }
-
-      img {
-        width: 5.5em;
-        align-self: center;
-        padding-bottom: var(--pd-md);
+        @include pc_xl {
+          font-size: var(--fs-2xl);
+        }
+        @include pc_2xl {
+          font-size: var(--fs-4xl);
+        }
       }
     }
   }
