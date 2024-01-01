@@ -1,18 +1,28 @@
 .intro {
   position: relative;
 
+  font-size: var(--fs-base-plus);
   background-color: var(--bgClr-lightgray);
 
-  padding: var(--pd-2xl) var(--pd-xs);
+  padding: var(--pd-2xl) var(--pd-xs) 0;
 
   @include mobile_md {
-    padding: var(--pd-2xl) var(--pd-sm);
+    padding: var(--pd-2xl) var(--pd-sm) 0;
+  }
+
+  @include tablet_md {
+    /* 
+      Padding-top gets removed because from tablet onwards the flow of this section changes, see &__main below 
+    */
+    padding: 0 var(--pd-sm) 0;
   }
 
   @include pc_lg {
     font-size: var(--fs-xl);
   }
-
+  @include pc_xl {
+    font-size: var(--fs-2xl);
+  }
   @include pc_2xl {
     font-size: var(--fs-4xl);
   }
@@ -125,71 +135,37 @@
 
       &__text {
         padding: 0;
-        font-size: var(--fs-md);
-
-        @include pc_lg {
-          font-size: var(--fs-xl);
-        }
-        @include pc_xl {
-          font-size: var(--fs-2xl);
-        }
-        @include pc_2xl {
-          font-size: var(--fs-4xl);
-        }
       }
     }
   }
 
   &__main {
-    text-align: center;
-    font-size: var(--fs-md);
-    padding: var(--pd-4xl) 0 0;
+    max-width: 55ch;
 
-    @include pc_sm {
-      max-width: 66%;
-      margin: 0 auto;
-    }
-    @include pc_lg {
-      max-width: 57%;
-      font-size: var(--fs-lg);
-    }
-    @include pc_xl {
-      max-width: 49%;
-      font-size: var(--fs-xl);
+    padding: var(--pd-xl) var(--pd-xs);
+    margin: 0 auto;
+
+    /* 
+      From tablet screens onwards the highlights section above is position: absolute; thus lifted out of the flow. 
+      See layout.js.
+    */
+    @include tablet_md {
+      padding: calc(var(--height-highlights) / 2 + var(--pd-lg)) var(--pd-xs)
+        var(--pd-xl);
     }
 
-    p {
-      margin: 0 auto;
-
+    &__text {
       &:first-of-type {
         margin-bottom: var(--pd-lg);
       }
     }
 
-    a {
-      color: var(--txtClr-accent);
-    }
+    &__image-container {
+      width: 50%;
+      margin: 0 auto var(--pd-lg);
 
-    .profile-img-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .img-container {
-        margin-bottom: var(--pd-md);
-        border-radius: 50%;
-
-        width: 50%;
-        overflow: hidden;
-        box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
-
-        @include tablet_sm {
-          width: 33%;
-        }
-
-        img {
-          width: 100%;
-        }
+      @include tablet_sm {
+        width: 33%;
       }
     }
   }

@@ -70,22 +70,6 @@
         justify-content: flex-start;
       }
 
-      &__img-container {
-        width: 5.5em;
-        overflow: hidden;
-        border-radius: 50%;
-        box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
-        margin: 0 auto var(--mg-base);
-
-        @include tablet_md {
-          margin: 0 var(--mg-base) 0 0;
-        }
-
-        img {
-          width: 100%;
-        }
-      }
-
       p {
         @include tablet_md {
           align-self: center;
@@ -93,6 +77,15 @@
         span {
           font-weight: bold;
         }
+      }
+    }
+
+    &__image {
+      width: 5.5em;
+      margin: 0 auto var(--mg-base);
+
+      @include tablet_md {
+        margin: 0 var(--mg-base) 0 0;
       }
     }
   }

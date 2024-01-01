@@ -70,7 +70,7 @@
       This functions as placeholder when the nav bar is lifted out of the page flow; this prevents a "jump" in the layout.
       The height variable is set via layout.js 
       */
-      min-height: var(--menu-height);
+      min-height: var(--height-menu);
       margin-bottom: var(--mg-2xl);
     }
 

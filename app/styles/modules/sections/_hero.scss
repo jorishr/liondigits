@@ -10,9 +10,14 @@
     height: 145vh;
   }
 
-  @include tablet_md {
+  /*   
+    Removed because of issue on Ipad Mini
+  
+    @include tablet_md {
     height: 133vh;
-  }
+  } 
+  
+  */
 
   @include pc_xl {
     height: 115vh;

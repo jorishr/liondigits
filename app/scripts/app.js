@@ -14,7 +14,7 @@ import {
   setPgpInfo,
 } from "./modules/anchor.js";
 import { setCollapseBtns } from "./modules/collapse.js";
-import { processHeaderHeight, processMenuHeight } from "./modules/layout.js";
+import { processElementHeight } from "./modules/layout.js";
 import {
   scrollIndicator,
   scrollDown,
@@ -40,8 +40,9 @@ try {
   console.log("Calendar unable to loaded");
 }
 
-processHeaderHeight();
-processMenuHeight();
+processElementHeight(".header", "--height-header");
+processElementHeight(".intro__highlight", "--height-highlights");
+processElementHeight(".skill__heading__nav", "--height-menu");
 langMenuToggle();
 targetToggle();
 btnClose();
