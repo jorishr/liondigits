@@ -309,7 +309,7 @@
         }
 
         @include pc_2xl {
-          font-size: var(--fs-2xl);
+          font-size: var(--fs-4xl);
         }
       }
 
@@ -340,6 +340,9 @@
           @include pc_xl {
             font-size: var(--fs-3xl);
           }
+          @include pc_2xl {
+            font-size: var(--fs-6xl);
+          }
         }
 
         @include pc_sm {
@@ -365,6 +368,12 @@
           .highlight-first-char::first-letter {
             @include highlight-first-char-xl;
             line-height: 0.6;
+          }
+        }
+
+        @include pc_2xl {
+          .highlight-first-char::first-letter {
+            @include highlight-first-char-2xl;
           }
         }
       }

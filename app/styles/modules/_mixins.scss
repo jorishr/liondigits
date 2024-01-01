@@ -89,3 +89,9 @@
   font-size: 8.5rem;
   line-height: 0.81;
 }
+
+@mixin highlight-first-char-2xl {
+  @include highlight-first-char;
+  font-size: 17rem;
+  line-height: 0.92;
+}
