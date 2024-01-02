@@ -1,74 +1,44 @@
 .services {
-  width: 95%;
-
-  font-size: var(--fs-md);
-  text-align: center;
-
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
-
-  background-color: var(--bgClr-lightblue);
-  color: var(--bgClr-accent);
-
-  padding: var(--pd-lg) var(--pd-sm);
-  margin: 0 auto var(--mg-2xl);
-
-  @include pc_lg {
-    font-size: var(--fs-xl);
-  }
-
-  @include pc_xl {
-    font-size: var(--fs-2xl);
-  }
+  // receives base styles from __section-base
 
   &__heading {
-    &__title {
-      font-size: var(--fs-2xl);
-      text-align: center;
-      margin-bottom: var(--mg-sm);
-
-      @include pc_lg {
-        font-size: var(--fs-3xl);
-      }
-    }
+    // section title receives base styles from __section-base
     &__image-container {
-      margin: 0 auto var(--mg-lg);
-      width: 45%;
-      max-width: 10em;
+      margin: 0 auto var(--mg-md);
+      width: 9em;
     }
   }
 
   &__list-container {
-    max-width: 66ch;
+    max-width: 55ch;
     text-align: center;
 
     margin: 0 auto var(--mg-lg);
+  }
 
-    ul {
-      list-style: none;
-      padding: 0;
+  &__list {
+    &__item {
       margin-bottom: var(--mg-base);
 
-      li {
-        margin-bottom: var(--mg-base);
+      &__title {
+        font-weight: 600;
+        line-height: 1.5;
+        font-size: var(--fs-md);
 
-        p:first-of-type {
-          font-weight: 600;
+        @include pc_lg {
           font-size: var(--fs-lg);
-
-          @include pc_lg {
-            font-size: var(--fs-xl);
-          }
-
-          @include pc_xl {
-            font-size: var(--fs-2xl);
-          }
+        }
+        @include pc_xl {
+          font-size: var(--fs-2xl);
+        }
+        @include pc_2xl {
+          font-size: var(--fs-5xl);
         }
       }
     }
   }
   &__addendum {
+    max-width: 75ch;
     margin: 0 auto;
-    max-width: 78ch;
   }
 }
