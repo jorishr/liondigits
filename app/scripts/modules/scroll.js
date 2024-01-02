@@ -54,8 +54,8 @@ export function stickyNavOnScroll() {
   const sectionElemEnd = document.querySelector(".fun-zone");
 
   if (navBar) {
-    const sectionStart = sectionElemStart.offsetTop + 150;
-    const sectionEnd = sectionElemEnd.offsetTop - 150;
+    const sectionStart = sectionElemStart.offsetTop + 330;
+    const sectionEnd = sectionElemEnd.offsetTop - 330;
 
     window.onscroll = () => {
       let currentPos = window.scrollY;

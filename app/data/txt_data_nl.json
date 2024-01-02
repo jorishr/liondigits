@@ -379,7 +379,7 @@
   "584": "IDE & Projectbeheer",
   "585": "UI/UX implementatie",
   "586": " Vele websites — waaronder deze eigenste site, worden ontworpen met een ontwerpprogramma zoals AdobeXd of Figma en vervolgens omgezet naar de code van het web in HTML5, (S)CSS en JavaScript. Daarbij wordt bijzondere aandacht geschonken aan een ",
-  "587": " benadering en een logische opdeling van de code in secties en componenten. ",
+  "587": " benadering en een logische opdeling van de code in secties en componenten met een methodologie zoals Block-Element-Modifier ",
   "588": "mobile-first",
   "589": "Een voorbeeld van hoe dit er in de praktijk precies uitziet vind je in de broncode voor deze website op deze ",
   "590": "Front-end & JavaScript bibliotheken",

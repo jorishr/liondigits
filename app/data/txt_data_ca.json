@@ -379,7 +379,7 @@
   "584": "IDE i gestió de projectes",
   "585": "Implementació UI/UX",
   "586": " Molts llocs web — inclòs aquest mateix lloc web, estan dissenyats amb un programa de disseny com AdobeXd o Figma i després es converteixen al codi del web en HTML5, (S)CSS i JavaScript. Es presta especial atenció a un ",
-  "587": " enfocament i una divisió lògica del codi en seccions i components.",
+  "587": " enfocament i una divisió lògica del codi en seccions i components mitjançant una metodologia com Block-Element-Modifier ",
   "588": "mobile first",
   "589": "Un exemple de com es fa això a la pràctica es pot trobar al codi font d'aquest lloc web en la meva ",
   "590": "Biblioteques de front-end i JavaScript",
