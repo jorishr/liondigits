@@ -56,15 +56,8 @@
   }
 
   &__link {
-    width: 95%;
-    font-size: var(--fs-base);
+    width: 18em;
 
-    @include mobile_md {
-      width: 18em;
-    }
-    @include pc_lg {
-      font-size: var(--fs-lg);
-    }
     @include pc_xl {
       font-size: var(--fs-xl);
     }

@@ -55,13 +55,11 @@
 
   &__btn {
     &__link {
-      font-size: var(--fs-base);
-
       @include pc_xl {
-        font-size: var(--fs-md);
+        font-size: var(--fs-lg);
       }
       @include pc_2xl {
-        font-size: var(--fs-2xl);
+        font-size: var(--fs-3xl);
       }
     }
   }

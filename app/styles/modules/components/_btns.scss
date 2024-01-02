@@ -1,5 +1,10 @@
 .btn {
-  // applied to anchor tags that appear as buttons
+  /* 
+    - Applied to anchor tags that appear as buttons
+    - Font-size is set to scale with media-queries
+    - Positioning and font-size tweaks should be applied in the section where the button appears
+  */
+  font-size: var(--fs-sm);
   font-weight: 600;
   text-transform: capitalize;
   text-align: center;
@@ -14,6 +19,22 @@
   background-color: var(--bgClr-accent);
 
   padding: var(--pd-sm) var(--pd-base);
+
+  @include mobile_md {
+    font-size: var(--fs-base);
+  }
+
+  @include pc_lg {
+    font-size: var(--fs-md);
+  }
+
+  @include pc_xl {
+    font-size: var(--fs-2xl);
+  }
+
+  @include pc_2xl {
+    font-size: var(--fs-4xl);
+  }
 
   &:hover {
     color: var(--accent-azureblue);
@@ -67,20 +88,9 @@
   }
 
   &--outline-gray {
-    font-size: var(--fs-sm);
     color: var(--txtClr-base);
     background-color: transparent;
     border-color: var(--txtClr-base);
-
-    @include pc_lg {
-      font-size: var(--fs-base);
-    }
-    @include pc_xl {
-      font-size: var(--fs-md);
-    }
-    @include pc_2xl {
-      font-size: var(--fs-2xl);
-    }
 
     &:hover {
       border-color: var(--txtClr-base);

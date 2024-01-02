@@ -196,24 +196,7 @@
   }
 
   &__link {
-    font-size: var(--fs-sm);
     width: 18em;
-
-    @include mobile_md {
-      font-size: var(--fs-base);
-    }
-
-    @include pc_lg {
-      font-size: var(--fs-md);
-    }
-
-    @include pc_xl {
-      font-size: var(--fs-2xl);
-    }
-
-    @include pc_2xl {
-      font-size: var(--fs-4xl);
-    }
 
     &:first-of-type {
       margin-bottom: var(--mg-sm);

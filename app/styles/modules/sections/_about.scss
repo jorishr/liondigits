@@ -20,6 +20,17 @@
     padding: var(--pd-lg) var(--pd-lg);
   }
 
+  &__btn-home {
+    font-size: var(--fs-xs);
+
+    @include pc_lg {
+      font-size: var(--fs-base);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-lg);
+    }
+  }
+
   &__nav-container {
     position: absolute;
     top: 1em;
