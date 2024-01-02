@@ -29,44 +29,49 @@
 
     @include tablet_md {
       flex-direction: row;
+      justify-content: center;
     }
 
-    p {
-      text-align: center;
-      color: var(--txtClr-white);
-      margin: 0 var(--mg-sm) var(--mg-sm) 0;
+    @include pc_lg {
+      font-size: var(--fs-md);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-2xl);
+    }
+  }
 
-      @include tablet_md {
-        margin-bottom: 0;
-      }
+  &__message {
+    text-align: center;
+    color: var(--txtClr-white);
+    margin: 0 0 var(--mg-base) !important;
 
-      @include pc_lg {
-        font-size: var(--fs-md);
+    @include tablet_md {
+      text-align: left;
+      margin: 0 var(--mg-base) 0 0 !important;
+    }
+  }
+
+  &__btn {
+    width: 18em;
+    font-size: var(--fs-sm);
+    margin-bottom: var(--mg-sm);
+
+    @include tablet_md {
+      margin-bottom: unset;
+
+      &:first-of-type {
+        order: 2;
+        margin-left: var(--mg-sm);
       }
     }
-
-    .btn {
-      width: 66%;
-      font-size: var(--fs-sm);
-      margin-bottom: var(--mg-sm);
-
-      @include mobile_lg {
-        width: 45%;
-      }
-
-      @include tablet_md {
-        width: unset;
-        margin-bottom: unset;
-
-        &:first-of-type {
-          order: 2;
-          margin-left: var(--mg-sm);
-        }
-      }
-
-      @include pc_lg {
-        font-size: var(--fs-md);
-      }
+    @include pc_lg {
+      font-size: var(--fs-base);
+    }
+    @include pc_xl {
+      font-size: var(--fs-md);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-xl);
     }
   }
 }
