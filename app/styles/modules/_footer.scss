@@ -352,29 +352,6 @@
 
         .highlight-first-char::first-letter {
           @include highlight-first-char;
-          line-height: 0.77;
-        }
-        @include pc_md {
-          .highlight-first-char::first-letter {
-            @include highlight-first-char-md;
-          }
-        }
-        @include pc_lg {
-          .highlight-first-char::first-letter {
-            @include highlight-first-char-lg;
-          }
-        }
-        @include pc_xl {
-          .highlight-first-char::first-letter {
-            @include highlight-first-char-xl;
-            line-height: 0.6;
-          }
-        }
-
-        @include pc_2xl {
-          .highlight-first-char::first-letter {
-            @include highlight-first-char-2xl;
-          }
         }
       }
 

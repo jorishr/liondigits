@@ -64,34 +64,19 @@
 
   float: left;
 
-  font-size: var(--fs-4xl);
+  font-size: 4em; //relative to surrounding content
   font-family: "Monaco", "Helvetica Neue";
   font-weight: 600;
 
-  line-height: 0.95;
+  line-height: 0.85;
   margin-right: 5px;
+
+  @include pc_2xl {
+    margin-right: 20px;
+  }
 }
 
 @mixin highlight-first-char-md {
   @include highlight-first-char;
-  font-size: 5.5rem;
-  line-height: 0.75;
-}
-
-@mixin highlight-first-char-lg {
-  @include highlight-first-char;
-  font-size: 6.5rem;
   line-height: 0.8;
-}
-
-@mixin highlight-first-char-xl {
-  @include highlight-first-char;
-  font-size: 8.5rem;
-  line-height: 0.81;
-}
-
-@mixin highlight-first-char-2xl {
-  @include highlight-first-char;
-  font-size: 17rem;
-  line-height: 0.92;
 }
