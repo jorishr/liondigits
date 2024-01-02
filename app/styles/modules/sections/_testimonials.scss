@@ -140,19 +140,8 @@
   }
 
   &__link-container {
-    font-size: var(--fs-sm);
-
     @include pc_sm {
       grid-row: 2;
-    }
-    @include pc_lg {
-      font-size: var(--fs-base);
-    }
-    @include pc_xl {
-      font-size: var(--fs-md);
-    }
-    @include pc_2xl {
-      font-size: var(--fs-2xl);
     }
   }
 

@@ -19,7 +19,7 @@
 
   &__text-container {
     max-width: 55ch;
-    margin: 0 auto var(--pd-lg);
+    margin: 0 auto var(--pd-base);
   }
 
   &__title {
@@ -50,6 +50,19 @@
     }
     @include pc_2xl {
       max-width: 160px;
+    }
+  }
+
+  &__btn {
+    &__link {
+      font-size: var(--fs-base);
+
+      @include pc_xl {
+        font-size: var(--fs-md);
+      }
+      @include pc_2xl {
+        font-size: var(--fs-2xl);
+      }
     }
   }
 }

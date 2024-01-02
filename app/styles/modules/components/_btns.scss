@@ -67,9 +67,20 @@
   }
 
   &--outline-gray {
+    font-size: var(--fs-sm);
     color: var(--txtClr-base);
     background-color: transparent;
     border-color: var(--txtClr-base);
+
+    @include pc_lg {
+      font-size: var(--fs-base);
+    }
+    @include pc_xl {
+      font-size: var(--fs-md);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-2xl);
+    }
 
     &:hover {
       border-color: var(--txtClr-base);
