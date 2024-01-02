@@ -1,21 +1,28 @@
 .testimonials {
+  font-size: var(--fs-base-plus);
+
   background-color: var(--bgClr-accent);
-  padding: var(--pd-2xl) var(--pd-sm);
+
+  padding: var(--pd-xl) var(--pd-xs);
 
   @include pc_lg {
-    font-size: var(--fs-xl);
+    font-size: var(--fs-lg);
   }
   @include pc_xl {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-xl);
+  }
+  @include pc_2xl {
+    font-size: var(--fs-3xl);
   }
 
-  h3 {
+  &__title {
     text-align: center;
     font-size: var(--fs-xl);
+    max-width: 45ch;
+
     color: var(--txtClr-white);
 
-    padding: var(--pd-sm) var(--pd-sm) 0;
-    margin-bottom: var(--mg-lg);
+    margin: 0 auto var(--mg-base);
 
     @include pc_lg {
       font-size: var(--fs-2xl);
@@ -23,139 +30,142 @@
     @include pc_xl {
       font-size: var(--fs-3xl);
     }
+    @include pc_2xl {
+      font-size: var(--fs-6xl);
+    }
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--bgClr-lightgray);
+  box-shadow: 5px 5px 25px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+
+  padding: var(--pd-base) var(--pd-sm);
+  margin: 0 auto var(--mg-lg);
+
+  @include tablet_md {
+    padding: var(--pd-base) var(--pd-xl);
   }
 
-  .project {
-    &-container {
-      display: flex;
-      flex-direction: column;
+  @include pc_sm {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-column-gap: var(--mg-lg);
+    grid-row-gap: var(--mg-xs);
 
-      background-color: var(--bgClr-lightgray);
-      box-shadow: 5px 5px 25px 0 rgba(0, 0, 0, 0.25);
+    padding: var(--pd-md) var(--pd-xl);
+
+    /* 
+      Reverse columns & content every other project
+    */
+    &:nth-of-type(even) {
+      grid-template-columns: 60% 40%;
+    }
+    &:nth-of-type(even) &__desc {
+      grid-column: 2;
+    }
+    &:nth-of-type(even) &__link-container {
+      grid-column: 2;
+    }
+    &:nth-of-type(even) &__demo {
+      grid-column: 1;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__demo {
+    margin-bottom: var(--mg-base);
+
+    @include pc_sm {
+      grid-column: 2;
+      align-self: center;
+      margin-bottom: 0;
+    }
+
+    &__image,
+    &__video {
       border-radius: 5px;
-
-      padding: var(--pd-xs) var(--pd-xs) var(--pd-lg);
-      margin: 0 auto var(--mg-2xl);
-
-      &:last-child {
-        margin-bottom: 0;
-      }
+      box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+      margin-bottom: var(--mg-xs);
     }
 
-    &__img-container {
-      order: 2;
+    &__video {
       width: 100%;
+    }
 
-      padding: var(--pd-base) var(--pd-sm) 0;
-      margin-bottom: var(--mg-lg);
+    &__caption {
+      text-align: center;
+      font-size: var(--fs-sm);
+    }
+  }
 
-      @include pc_md {
-        max-width: 81%;
+  &__desc {
+    margin-bottom: var(--mg-base);
+
+    @include pc_sm {
+      grid-row: 1;
+      align-self: center;
+    }
+
+    &__logo {
+      text-align: center;
+      margin-bottom: var(--mg-sm);
+
+      &__image {
+        width: 54%;
         margin: 0 auto;
-      }
-
-      p {
-        text-align: center;
-        font-weight: 600;
-        padding: var(--pd-base);
-      }
-
-      img {
         border-radius: 5px;
-        box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
-      }
 
-      video {
-        border-radius: 5px;
-        box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
-        width: 100%;
-      }
-    }
-
-    &__legend {
-      &-container {
-        order: 1;
-        width: 100%;
-        padding: var(--pd-xs) var(--pd-sm);
-
-        @include pc_sm {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-evenly;
-          padding: var(--pd-lg) var(--pd-base);
-        }
-      }
-
-      &__description {
-        margin-bottom: var(--mg-lg);
-        padding: var(--pd-xs) var(--pd-sm);
-
-        @include pc_sm {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          max-width: 50%;
-
-          padding: var(--pd-xs) var(--pd-base);
-          margin-bottom: 0;
-        }
-        .img-container {
-          margin: 0 auto var(--mg-lg);
-          text-align: center;
-          max-width: 45%;
-          a {
-            img {
-              border-radius: 5px;
-              box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
-              margin: 0 auto;
-
-              @include pc_sm {
-                max-width: 100%;
-              }
-            }
-          }
-        }
-
-        p {
-          text-align: center;
-          font-size: var(--fs-md);
-          line-height: 1.5;
-
-          @include pc_lg {
-            font-size: var(--fs-xl);
-          }
-          @include pc_xl {
-            font-size: var(--fs-2xl);
-          }
-        }
-      }
-
-      &__links {
-        @include tablet_sm {
-          max-width: 66%;
-          margin: 0 auto;
+        @include mobile_lg {
+          width: 12em;
         }
         @include pc_sm {
-          width: 33%;
-        }
-
-        a.btn {
-          width: 100%;
-
-          &:first-of-type {
-            margin-bottom: var(--mg-sm);
-
-            @include pc_sm {
-              margin-bottom: var(--mg-base);
-            }
-          }
+          width: 9em;
         }
       }
     }
 
-    /* Volgorde van projectcontainer content verandert alternerend */
-    /*     &:nth-of-type(2n + 1) .image-container {
-      order: unset;
-    } */
+    &__text {
+      text-align: center;
+      max-width: 33ch;
+      margin: 0 auto;
+    }
+  }
+
+  &__link-container {
+    font-size: var(--fs-sm);
+
+    @include pc_sm {
+      grid-row: 2;
+    }
+    @include pc_lg {
+      font-size: var(--fs-base);
+    }
+    @include pc_xl {
+      font-size: var(--fs-md);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-2xl);
+    }
+  }
+
+  &__link {
+    width: 81%;
+    margin: 0 auto;
+
+    &:first-of-type {
+      margin-bottom: var(--mg-sm);
+    }
+
+    @include mobile_md {
+      width: 21em;
+    }
   }
 }

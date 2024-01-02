@@ -54,7 +54,7 @@
       font-size: var(--fs-md);
       font-weight: 300;
 
-      margin-bottom: var(--mg-base);
+      margin-bottom: var(--mg-base) !important;
 
       @include pc_lg {
         font-size: var(--fs-xl);

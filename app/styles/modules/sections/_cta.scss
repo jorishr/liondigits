@@ -59,7 +59,7 @@
     width: 95%;
     font-size: var(--fs-base);
 
-    @include mobile_lg {
+    @include mobile_md {
       width: 18em;
     }
     @include pc_lg {
