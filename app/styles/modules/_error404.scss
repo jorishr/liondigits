@@ -1,8 +1,6 @@
-.err {
-  &-page-container {
-    position: relative;
-    top: var(--height-header); //see layout.js
-  }
+.error {
+  position: relative;
+  top: var(--height-header); //see layout.js
 
   &__background-image {
     background-size: cover;
@@ -10,7 +8,7 @@
     height: 100vh;
   }
 
-  &__txt {
+  &__text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -26,6 +24,10 @@
       font-size: var(--fs-2xl);
       color: var(--txtClr-white);
       text-shadow: 0 1px 0 rgb(0, 0, 0);
+
+      @include pc_2xl {
+        font-size: var(--fs-4xl);
+      }
     }
 
     p:last-of-type {

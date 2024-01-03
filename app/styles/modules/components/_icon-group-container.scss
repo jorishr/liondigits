@@ -1,11 +1,11 @@
-.icon-container {
+.icon-group-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 0 auto var(--mg-sm);
+  margin: 0 auto var(--mg-base);
 
-  @include tablet_md {
-    max-width: 24em;
+  @include tablet_sm {
+    max-width: 45ch;
   }
 
   img {

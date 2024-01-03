@@ -1,0 +1,47 @@
+.cta-more {
+  font-size: var(--fs-base-plus);
+  text-align: center;
+  color: var(--bgClr-accent);
+
+  background-color: var(--bgClr-lightblue);
+
+  padding: var(--pd-xl) var(--pd-sm);
+
+  @include pc_lg {
+    font-size: var(--fs-lg);
+  }
+  @include pc_xl {
+    font-size: var(--fs-xl);
+  }
+  @include pc_2xl {
+    font-size: var(--fs-3xl);
+  }
+
+  &__text-container {
+    max-width: 55ch;
+    margin: 0 auto var(--pd-base);
+  }
+
+  &__title {
+    font-size: var(--fs-xl);
+    margin-bottom: var(--mg-sm);
+
+    @include pc_xl {
+      font-size: var(--fs-2xl);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-4xl);
+    }
+  }
+
+  &__btn {
+    &__link {
+      @include pc_xl {
+        font-size: var(--fs-lg);
+      }
+      @include pc_2xl {
+        font-size: var(--fs-3xl);
+      }
+    }
+  }
+}

@@ -1,5 +1,10 @@
 .btn {
-  // applied to anchor tags that appear as buttons
+  /* 
+    - Applied to anchor tags that appear as buttons
+    - Font-size is set to scale with media-queries
+    - Positioning and font-size tweaks should be applied in the section where the button appears
+  */
+  font-size: var(--fs-sm);
   font-weight: 600;
   text-transform: capitalize;
   text-align: center;
@@ -14,6 +19,22 @@
   background-color: var(--bgClr-accent);
 
   padding: var(--pd-sm) var(--pd-base);
+
+  @include mobile_md {
+    font-size: var(--fs-base);
+  }
+
+  @include pc_lg {
+    font-size: var(--fs-md);
+  }
+
+  @include pc_xl {
+    font-size: var(--fs-2xl);
+  }
+
+  @include pc_2xl {
+    font-size: var(--fs-4xl);
+  }
 
   &:hover {
     color: var(--accent-azureblue);
@@ -83,18 +104,86 @@
     border-color: var(--txtClr-lightblue);
   }
 
-  &--inside-list {
+  &--horizontal-list {
+    width: 15em;
     white-space: normal;
     font-size: var(--fs-xs);
+
     padding: var(--pd-xs) var(--pd-sm);
+    margin: 0 auto var(--mg-base);
 
     @include mobile_md {
       font-size: var(--fs-sm);
       padding: var(--pd-sm) var(--pd-base);
     }
-
-    @include pc_sm {
+    @include pc_lg {
       font-size: var(--fs-base);
     }
+    @include pc_xl {
+      font-size: var(--fs-base-plus);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-2xl);
+    }
+  }
+}
+
+/* Used on modals and tooltips */
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-50%);
+
+  font-size: var(--fs-md);
+  color: var(--txtClr-base);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--txtClr-white);
+    cursor: pointer;
+  }
+
+  &--white {
+    color: var(--txtClr-white);
+
+    &:hover {
+      color: var(--txtClr-lightblue);
+    }
+  }
+
+  &--orange {
+    &:hover {
+      color: var(--txtClr-orange);
+    }
+  }
+
+  @include pc_sm {
+    font-size: var(--fs-xl);
+  }
+  @include pc_lg {
+    font-size: var(--fs-3xl);
+  }
+  @include pc_2xl {
+    font-size: var(--fs-6xl);
+  }
+}
+
+/* applied to button elements */
+.button {
+  font-size: inherit;
+  font-family: inherit;
+
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: var(--txtClr-base);
+
+  transition: all 0.5s ease 0ms;
+  padding: 0.5em 1em;
+
+  border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
   }
 }

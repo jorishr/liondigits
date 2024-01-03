@@ -1,0 +1,13 @@
+.divider {
+  width: 6em;
+  height: 6px;
+  background-color: rgba(0, 180, 255);
+  border-radius: 5px;
+  border: none;
+
+  margin-bottom: var(--mg-xs);
+
+  @include pc_2xl {
+    height: 18px;
+  }
+}

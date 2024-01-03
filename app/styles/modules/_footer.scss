@@ -1,17 +1,23 @@
 .footer {
   position: relative; //see modal class
-  background-color: var(--bgClr-darkest); //#0e161b;
-  padding: var(--pd-2xl) var(--pd-base) 0;
-  border-top: 6px #00b4ff solid;
 
   color: var(--accent-azureblue);
-  line-height: 1.9em;
+
+  background-color: var(--bgClr-darkest); //#0e161b;
+  border-top: 6px #00b4ff solid;
+
+  padding: var(--pd-2xl) var(--pd-base) 0;
 
   @include pc_lg {
     font-size: var(--fs-xl);
   }
+
   @include pc_xl {
     font-size: var(--fs-2xl);
+  }
+
+  @include pc_2xl {
+    font-size: var(--fs-4xl);
   }
 
   &__logo {
@@ -25,6 +31,10 @@
 
       @include pc_lg {
         width: 325px;
+      }
+
+      @include pc_2xl {
+        width: 650px;
       }
     }
   }
@@ -93,8 +103,19 @@
         @include pc_lg {
           width: 100px;
         }
+
+        @include pc_2xl {
+          width: 200px;
+        }
       }
     }
+  }
+
+  &__info-icon {
+    display: inline-block;
+    height: 1.15em;
+    width: 1.15em;
+    align-self: center;
   }
 
   &__pgp {
@@ -112,8 +133,7 @@
       margin-bottom: var(--pd-xs);
 
       &__icon {
-        width: 1em;
-        margin-right: 0.75em;
+        margin-right: var(--mg-xs);
       }
     }
 
@@ -145,17 +165,6 @@
           }
         }
       }
-
-      &__icon {
-        display: inline-block;
-        height: 1.125em;
-        width: 1.125em;
-
-        @include pc_lg {
-          height: 2.25em;
-          width: 2.25em;
-        }
-      }
     }
 
     &__modal {
@@ -172,21 +181,13 @@
       }
 
       &__section-title {
-        margin-bottom: var(--mg-xs);
         text-align: left;
+        margin-bottom: var(--mg-xs);
       }
 
       &__txt-container {
+        max-width: 81ch;
         margin: 0 auto var(--mg-base);
-        max-width: 54em;
-
-        p {
-          margin-bottom: var(--mg-xs);
-
-          &:last-of-type {
-            margin-bottom: 0;
-          }
-        }
       }
 
       &__btn-container {
@@ -199,9 +200,11 @@
 
         margin: 0 auto var(--mg-lg);
 
-        // these btns have long text, especially in some translations
-        // tone down the font-size on small mobile screens
-        // base styles see __btns.scss
+        /*  
+            These btns have long text, especially in some translations.
+            Tone down the font-size on small mobile screens.
+            Base styles see __btns.scss. 
+        */
         & a {
           font-size: var(--fs-xs);
           justify-content: space-evenly;
@@ -214,8 +217,24 @@
           @include mobile_lg {
             font-size: var(--fs-sm);
           }
+
           @include tablet_md {
             font-size: var(--fs-base);
+            width: 100%;
+          }
+
+          @include pc_lg {
+            font-size: var(--fs-lg);
+            width: 84%;
+          }
+
+          @include pc_xl {
+            font-size: var(--fs-xl);
+            width: 87%;
+          }
+
+          @include pc_2xl {
+            font-size: var(--fs-4xl);
             width: 100%;
           }
         }
@@ -228,25 +247,30 @@
   }
 
   &__btc {
-    position: relative;
+    position: relative; //modal
+    margin: 0 auto var(--mg-lg);
 
     &__link-container {
+      position: relative; // a-tag link
+    }
+
+    &__link {
+      /* make link container clickable */
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__content-container {
       display: flex;
       justify-content: center;
-
-      margin: 0 auto var(--mg-lg);
     }
 
     &__logo {
-      width: 10em;
+      width: 9em;
       margin-right: var(--mg-base);
-    }
-
-    &__icon {
-      display: inline-block;
-      height: 1.15em;
-      width: 1.15em;
-      align-self: center;
     }
 
     &__modal {
@@ -285,14 +309,12 @@
           font-size: var(--fs-lg);
         }
 
-        @include pc_lg {
+        @include pc_xl {
           font-size: var(--fs-xl);
         }
-      }
 
-      &__btn-close {
-        &:hover {
-          color: var(--txtClr-orange);
+        @include pc_2xl {
+          font-size: var(--fs-4xl);
         }
       }
 
@@ -315,9 +337,9 @@
           @include pc_xl {
             font-size: var(--fs-3xl);
           }
-        }
-        p {
-          margin-bottom: var(--mg-xs);
+          @include pc_2xl {
+            font-size: var(--fs-6xl);
+          }
         }
 
         @include pc_sm {
@@ -327,23 +349,6 @@
 
         .highlight-first-char::first-letter {
           @include highlight-first-char;
-          line-height: 0.77;
-        }
-        @include pc_md {
-          .highlight-first-char::first-letter {
-            @include highlight-first-char-md;
-          }
-        }
-        @include pc_lg {
-          .highlight-first-char::first-letter {
-            @include highlight-first-char-lg;
-          }
-        }
-        @include pc_xl {
-          .highlight-first-char::first-letter {
-            @include highlight-first-char-xl;
-            line-height: 0.6;
-          }
         }
       }
 
@@ -360,21 +365,17 @@
   &__onion {
     display: flex;
     flex-direction: column;
-    margin-bottom: var(--mg-lg);
+    align-items: center;
+    flex-wrap: nowrap;
+
     text-align: center;
 
-    @include pc_md {
+    margin-bottom: var(--mg-lg);
+
+    @include pc_sm {
       flex-direction: row;
       justify-content: center;
-    }
-
-    a {
-      color: var(--txtClr-azureblue);
-      justify-content: center;
-
-      &:hover {
-        text-decoration: underline;
-      }
+      align-items: center;
     }
   }
 

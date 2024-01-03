@@ -43,8 +43,8 @@
   </head>
 
   <noscript></noscript>
-  <header class="header wrapper">
-    <section class="header-container">
+  <header class="header">
+    <div class="header__content-container">
       <div class="header__left">
         <div class="header__logo">
           <a href="/"
@@ -55,34 +55,32 @@
         </div>
       </div>
       <div class="header__right">
-        <div class="header__right__lang-menu js-lang-btn">
-          <div class="header__right__lang-menu__icon">
-            <img               src="images/icons/icon_translate_lightblue.png"
+        <div class="lang-menu js-lang-btn">
+          <div class="lang-menu__toggle">
+            <img 
+              class="lang-menu__toggle__icon"
+              src="images/icons/icon_translate_lightblue.png"
               alt="Vertalen icoon"
               data-txt_id__alt="162"
             >
-            <span class="js-lang-span" translate="no">nl</span>
+            <span class="js-lang-span lang-menu__toggle__text" translate="no">nl</span>
           </div>
-          <ul class="header__right__lang-menu__options">
-            <li class="js-lang-option" data-lang="nl">
-              <a href="#" hreflang="nl" translate="no">nederlands</a>
+          <ul class="lang-menu__list">
+            <li class="lang-menu__option" data-lang="nl">
+              <button class="lang-menu__option__btn button" translate="no">nederlands</button>
             </li>
-            <li class="js-lang-option" data-lang="en">
-              <a href="#" hreflang="en" translate="no">english</a>
+            <li class="lang-menu__option" data-lang="en">
+              <button class="lang-menu__option__btn button" translate="no">english</button>
             </li>
-            <li class="js-lang-option" data-lang="es">
-              <a href="#" hreflang="es" translate="no">español</a>
+            <li class="lang-menu__option" data-lang="es">
+              <button class="lang-menu__option__btn button" translate="no">español</button>
             </li>
-            <li class="js-lang-option" data-lang="ca">
-              <a href="#" hreflang="cat" translate="no">català</a>
+            <li class="lang-menu__option" data-lang="ca">
+              <button class="lang-menu__option__btn button" translate="no">català</button>
             </li>
           </ul>
         </div>
-        <div class="header__cta">
-          <a class="btn" data-cal-link="liondigits/20min" data-txt_id="[160]"
-            >maak een afspraak</a>
-        </div>
       </div>
-    </section>
+    </div>
   </header>
 </html>

@@ -1,50 +1,59 @@
 /* MEDIA QUERY MIXINS - START*/
 @mixin mobile_md {
-  @media (min-width: 375px) {
+  @media (min-width: 23.4375rem) {
+    // 375px
     @content;
   }
 }
 @mixin mobile_lg {
-  @media (min-width: 425px) {
+  @media (min-width: 26.5625rem) {
+    // 425px
     @content;
   }
 }
 
 @mixin tablet_sm {
-  @media (min-width: 576px) {
+  @media (min-width: 36rem) {
+    // 576px
     @content;
   }
 }
 @mixin tablet_md {
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
+    // 768px
     @content;
   }
 }
 
 @mixin pc_sm {
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
+    // 1024px
     @content;
   }
 }
 
 @mixin pc_md {
-  @media (min-width: 1366px) {
+  @media (min-width: 85.375rem) {
+    // 1366px
     @content;
   }
 }
 
 @mixin pc_lg {
-  @media (min-width: 1920px) {
+  @media (min-width: 120rem) {
+    //1920px
     @content;
   }
 }
 @mixin pc_xl {
-  @media (min-width: 2560px) {
+  @media (min-width: 160rem) {
+    // 2560px
     @content;
   }
 }
 @mixin pc_2xl {
-  @media (min-width: 5121px) {
+  @media (min-width: 320rem) {
+    // 5120px
     @content;
   }
 }
@@ -55,28 +64,19 @@
 
   float: left;
 
-  font-size: var(--fs-4xl);
+  font-size: 4em; //relative to surrounding content
   font-family: "Monaco", "Helvetica Neue";
   font-weight: 600;
 
-  line-height: 0.95;
+  line-height: 0.85;
   margin-right: 5px;
+
+  @include pc_2xl {
+    margin-right: 20px;
+  }
 }
 
 @mixin highlight-first-char-md {
   @include highlight-first-char;
-  font-size: 5.5rem;
-  line-height: 0.75;
-}
-
-@mixin highlight-first-char-lg {
-  @include highlight-first-char;
-  font-size: 6.5rem;
   line-height: 0.8;
-}
-
-@mixin highlight-first-char-xl {
-  @include highlight-first-char;
-  font-size: 8.5rem;
-  line-height: 0.81;
 }
