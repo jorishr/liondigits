@@ -37,35 +37,5 @@
 
     box-shadow: 5px 5px 5px 8em rgb(233, 235, 238, 0.6);
     border-radius: 5px;
-
-    &__btn-close {
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translateX(-50%);
-
-      color: var(--txtClr-white);
-      font-size: var(--fs-md);
-
-      padding: 0;
-
-      @include pc_sm {
-        font-size: var(--fs-xl);
-      }
-
-      @include pc_lg {
-        font-size: var(--fs-3xl);
-      }
-
-      @include pc_2xl {
-        font-size: var(--fs-6xl);
-      }
-
-      &:hover {
-        color: var(--txtClr-lightblue);
-        text-decoration: none;
-        cursor: pointer;
-      }
-    }
   }
 }

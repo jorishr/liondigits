@@ -1,4 +1,5 @@
 .tooltip {
+  /* parent should have position:relative; */
   display: none;
 
   &--active {
@@ -27,6 +28,9 @@
   font-size: var(--fs-sm);
 
   &__content-container {
+    /* 
+      There is a trade-off here: positioning the content in the center works very well on mobile. But, on bigger screens (pc_md) some users may have to scroll up or down slightly to read the entire message.
+    */
     position: absolute;
     top: 50%;
     left: 50%;

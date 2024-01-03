@@ -313,14 +313,6 @@
         }
       }
 
-      &__btn-close {
-        color: var(--txtClr-base);
-
-        &:hover {
-          color: var(--txtClr-orange);
-        }
-      }
-
       &__image-container {
         width: 6em;
         margin: 0 auto var(--mg-lg);
