@@ -46,10 +46,7 @@
 
   &__sub {
     margin-bottom: var(--mg-sm) !important;
-
-    &--inside-list {
-      display: none;
-    }
+    line-height: 1.5;
   }
 
   &__image {

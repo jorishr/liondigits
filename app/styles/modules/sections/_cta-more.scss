@@ -34,25 +34,6 @@
     }
   }
 
-  &__icon-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: var(--mg-sm);
-  }
-
-  &__icon {
-    max-width: 55px;
-    margin: 0 1em 1em;
-
-    @include tablet_md {
-      max-width: 80px;
-    }
-    @include pc_2xl {
-      max-width: 160px;
-    }
-  }
-
   &__btn {
     &__link {
       @include pc_xl {
