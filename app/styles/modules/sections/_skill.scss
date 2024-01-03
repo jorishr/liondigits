@@ -1,34 +1,6 @@
-.skill {
-  &__content-container {
-    width: 95%;
-
-    font-size: var(--fs-md);
-
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
-
-    color: var(--txtClr-white);
-    background-color: #003f8c;
-
-    padding: var(--pd-lg) var(--pd-sm);
-    margin: 0 auto var(--mg-2xl);
-
-    @include mobile_lg {
-      padding: var(--pd-lg) var(--pd-base);
-    }
-
-    @include tablet_md {
-      padding: var(--pd-lg) var(--pd-lg);
-    }
-
-    @include pc_lg {
-      font-size: var(--fs-xl);
-    }
-
-    @include pc_xl {
-      font-size: var(--fs-2xl);
-    }
-  }
+.skill-section {
+  color: var(--txtClr-white);
+  background-color: #003f8c;
 
   &__heading {
     position: relative;
@@ -37,170 +9,188 @@
       margin: 0 auto var(--mg-lg);
     }
 
-    &__title {
-      text-align: center;
-      font-size: var(--fs-2xl);
-
-      margin-bottom: var(--mg-xs);
-
-      @include pc_lg {
-        font-size: var(--fs-3xl);
-      }
-    }
-
     &__subtitle {
       text-align: center;
       font-style: italic;
       font-size: var(--fs-md);
       font-weight: 300;
 
-      margin-bottom: var(--mg-base) !important;
+      margin: calc((-1) * var(--mg-base)) 0 var(--mg-base) !important;
 
       @include pc_lg {
         font-size: var(--fs-xl);
       }
-
       @include pc_xl {
         font-size: var(--fs-2xl);
       }
-    }
-
-    &__nav-container {
-      /* 
-      This functions as placeholder when the nav bar is lifted out of the page flow; this prevents a "jump" in the layout.
-      The height variable is set via layout.js 
-      */
-      min-height: var(--height-menu);
-      margin-bottom: var(--mg-2xl);
-    }
-
-    &__nav {
-      position: relative;
-      top: 0;
-
-      width: 100%;
-
-      border-radius: 5px;
-
-      padding: var(--pd-base) var(--pd-xs);
-
-      transition: all ease-in 500ms;
-
-      @include pc_lg {
-        max-width: 78ch;
-        margin: 0 auto;
+      @include pc_2xl {
+        font-size: var(--fs-4xl);
       }
-      /*
-      # Base styles for the nav menu as shown before scrolling past it */
-      ul {
-        padding: 0;
-        text-align: center;
+    }
+  }
 
-        li {
-          display: inline-block;
-          margin-bottom: var(--mg-xs);
+  &__nav-container {
+    /* 
+    This functions as placeholder when the nav bar is lifted out of the page flow; this prevents a "jump" in the layout.
+    The height variable is set via layout.js 
+    */
+    min-height: var(--height-menu);
+    margin-bottom: var(--mg-xl);
+  }
 
-          a {
-            width: 14em;
-            font-size: var(--fs-base);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            text-transform: capitalize;
-            word-wrap: break-word;
+  &__nav {
+    position: relative;
+    top: 0;
 
-            color: var(--txtClr-white);
-            background-color: var(--bgClr-gold);
+    width: 100%;
 
-            border-radius: 5px;
-            box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
 
-            padding: var(--pd-sm) var(--pd-base);
+    padding: var(--pd-base) var(--pd-xs);
 
-            transform: scale(1);
+    transition: all ease-in 500ms;
 
-            &:hover {
-              transform: scale(1.025);
-              color: var(--txtClr-lightblue);
-            }
+    @include tablet_md {
+      max-width: 50%;
+      margin: 0 auto;
+    }
+    /*
+    # Base styles for the nav menu as shown before scrolling past it */
+    ul {
+      padding: 0;
+      text-align: center;
 
-            @include mobile_md {
-              width: 18em;
-            }
-            @include tablet_sm {
-              width: 21em;
-            }
-            @include pc_lg {
-              font-size: var(--fs-md);
-            }
+      li {
+        display: inline-block;
+        margin-bottom: var(--mg-xs);
+
+        a {
+          width: 14em;
+          font-size: var(--fs-base);
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          text-transform: capitalize;
+          word-wrap: break-word;
+
+          color: var(--txtClr-white);
+          background-color: var(--bgClr-gold);
+
+          border-radius: 5px;
+          box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
+
+          padding: var(--pd-sm) var(--pd-base);
+
+          transform: scale(1);
+
+          &:hover {
+            transform: scale(1.025);
+            color: var(--txtClr-lightblue);
+          }
+
+          @include mobile_md {
+            width: 18em;
+          }
+          @include tablet_sm {
+            width: 21em;
+          }
+          @include pc_lg {
+            font-size: var(--fs-md);
+          }
+          @include pc_xl {
+            font-size: var(--fs-xl);
+          }
+          @include pc_2xl {
+            font-size: var(--fs-3xl);
           }
         }
       }
-      /* 
-      # Upon scrolling past the nav bar is re-located to bottom of the screen
-      # - On mobile and tablet screens only one <li> element is shown, the one 
-      # that corresponds to the active section. See also scroll.js
-      # - On desktop screens all <li> elements are visible
-      # - The color patterns differ slightly 
-      */
-      &__onScroll {
-        position: fixed;
-        top: unset;
-        bottom: 0;
-        left: 0;
-        max-width: unset;
+    }
+    /* 
+    # Upon scrolling past the nav bar is re-located to bottom of the screen
+    # - On mobile and tablet screens only one <li> element is shown, the one 
+    # that corresponds to the active section. See also scroll.js
+    # - On desktop screens all <li> elements are visible
+    # - The color patterns differ slightly 
+    */
+    &__onScroll {
+      position: fixed;
+      top: unset;
+      bottom: 0;
+      left: 0;
+      max-width: unset;
+      z-index: 5;
 
-        z-index: 5;
+      border-radius: 5px 5px 0 0;
+      background-color: rgba(3, 31, 48, 0.95);
 
-        border-radius: 5px 5px 0 0;
-        background-color: rgba(3, 31, 48, 0.95);
+      padding: var(--pd-sm) var(--pd-xs);
+      margin-bottom: 0;
 
-        padding: var(--pd-sm) var(--pd-xs);
-        margin-bottom: 0;
+      @include pc_sm {
+        background-color: rgb(11, 33, 74, 0.95);
+      }
 
-        @include pc_sm {
-          background-color: rgb(11, 33, 74, 0.95);
-        }
+      ul {
+        li {
+          display: none;
 
-        ul {
-          li {
-            display: none;
+          &.active {
+            display: inline-block;
+
+            a {
+              font-size: var(--fs-sm);
+              padding: var(--pd-xs) var(--pd-sm);
+              color: var(--txtClr-gold);
+              background-color: var(--bgClr-gold);
+            }
+          }
+
+          @include pc_sm {
+            display: inline-block;
+
+            a {
+              font-size: var(--fs-sm);
+              padding: var(--pd-xs) var(--pd-sm);
+              color: var(--txtClr-gold);
+            }
 
             &.active {
-              display: inline-block;
-
               a {
-                font-size: var(--fs-sm);
-                padding: var(--pd-xs) var(--pd-sm);
-                color: var(--txtClr-gold);
-                background-color: var(--bgClr-gold);
+                background-color: unset;
               }
             }
+          }
 
-            @include pc_sm {
-              display: inline-block;
-
-              a {
-                font-size: var(--fs-sm);
-                padding: var(--pd-xs) var(--pd-sm);
-                color: var(--txtClr-gold);
-              }
-
-              &.active {
-                a {
-                  background-color: unset;
-                }
-              }
+          @include pc_lg {
+            a {
+              font-size: var(--fs-md);
             }
 
-            @include pc_lg {
+            &.active {
               a {
                 font-size: var(--fs-md);
               }
+            }
+          }
+          @include pc_xl {
+            a {
+              font-size: var(--fs-xl);
+            }
 
-              &.active {
-                a {
-                  font-size: var(--fs-md);
-                }
+            &.active {
+              a {
+                font-size: var(--fs-xl);
+              }
+            }
+          }
+          @include pc_2xl {
+            a {
+              font-size: var(--fs-2xl);
+            }
+
+            &.active {
+              a {
+                font-size: var(--fs-2xl);
               }
             }
           }
@@ -208,61 +198,58 @@
       }
     }
   }
+}
 
-  &__section {
-    margin-bottom: var(--mg-2xl);
+.article {
+  overflow: hidden; // sometimes caused by txt-links
+  margin-bottom: var(--mg-xl);
 
-    @include tablet_md {
-      margin: 0 auto var(--mg-2xl);
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include tablet_md {
+    margin: 0 auto var(--mg-2xl);
+  }
+
+  &__heading {
+    text-align: center;
+    word-break: break-word;
+
+    margin-bottom: var(--mg-md);
+  }
+
+  &__title {
+    margin-bottom: var(--mg-xs);
+
+    &--mg-base {
+      margin-bottom: var(--mg-sm);
     }
+  }
 
-    @include pc_lg {
-      font-size: var(--fs-xl);
+  &__subtitle {
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  &__main {
+    max-width: 78ch;
+    margin: 0 auto;
+  }
+
+  &__topic {
+    margin-bottom: var(--mg-base);
+
+    &__title {
+      margin-bottom: var(--mg-xs);
     }
+  }
 
-    @include pc_xl {
-      font-size: var(--fs-2xl);
-    }
+  &__card {
+    margin: 0 auto var(--mg-base);
 
-    &__heading {
-      text-align: center;
-      word-break: break-word;
-
-      margin-bottom: var(--mg-md);
-
-      &__title {
-        margin-bottom: var(--mg-xs);
-      }
-
-      &__subtitle {
-        font-style: italic;
-        font-weight: 300;
-      }
-
-      &__icon-group-container {
-        margin-top: var(--mg-sm);
-      }
-    }
-    &__article {
-      max-width: 78ch;
-      overflow: hidden;
-      margin: 0 auto;
-
-      &__topic {
-        margin-bottom: var(--mg-base);
-        h4 {
-          margin-bottom: var(--mg-xs);
-        }
-
-        p {
-          margin-bottom: var(--mg-xs);
-        }
-      }
-    }
-
-    &__card {
-      max-width: 78ch;
-      margin: 0 auto var(--mg-lg);
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 }

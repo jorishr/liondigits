@@ -11,7 +11,9 @@
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
 
   padding: var(--pd-sm) var(--pd-xs);
-  margin: 0;
+
+  width: 95%;
+  margin: 0 auto;
 
   @include mobile_md {
     padding: var(--pd-base) var(--pd-sm);
@@ -57,7 +59,14 @@
   &__btn {
     width: 15em;
     margin: 0 auto;
+    font-size: var(--fs-sm);
 
+    @include pc_lg {
+      font-size: var(--fs-base);
+    }
+    @include pc_xl {
+      font-size: var(--fs-md);
+    }
     @include pc_2xl {
       font-size: var(--fs-3xl);
     }

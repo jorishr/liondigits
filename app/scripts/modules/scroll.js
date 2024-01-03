@@ -49,27 +49,28 @@ export function scrollDown() {
 }
 
 export function stickyNavOnScroll() {
-  const navBar = document.querySelector(".skill__heading__nav");
-  const sectionElemStart = document.querySelector("#skill-section_1");
+  const navBar = document.querySelector(".skill-section__nav");
+  const sectionElemStart = document.querySelector("#skill-section-article_1");
   const sectionElemEnd = document.querySelector(".fun-zone");
 
   if (navBar) {
     const sectionStart = sectionElemStart.offsetTop + 330;
     const sectionEnd = sectionElemEnd.offsetTop - 330;
+    console.log(sectionStart);
 
     window.onscroll = () => {
       let currentPos = window.scrollY;
       if (currentPos > sectionStart && currentPos < sectionEnd) {
-        navBar.classList.add("skill__heading__nav__onScroll");
+        navBar.classList.add("skill-section__nav__onScroll");
       } else {
-        navBar.classList.remove("skill__heading__nav__onScroll");
+        navBar.classList.remove("skill-section__nav__onScroll");
       }
     };
   }
 }
 
 export function navHighlightOnScroll() {
-  const sections = document.querySelectorAll("[id^=skill-section]");
+  const sections = document.querySelectorAll("[id^=skill-section-article]");
   if (sections) {
     window.addEventListener("scroll", () => {
       let currentScrollY = window.scrollY;
