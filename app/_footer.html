@@ -209,7 +209,7 @@
     <div class="footer__pgp__link-container">
       <div class="footer__pgp__key">
         <img
-          class="footer__pgp__key__icon"
+          class="footer__pgp__key__icon icon-info"
           src="images/icons/icon_pgp-key.png"
           alt="Sleutel icoon"
           data-txt_id__alt="488"
@@ -223,20 +223,20 @@
           data-txt_id__title="147"
         >
           <img
-            class="footer__pgp__btns__icon"
+            class="icon-info"
             src="images/icons/icon_content-copy_azureblue.png"
             alt="Kopiëren naar klembord icoon"
             data-txt_id__alt="148"
           />
         </a>
         <a
-          class="footer__pgp__btns__info modal-btn js-target-toggle"
+          class="footer__pgp__btns__info js-target-toggle"
           title="Wat is dit?"
           data-txt_id__title="149"
           data-target="001"
         >
           <img
-            class="footer__pgp__btns__icon"
+            class="icon-info"
             src="images/icons/icon_info-circle_azureblue.png"
             alt="Vraagteken icoon"
             data-txt_id__alt="150"
@@ -488,24 +488,29 @@
   </section>
   <section class="footer__btc">
     <div class="footer__btc__link-container">
-      <img
-        class="footer__btc__logo"
-        src="images/logo/btc_logo_accepted.png"
-        alt="Bitcoin accepted here logo"
-        title="Bitcoin accepted here logo"
-        data-txt_id__alt="528"
-        data-txt_id__title="529"
-      />
-      <a
-        class="modal-btn footer__btc__icon js-target-toggle"
-        title="Wat is dit?"
-        data-txt_id__title="149"
-        data-target="003"
-        ><img
+      <div class="footer__btc__content-container">
+        <img
+          src="images/logo/btc_logo_accepted.png"
+          alt="Bitcoin accepted here logo"
+          title="Bitcoin accepted here logo"
+          data-txt_id__alt="528"
+          data-txt_id__title="529"
+          class="footer__btc__logo"
+        />
+        <img
           src="images/icons/icon_info-circle_azureblue.png"
           alt="Info icoon"
           data-txt_id__alt="415"
-      /></a>
+          class="footer__btc__icon-info icon-info icon-info--lg"
+        />
+      </div>
+      <a
+        class="footer__btc__link js-target-toggle"
+        title="Wat is dit?"
+        data-txt_id__title="149"
+        data-target="003"
+      >
+      </a>
     </div>
     <div class="footer__btc__modal modal" data-target_id="003">
       <div

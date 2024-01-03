@@ -111,6 +111,13 @@
     }
   }
 
+  &__info-icon {
+    display: inline-block;
+    height: 1.15em;
+    width: 1.15em;
+    align-self: center;
+  }
+
   &__pgp {
     &__link-container {
       display: flex;
@@ -126,7 +133,6 @@
       margin-bottom: var(--pd-xs);
 
       &__icon {
-        width: 1em;
         margin-right: var(--mg-xs);
       }
     }
@@ -158,12 +164,6 @@
             display: inline-block;
           }
         }
-      }
-
-      &__icon {
-        display: inline-block;
-        height: 1.125em;
-        width: 1.125em;
       }
     }
 
@@ -247,25 +247,30 @@
   }
 
   &__btc {
-    position: relative;
+    position: relative; //modal
+    margin: 0 auto var(--mg-lg);
 
     &__link-container {
+      position: relative; // a-tag link
+    }
+
+    &__link {
+      /* make link container clickable */
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__content-container {
       display: flex;
       justify-content: center;
-
-      margin: 0 auto var(--mg-lg);
     }
 
     &__logo {
-      width: 10em;
+      width: 9em;
       margin-right: var(--mg-base);
-    }
-
-    &__icon {
-      display: inline-block;
-      height: 1.15em;
-      width: 1.15em;
-      align-self: center;
     }
 
     &__modal {

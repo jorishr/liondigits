@@ -112,14 +112,6 @@
 
     &__tooltip {
       align-self: center;
-
-      &__icon {
-        width: 1em;
-
-        @include tablet_md {
-          width: 1.5em;
-        }
-      }
     }
   }
 

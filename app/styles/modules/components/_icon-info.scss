@@ -1,0 +1,19 @@
+.icon-info {
+  width: 1em;
+  height: 1em;
+  align-self: center;
+
+  &--md {
+    width: 1.125em;
+    height: 1.125em;
+
+    @include tablet_md {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+  &--lg {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
