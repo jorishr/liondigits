@@ -41,43 +41,25 @@
 
     padding: var(--pd-md);
 
-    p {
-      margin-bottom: var(--mg-xs);
-    }
-
     @include tablet_md {
       max-width: 55ch;
     }
-
     @include pc_sm {
       font-size: var(--fs-base);
       padding: var(--pd-base) var(--pd-base);
     }
-
     @include pc_lg {
       font-size: var(--fs-md);
     }
-
-    &__btn-close {
-      position: absolute;
-      top: -0.21em;
-      right: 0.18em;
-
+    @include pc_xl {
       font-size: var(--fs-xl);
-      color: var(--txtClr-base);
-
-      &:hover {
-        color: var(--txtClr-white);
-        cursor: pointer;
-      }
-
-      @include pc_sm {
-        font-size: var(--fs-2xl);
-      }
-
-      @include pc_lg {
-        font-size: var(--fs-3xl);
-      }
     }
+    @include pc_2xl {
+      font-size: var(--fs-3xl);
+    }
+  }
+
+  &__text:last-of-type {
+    margin-bottom: var(--mg-sm);
   }
 }

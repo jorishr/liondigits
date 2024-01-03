@@ -18,6 +18,10 @@
     text-decoration: none;
   }
 
+  &--accent {
+    color: var(--bgClr-accent);
+  }
+
   &__icon {
     width: 0.9em;
     height: 0.9em;

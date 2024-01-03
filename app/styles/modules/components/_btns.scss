@@ -104,19 +104,50 @@
     border-color: var(--txtClr-lightblue);
   }
 
-  &--inside-list {
+  &--horizontal-list {
+    width: 15em;
     white-space: normal;
     font-size: var(--fs-xs);
+
     padding: var(--pd-xs) var(--pd-sm);
+    margin: 0 auto var(--mg-base);
 
     @include mobile_md {
       font-size: var(--fs-sm);
       padding: var(--pd-sm) var(--pd-base);
     }
-
-    @include pc_sm {
+    @include pc_lg {
       font-size: var(--fs-base);
     }
+    @include pc_xl {
+      font-size: var(--fs-base-plus);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-2xl);
+    }
+  }
+}
+
+/* Used on modals and tooltips */
+.btn-close {
+  position: absolute;
+  top: -0.21em;
+  right: 0.18em;
+
+  font-size: var(--fs-xl);
+  color: var(--txtClr-base);
+
+  &:hover {
+    color: var(--txtClr-white);
+    cursor: pointer;
+  }
+
+  @include pc_sm {
+    font-size: var(--fs-2xl);
+  }
+
+  @include pc_lg {
+    font-size: var(--fs-3xl);
   }
 }
 

@@ -466,32 +466,25 @@
               mijn Codepen:
             </p>
           </div>
-          <div class="skill__section__card card card-container">
+          <div class="skill__section__card card">
             <h5 class="card__title" data-txt_id="[322]">
               Codepen front-end mini-projects
             </h5>
             <p class="card__sub" data-txt_id="[323]">
               Collecties omvatten onder meer: formulieren met validatie aan de
               client-zijde, afbeeldingsgalerijen met DOM-elementfiltering,
-              modals en css-animaties
+              modals en css-animaties...
             </p>
             <figure>
-              <a
-                class="card__img-link"
-                href="https://codepen.io/jorishr"
-                title="Bekijk mijn visuele creaties op Codepen"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-txt_id__title="391"
-              >
-                <img
-                  src="images/codepen_profile_page.webp"
-                  alt="Codepen profiel snapshot"
-                  data-txt_id__alt="392"
-              /></a>
+              <img
+                src="images/codepen_profile_page.webp"
+                alt="Codepen profiel snapshot"
+                data-txt_id__alt="392"
+                class="card__image"
+              />
             </figure>
             <a
-              class="card__btn btn btn--outline-gray btn-icon"
+              class="btn btn--outline-gray btn-icon card__btn"
               href="https://codepen.io/jorishr"
               target="_blank"
               rel="noopener noreferrer"
@@ -673,15 +666,17 @@
             </p>
           </div>
         </div>
-        <div class="skill__section__card card card-container">
+        <div class="skill__section__card card">
           <h5 class="card__title" data-txt_id="[606]">
             Voorbeelden van Node.js projecten
           </h5>
           <ul class="card__list">
-            <li>
+            <li class="card__list__item">
               <p data-txt_id="[607,608]">
-                <strong data-txt_id="[453]">Website Text Translator</strong> is
-                een Node.js NPM module met een Command Line Interface. Het
+                <strong class="text-strong" data-txt_id="[453]"
+                  >Website Text Translator (WTT)</strong
+                >
+                is een Node.js NPM module met een Command Line Interface. Het
                 programma helpt je om de tekst van bestaande HTML bestanden te
                 vertalen via de Google Translate API en vervolgens te integreren
                 en beheren in je website met behulp van JSON bestanden. De CLI
@@ -690,7 +685,7 @@
                 bijhorende documentatie, is beschikbaar als open-bron software
                 in het NPM register:
                 <a
-                  class="txt-link"
+                  class="txt-link txt-link--accent"
                   href="https://www.npmjs.com/package/website-text-translator"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -705,15 +700,18 @@
                 >.
               </p>
             </li>
-            <li>
+            <li class="card__list__item">
               <p data-txt_id="[609,610]">
-                <strong data-txt_id="[611]">CataCamp</strong> is een project
-                gebouwd in Node.js met een ExpressJS server, een REST API,
-                authenticatie met PassportJS en Redis voor sessie-opslag. Andere
-                data wordt opgeslagen in een MongoDB database met Mongoose voor
-                objectmodellering (ODM). Bekijk de code op
+                <strong class="text-strong" data-txt_id="[611]"
+                  >CataCamp</strong
+                >
+                is een project gebouwd in Node.js met een ExpressJS server, een
+                REST API, authenticatie met PassportJS en Redis voor
+                sessie-opslag. Andere data wordt opgeslagen in een MongoDB
+                database met Mongoose voor objectmodellering (ODM). Bekijk de
+                code op
                 <a
-                  class="txt-link"
+                  class="txt-link txt-link--accent"
                   href="http://github.com/jorishr/catacamp"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -728,7 +726,7 @@
                 /></a>
                 of een werkende demo-versie via deze
                 <a
-                  class="txt-link"
+                  class="txt-link txt-link--accent"
                   href="https://catacamp.liondigits.com"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -1248,205 +1246,173 @@
       </section>
     </div>
   </section>
-  <section class="fun-zone">
+  <section class="fun-zone section section--bgLightblue">
     <div class="fun-zone__content-container">
       <div class="fun-zone__heading">
-        <h2 class="fun-zone__heading__title" data-txt_id="[351]">Fun Zone</h2>
+        <h2 class="fun-zone__heading__title section__title" data-txt_id="[351]">
+          Fun Zone
+        </h2>
         <h3 class="fun-zone__heading__subtitle" data-txt_id="[352]">
           Ok, genoeg gelezen. Hieronder vind je een aantal mini-projectjes en
           spelletjes waar je een tijdje zoet mee bent. Veel plezier!
         </h3>
       </div>
-      <div class="fun-zone__hs-list">
-        <ul class="hs-list hs-list-container" data-aos="flip-down">
-          <li class="card card-container card-container--inside-list">
-            <h5
-              class="card__title card__title--inside-list"
-              data-txt_id="[353]"
-            >
-              Guess the Flag
-            </h5>
-            <p class="card__sub card__sub--inside-list"></p>
-            <figure>
-              <a
-                class="card__img-link"
-                href="https://guess-the-flag.liondigits.com"
-                title="Klik en speel het spel"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-txt_id__title="400"
-              >
+      <div
+        class="horizontal-list fun-zone__horizontal-list"
+        data-aos="flip-down"
+      >
+        <ul class="horizontal-list__list">
+          <li class="horizontal-list__item">
+            <div class="horizontal-list__item__content-container">
+              <h5 class="horizontal-list__item__title" data-txt_id="[353]">
+                Guess the Flag
+              </h5>
+              <figure class="horizontal-list__item__image-container">
                 <img
                   src="images/guess_the_flag.webp"
                   alt="Raad het land van de vlag"
                   data-txt_id__alt="401"
-              /></a>
-            </figure>
-            <div class="card__link-container">
-              <a
-                class="card__btn btn btn--outline-gray btn--inside-list"
-                href="https://guess-the-flag.liondigits.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-txt_id="[354]"
-                >Speel nu</a
-              >
-              <a
-                class="card__tooltip js-target-toggle"
-                data-target="100"
-                title="Technische details..."
-                data-txt_id__title="402"
-                ><img
-                  class="card__tooltip__icon"
-                  src="images/icons/icon_info-circle_gray.png"
-                  alt="Vraagteken icoon"
-                  data-txt_id__alt="403"
-              /></a>
+                  class="horizontal-list__item__image"
+                />
+              </figure>
+              <div class="horizontal-list__item__link-container">
+                <a
+                  class="btn btn--outline-gray btn--horizontal-list"
+                  href="https://guess-the-flag.liondigits.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-txt_id="[354]"
+                  >Speel nu</a
+                >
+                <a
+                  class="horizontal-list__item__tooltip js-target-toggle"
+                  data-target="100"
+                  title="Technische details..."
+                  data-txt_id__title="402"
+                  ><img
+                    class="horizontal-list__item__tooltip__icon"
+                    src="images/icons/icon_info-circle_gray.png"
+                    alt="Vraagteken icoon"
+                    data-txt_id__alt="403"
+                /></a>
+              </div>
             </div>
           </li>
-          <li class="card card-container card-container--inside-list">
-            <h5
-              class="card__title card__title--inside-list"
-              data-txt_id="[355]"
-            >
-              Task Manager
-            </h5>
-            <p class="card__sub card__sub--inside-list"></p>
-            <figure>
-              <a
-                class="card__img-link"
-                href="https://todo-app.liondigits.com"
-                title="Klik en probeer de app"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-txt_id__title="404"
-              >
+          <li class="horizontal-list__item">
+            <div class="horizontal-list__item__content-container">
+              <h5 class="horizontal-list__item__title" data-txt_id="[355]">
+                Task Manager
+              </h5>
+              <figure class="horizontal-list__item__image-container">
                 <img
                   src="images/task_manager.png"
                   alt="Afbeelding van de Task Manager app"
                   data-txt_id__alt="405"
-              /></a>
-            </figure>
-            <div class="card__link-container">
-              <a
-                class="card__btn btn btn--outline-gray btn--inside-list"
-                href="https://todo-app.liondigits.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-txt_id="[356]"
-                >Naar de app</a
-              >
-              <a
-                class="card__tooltip js-target-toggle"
-                data-target="101"
-                title="Technische details..."
-                data-txt_id__title="406"
-                ><img
-                  class="card__tooltip__icon"
-                  src="images/icons/icon_info-circle_gray.png"
-                  alt="Vraagteken icoon"
-                  data-txt_id__alt="407"
-              /></a>
+                  class="horizontal-list__item__image"
+                />
+              </figure>
+              <div class="horizontal-list__item__link-container">
+                <a
+                  class="btn btn--outline-gray btn--horizontal-list"
+                  href="https://todo-app.liondigits.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-txt_id="[356]"
+                  >Naar de app</a
+                >
+                <a
+                  class="horizontal-list__item__tooltip js-target-toggle"
+                  data-target="101"
+                  title="Technische details..."
+                  data-txt_id__title="406"
+                  ><img
+                    class="horizontal-list__item__tooltip__icon"
+                    src="images/icons/icon_info-circle_gray.png"
+                    alt="Vraagteken icoon"
+                    data-txt_id__alt="407"
+                /></a>
+              </div>
             </div>
           </li>
-          <li class="card card-container card-container--inside-list">
-            <h5
-              class="card__title card__title--inside-list"
-              data-txt_id="[357]"
-            >
-              Stenographer
-            </h5>
-            <p class="card__sub card__sub--inside-list"></p>
-            <figure>
-              <a
-                class="card__img-link"
-                href="https://stenographer.liondigits.com"
-                title="Naar de app"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-txt_id__title="408"
-              >
+          <li class="horizontal-list__item">
+            <div class="horizontal-list__item__content-container">
+              <h5 class="horizontal-list__item__title" data-txt_id="[357]">
+                Stenographer
+              </h5>
+              <figure class="horizontal-list__item__image-container">
                 <img
                   src="images/ld_placeholder-grayscale.webp"
                   alt="Afbeelding van de Stenographer app"
                   data-txt_id__alt="409"
-              /></a>
-            </figure>
-            <div class="card__link-container">
-              <a
-                class="card__btn btn btn--outline-gray btn--inside-list"
-                href="https://stenographer.liondigits.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-txt_id="[358]"
-                >Naar de app</a
-              >
-              <a
-                class="card__tooltip js-target-toggle"
-                data-target="102"
-                title="Technische details..."
-                data-txt_id__title="410"
-                ><img
-                  class="card__tooltip__icon"
-                  src="images/icons/icon_info-circle_gray.png"
-                  alt="Vraagteken icoon"
-                  data-txt_id__alt="411"
-              /></a>
+                  class="card__image horizontal-list__item__image"
+                />
+              </figure>
+              <div class="horizontal-list__item__link-container">
+                <a
+                  class="btn btn--outline-gray btn--horizontal-list"
+                  href="https://stenographer.liondigits.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-txt_id="[358]"
+                  >Naar de app</a
+                >
+                <a
+                  class="horizontal-list__item__tooltip js-target-toggle"
+                  data-target="102"
+                  title="Technische details..."
+                  data-txt_id__title="410"
+                  ><img
+                    class="horizontal-list__item__tooltip__icon"
+                    src="images/icons/icon_info-circle_gray.png"
+                    alt="Vraagteken icoon"
+                    data-txt_id__alt="411"
+                /></a>
+              </div>
             </div>
           </li>
-          <li class="card card-container card-container--inside-list">
-            <h5
-              class="card__title card__title--inside-list"
-              data-txt_id="[359]"
-            >
-              Patatap
-            </h5>
-            <p class="card__sub card__sub--inside-list"></p>
-            <figure>
-              <a
-                class="card__img-link"
-                href="https://patatap.liondigits.com"
-                title="Klik en speel het spel"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-txt_id__title="412"
-              >
+          <li class="horizontal-list__item">
+            <div class="horizontal-list__item__content-container">
+              <h5 class="horizontal-list__item__title" data-txt_id="[359]">
+                Patatap
+              </h5>
+              <figure class="horizontal-list__item__image-container">
                 <img
                   src="images/patatap.jpg"
                   alt="Afbeelding van de Patatap app"
                   data-txt_id__alt="413"
-              /></a>
-            </figure>
-            <div class="card__link-container">
-              <a
-                class="card__btn btn btn--outline-gray btn--inside-list"
-                href="https://patatap.liondigits.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-txt_id="[360]"
-                >Speel nu</a
-              >
-              <a
-                class="card__tooltip js-target-toggle"
-                data-target="103"
-                title="Technische details..."
-                data-txt_id__title="414"
-                ><img
-                  class="card__tooltip__icon"
-                  src="images/icons/icon_info-circle_gray.png"
-                  alt="Info icoon"
-                  data-txt_id__alt="415"
-              /></a>
+                  class="horizontal-list__item__image"
+                />
+              </figure>
+              <div class="horizontal-list__item__link-container">
+                <a
+                  class="btn btn--outline-gray btn--horizontal-list"
+                  href="https://patatap.liondigits.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-txt_id="[360]"
+                  >Speel nu</a
+                >
+                <a
+                  class="horizontal-list__item__tooltip js-target-toggle"
+                  data-target="103"
+                  title="Technische details..."
+                  data-txt_id__title="414"
+                  ><img
+                    class="horizontal-list__item__tooltip__icon"
+                    src="images/icons/icon_info-circle_gray.png"
+                    alt="Info icoon"
+                    data-txt_id__alt="415"
+                /></a>
+              </div>
             </div>
           </li>
         </ul>
         <div class="tooltip" data-target_id="100">
           <div class="tooltip__content-container">
-            <span
-              class="btn-close tooltip__content-container__btn-close js-btn-close"
+            <span class="btn-close tooltip__btn-close js-btn-close"
               >&times;</span
             >
-            <p data-txt_id="[361]">
+            <p class="tooltip__text" data-txt_id="[361]">
               De speler krijgt een willekeurige landvlag voorgeschoteld en vier
               mogelijke antwoorden. Probeer de juiste te kiezen. Game
               statusbeheer gebouwd met ReactJs en gegevens opgehaald uit de
@@ -1456,7 +1422,7 @@
               href="https://github.com/jorishr/guess-the-flag"
               target="_blank"
               rel="noopener noreferrer"
-              class="txt-link txt-link--lightblue"
+              class="txt-link txt-link--lightblue tooltip__link"
               ><span data-txt_id="[683]">Bekijk de code op Github</span
               ><img
                 class="txt-link__icon"
@@ -1468,11 +1434,10 @@
         </div>
         <div class="tooltip" data-target_id="101">
           <div class="tooltip__content-container">
-            <span
-              class="btn-close tooltip__content-container__btn-close js-btn-close"
+            <span class="btn-close tooltip__btn-close js-btn-close"
               >&times;</span
             >
-            <p data-txt_id="[362]">
+            <p class="tooltip__text" data-txt_id="[362]">
               Single page app voor taakbeheer met aangepaste JSON API.
               Voornaamste UI-functie: selecteer meerdere items (shift-toets),
               verwijder en update een aangepaste selectie van taken. Applicatie
@@ -1483,7 +1448,7 @@
               href="https://github.com/jorishr/todo-app"
               target="_blank"
               rel="noopener noreferrer"
-              class="txt-link txt-link--lightblue"
+              class="txt-link txt-link--lightblue tooltip__link"
               ><span data-txt_id="[684]">Bekijk de code op Github</span
               ><img
                 class="txt-link__icon"
@@ -1495,11 +1460,10 @@
         </div>
         <div class="tooltip" data-target_id="102">
           <div class="tooltip__content-container">
-            <span
-              class="btn-close tooltip__content-container__btn-close js-btn-close"
+            <span class="btn-close tooltip__btn-close js-btn-close"
               >&times;</span
             >
-            <p data-txt_id="[685]">
+            <p class="tooltip__text" data-txt_id="[685]">
               Verberg een tekstbericht in een afbeelding. Codeer en decodeer een
               afbeelding naar keuze. Gebouwd met Python en React.
             </p>
@@ -1507,7 +1471,7 @@
               href="https://github.com/jorishr/stenographer"
               target="_blank"
               rel="noopener noreferrer"
-              class="txt-link txt-link--lightblue"
+              class="txt-link txt-link--lightblue tooltip__link"
               ><span data-txt_id="[686]">Bekijk de code op Github</span
               ><img
                 class="txt-link__icon"
@@ -1519,11 +1483,10 @@
         </div>
         <div class="tooltip" data-target_id="103">
           <div class="tooltip__content-container">
-            <span
-              class="btn-close tooltip__content-container__btn-close js-btn-close"
+            <span class="btn-close tooltip__btn-close js-btn-close"
               >&times;</span
             >
-            <p data-txt_id="[364]">
+            <p class="tooltip__text" data-txt_id="[364]">
               Tap, klik of typ willekeurig op je toetsenbord. Elke toetsaanslag
               produceert een vuurwerk van willekeurig gegenereerde geluiden en
               kleuren. Applicatie gebouwd met de bibliotheken PaperJs en
@@ -1533,7 +1496,7 @@
               href="https://github.com/jorishr/patatap-clone"
               target="_blank"
               rel="noopener noreferrer"
-              class="txt-link txt-link--lightblue"
+              class="txt-link txt-link--lightblue tooltip__link"
               ><span data-txt_id="[687]">Bekijk de code op Github</span
               ><img
                 class="txt-link__icon"
