@@ -13,7 +13,7 @@ noscript::before {
   background-color: var(--accent-alert);
   color: var(--txtClr-white);
 
-  z-index: 5;
+  z-index: 7; // see stacking context note __global.scss
 
   @include tablet_md {
     padding: var(--pd-sm) var(--pd-base);

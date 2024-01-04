@@ -1,8 +1,12 @@
+/* 
+  - Height of this section is extended to create space for the highlights section that needs to partially float between the hero and the intro section.
+  - Stacking context: 
+    -- The header section and its menu's should always appear above this hero section and has values ranging form 1 to 3.
+    -- The _content-container here has value 0.
+    -- The bg-overlay has value -1.
+    -- The background-image has value -2.
+*/
 .hero {
-  /* 
-  Height of this section is extended to create space for the highlights section that needs to partially float between the hero and the intro section.
-  */
-
   height: 166vh;
   width: 100%;
 
@@ -43,7 +47,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 1; // see stacking context note __global.scss
 
     width: 100%;
 
@@ -223,7 +227,7 @@
     width: 100%;
     height: 133%;
     background-color: rgba(11, 33, 74, 0.95);
-    z-index: 0;
+    z-index: -1; // see stacking context note __global.scss
   }
 
   &__bg__img {
@@ -232,7 +236,7 @@
     left: 0;
     width: 100%;
     height: 133%;
-    z-index: -1;
+    z-index: -2; // see stacking context note __global.scss
 
     background-image: url("../images/logo/liondigits_logo_v1_gold_transparent-bg-1600x1600.svg");
     background-size: cover;

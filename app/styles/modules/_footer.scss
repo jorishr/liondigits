@@ -402,7 +402,7 @@
   }
 
   .Matthew6 {
-    z-index: -1;
+    z-index: -1; // see stacking context note __global.scss
 
     position: absolute;
     top: 10em;

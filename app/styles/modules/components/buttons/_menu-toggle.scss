@@ -1,6 +1,7 @@
 .menu-toggle {
   &__container {
     position: relative;
+    z-index: 3; // see stacking context note __global.scss
     width: 2.5em; //40px
     height: 2.5em; //40px
 

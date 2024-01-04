@@ -1,5 +1,6 @@
 .lang-menu {
   position: relative;
+  z-index: 3; // see stacking context note __global.scss
 
   padding: var(--pd-xs);
 
