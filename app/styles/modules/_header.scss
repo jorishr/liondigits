@@ -15,107 +15,34 @@
     padding: var(--pd-xs);
     margin: 0 auto;
 
-    @include tablet_md {
-      padding: var(--pd-xs) var(--pd-base);
-    }
+    padding: var(--pd-sm);
 
+    @include tablet_md {
+      padding: var(--pd-base) var(--pd-lg);
+    }
+    @include pc_lg {
+      font-size: var(--fs-md);
+    }
     @include pc_xl {
-      padding: 2% 3%;
+      font-size: var(--fs-xl);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-4xl);
+      padding: var(--pd-lg) var(--pd-2xl);
     }
   }
 
   &__logo {
-    width: 60px;
-
-    @include pc_sm {
-      width: 80px;
-    }
-
-    @include pc_lg {
-      // % of header__left container
-      width: 25%;
-    }
-
-    @include pc_xl {
-      width: 33%;
-    }
-
-    @include pc_2xl {
-      width: 66%;
-    }
+    width: 5.4em;
   }
 
   &__right {
     display: flex;
     align-items: flex-start;
   }
-
-  &__menu {
-    &__toggle-container {
-      width: 40px;
-      height: 40px;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
 }
 
 .menu {
-  &__toggle-container {
-    width: 40px;
-    height: 40px;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  &__toggle {
-    position: relative;
-    top: 27px;
-    left: 3px;
-    width: 33px;
-    height: auto;
-    border-bottom: 3px solid var(--bgClr-gold);
-    border-radius: 5px;
-
-    transition: all 0.3s ease-in;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 33px;
-      height: 3px;
-      border-radius: 5px;
-      background-color: var(--bgClr-gold);
-    }
-
-    &::before {
-      top: -10px;
-    }
-    &::after {
-      top: -20px;
-    }
-
-    &--open {
-      border-bottom: none;
-
-      &::before {
-        transform: rotate(-45deg);
-      }
-      &::after {
-        transform: rotate(45deg);
-        top: -10px;
-      }
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
-
   &__nav {
     display: none;
 
@@ -145,7 +72,14 @@
 
     color: var(--txtClr-white);
 
-    padding: var(--pd-xl) var(--pd-xs) var(--pd-sm);
+    padding: var(--pd-2xl) var(--pd-xs) var(--pd-sm);
+
+    @include pc_lg {
+      padding: var(--pd-2xl) var(--pd-sm) var(--pd-base);
+    }
+    @include pc_xl {
+      padding: var(--pd-3xl) var(--pd-base) var(--pd-md);
+    }
   }
 
   &__item {
@@ -156,7 +90,6 @@
 
     text-align: center;
     text-transform: capitalize;
-    font-size: var(--fs-sm);
 
     padding: var(--pd-sm) var(--pd-base);
     margin-bottom: var(--mg-sm);

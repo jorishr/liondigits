@@ -51,24 +51,32 @@ function animateClose(target, baseClass) {
   );
 }
 
+/* The clickable area is set by the menuToggleContainer */
 export function toggleMenu() {
-  const menuToggleBtn = document.querySelector(".menu__toggle-container");
+  const menuToggleContainer = document.querySelector(".menu-toggle__container");
+  const menuToggleBtn = document.querySelector(".menu-toggle__toggle");
   const menu = document.querySelector(".menu__nav");
-  menuToggleBtn.addEventListener("click", () => toggleMenu());
-  menuToggleBtn.addEventListener("keydown", (e) => {
+  menuToggleContainer.addEventListener("click", () => toggleMenu());
+  menuToggleContainer.addEventListener("keydown", (e) => {
     if (e.key === "Enter" || e.keyCode === 13) toggleMenu();
   });
   const toggleMenu = () => {
     if (menu.classList.contains("menu__nav--active")) {
       menu.classList.add("menu__nav--closing");
+      menuToggleBtn.classList.add(`menu-toggle__toggle--closing`);
       menu.addEventListener(
         "animationend",
         () => {
           menu.classList.remove(`menu__nav--closing`);
           menu.classList.remove(`menu__nav--active`);
+          menuToggleBtn.classList.remove(`menu-toggle__toggle--closing`);
+          menuToggleBtn.classList.remove(`menu-toggle__toggle--active`);
         },
         { once: true }
       );
-    } else menu.classList.add("menu__nav--active");
+    } else {
+      menu.classList.add("menu__nav--active");
+      menuToggleBtn.classList.add(`menu-toggle__toggle--active`);
+    }
   };
 }

@@ -11,23 +11,25 @@ Language menu
 #############  
 */
 export function langMenuToggle() {
-  const langBtn = document.getElementsByClassName("js-lang-btn")[0];
+  const langBtn = document.querySelector(".lang-menu-toggle");
+  console.log(langBtn);
   if (langBtn) {
     langBtn.addEventListener("click", function () {
-      const langMenu = document.getElementsByClassName("lang-menu__list")[0];
+      const langMenu = document.querySelector(".lang-menu__list");
       langMenu.classList.toggle("lang-menu__list--active");
     });
   }
 }
 
 export function langMenuOptions() {
-  const langOptions = Array.from(
-    document.getElementsByClassName("lang-menu__option")
-  );
+  const langOptions = Array.from(document.querySelector(".lang-menu__option"));
   langOptions.forEach((option) => {
     option.addEventListener("click", function () {
       setCookie("language", option.dataset.lang);
       setTxtContent(option.dataset.lang);
+      document
+        .querySelector(".lang-menu__list")
+        .classList.remove("lang-menu__list--active");
     });
   });
 }

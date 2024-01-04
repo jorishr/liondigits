@@ -1,0 +1,60 @@
+.menu-toggle {
+  &__container {
+    position: relative;
+    width: 2.5em; //40px
+    height: 2.5em; //40px
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    top: 1.6875em; // 27px
+    left: 0.1875em; // 3px
+    width: 2.0625em; // 33px
+    height: auto;
+    border-bottom: 0.1875em solid var(--bgClr-gold); // 3px
+    border-radius: 0.3125em; // 5px
+
+    transition: all 0.3s ease-in;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2.0625em; // 33px
+      height: 0.1875em; // 3px
+      border-radius: 0.3125em; // 5px
+      background-color: var(--bgClr-gold);
+    }
+
+    &::before {
+      top: -0.625em; // -10px
+    }
+    &::after {
+      top: -1.25em; // -20px
+    }
+
+    &--active {
+      border-bottom: none;
+      animation: fade-in 500ms forwards;
+
+      &::before {
+        background-color: var(--txtClr-lightgray);
+        transform: rotate(-45deg);
+      }
+      &::after {
+        background-color: var(--txtClr-lightgray);
+        transform: rotate(45deg);
+        top: -0.625em; // -10px
+        right: -0.0625em; // -1px
+      }
+    }
+
+    &--closing {
+      animation: fade-out 500ms forwards;
+    }
+  }
+}
