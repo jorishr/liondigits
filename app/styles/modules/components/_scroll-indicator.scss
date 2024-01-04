@@ -10,7 +10,7 @@
   background-color: var(--bgClr-white);
   padding: var(--pd-sm);
 
-  z-index: 5;
+  z-index: 5; // see stacking context note __global.scss
   opacity: 0;
 
   &:hover {

@@ -1,11 +1,16 @@
 /* 
-#################
-z-index guideline
-#################
-Values between -1 and 5. Check:
-- hero-section (-1;3); 
-- modal (3;4); 
-- noscript, other alerts, easter eggs (5)
+  Stacking context: 
+  - header as whole (value: 2): should appear above hero elements that range from -3 to 1
+  - inside the header: The brand logo and menu toggles should appear above the opening header menu. The lang-menu appears above the main menu.
+    -- menu__nav: 2
+    -- menu-toggle: 3 (see _menu-toggle.scss)
+    -- logo: 3
+    -- lang-menu-toggle: 3 (see _menu-toggle.scss)
+    -- lang-menu: 3 (see _lang-menu.scss)
+  - scroll-height-indicator has value 5 
+  - modals and tooltips and have value 6
+  - noscript element has value 7
+  - hidden element in footer has value -1
 */
 
 :root {

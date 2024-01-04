@@ -18,7 +18,7 @@
   width: 100%;
   height: 100%;
 
-  z-index: 6;
+  z-index: 6; // see stacking context note __global.scss
   overflow-y: auto;
 
   background-color: rgba(196, 240, 255, 0.75);
