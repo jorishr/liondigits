@@ -159,7 +159,7 @@ class Snowfall {
       // Use requestAnimationFrame to optimize the resizing
       requestAnimationFrame(this.resizeCanvas.bind(this));
     };
-    window.addEventListener("resize", throttle(resizeHandler, 300));
+    window.addEventListener("resize", throttle(resizeHandler.bind(this), 300));
     // Create an array to store the snowflakes
     this.snowflakes = [];
     // Set the number of snowflakes
