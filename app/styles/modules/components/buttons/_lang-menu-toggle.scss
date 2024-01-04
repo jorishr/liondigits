@@ -1,4 +1,7 @@
 .lang-menu-toggle {
+  position: relative;
+  z-index: 3; // see stacking context note __global.scss
+
   display: flex;
 
   cursor: pointer;
@@ -9,21 +12,6 @@
     height: 1.25em; // 20px
 
     margin-right: var(--mg-xs);
-
-    /*     @include pc_lg {
-      width: 40px;
-      height: 40px;
-    }
-
-    @include pc_xl {
-      width: 60px;
-      height: 60px;
-    }
-
-    @include pc_2xl {
-      width: 80px;
-      height: 80px;
-    } */
   }
 
   &__text {

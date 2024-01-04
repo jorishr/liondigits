@@ -35,7 +35,7 @@
     position: relative;
     margin-top: -67.5vh;
 
-    z-index: 2;
+    z-index: 2; // see stacking context note __global.scss
 
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
 
