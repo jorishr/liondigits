@@ -57,7 +57,7 @@
       </div>
       <div class="header__right">
         <div class="lang-menu js-lang-btn">
-          <div class="lang-menu__toggle">
+          <div class="lang-menu__toggle"  tabindex="0">
             <img 
               class="lang-menu__toggle__icon"
               src="images/icons/icon_translate_lightblue.png"
@@ -81,6 +81,28 @@
             </li>
           </ul>
         </div>
+        <nav class="menu">
+          <div class="menu__toggle-container">
+            <div class="menu__toggle" tabindex="1"></div>
+          </div>
+          <ul class="menu__nav">
+            <li class="menu__item" id="js-menu-home-item"><a class="menu__item__link" href="/" data-txt_id="[194]">← Home</a></li>
+            <li class="menu__item" id="js-menu-services-item"><a class="menu__item__link" href="profile.html" data-txt_id="[703]">IT Diensten</a></li>
+            <li class="menu__item"><a class="menu__item__link" data-cal-link="liondigits/20min" data-txt_id="[160]">Maak een afspraak</a></li>
+            <li class="menu__item menu__item--alt"><a class="menu__item__link" href="conditions.html" data-txt_id="[100]">Algemene voorwaarden</a></li>
+            <li class="menu__item menu__item--alt"><a class="menu__item__link" href="privacy.html" data-txt_id="[101]">Privacy-beleid</a></li>
+            <li class="menu__item">
+              <div class="menu__item__snow-toggle snow-toggle snow-toggle--header">
+                <span class="snow-toggle__text" data-txt_id="[702]">Sneeuw</span>
+                <input
+                  class="snow-toggle__checkbox"
+                  type="checkbox"
+                  id="snow-toggle--menu__1"
+                /><label for="snow-toggle--menu__1" class="snow-toggle__label"></label>
+              </div>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>

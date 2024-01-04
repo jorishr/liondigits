@@ -18,3 +18,20 @@ export function processElementHeight(targetSelector, propertyName) {
     });
   }
 }
+
+export function setHeaderMenuItems() {
+  const currentPathname = window.location.pathname;
+  const itemHome = document.querySelector("#js-menu-home-item");
+  const itemServices = document.querySelector("#js-menu-services-item");
+  switch (currentPathname) {
+    case "/":
+      itemHome.style.display = "none";
+      break;
+    case "/profile":
+    case "/profile.html":
+      itemServices.style.display = "none";
+      break;
+    default:
+      break;
+  }
+}

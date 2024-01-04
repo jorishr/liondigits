@@ -1,6 +1,6 @@
 import checkDateRange from "../modules/checkDateRange.js";
 /*!
- * This animation should run between 15 decemeber and 15 february. Condition
+ * This animation should run between 15 December and 15 February. Condition
  * checked by helper function.
  *
  * Snowfall.js - A JavaScript library for creating and animating snowflakes on a web page
@@ -269,26 +269,55 @@ class Snowfall {
   };
 }
 
+/* 
+  - The selector querySelectorAll is static. That's why in the eventListener block, the checkboxes are selected again. The click event has changed the state of the DOM. 
+  - Checkboxes have different id's
+  - Code synchronizes the state of the checkboxes in menu and footer
+  - The visible part of the checkbox is the label element. Find the target element property and select the previous sibling, which is the checkbox input element
+*/
 export default function runSnowfall() {
   const shouldRun = checkDateRange();
   if (shouldRun) {
     let snowfall = initSnowFall();
     let isRunning = true;
 
-    const snowToggleContainer = document.querySelector(".snow-toggle");
-    const snowToggleCheckbox = document.querySelector(".snow-toggle__checkbox");
-    const snowToggleLabel = document.querySelector(".snow-toggle__label");
-    snowToggleContainer.classList.add("snow-toggle--show");
-    snowToggleCheckbox.checked = true;
-    snowToggleLabel.addEventListener("click", () => {
-      if (isRunning) {
-        snowfall.destroy();
-        isRunning = false;
-      } else {
-        snowfall = initSnowFall();
-        isRunning = true;
-      }
+    const snowToggleContainers = [...document.querySelectorAll(".snow-toggle")];
+    const snowToggleCheckboxes = [
+      ...document.querySelectorAll(".snow-toggle__checkbox"),
+    ];
+    const snowToggleLabels = [
+      ...document.querySelectorAll(".snow-toggle__label"),
+    ];
+
+    snowToggleContainers.forEach((container) => {
+      container.classList.add("snow-toggle--show");
     });
+    snowToggleCheckboxes.forEach((checkbox) => {
+      checkbox.checked = isRunning;
+    });
+
+    snowToggleLabels.forEach((label) => {
+      label.addEventListener("click", (event) => {
+        if (isRunning) {
+          snowfall.destroy();
+          isRunning = false;
+          updateOtherCheckboxesState(event);
+        } else {
+          snowfall = initSnowFall();
+          isRunning = true;
+          updateOtherCheckboxesState(event);
+        }
+      });
+    });
+    const updateOtherCheckboxesState = (event) => {
+      [...document.querySelectorAll(".snow-toggle__checkbox")].forEach(
+        (checkbox) => {
+          if (checkbox.id !== event.target.previousElementSibling.id) {
+            checkbox.checked = isRunning;
+          }
+        }
+      );
+    };
   }
 }
 
