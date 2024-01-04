@@ -1,5 +1,6 @@
 import checkDateRange from "../modules/checkDateRange.js";
 import { throttle } from "../modules/helper.js";
+import { hasHardware } from "../modules/helper.js";
 /*!
  * This animation should run between 15 December and 15 February. Condition
  * checked by helper function.
@@ -277,7 +278,7 @@ class Snowfall {
   - The visible part of the checkbox is the label element. Find the target element property and select the previous sibling, which is the checkbox input element
 */
 export default function runSnowfall() {
-  const shouldRun = checkDateRange();
+  const shouldRun = checkDateRange() && hasHardware();
   if (shouldRun) {
     let snowfall = initSnowFall();
     let isRunning = true;
