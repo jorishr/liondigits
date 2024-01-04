@@ -51,12 +51,12 @@ export function scrollDown() {
 export function stickyNavOnScroll() {
   const navBar = document.querySelector(".skill-section__nav");
   const sectionElemStart = document.querySelector("#skill-section-article_1");
-  const sectionElemEnd = document.querySelector(".fun-zone");
+  const sectionElemEnd = document.querySelector("#section-nav-end");
 
   if (navBar) {
     const sectionStart = sectionElemStart.offsetTop + 330;
     const sectionEnd = sectionElemEnd.offsetTop - 330;
-    console.log(sectionStart);
+    console.log(sectionEnd);
 
     window.onscroll = () => {
       let currentPos = window.scrollY;

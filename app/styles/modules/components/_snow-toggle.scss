@@ -1,0 +1,71 @@
+.snow-toggle {
+  display: none;
+
+  &--show {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__text {
+    // this is the text that accompanies the checkbox
+    margin-left: var(--mg-xs);
+    line-height: 1.25;
+    order: 2;
+  }
+
+  &__checkbox {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+
+    &:checked + label {
+      background: var(--bgClr-accent);
+    }
+
+    &:checked + label::after {
+      left: calc(100% - 2px);
+      transform: translateX(-100%);
+    }
+  }
+
+  // this is the box you see
+  &__label {
+    position: relative;
+
+    display: block;
+
+    text-indent: -9999px;
+    cursor: pointer;
+
+    width: 40px;
+    height: 20px;
+
+    background: var(--bgClr-gold);
+    border-radius: 20px;
+
+    &:active::after {
+      width: 22px;
+    }
+
+    // switch inside
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      background: var(--accent-azureblue);
+      border-radius: 16px;
+      transition: 0.3s;
+    }
+  }
+
+  &--header &__text {
+    line-height: 1.75;
+    margin-left: var(--mg-sm);
+  }
+  &--header &__checkbox:checked + label {
+    background: var(--bgClr);
+  }
+}

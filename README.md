@@ -52,6 +52,8 @@ The website uses JavaScript modules to perform the following tasks:
 - scroll animations via [AOS library](https://michalsnik.github.io/aos/)
 - typewriter effect in hero section with the [Typewriter Effect](https://www.npmjs.com/package/typewriter-effect) library, see ([typewriter.js](app/scripts/modules/typewriter.js))
 - handle the [Cal](https://cal.com/) calendar widget (see [cal.js](app/scripts/modules/cal.js))
+- snow animation with Snowfall.js which runs between December 15 and February 15
+- synchronized custom snow animation toggles in header menu and footer
 
 ### Website-text-translator Package
 
