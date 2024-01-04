@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0] - 2023-12-18
+
+- Major review of markup, styles and animations with improved responsiveness for large screens
+- Code re-organization
+- Adds snowfall.js animations between December 15 and February 15 every year, including synchronized toggles to turn animation on/off
+- Adds new header menu
+- Various copy text changes and translation improvements
+
 ## [1.2.2] - 2023-12-18
 
 - Minor style and script changes, fixes and improvements
