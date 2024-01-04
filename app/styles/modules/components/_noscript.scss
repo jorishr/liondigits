@@ -8,10 +8,21 @@ noscript::before {
   font-size: var(--fs-md);
   text-align: center;
 
-  padding: var(--pd-sm) var(--pd-lg);
+  padding: var(--pd-sm) var(--pd-xs);
 
   background-color: var(--accent-alert);
   color: var(--txtClr-white);
 
-  z-index: 5;
+  z-index: 7; // see stacking context note __global.scss
+
+  @include tablet_md {
+    padding: var(--pd-sm) var(--pd-base);
+  }
+  @include pc_xl {
+    padding: var(--pd-base) var(--pd-md);
+    font-size: var(--fs-xl);
+  }
+  @include pc_xl {
+    font-size: var(--fs-3xl);
+  }
 }

@@ -1,7 +1,7 @@
 import Typewriter from "typewriter-effect/dist/core";
 
 export function typewriterEffect() {
-  const text = document.querySelector(".typewriter");
+  const text = document.querySelector(".js-typewriter");
 
   const typewriter = new Typewriter(text, {
     loop: true,

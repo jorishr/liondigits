@@ -10,7 +10,7 @@
   background-color: var(--bgClr-white);
   padding: var(--pd-sm);
 
-  z-index: 5;
+  z-index: 5; // see stacking context note __global.scss
   opacity: 0;
 
   &:hover {
@@ -24,6 +24,10 @@
   &__arrow {
     height: 20px;
     z-index: 1;
+
+    @include pc_2xl {
+      height: 80px;
+    }
   }
 
   &__bg {
@@ -31,7 +35,7 @@
     bottom: 0;
     left: 0;
 
-    background: #00b4ff;
+    background-color: #00b4ff;
     height: 0;
     width: 100%;
 

@@ -1,0 +1,189 @@
+.btn {
+  /* 
+    - Applied to anchor tags that appear as buttons
+    - Font-size is set to scale with media-queries
+    - Positioning and font-size tweaks should be applied in the section where the button appears
+  */
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+
+  white-space: nowrap;
+
+  border-radius: 0.3125em;
+  border: 0.125em solid var(--bgClr-accent);
+  box-shadow: 0.125em 0.125em 0.125em 0 rgba(0, 0, 0, 0.25);
+
+  color: var(--txtClr-white);
+  background-color: var(--bgClr-accent);
+
+  padding: var(--pd-sm) var(--pd-base);
+
+  @include mobile_md {
+    font-size: var(--fs-base);
+  }
+
+  @include pc_lg {
+    font-size: var(--fs-md);
+  }
+
+  @include pc_xl {
+    font-size: var(--fs-2xl);
+  }
+
+  @include pc_2xl {
+    font-size: var(--fs-4xl);
+  }
+
+  &:hover {
+    color: var(--accent-azureblue);
+    background-color: var(--bgClr-white);
+    border-color: var(--bgClr-white);
+  }
+
+  &-icon {
+    // applies to anchor tag buttons with span & img inside
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    white-space: normal;
+
+    img {
+      width: 1.25em;
+      height: 1.25em;
+    }
+
+    &::after {
+      // pop-up when clicked
+      display: none;
+      content: var(--pseudo_txt_copy);
+
+      position: absolute;
+      top: -1.3125em;
+      right: 0.1875em;
+
+      color: var(--txtClr-white);
+      background-color: var(--accent-azureblue);
+
+      border-radius: 0.3125em;
+
+      padding: var(--pd-xs);
+    }
+
+    &.js-copied {
+      &::after {
+        display: inline-block;
+      }
+    }
+  }
+
+  &--outline-blue {
+    background-color: transparent;
+    border-color: var(--bgClr-accent);
+  }
+
+  &--outline-gray {
+    color: var(--txtClr-base);
+    background-color: transparent;
+    border-color: var(--txtClr-base);
+
+    &:hover {
+      border-color: var(--txtClr-base);
+      color: var(--txtClr-base);
+    }
+  }
+
+  &--lightblue {
+    color: var(--txtClr-base);
+    background-color: var(--bgClr-lightblue);
+    border-color: var(--txtClr-lightblue);
+  }
+
+  &--horizontal-list {
+    width: 15em;
+    white-space: normal;
+    font-size: var(--fs-xs);
+
+    padding: var(--pd-xs) var(--pd-sm);
+    margin: 0 auto var(--mg-base);
+
+    @include mobile_md {
+      font-size: var(--fs-sm);
+      padding: var(--pd-sm) var(--pd-base);
+    }
+    @include pc_lg {
+      font-size: var(--fs-base);
+    }
+    @include pc_xl {
+      font-size: var(--fs-base-plus);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-2xl);
+    }
+  }
+}
+
+/* Used on modals and tooltips */
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-50%);
+
+  font-size: var(--fs-md);
+  color: var(--txtClr-base);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--txtClr-white);
+    cursor: pointer;
+  }
+
+  &--white {
+    color: var(--txtClr-white);
+
+    &:hover {
+      color: var(--txtClr-lightblue);
+    }
+  }
+
+  &--orange {
+    &:hover {
+      color: var(--txtClr-orange);
+    }
+  }
+
+  @include pc_sm {
+    font-size: var(--fs-xl);
+  }
+  @include pc_lg {
+    font-size: var(--fs-3xl);
+  }
+  @include pc_2xl {
+    font-size: var(--fs-6xl);
+  }
+}
+
+/* applied to button elements */
+.button {
+  font-size: inherit;
+  font-family: inherit;
+
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: var(--txtClr-base);
+
+  transition: all 0.5s ease 0ms;
+  padding: 0.5em 1em;
+
+  border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

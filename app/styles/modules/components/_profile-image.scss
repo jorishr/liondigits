@@ -1,0 +1,9 @@
+.profile-image {
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
+
+  &__image {
+    width: 100%;
+  }
+}

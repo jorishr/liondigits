@@ -1,121 +1,118 @@
 .header {
   position: relative;
   top: 0;
-  z-index: 2;
-  width: 99%;
-  margin: 0 auto;
-  padding-top: var(--pd-sm);
+  left: 0;
+  right: 0;
 
-  &-container {
+  z-index: 3; // see stacking context note __global.scss
+
+  &__content-container {
     display: flex;
     justify-content: space-between;
+
+    width: 100%;
+
+    padding: var(--pd-xs);
     margin: 0 auto;
-    max-width: 94%;
+
+    padding: var(--pd-sm);
+
+    @include tablet_md {
+      padding: var(--pd-base) var(--pd-lg);
+    }
+    @include pc_lg {
+      font-size: var(--fs-md);
+    }
+    @include pc_xl {
+      font-size: var(--fs-xl);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-4xl);
+      padding: var(--pd-lg) var(--pd-2xl);
+    }
   }
 
-  &__left {
-    .header__logo {
-      max-width: 80px;
+  &__logo {
+    position: relative;
+    z-index: 3;
 
-      @include pc_lg {
-        max-width: 160px;
-      }
-    }
+    width: 5.4em;
   }
 
   &__right {
     display: flex;
     align-items: flex-start;
+  }
+}
 
-    /* LANGUAGE SELECTION MENU - START*/
-    &__lang-menu {
-      position: relative;
-      @include pc_lg {
-        font-size: var(--fs-xl);
-      }
+.menu {
+  &__nav {
+    display: none;
 
-      &__icon {
-        display: flex;
-
-        img {
-          width: 20px;
-          height: 20px;
-          cursor: pointer;
-          margin-right: var(--mg-xs);
-
-          @include pc_lg {
-            width: 40px;
-            height: 40px;
-          }
-        }
-        span {
-          color: var(--txtClr-lightblue);
-          cursor: pointer;
-        }
-      }
-
-      &__options {
-        display: none;
-
-        &--active {
-          display: block;
-        }
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(-75%, 18%);
-
-        width: 200px;
-        padding: var(--pd-sm) 0;
-        background-color: var(--bgClr-lightgray);
-        border-radius: 5%;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-
-        &:before {
-          content: "";
-          position: absolute;
-          top: -6px;
-          right: 12%;
-          width: 0px;
-          height: 0px;
-
-          border-style: solid;
-          border-width: 0px 9px 9px 9px;
-          border-color: transparent transparent var(--bgClr-lightgray)
-            transparent;
-        }
-
-        li {
-          padding: 10px 15px;
-          transition: all 0.5s ease 0ms;
-
-          a {
-            line-height: 1.2em;
-            text-transform: capitalize;
-            color: var(--txtClr-base);
-
-            cursor: pointer;
-          }
-
-          &:hover {
-            background-color: #003f8c;
-
-            a {
-              color: #fff;
-            }
-          }
-        }
-      }
+    &--active {
+      display: flex;
+      animation: fade-in 500ms forwards;
     }
-    /* LANGUAGE SELECTION MENU - END*/
 
-    .header__cta {
-      display: none;
+    &--closing {
+      animation: fade-out 500ms forwards;
+    }
 
-      a.btn {
-        padding: var(--pd-xs) var(--pd-sm);
-        margin: auto 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    width: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--txtClr-accent);
+    border-radius: 5px;
+    border-bottom: 6px solid var(--accent-azureblue);
+
+    color: var(--txtClr-white);
+
+    padding: var(--pd-2xl) var(--pd-xs) var(--pd-sm);
+
+    @include pc_lg {
+      padding: var(--pd-2xl) var(--pd-sm) var(--pd-base);
+    }
+    @include pc_xl {
+      padding: var(--pd-3xl) var(--pd-base) var(--pd-md);
+    }
+  }
+
+  &__item {
+    width: 18em;
+
+    margin-bottom: var(--mg-sm);
+
+    text-align: center;
+    text-transform: capitalize;
+
+    /* There are three types of items: link, link--alt and snow-toggle */
+    &--alt &__link {
+      border: none;
+    }
+
+    &__link {
+      width: 100%;
+
+      color: var(--txtClr-white);
+
+      border-radius: 5px;
+      border: var(--bgClr-white) solid 1px;
+
+      transition: all 0.3s ease-in-out;
+
+      padding: var(--pd-sm) var(--pd-base);
+
+      &:hover {
+        background-color: var(--bgClr-white);
+        color: var(--txtClr-accent);
       }
     }
   }

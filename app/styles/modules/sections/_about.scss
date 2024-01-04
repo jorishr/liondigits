@@ -1,59 +1,46 @@
 .about {
+  /* receives base styles from __section-base */
   position: relative;
-  width: 95%;
-
-  font-size: var(--fs-md);
-
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
-
-  background-color: var(--bgClr-lightgray);
-
-  padding: var(--pd-lg) var(--pd-sm);
-  margin: var(--mg-base) auto var(--mg-2xl);
-
-  @include mobile_lg {
-    padding: var(--pd-lg) var(--pd-base);
-  }
-
-  @include tablet_md {
-    padding: var(--pd-lg) var(--pd-lg);
-  }
 
   &__nav-container {
+    display: none;
     position: absolute;
-    top: 1em;
-    left: 1em;
+    top: 0.5em;
+    left: 0.5em;
+  }
 
+  &__nav-btn {
     font-size: var(--fs-xs);
+
+    @include pc_lg {
+      font-size: var(--fs-base);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-lg);
+    }
   }
 
   &__content-container {
     @include tablet_md {
-      max-width: 50em;
-      margin: var(--mg-base) auto;
-    }
-
-    @include pc_lg {
-      font-size: var(--fs-xl);
-    }
-
-    @include pc_xl {
-      font-size: var(--fs-2xl);
+      max-width: 55ch;
+      margin: 0 auto;
     }
   }
 
   &__heading {
     &__title {
-      font-size: var(--fs-2xl);
+      font-size: var(--fs-xl);
       text-align: center;
       margin-bottom: var(--mg-base);
 
-      @include tablet_md {
-        margin-bottom: var(--mg-base);
-      }
       @include pc_lg {
+        font-size: var(--fs-2xl);
+      }
+      @include pc_xl {
         font-size: var(--fs-3xl);
+      }
+      @include pc_2xl {
+        font-size: var(--fs-6xl);
       }
     }
 
@@ -70,22 +57,6 @@
         justify-content: flex-start;
       }
 
-      &__img-container {
-        width: 5.5em;
-        overflow: hidden;
-        border-radius: 50%;
-        box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
-        margin: 0 auto var(--mg-base);
-
-        @include tablet_md {
-          margin: 0 var(--mg-base) 0 0;
-        }
-
-        img {
-          width: 100%;
-        }
-      }
-
       p {
         @include tablet_md {
           align-self: center;
@@ -95,31 +66,23 @@
         }
       }
     }
+
+    &__image {
+      width: 5.5em;
+      margin: 0 auto var(--mg-base);
+
+      @include tablet_md {
+        margin: 0 var(--mg-base) 0 0;
+      }
+    }
   }
 
   &__txt-container {
     overflow: hidden;
+    margin-bottom: var(--mg-sm);
 
-    p {
-      margin-bottom: var(--mg-xs);
-    }
     .highlight-first-char::first-letter {
       @include highlight-first-char;
-    }
-    @include pc_md {
-      .highlight-first-char::first-letter {
-        @include highlight-first-char-md;
-      }
-    }
-    @include pc_lg {
-      .highlight-first-char::first-letter {
-        @include highlight-first-char-lg;
-      }
-    }
-    @include pc_xl {
-      .highlight-first-char::first-letter {
-        @include highlight-first-char-xl;
-      }
     }
   }
 
@@ -133,7 +96,18 @@
     }
   }
 
-  &__btn-expand:hover {
-    cursor: pointer;
+  &__btn-expand {
+    border: 0.125em solid var(--txtClr-base);
+    font-size: var(--fs-base);
+
+    @include pc_lg {
+      font-size: var(--fs-base-plus);
+    }
+    @include pc_xl {
+      font-size: var(--fs-xl);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-3xl);
+    }
   }
 }

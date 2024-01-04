@@ -1,0 +1,79 @@
+.lang-menu {
+  position: relative;
+  z-index: 3; // see stacking context note __global.scss
+
+  padding: var(--pd-xs);
+
+  @include pc_lg {
+    font-size: var(--fs-xl);
+  }
+
+  @include pc_xl {
+    font-size: var(--fs-2xl);
+  }
+
+  @include pc_2xl {
+    font-size: var(--fs-4xl);
+  }
+
+  &__list {
+    display: none;
+
+    &--active {
+      display: block;
+      animation: fade-in 500ms ease;
+    }
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(100%);
+
+    background-color: var(--bgClr-lightgray);
+
+    border-radius: 5px;
+
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.35);
+
+    padding: var(--pd-sm) var(--pd-sm);
+
+    &::before {
+      /* 
+        This is the mini triangle that pushes just outside the container 
+        to create a better visual connection between the options menu and the language menu icon.
+        */
+      content: "";
+      position: absolute;
+      top: -6px;
+      right: 12%;
+      width: 0px;
+      height: 0px;
+
+      border-style: solid;
+      border-width: 0px 9px 9px 9px;
+      border-color: transparent transparent var(--bgClr-lightgray) transparent;
+
+      @include pc_lg {
+        top: -12px;
+        border-width: 0px 18px 18px 18px;
+      }
+
+      @include pc_2xl {
+        border-width: 0px 36px 36px 36px;
+        top: -33px;
+      }
+    }
+  }
+
+  &__option {
+    &__btn {
+      border: none;
+      width: 100%;
+
+      &:hover {
+        background-color: #003f8c;
+        color: #fff;
+      }
+    }
+  }
+}

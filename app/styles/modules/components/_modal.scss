@@ -12,14 +12,12 @@
   }
 
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-  width: 100%;
-  height: 100%;
-
-  z-index: 6;
+  z-index: 6; // see stacking context note __global.scss
   overflow-y: auto;
 
   background-color: rgba(3, 31, 48, 0.3);
@@ -37,32 +35,7 @@
     background-color: var(--bgClr-dark);
     color: var(--txtClr-gold);
 
-    box-shadow: 5px 5px 5px 5em rgb(233, 235, 238, 0.6);
+    box-shadow: 5px 5px 5px 8em rgb(233, 235, 238, 0.6);
     border-radius: 5px;
-
-    &__btn-close {
-      position: absolute;
-      top: 0.21em;
-      right: 0.21em;
-      padding: 0;
-      border-radius: 5px;
-
-      font-size: var(--fs-xl);
-
-      padding: 0.03em 0.24em;
-
-      color: var(--txtClr-white);
-      background-color: var(--txtClr-base);
-
-      @include pc_lg {
-        font-size: var(--fs-3xl);
-      }
-
-      &:hover {
-        color: var(--txtClr-lightblue);
-        text-decoration: none;
-        cursor: pointer;
-      }
-    }
   }
 }
