@@ -157,7 +157,7 @@ class Snowfall {
     // Add an event handler to resize the canvas when the window size changes
     const resizeHandler = () => {
       // Use requestAnimationFrame to optimize the resizing
-      requestAnimationFrame(this.resizeCanvas.bind(this));
+      requestAnimationFrame(() => this.resizeCanvas());
     };
     window.addEventListener("resize", throttle(resizeHandler.bind(this), 300));
     // Create an array to store the snowflakes
