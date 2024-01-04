@@ -87,42 +87,33 @@
 
   &__item {
     width: 18em;
-    background-color: var(---txtClr-accent);
-    border-radius: 5px;
-    border: var(--bgClr-white) solid 1px;
+
+    margin-bottom: var(--mg-sm);
 
     text-align: center;
     text-transform: capitalize;
 
-    padding: var(--pd-sm) var(--pd-base);
-    margin-bottom: var(--mg-sm);
-
-    transition: all 0.3s ease-in-out;
-
-    &:last-of-type {
+    /* There are three types of items: link, link--alt and snow-toggle */
+    &--alt &__link {
       border: none;
-    }
-
-    &:hover {
-      background-color: var(--bgClr-white);
-    }
-
-    &:hover &__link {
-      color: var(--txtClr-accent);
-    }
-
-    &:hover:last-of-type {
-      background-color: var(--bgClr-accent);
     }
 
     &__link {
-      background-color: transparent;
-      border: none;
-      color: var(--txtClr-white);
-    }
+      width: 100%;
 
-    &--alt {
-      border: none;
+      color: var(--txtClr-white);
+
+      border-radius: 5px;
+      border: var(--bgClr-white) solid 1px;
+
+      transition: all 0.3s ease-in-out;
+
+      padding: var(--pd-sm) var(--pd-base);
+
+      &:hover {
+        background-color: var(--bgClr-white);
+        color: var(--txtClr-accent);
+      }
     }
   }
 }
