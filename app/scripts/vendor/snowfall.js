@@ -1,4 +1,5 @@
 import checkDateRange from "../modules/checkDateRange.js";
+import { throttle } from "../modules/helper.js";
 /*!
  * This animation should run between 15 December and 15 February. Condition
  * checked by helper function.
@@ -153,11 +154,11 @@ class Snowfall {
     // Set the width and height of the canvas equal to the width and height of the browser window
     this.resizeCanvas();
     // Add an event handler to resize the canvas when the window size changes
-    window.addEventListener("resize", () => {
+    const resizeHandler = () => {
       // Use requestAnimationFrame to optimize the resizing
       requestAnimationFrame(this.resizeCanvas.bind(this));
-    });
-
+    };
+    window.addEventListener("resize", throttle(resizeHandler, 300));
     // Create an array to store the snowflakes
     this.snowflakes = [];
     // Set the number of snowflakes

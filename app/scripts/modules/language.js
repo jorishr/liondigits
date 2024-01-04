@@ -12,7 +12,6 @@ Language menu
 */
 export function langMenuToggle() {
   const langBtn = document.querySelector(".lang-menu-toggle");
-  console.log(langBtn);
   if (langBtn) {
     langBtn.addEventListener("click", function () {
       const langMenu = document.querySelector(".lang-menu__list");
@@ -22,7 +21,9 @@ export function langMenuToggle() {
 }
 
 export function langMenuOptions() {
-  const langOptions = Array.from(document.querySelector(".lang-menu__option"));
+  const langOptions = Array.from(
+    document.querySelectorAll(".lang-menu__option")
+  );
   langOptions.forEach((option) => {
     option.addEventListener("click", function () {
       setCookie("language", option.dataset.lang);
