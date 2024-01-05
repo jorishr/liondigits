@@ -42,7 +42,6 @@
     <link rel="stylesheet" href="styles/main.scss" >
     <link rel="import" href="./error404.html">
   </head>
-
   <noscript></noscript>
   <header class="header">
     <div class="header__content-container">
@@ -56,35 +55,35 @@
         </div>
       </div>
       <div class="header__right">
-        <div class="lang-menu">
-          <div class="lang-menu-toggle" tabindex="0">
-            <img 
-              class="lang-menu-toggle__icon"
-              src="images/icons/icon_translate_lightblue.png"
-              alt="Vertalen icoon"
-              data-txt_id__alt="162"
+        <div class="lang-menu-toggle js-target-toggle" tabindex="0" data-target="language-menu">
+          <img 
+            class="lang-menu-toggle__icon"
+            src="images/icons/icon_translate_lightblue.png"
+            alt="Vertalen icoon"
+            data-txt_id__alt="162"
             >
             <span class="js-lang-span lang-menu-toggle__text" translate="no">nl</span>
-          </div>
-          <ul class="lang-menu__list">
-            <li class="lang-menu__option" data-lang="nl">
-              <button class="lang-menu__option__btn button" translate="no">nederlands</button>
+        </div>
+        <div class="menu-toggle__container">
+            <div class="menu-toggle__toggle" tabindex="1"></div>
+        </div>
+        <div class="language" data-target_id="language-menu">
+          <ul class="language__list">
+            <li class="language__option" data-lang="nl">
+              <button class="language__option__btn button" translate="no">nederlands</button>
             </li>
-            <li class="lang-menu__option" data-lang="en">
-              <button class="lang-menu__option__btn button" translate="no">english</button>
+            <li class="language__option" data-lang="en">
+              <button class="language__option__btn button" translate="no">english</button>
             </li>
-            <li class="lang-menu__option" data-lang="es">
-              <button class="lang-menu__option__btn button" translate="no">español</button>
+            <li class="language__option" data-lang="es">
+              <button class="language__option__btn button" translate="no">español</button>
             </li>
-            <li class="lang-menu__option" data-lang="ca">
-              <button class="lang-menu__option__btn button" translate="no">català</button>
+            <li class="language__option" data-lang="ca">
+              <button class="language__option__btn button" translate="no">català</button>
             </li>
           </ul>
         </div>
         <nav class="menu">
-          <div class="menu__menu-toggle menu-toggle__container">
-            <div class="menu-toggle__toggle" tabindex="1"></div>
-          </div>
           <ul class="menu__nav">
             <li class="menu__item" id="js-menu-home-item"><a class="menu__item__link" href="/" data-txt_id="[194]">← Home</a></li>
             <li class="menu__item" id="js-menu-services-item"><a class="menu__item__link" href="profile.html" data-txt_id="[703]">IT Diensten</a></li>

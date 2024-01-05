@@ -241,7 +241,7 @@
           class="footer__pgp__btns__info js-target-toggle"
           title="Wat is dit?"
           data-txt_id__title="149"
-          data-target="001"
+          data-target="modal-pgp"
         >
           <img
             class="icon-info"
@@ -252,11 +252,15 @@
         </a>
       </div>
     </div>
-    <div class="modal footer__pgp__modal" data-target_id="001">
+    <div class="footer__pgp__modal modal" data-target_id="modal-pgp">
       <div
         class="modal__content-container footer__pgp__modal__content-container"
       >
-        <span class="btn-close btn-close--white js-btn-close">&times;</span>
+        <span
+          class="btn-close btn-close--white js-btn-close"
+          data-target="modal-pgp"
+          >&times;</span
+        >
         <h2 class="footer__pgp__modal__title" data-txt_id="[102]">
           Versleutelde communicatie
         </h2>
@@ -516,15 +520,19 @@
         class="footer__btc__link js-target-toggle"
         title="Wat is dit?"
         data-txt_id__title="149"
-        data-target="003"
+        data-target="modal-btc"
       >
       </a>
     </div>
-    <div class="footer__btc__modal modal" data-target_id="003">
+    <div class="footer__btc__modal modal" data-target_id="modal-btc">
       <div
         class="modal__content-container footer__btc__modal__content-container"
       >
-        <span class="btn-close btn-close--orange js-btn-close">&times;</span>
+        <span
+          class="btn-close btn-close--orange js-btn-close"
+          data-target="modal-btc"
+          >&times;</span
+        >
         <div class="footer__btc__modal__image-container">
           <img
             src="images/logo/bitcoin_logo.jpg"

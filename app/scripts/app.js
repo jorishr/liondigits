@@ -1,9 +1,5 @@
-import {
-  langMenuToggle,
-  langMenuOptions,
-  setTxtContent,
-} from "./modules/language.js";
-import { btnClose, targetToggle, toggleMenu } from "./modules/toggles.js";
+import { handleLangMenuOptions, setTxtContent } from "./modules/language.js";
+import { toggleTarget, toggleMenu } from "./modules/toggles.js";
 import { clipboardCopy } from "./modules/clipboard.js";
 import {
   setAnchorLinks,
@@ -23,26 +19,35 @@ import {
 import consent from "./modules/consent.js";
 import setFooterCredits from "./modules/set-footer-credits.js";
 
+/* set layout */
 processElementHeight(".header", "--height-header");
 processElementHeight(".intro__highlight", "--height-highlights");
 processElementHeight(".skill__heading__nav", "--height-menu");
+
+/* set btns & btn handlers */
 setHeaderMenuItems();
-langMenuToggle();
-targetToggle();
-btnClose();
-clipboardCopy();
-langMenuOptions();
+toggleTarget();
+toggleMenu();
+handleLangMenuOptions();
 setCollapseBtns();
+
+/* set text */
 setAddress();
 setOnionAddress();
 setCompanyInfo();
 setPgpInfo();
 setAnchorLinks();
 setTxtContent();
-scrollIndicator();
-scrollDown();
-consent();
 setFooterCredits();
+
+/* set helpers */
+clipboardCopy();
+
+/* set consent bar fn */
+consent();
+
+/* set scroll items */
 stickyNavOnScroll();
 navHighlightOnScroll();
-toggleMenu();
+scrollIndicator();
+scrollDown();

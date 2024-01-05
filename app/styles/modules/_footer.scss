@@ -276,17 +276,6 @@
     }
 
     &__modal {
-      /* &--active and &--closing are duplicates from code in _modal.scss. It was added here as a hot-fix for issue #97
-      */
-      &--active {
-        display: block;
-        animation: fade-in 500ms forwards;
-      }
-
-      &--closing {
-        animation: fade-out 500ms forwards;
-      }
-
       &__content-container {
         background-color: var(--bgClr-white);
         color: var(--txtClr-base);
