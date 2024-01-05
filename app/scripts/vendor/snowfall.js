@@ -1,6 +1,6 @@
 import checkDateRange from "../modules/checkDateRange.js";
-import { throttle } from "../modules/helper.js";
-import { hasHardware } from "../modules/helper.js";
+import { throttle, hasHardware } from "../modules/helper.js";
+import { getUserSettings, setUserSettings } from "../modules/userSettings.js";
 /*!
  * This animation should run between 15 December and 15 February. Condition
  * checked by helper function.
@@ -278,25 +278,32 @@ class Snowfall {
   - The visible part of the checkbox is the label element. Find the target element property and select the previous sibling, which is the checkbox input element
 */
 export default function runSnowfall() {
-  const shouldRun = checkDateRange() && hasHardware();
-  if (shouldRun) {
-    let snowfall = initSnowFall();
-    let isRunning = true;
+  const snowToggleContainers = [...document.querySelectorAll(".snow-toggle")];
+  const snowToggleCheckboxes = [
+    ...document.querySelectorAll(".snow-toggle__checkbox"),
+  ];
+  const snowToggleLabels = [
+    ...document.querySelectorAll(".snow-toggle__label"),
+  ];
 
-    const snowToggleContainers = [...document.querySelectorAll(".snow-toggle")];
-    const snowToggleCheckboxes = [
-      ...document.querySelectorAll(".snow-toggle__checkbox"),
-    ];
-    const snowToggleLabels = [
-      ...document.querySelectorAll(".snow-toggle__label"),
-    ];
+  const userPreference = checkUserSettings();
+  const shouldRun = checkDateRange() && hasHardware();
+
+  if (shouldRun) {
+    let snowfall;
+    let isRunning;
 
     snowToggleContainers.forEach((container) => {
       container.classList.add("snow-toggle--show");
     });
-    snowToggleCheckboxes.forEach((checkbox) => {
-      checkbox.checked = isRunning;
-    });
+
+    if (userPreference) {
+      snowToggleCheckboxes.forEach((checkbox) => {
+        checkbox.checked = true;
+        snowfall = initSnowFall();
+        isRunning = true;
+      });
+    }
 
     snowToggleLabels.forEach((label) => {
       label.addEventListener("click", (event) => {
@@ -304,13 +311,16 @@ export default function runSnowfall() {
           snowfall.destroy();
           isRunning = false;
           updateOtherCheckboxesState(event);
+          setUserSettings({ runSnowfallAnimation: false });
         } else {
           snowfall = initSnowFall();
           isRunning = true;
           updateOtherCheckboxesState(event);
+          setUserSettings({ runSnowfallAnimation: true });
         }
       });
     });
+
     const updateOtherCheckboxesState = (event) => {
       [...document.querySelectorAll(".snow-toggle__checkbox")].forEach(
         (checkbox) => {
@@ -341,4 +351,14 @@ function initSnowFall() {
     zIndex: "1000",
   });
   return snowfall;
+}
+
+/* 
+  When no settings are found, the default setting should be to run the animation
+*/
+function checkUserSettings() {
+  if (getUserSettings().runSnowfallAnimation) {
+    return true;
+  } else if (getUserSettings().runSnowfallAnimation === false) return false;
+  else return true; //fallback
 }

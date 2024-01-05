@@ -19,26 +19,28 @@ import {
 import consent from "./modules/consent.js";
 import setFooterCredits from "./modules/set-footer-credits.js";
 
-/* set layout */
-processElementHeight(".header", "--height-header");
-processElementHeight(".intro__highlight", "--height-highlights");
-processElementHeight(".skill__heading__nav", "--height-menu");
+document.addEventListener("DOMContentLoaded", function () {
+  /* set layout */
+  processElementHeight(".header", "--height-header");
+  processElementHeight(".skill__heading__nav", "--height-menu");
+  processElementHeight(".intro__highlight", "--height-highlights");
 
-/* set btns & btn handlers */
-setHeaderMenuItems();
-toggleTarget();
-toggleMenu();
-handleLangMenuOptions();
-setCollapseBtns();
+  /* set text */
+  setTxtContent();
+  setAnchorLinks();
+  setCompanyInfo();
+  setAddress();
+  setPgpInfo();
+  setOnionAddress();
+  setFooterCredits();
 
-/* set text */
-setAddress();
-setOnionAddress();
-setCompanyInfo();
-setPgpInfo();
-setAnchorLinks();
-setTxtContent();
-setFooterCredits();
+  /* set btns & btn handlers */
+  setHeaderMenuItems();
+  toggleTarget();
+  toggleMenu();
+  handleLangMenuOptions();
+  setCollapseBtns();
+});
 
 /* set helpers */
 clipboardCopy();
