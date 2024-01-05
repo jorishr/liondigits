@@ -43,7 +43,7 @@ setFooterCredits();
 /* set helpers */
 clipboardCopy();
 
-/* set consent bar fn */
+/* set consent & cookie bar fn */
 consent();
 
 /* set scroll items */

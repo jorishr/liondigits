@@ -1,5 +1,15 @@
 .consent {
   display: none;
+  visibility: hidden;
+
+  &--active {
+    display: flex;
+    visibility: visible;
+  }
+
+  &--closing {
+    animation: fade-out 500ms forwards;
+  }
 
   position: fixed;
   bottom: 0;
@@ -9,14 +19,6 @@
   z-index: 5;
 
   background-color: var(--bgClr-dark);
-
-  &--active {
-    display: flex;
-  }
-
-  &--closing {
-    animation: fade-out 500ms forwards;
-  }
 
   &__content-container {
     display: flex;
