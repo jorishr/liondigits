@@ -5,32 +5,18 @@ import txt_data_es from "../../data/txt_data_es.json";
 import txt_data_ca from "../../data/txt_data_ca.json";
 import txt_data_addendum from "../../data/addendum.json";
 import contactInfo from "../../data/contact.json";
-/*
-############# 
-Language menu 
-#############  
-*/
-export function langMenuToggle() {
-  const langBtn = document.querySelector(".lang-menu-toggle");
-  if (langBtn) {
-    langBtn.addEventListener("click", function () {
-      const langMenu = document.querySelector(".lang-menu__list");
-      langMenu.classList.toggle("lang-menu__list--active");
-    });
-  }
-}
+import { animateClose } from "./helper";
 
-export function langMenuOptions() {
+export function handleLangMenuOptions() {
   const langOptions = Array.from(
-    document.querySelectorAll(".lang-menu__option")
+    document.querySelectorAll(".language__option")
   );
+  const langMenu = document.querySelector(".language");
   langOptions.forEach((option) => {
     option.addEventListener("click", function () {
       setCookie("language", option.dataset.lang);
       setTxtContent(option.dataset.lang);
-      document
-        .querySelector(".lang-menu__list")
-        .classList.remove("lang-menu__list--active");
+      animateClose(langMenu, "language");
     });
   });
 }

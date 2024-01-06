@@ -3,6 +3,7 @@ export function setCookie(key, val) {
     60 * 60 * 24 * 7
   };Secure;SameSite=Strict`;
 }
+
 export function getCookie(key) {
   if (document.cookie) {
     const cookieObj = document.cookie.split(";").reduce((acc, curr) => {
@@ -47,4 +48,16 @@ export function hasHardware() {
   if (deviceMemory >= 4 || cpuCores >= 4) {
     return true;
   } else return false;
+}
+
+export function animateClose(target, targetClass) {
+  target.classList.add(`${targetClass}--closing`);
+  target.addEventListener(
+    "animationend",
+    () => {
+      target.classList.remove(`${targetClass}--active`);
+      target.classList.remove(`${targetClass}--closing`);
+    },
+    { once: true }
+  );
 }

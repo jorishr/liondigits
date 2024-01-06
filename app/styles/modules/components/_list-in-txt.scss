@@ -1,12 +1,19 @@
-.list-in-txt {
+.list-in-text {
   list-style-type: disc;
-  margin-bottom: var(--mg-xs);
   overflow: hidden;
 
+  margin: var(--mg-xs) 0;
+
   li {
-    margin-bottom: var(--mg-xs);
     text-overflow: ellipsis;
     overflow-wrap: break-word;
+
+    margin-left: 1em;
+    margin-bottom: var(--mg-xs);
+
+    &::marker {
+      color: var(--txtClr-base);
+    }
 
     &:last-of-type {
       margin-bottom: 0;
