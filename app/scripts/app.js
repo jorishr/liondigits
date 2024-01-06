@@ -23,7 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
   /* set layout */
   processElementHeight(".header", "--height-header");
   processElementHeight(".skill__heading__nav", "--height-menu");
-  processElementHeight(".intro__highlight", "--height-highlights");
+  processElementHeight(
+    ".intro__highlight__content-container",
+    "--height-highlights"
+  );
 
   /* set text */
   setTxtContent();

@@ -1,9 +1,5 @@
 .header {
   position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-
   z-index: 3; // see stacking context note __global.scss
 
   &__content-container {
@@ -12,23 +8,23 @@
 
     width: 100%;
 
-    padding: var(--pd-xs);
     margin: 0 auto;
 
     padding: var(--pd-sm);
 
     @include tablet_md {
-      padding: var(--pd-base) var(--pd-lg);
+      padding: var(--pd-base) var(--pd-lg) var(--pd-sm);
     }
     @include pc_lg {
       font-size: var(--fs-md);
     }
     @include pc_xl {
       font-size: var(--fs-xl);
+      padding: var(--pd-lg) var(--pd-lg) var(--pd-sm);
     }
     @include pc_2xl {
       font-size: var(--fs-4xl);
-      padding: var(--pd-lg) var(--pd-2xl);
+      padding: var(--pd-lg) var(--pd-xl) var(--pd-sm);
     }
   }
 

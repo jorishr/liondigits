@@ -1,74 +1,63 @@
+/* 
+  This page section has two major components: highlights and main. Until tablet_md the layout is self-evident. 
+  From then onwards, the illusion is created as if the highlight section is lifted out of the page flow and floats between the hero section and the intro__main section.
+
+  In order to achieve this without affecting the layout and positioning of the previous hero section, the highlight section is wrapped in a position container that has half the height of the highlight section container and uses the same background-color as the hero section. This will create the desired floating effect. 
+  
+  The height of the highlight section is stored in a variable, also see layout.js.
+
+  The intro__main section then gets a padding-top set to the same value.
+*/
+
 .intro {
-  position: relative;
-
-  font-size: var(--fs-base-plus);
-  background-color: var(--bgClr-lightgray);
-
-  padding: var(--pd-2xl) var(--pd-xs) 0;
-
-  @include mobile_md {
-    padding: var(--pd-2xl) var(--pd-sm) 0;
-  }
+  // undo default values by section class
+  width: 100%;
+  border-radius: 0;
+  margin-bottom: 0;
 
   @include tablet_md {
-    /* 
-      Padding-top gets removed because from tablet onwards the flow of this section changes, see &__main below 
-    */
-    padding: 0 var(--pd-sm) 0;
-  }
-
-  @include pc_lg {
-    font-size: var(--fs-xl);
-  }
-  @include pc_xl {
-    font-size: var(--fs-2xl);
-  }
-  @include pc_2xl {
-    font-size: var(--fs-4xl);
+    padding: 0; // undo default by section class
   }
 
   &__highlight {
-    /* 
-        The positioning is tricky on mobile devices with limited screen height. But the negative top margins is a good enough result.
-        From tablet_md onwards, the positioning is straightforward.
-    */
     position: relative;
-    margin-top: -67.5vh;
-
     z-index: 2; // see stacking context note __global.scss
 
-    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
+    margin: 0 auto var(--mg-lg);
 
     @include tablet_md {
-      position: absolute;
-      margin-top: 0;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      width: 100%;
+      margin: 0 auto 0;
+    }
 
-      width: 96%;
+    &__position-container {
+      @include tablet_md {
+        display: block;
+
+        width: 100%;
+        height: calc(var(--height-highlights) / 2);
+
+        background-color: var(--bgClr);
+      }
     }
 
     &__content-container {
-      border-radius: 5px;
+      border-radius: 5px 5px;
+      box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
       background-color: var(--bgClr-white);
 
       padding: var(--pd-md) var(--pd-xs);
+      margin: 0 auto;
 
       @include mobile_md {
         padding: var(--pd-base) var(--pd-sm);
       }
-
       @include tablet_sm {
         padding: var(--pd-lg) var(--pd-md);
       }
-
       @include tablet_md {
         padding: var(--pd-lg) var(--pd-md);
-      }
-
-      @include pc_sm {
-        padding: var(--pd-lg) var(--pd-md);
+        width: 95%;
       }
     }
 
@@ -113,9 +102,17 @@
 
       margin: 0 0 var(--mg-lg);
 
+      &:last-of-type {
+        margin: 0;
+      }
+
       @include tablet_md {
         max-width: 55ch;
         margin: 0 auto var(--mg-lg);
+
+        &:last-of-type {
+          margin: 0;
+        }
       }
 
       @include pc_sm {
@@ -141,17 +138,14 @@
 
   &__main {
     max-width: 55ch;
-
-    padding: var(--pd-xl) var(--pd-xs);
     margin: 0 auto;
-
     /* 
-      From tablet screens onwards the highlights section above is position: absolute; thus lifted out of the flow. 
-      See layout.js.
+      From tablet screens onwards the changes in the highlights section above create the need for extra padding-top
     */
     @include tablet_md {
-      padding: calc(var(--height-highlights) / 2 + var(--pd-lg)) var(--pd-xs)
-        var(--pd-xl);
+      padding-top: calc(var(--height-highlights) / 2 + var(--pd-lg));
+      padding-left: var(--pd-xs);
+      padding-bottom: var(--pd-xl);
     }
 
     &__text {
