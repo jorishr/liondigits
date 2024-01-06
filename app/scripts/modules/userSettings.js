@@ -19,7 +19,6 @@ export function getUserSettings() {
   try {
     const settingsJSON = localStorage.getItem("userSettings");
     const settings = JSON.parse(settingsJSON) || {};
-    console.log(settings);
     return settings;
   } catch (error) {
     console.error("Error retrieving user settings:", error);

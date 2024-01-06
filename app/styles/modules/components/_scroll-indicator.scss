@@ -13,6 +13,10 @@
   z-index: 5; // see stacking context note __global.scss
   opacity: 0;
 
+  @include pc_2xl {
+    font-size: var(--fs-2xl);
+  }
+
   &:hover {
     cursor: pointer;
   }
@@ -22,12 +26,8 @@
   }
 
   &__arrow {
-    height: 20px;
+    height: 1.25em;
     z-index: 1;
-
-    @include pc_2xl {
-      height: 80px;
-    }
   }
 
   &__bg {
