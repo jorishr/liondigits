@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.3.0] - 2023-12-18
+## [1.3.1] - 2024-01-06
+
+- Minor release which contains minor bug fixes, improvements and copy text updates.
+
+## [1.3.0] - 2023-12-30
 
 - Major review of markup, styles and animations with improved responsiveness for large screens
 - Code re-organization
