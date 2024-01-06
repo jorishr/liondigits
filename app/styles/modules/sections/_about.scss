@@ -86,16 +86,6 @@
     }
   }
 
-  &__expandable-section {
-    display: none;
-    animation: slide-up 500ms forwards, fade-out 1000ms forwards;
-
-    &--active {
-      display: block;
-      animation: slide-up 500ms forwards, fade-in 1000ms forwards;
-    }
-  }
-
   &__btn-expand {
     border: 0.125em solid var(--txtClr-base);
     font-size: var(--fs-base);
@@ -109,5 +99,14 @@
     @include pc_2xl {
       font-size: var(--fs-3xl);
     }
+  }
+}
+
+.expand {
+  display: none;
+
+  &--active {
+    display: block;
+    animation: slide-up 500ms forwards, fade-in 1000ms forwards;
   }
 }

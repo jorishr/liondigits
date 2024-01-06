@@ -93,8 +93,9 @@
     border-color: var(--txtClr-base);
 
     &:hover {
-      border-color: var(--txtClr-base);
-      color: var(--txtClr-base);
+      border-color: transparent;
+      background-color: var(--txtClr-base);
+      color: var(--txtClr-white);
     }
   }
 

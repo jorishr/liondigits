@@ -1,9 +1,5 @@
-import {
-  langMenuToggle,
-  langMenuOptions,
-  setTxtContent,
-} from "./modules/language.js";
-import { btnClose, targetToggle, toggleMenu } from "./modules/toggles.js";
+import { handleLangMenuOptions, setTxtContent } from "./modules/language.js";
+import { toggleTarget, toggleMenu } from "./modules/toggles.js";
 import { clipboardCopy } from "./modules/clipboard.js";
 import {
   setAnchorLinks,
@@ -23,26 +19,40 @@ import {
 import consent from "./modules/consent.js";
 import setFooterCredits from "./modules/set-footer-credits.js";
 
-processElementHeight(".header", "--height-header");
-processElementHeight(".intro__highlight", "--height-highlights");
-processElementHeight(".skill__heading__nav", "--height-menu");
-setHeaderMenuItems();
-langMenuToggle();
-targetToggle();
-btnClose();
+document.addEventListener("DOMContentLoaded", function () {
+  /* set layout */
+  processElementHeight(".header", "--height-header");
+  processElementHeight(".skill__heading__nav", "--height-menu");
+  processElementHeight(
+    ".intro__highlight__content-container",
+    "--height-highlights"
+  );
+
+  /* set text */
+  setTxtContent();
+  setAnchorLinks();
+  setCompanyInfo();
+  setAddress();
+  setPgpInfo();
+  setOnionAddress();
+  setFooterCredits();
+
+  /* set btns & btn handlers */
+  setHeaderMenuItems();
+  toggleTarget();
+  toggleMenu();
+  handleLangMenuOptions();
+  setCollapseBtns();
+});
+
+/* set helpers */
 clipboardCopy();
-langMenuOptions();
-setCollapseBtns();
-setAddress();
-setOnionAddress();
-setCompanyInfo();
-setPgpInfo();
-setAnchorLinks();
-setTxtContent();
-scrollIndicator();
-scrollDown();
+
+/* set consent & cookie bar fn */
 consent();
-setFooterCredits();
+
+/* set scroll items */
 stickyNavOnScroll();
 navHighlightOnScroll();
-toggleMenu();
+scrollIndicator();
+scrollDown();
