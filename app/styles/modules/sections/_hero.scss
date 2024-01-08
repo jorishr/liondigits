@@ -190,7 +190,10 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 100vh;
+    bottom: 0;
+    //height: 100vh;
+    width: 100%;
+    min-height: 100vh;
 
     @media screen and (orientation: landscape) {
       min-height: 450px;
@@ -215,7 +218,7 @@
     height: 100%;
     z-index: -2; // see stacking context note __global.scss
 
-    background-image: url("../images/logo/liondigits_logo_v1_gold_transparent-bg-1600x1600.svg");
+    /*     background-image: url("../images/logo/liondigits_logo_v1_gold_transparent-bg-1600x1600.svg"); */
     background-size: cover;
   }
 }
