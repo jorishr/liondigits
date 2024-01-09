@@ -24,9 +24,9 @@ AOS.init();
 
 setTimeout(function () {
   runSnowfall();
-}, 1750);
+}, 1050);
 
 setTimeout(function () {
   /* unlikely people will interact with this immediately*/
   setupCalJs();
-}, 1500);
+}, 1000);
