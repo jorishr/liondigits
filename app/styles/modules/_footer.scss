@@ -24,61 +24,54 @@
     margin-bottom: var(--mg-lg);
   }
 
-  &__logo {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    margin-bottom: var(--mg-sm);
+  &__company-info {
+    margin-bottom: var(--mg-lg);
 
-    img {
-      width: 175px;
+    &__logo {
+      position: relative;
 
-      @include pc_lg {
-        width: 325px;
+      width: 9em;
+
+      margin: 0 auto var(--mg-sm);
+
+      &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
+    }
 
-      @include pc_2xl {
-        width: 650px;
-      }
+    &__content-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__num {
+      text-transform: capitalize;
+      color: var(--txtClr-white);
+    }
+
+    &__icon {
+      width: 1.5em;
+      margin-right: var(--mg-xs);
     }
   }
 
   &__nav {
     margin-bottom: var(--mg-lg);
 
-    ul {
-      li {
+    &__item {
+      text-align: center;
+
+      &__link {
+        color: var(--accent-azureblue);
         padding: var(--pd-sm) 0;
-        text-align: center;
 
-        .company__container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          img {
-            width: 1.5em;
-            margin-right: 1em;
-          }
-        }
-
-        a {
-          text-transform: capitalize;
-          color: var(--txtClr-white);
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-
-        &:first-of-type {
-          a {
-            color: var(--accent-azureblue);
-            &:hover {
-              text-decoration: none;
-              cursor: default;
-            }
-          }
+        &:hover {
+          text-decoration: underline;
         }
       }
     }
@@ -115,8 +108,8 @@
 
   &__info-icon {
     display: inline-block;
-    height: 1.15em;
     width: 1.15em;
+    height: 1.15em;
     align-self: center;
   }
 
@@ -165,6 +158,10 @@
           &::before {
             display: inline-block;
           }
+        }
+
+        &__icon {
+          width: 1em;
         }
       }
     }

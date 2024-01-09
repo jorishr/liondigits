@@ -15,7 +15,9 @@ export function handleLangMenuOptions() {
   langOptions.forEach((option) => {
     option.addEventListener("click", function () {
       setCookie("language", option.dataset.lang);
-      setTxtContent(option.dataset.lang);
+      setTimeout(() => {
+        setTxtContent(option.dataset.lang);
+      }, 0);
       animateClose(langMenu, "language");
     });
   });
@@ -24,7 +26,8 @@ export function handleLangMenuOptions() {
 /*
 ############################# 
 Get and set document language  
-#############################  
+#############################
+- setTimeout additions are for performance considerations, to free up the main thread and minimize blocking
 */
 export function setTxtContent(langPref) {
   // Import language data
@@ -39,6 +42,24 @@ export function setTxtContent(langPref) {
   }
   const data = eval("txt_" + [setLang]);
   const txtElems = document.querySelectorAll("[data-txt_id]");
+  setTimeout(() => {
+    setTextElems(txtElems, data);
+  }, 0);
+  setDocumentLang(setLang);
+  setLangIconTxt(setLang);
+  setPseudoElemTxt(setLang, "pseudo_txt_copy");
+  setEmailSubjectTxt(setLang);
+  setTimeout(() => {
+    setAttributeTxt(data, "title");
+  }, 0);
+  setTimeout(() => {
+    setAttributeTxt(data, "alt");
+  }, 0);
+  setAttributeTxt(data, "placeholder");
+  setAttributeTxt(data, "meta");
+}
+
+function setTextElems(txtElems, data) {
   txtElems.forEach((elem) => {
     const idArr = eval(elem.dataset.txt_id);
     if (elem.childNodes.length === 0) {
@@ -52,14 +73,6 @@ export function setTxtContent(langPref) {
       }
     }
   });
-  setDocumentLang(setLang);
-  setLangIconTxt(setLang);
-  setPseudoElemTxt(setLang, "pseudo_txt_copy");
-  setEmailSubjectTxt(setLang);
-  setAttributeTxt(data, "title");
-  setAttributeTxt(data, "alt");
-  setAttributeTxt(data, "placeholder");
-  setAttributeTxt(data, "meta");
 }
 
 function setAttributeTxt(data, target) {

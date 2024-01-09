@@ -336,7 +336,7 @@ export default function runSnowfall() {
 function initSnowFall() {
   const snowfall = new Snowfall({
     // number of snowflakes
-    count: 100,
+    count: 50,
     // min/max size
     minRadius: 10,
     maxRadius: 30,

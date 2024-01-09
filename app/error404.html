@@ -1,15 +1,81 @@
-<include src="./app/_header.html"></include>
-<div class="wrapper">
-  <section class="error">
-    <div class="error__text">
-      <p class data-txt_id="[199]">Hela, opgepast!</p>
-      <p class data-txt_id="[200]">Hier hoor je niet te zijn...</p>
-      <a href="/" class="btn" data-txt_id="[201]">terug</a>
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <title data-txt_id="[272]">Lion Digits, web ontwikkeling</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta
+      name="description"
+      content="Lion Digits | Krachtige digitale tech. Door Joris Raymaekers."
+      data-txt_id__meta="422"
+    />
+    <meta name="author" content="Joris Raymaekers" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="rgba(26, 27, 31, .6)" />
+
+    <meta property="og:site_name" content="Lion Digits" />
+    <meta
+      property="og:title"
+      content="Lion Digits | Powerful tech | Web development"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio and profile website by Joris Raymaekers."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://liondigits.com" />
+    <meta
+      property="og:image"
+      content="https://liondigits.com/.public-images/social_card_1200x600.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="mask-icon"
+      href="images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+
+    <script type="module" src="scripts/app.js"></script>
+    <script type="module" src="scripts/vendor.js"></script>
+    <link rel="stylesheet" href="styles/main.scss" />
+    <link rel="import" href="./error404.html" />
+  </head>
+  <body>
+    <noscript></noscript>
+    <include src="./app/_header.html"></include>
+    <div class="wrapper">
+      <section class="error">
+        <div class="error__text">
+          <p class data-txt_id="[199]">Hela, opgepast!</p>
+          <p class data-txt_id="[200]">Hier hoor je niet te zijn...</p>
+          <a href="/" class="btn" data-txt_id="[201]">terug</a>
+        </div>
+        <div
+          class="error__background-image"
+          style="background-image: url(images/error404.png)"
+        ></div>
+      </section>
     </div>
-    <div
-      class="error__background-image"
-      style="background-image: url(images/error404.png)"
-    ></div>
-  </section>
-</div>
-<include src="./app/_footer.html"></include>
+    <include src="./app/_footer.html"></include>
+  </body>
+</html>
