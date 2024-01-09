@@ -1,37 +1,62 @@
 <footer class="footer">
-  <section class="footer__logo">
-    <a href="/"
-      ><img
+  <section class="footer__company-info">
+    <div class="footer__company-info__logo">
+      <img
         src="images/logo/liondigits_logo_header_v1_vertical_transparent-bg_white-blue.png"
         alt="Lion Digits logo"
         data-txt_id__alt="127"
         data-aos="zoom-in-down"
-    /></a>
+        loading="lazy"
+        class="footer__company-info__logo__img"
+      />
+      <a
+        href="/"
+        alt="home page"
+        title="← Home"
+        data-txt_id__title="711"
+        class="footer__company-info__logo__link"
+        data-txt_id__alt="710"
+      ></a>
+    </div>
+    <div class="footer__company-info__content-container">
+      <img
+        src="images/icons/icon_business-azureblue.png"
+        alt="Business icoon"
+        data-txt_id__alt="487"
+        class="footer__company-info__icon"
+      />
+      <span
+        class="footer__company-info__num company-num"
+        title="Ondernemingsnummer"
+        data-txt_id__title="128"
+      ></span>
+    </div>
   </section>
   <nav class="footer__nav">
-    <ul>
-      <li>
-        <div class="company__container">
-          <img
-            src="images/icons/icon_business-azureblue.png"
-            alt="Business icoon"
-            data-txt_id__alt="487"
-          />
-          <a
-            class="company-num"
-            title="Ondernemingsnummer"
-            data-txt_id__title="128"
-          ></a>
-        </div>
+    <ul class="footer__nav__list">
+      <li class="footer__nav__item">
+        <a
+          class="footer__nav__item__link"
+          href="profile.html"
+          data-txt_id="[466]"
+          >IT diensten &#x26; Over mijzelf</a
+        >
       </li>
-      <li>
-        <a href="profile.html" data-txt_id="[466]">Over mij & IT diensten</a>
+      <li class="footer__nav__item">
+        <a
+          class="footer__nav__item__link"
+          href="conditions.html"
+          data-txt_id="[100]"
+          >Algemene voorwaarden</a
+        >
       </li>
-      <li>
-        <a href="conditions.html" data-txt_id="[100]">Algemene voorwaarden</a>
-      </li>
-      <li>
-        <a href="privacy.html" data-txt_id="[101]">Privacy-beleid</a>
+      <li class="footer__nav__item">
+        <a
+          class="footer__nav__item__link"
+          href="privacy.html"
+          data-txt_id="[101]"
+          >Privacy-beleid</a
+        >
       </li>
     </ul>
   </nav>
@@ -231,7 +256,7 @@
           data-txt_id__title="147"
         >
           <img
-            class="icon-info"
+            class="footer__pgp__btns__copy__icon"
             src="images/icons/icon_content-copy_azureblue.png"
             alt="Kopiëren naar klembord icoon"
             data-txt_id__alt="148"
@@ -508,6 +533,7 @@
           data-txt_id__alt="528"
           data-txt_id__title="529"
           class="footer__btc__logo"
+          loading="lazy"
         />
         <img
           src="images/icons/icon_info-circle_azureblue.png"
@@ -535,11 +561,12 @@
         >
         <div class="footer__btc__modal__image-container">
           <img
-            src="images/logo/bitcoin_logo.jpg"
+            src="images/logo/bitcoin_logo.webp"
             alt="Bitcoin logo"
             title="Bitcoin logo"
             data-txt_id__alt="530"
             data-txt_id__title="531"
+            loading="lazy"
           />
         </div>
         <div class="footer__btc__modal__txt-container">
@@ -561,9 +588,9 @@
           </p>
           <p data-txt_id="[537]">
             Er circuleert heel wat verwarrende en onjuiste informatie over
-            bitcoin en wat men 'crypto' noemt. Informeer je grondig en als je op
-            zoek bent naar een aanknopingspunt dan maak ik nederig enkele gratis
-            suggesties:
+            bitcoin en wat men &#x27;crypto&#x27; noemt. Informeer je grondig en
+            als je op zoek bent naar een aanknopingspunt dan maak ik nederig
+            twee gratis suggesties:
           </p>
           <ul class="list-in-text footer__btc__modal__list">
             <li>
@@ -653,7 +680,7 @@
             </li>
             <li>
               <p>
-                <span data-txt_id="[704]">Bitcoin en energie &#8212;</span>
+                <span data-txt_id="[704]">Bitcoin en energie</span>
                 <a
                   class="txt-link txt-link--orange"
                   href="https://kpmg.com/us/en/articles/2023/bitcoin-role-esg-imperative.html"
@@ -671,14 +698,15 @@
                 </a>
               </p>
               <p>
-                <span data-txt_id="[707]">
-                  Ook vanuit institutionele en corporatieve hoek blijft de
+                <span data-txt_id="[707]"
+                  >Ook vanuit institutionele en corporatieve hoek blijft de
                   aandacht voor bitcoin toenemen. Steeds meer bedrijven, groot
                   en klein, beseffen dat er naast de wilde prijsschommelingen en
-                  alle gekkigheden van 'crypto' speculanten wel degelijk een
-                  basis is voor nieuwe zakelijke modellen. Dit rapport van KPMG
-                  is daar een voorbeeld van:
-                </span>
+                  alle gekkigheden van &#x27;crypto&#x27; speculanten wel
+                  degelijk een basis is voor nieuwe en serieuze zakelijke
+                  modellen. Dit rapport van KPMG is daar een voorbeeld
+                  van:</span
+                >
                 <a
                   class="txt-link txt-link--orange"
                   href="https://kpmg.com/us/en/articles/2023/bitcoin-role-esg-imperative.html"
@@ -706,7 +734,9 @@
               target="_blank"
               title="Bitcoin white paper"
               data-txt_id="[550]"
-              >hier<img
+              alt="in dit pdf-bestand"
+              data-txt_id__alt="550"
+              >in dit pdf-bestand<img
                 class="txt-link__icon"
                 src="images/icons/icon_external-link_gray.png"
                 alt="externe link icoon"

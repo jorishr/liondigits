@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.2] - 2024-01-09
+
+- Adds various performance improvements for JavaScript code, including lazy loading for images and video's.
+- Changes main images to SVG
+- Adds updated text emphasis style options
+- Translation updates
+
 ## [1.3.1] - 2024-01-06
 
 - Minor release which contains minor bug fixes, improvements and copy text updates.

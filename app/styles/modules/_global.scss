@@ -78,7 +78,10 @@
   --mg-3xl: 12em;
   --mg-4xl: 16em;
 
-  --height-header: -100px; //set by layout.js
+  //set by layout.js
+  --height-header: 125px;
+  --height-highlights: 1125px;
+  --height-menu: 510px;
 
   /* PSEUDO ELEM TXT VAR */
   /* Value can be by JS language translation */
