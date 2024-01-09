@@ -213,10 +213,5 @@
     width: 100%;
     height: 100%;
     z-index: -2; // see stacking context note __global.scss
-
-    &__use {
-      width: 100%;
-      height: 100%;
-    }
   }
 }
