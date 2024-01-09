@@ -40,6 +40,7 @@ See [\_global.scss](app/styles/modules/_global.scss) for declaration of base sty
 The website uses JavaScript modules to perform the following tasks:
 
 - detect the user language preference and serve the corresponding translation of the website text (see [language.js](app/scripts/modules/language.js))
+- lazy load video elements
 - copy selected text to clipboard (see [clipboard.js](app/scripts/modules/clipboard.js))
 - programmatically set link text, contact information and addresses (see [anchor.js](app/scripts/modules/anchor.js))
 - handle GDPR consent notice bar & cookie (see [consent.js](app/scripts/modules/consent.js))
