@@ -63,22 +63,21 @@
     ></script>
     <script type="module" src="scripts/vendor.js"></script>
     <link rel="stylesheet" href="styles/main.scss" />
-    <link rel="import" href="./error404.html" />
   </head>
   <body>
     <noscript></noscript>
     <include src="./app/_header.html"></include>
+    <include src="./app/_consent.html"></include>
     <div class="wrapper">
-      <section class="error">
-        <div class="error__text">
-          <p class data-txt_id="[199]">Hela, opgepast!</p>
-          <p class data-txt_id="[200]">Hier hoor je niet te zijn...</p>
-          <a href="/" class="btn" data-txt_id="[201]">terug</a>
+      <section class="error section">
+        <div class="error__content-container">
+          <p class="error__text" data-txt_id="[199]">Hela, opgepast!</p>
+          <p class="error__text" data-txt_id="[200]">
+            Hier hoor je niet te zijn...
+          </p>
+          <a href="/" class="btn error__btn" data-txt_id="[201]">terug</a>
         </div>
-        <div
-          class="error__background-image"
-          style="background-image: url(images/error404.png)"
-        ></div>
+        <div class="error__background-image"></div>
       </section>
     </div>
     <include src="./app/_footer.html"></include>
