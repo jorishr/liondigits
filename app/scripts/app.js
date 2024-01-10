@@ -74,11 +74,13 @@ document.addEventListener("DOMContentLoaded", function () {
   lazyLoadVideos();
 });
 
+/* set consent & cookie bar fn */
+document.addEventListener("DOMContentLoaded", function () {
+  consent();
+});
+
 /* set helpers */
 clipboardCopy();
-
-/* set consent & cookie bar fn */
-consent();
 
 /* set scroll items */
 stickyNavOnScroll();
