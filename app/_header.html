@@ -28,6 +28,7 @@
       <button
         class="lang-menu-toggle js-target-toggle"
         data-target="language-menu"
+        aria-labelledby="#lang-menu-toggle__text"
       >
         <img
           class="lang-menu-toggle__icon"
@@ -35,11 +36,15 @@
           alt="Vertalen icoon"
           data-txt_id__alt="162"
         />
-        <span class="js-lang-span lang-menu-toggle__text" translate="no"
+        <span
+          class="js-lang-span lang-menu-toggle__text"
+          translate="no"
+          aria-label="language menu toggle: choose nl , es, ca or en"
+          id="lang-menu-toggle__text"
           >nl</span
         >
       </button>
-      <button class="menu-toggle__container">
+      <button class="menu-toggle" aria-label="navigation menu toggle">
         <div class="menu-toggle__toggle"></div>
       </button>
       <div class="language" data-target_id="language-menu">
