@@ -86,6 +86,14 @@
     }
   }
 
+  &__btn-modal {
+    padding: 0;
+
+    &__icon {
+      margin-right: 0;
+    }
+  }
+
   &__btn-expand {
     border: 0.125em solid var(--txtClr-base);
     font-size: var(--fs-base);

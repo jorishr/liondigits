@@ -2,23 +2,31 @@
   font-style: italic;
 
   &--accent {
-    color: var(--accent-azureblue);
+    color: var(--bgClr-accent);
     font-weight: 600;
   }
 
   &--underline {
-    border-bottom: 6px solid var(--accent-azureblue);
+    border-bottom: 6px solid var(--bgClr-accent);
     border-radius: 5px;
   }
 
   &--bg {
-    background-color: var(--accent-azureblue);
-    color: white;
-    padding: 0.06em 0.12em;
     border-radius: 2px;
+    line-height: 1.66;
+    padding: 0.06em 0.12em;
+
+    &-accent {
+      background-color: var(--bgClr-accent);
+      color: white;
+    }
+    &-white {
+      background-color: white;
+      color: var(--bgClr-accent);
+    }
   }
 }
 
 .text-strong {
-  color: var(--accent-azureblue);
+  color: var(--bgClr-accent);
 }

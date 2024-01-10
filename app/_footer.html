@@ -250,7 +250,7 @@
         <p class="footer__pgp__key__key-text" id="pgp-key-txt"></p>
       </div>
       <div class="footer__pgp__btns">
-        <a
+        <button
           class="footer__pgp__btns__copy js-btn-copy js-data-long_id"
           title="Kopiëren naar klembord"
           data-txt_id__title="147"
@@ -261,8 +261,8 @@
             alt="Kopiëren naar klembord icoon"
             data-txt_id__alt="148"
           />
-        </a>
-        <a
+        </button>
+        <button
           class="footer__pgp__btns__info js-target-toggle"
           title="Wat is dit?"
           data-txt_id__title="149"
@@ -274,18 +274,19 @@
             alt="Vraagteken icoon"
             data-txt_id__alt="150"
           />
-        </a>
+        </button>
       </div>
     </div>
     <div class="footer__pgp__modal modal" data-target_id="modal-pgp">
       <div
         class="modal__content-container footer__pgp__modal__content-container"
       >
-        <span
+        <button
           class="btn-close btn-close--white js-btn-close"
           data-target="modal-pgp"
-          >&times;</span
         >
+          &times;
+        </button>
         <h2 class="footer__pgp__modal__title" data-txt_id="[102]">
           Versleutelde communicatie
         </h2>
@@ -442,7 +443,9 @@
             />
             <span class data-txt_id="[117]">Download Publieke Sleutel</span>
           </a>
-          <a class="btn btn-icon btn--lightblue js-btn-copy js-data-pubkey">
+          <button
+            class="btn btn-icon btn--lightblue js-btn-copy js-data-pubkey"
+          >
             <img
               src="images/icons/icon_content-copy-gray.png"
               alt="Kopiëren naar klembord icoon"
@@ -451,7 +454,7 @@
             <span class data-txt_id="[118]"
               >PGP Vingerafdruk Kopi&#xEB;ren</span
             >
-          </a>
+          </button>
         </div>
         <h2 class="footer__pgp__modal__title" data-txt_id="[119]">
           TOR ondersteuning
@@ -524,41 +527,38 @@
     </div>
   </section>
   <section class="footer__btc">
-    <div class="footer__btc__link-container">
-      <div class="footer__btc__content-container">
-        <img
-          src="images/logo/btc_logo_accepted.png"
-          alt="Bitcoin accepted here logo"
-          title="Bitcoin accepted here logo"
-          data-txt_id__alt="528"
-          data-txt_id__title="529"
-          class="footer__btc__logo"
-          loading="lazy"
-        />
-        <img
-          src="images/icons/icon_info-circle_azureblue.png"
-          alt="Info icoon"
-          data-txt_id__alt="415"
-          class="footer__btc__icon-info icon-info icon-info--lg"
-        />
-      </div>
-      <a
-        class="footer__btc__link js-target-toggle"
-        title="Wat is dit?"
-        data-txt_id__title="149"
-        data-target="modal-btc"
-      >
-      </a>
-    </div>
+    <button
+      class="footer__btc__button js-target-toggle"
+      title="Wat is dit?"
+      data-txt_id__title="149"
+      data-target="modal-btc"
+    >
+      <img
+        src="images/logo/btc_logo_accepted.png"
+        alt="Bitcoin accepted here logo"
+        title="Bitcoin accepted here logo"
+        data-txt_id__alt="528"
+        data-txt_id__title="529"
+        class="footer__btc__button__logo"
+        loading="lazy"
+      />
+      <img
+        src="images/icons/icon_info-circle_azureblue.png"
+        alt="Info icoon"
+        data-txt_id__alt="415"
+        class="footer__btc__button__icon-info icon-info icon-info--lg"
+      />
+    </button>
     <div class="footer__btc__modal modal" data-target_id="modal-btc">
       <div
         class="modal__content-container footer__btc__modal__content-container"
       >
-        <span
+        <button
           class="btn-close btn-close--orange js-btn-close"
           data-target="modal-btc"
-          >&times;</span
         >
+          &times;
+        </button>
         <div class="footer__btc__modal__image-container">
           <img
             src="images/logo/bitcoin_logo.webp"
