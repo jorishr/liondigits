@@ -14,29 +14,29 @@
   top: 0;
   right: 0;
 
-  transform: translate(-27%, 33%);
+  transform: translate(-27%, 27%);
 
   z-index: 3; // see stacking context note __global.scss
 
   padding: var(--pd-xs);
 
   @include tablet_md {
-    transform: translate(-54%, 39%);
+    transform: translate(-54%, 33%);
   }
 
   @include pc_lg {
     font-size: var(--fs-xl);
-    transform: translate(-36%, 27%);
+    transform: translate(-33%, 24%);
   }
 
   @include pc_xl {
     font-size: var(--fs-2xl);
-    transform: translate(-45%, 33%);
+    transform: translate(-45%, 39%);
   }
 
   @include pc_2xl {
     font-size: var(--fs-4xl);
-    transform: translate(-92%, 54%);
+    transform: translate(-69%, 42%);
   }
 
   &__list {
