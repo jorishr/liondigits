@@ -1,6 +1,5 @@
 .btn {
   /* 
-    - Applied to anchor tags that appear as buttons
     - Font-size is set to scale with media-queries
     - Positioning and font-size tweaks should be applied in the section where the button appears
   */
@@ -8,6 +7,7 @@
   font-weight: 600;
   text-transform: capitalize;
   text-align: center;
+  letter-spacing: 1px;
 
   white-space: nowrap;
 
@@ -140,6 +140,8 @@
   color: var(--txtClr-base);
   transition: all 0.3s ease-in-out;
 
+  padding: 0;
+
   &:hover {
     color: var(--txtClr-white);
     cursor: pointer;
@@ -170,11 +172,7 @@
   }
 }
 
-/* applied to button elements */
 .button {
-  font-size: inherit;
-  font-family: inherit;
-
   text-transform: capitalize;
   letter-spacing: 1px;
   color: var(--txtClr-base);

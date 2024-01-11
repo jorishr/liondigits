@@ -15,6 +15,17 @@
   }
 
   &__text {
+    font-size: var(--fs-sm);
     color: var(--txtClr-lightblue);
+
+    @include pc_lg {
+      font-size: var(--fs-base);
+    }
+    @include pc_xl {
+      font-size: var(--fs-md);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-3xl);
+    }
   }
 }
