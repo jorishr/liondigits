@@ -53,7 +53,7 @@
     flex-direction: row;
     align-items: flex-start;
 
-    & div:first-child {
+    & button:first-child {
       /* aligns the two toggles as desired */
       margin: var(--mg-sm) var(--mg-xs) 0 0;
     }

@@ -144,6 +144,7 @@
           // this is the pop-up message
           content: var(--pseudo_txt_copy);
           display: none;
+          color: var(--accent-azureblue);
 
           position: absolute;
           bottom: -1.5em;
@@ -204,7 +205,8 @@
             Tone down the font-size on small mobile screens.
             Base styles see __btns.scss. 
         */
-        & a {
+        & a,
+        button {
           font-size: var(--fs-xs);
           justify-content: space-evenly;
 
@@ -249,27 +251,19 @@
     position: relative; //modal
     margin: 0 auto var(--mg-lg);
 
-    &__link-container {
-      position: relative; // a-tag link
-    }
+    &__button {
+      position: relative; // button-tag element is steccht out on top
 
-    &__link {
-      /* make link container clickable */
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-
-    &__content-container {
       display: flex;
       justify-content: center;
-    }
 
-    &__logo {
-      width: 9em;
-      margin-right: var(--mg-base);
+      width: 12em;
+      margin: 0 auto;
+
+      &__logo {
+        margin-right: var(--mg-base);
+        width: 9em;
+      }
     }
 
     &__modal {

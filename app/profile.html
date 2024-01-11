@@ -1,65 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <title data-txt_id="[272]">Lion Digits, web ontwikkeling</title>
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <meta
-      name="description"
-      content="Lion Digits | Krachtige digitale tech. Door Joris Raymaekers."
-      data-txt_id__meta="422"
-    />
-    <meta name="author" content="Joris Raymaekers" />
-    <meta name="msapplication-TileColor" content="#2b5797" />
-    <meta name="theme-color" content="rgba(26, 27, 31, .6)" />
-
-    <meta property="og:site_name" content="Lion Digits" />
-    <meta
-      property="og:title"
-      content="Lion Digits | Powerful tech | Web development"
-    />
-    <meta
-      property="og:description"
-      content="Portfolio and profile website by Joris Raymaekers."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://liondigits.com" />
-    <meta
-      property="og:image"
-      content="https://liondigits.com/.public-images/social_card_1200x600.png"
-    />
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicon/favicon-16x16.png"
-    />
-    <link
-      rel="mask-icon"
-      href="images/favicon/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-
-    <script type="module" src="scripts/app.js"></script>
-    <script type="module" src="scripts/vendor.js"></script>
-    <link rel="stylesheet" href="styles/main.scss" />
-    <link rel="import" href="./error404.html" />
-  </head>
+  <include src="./app/_head.html"></include>
   <body>
     <noscript></noscript>
     <include src="./app/_header.html"></include>
@@ -150,23 +91,42 @@
                   Naast mijn werk op het web ben ik ook gefascineerd door
                   cryptografie en de mogelijke toepassingen met digitale
                   sleutels voor beveiliging of nieuwe vormen van geld en
-                  betalingen zoals
-                </span>
-                <a
-                  class="txt-link js-target-toggle"
+                  betalingen zoals </span
+                ><button
+                  class="txt-link about__btn-modal js-target-toggle"
                   title="Ontdek wat ik weet over bitcoin..."
                   data-target="modal-btc"
                   data-txt_id__title="496"
-                  ><span class="txt-link__txt" data-txt_id="[560]">bitcoin</span
-                  ><img
-                    class="txt-link__icon"
-                    src="images/icons/icon_external-link_gray.png"
-                    alt="externe link icoon"
-                    data-txt_id__alt="370" /></a
+                >
+                  <span class="txt-link__txt" data-txt_id="[560]">bitcoin</span>
+                  <img
+                    class="txt-link__icon about__btn-modal__icon"
+                    src="images/icons/icon_info-circle_gray.png"
+                    alt="Info icoon"
+                    data-txt_id__alt="415"
+                  /></button
                 ><span data-txt_id="[561]"
-                  >. Vandaar ook de verwijzingen naar zaken zoals Pretty Good
-                  Privacy of TOR die je vindt helemaal onderaan op deze
-                  pagina.</span
+                  >. Vandaar ook de verwijzingen naar zaken zoals
+                </span>
+                <button
+                  class="txt-link about__btn-modal js-target-toggle"
+                  title="Ontdek wat ik weet over versleutelde communicatie..."
+                  data-txt_id__title="733"
+                  data-target="modal-pgp"
+                >
+                  <span class="txt-link__txt" data-txt_id="[731]"
+                    >Pretty Good Privacy (PGP)</span
+                  >
+                  <img
+                    class="txt-link__icon about__btn-modal__icon"
+                    src="images/icons/icon_info-circle_gray.png"
+                    alt="Info icoon"
+                    data-txt_id__alt="415"
+                  />
+                </button>
+                <span data-txt_id="[732]">
+                  of TOR Onion Router diensten die je vindt helemaal onderaan op
+                  deze pagina.</span
                 >
               </p>
               <p data-txt_id="[499,500]">
@@ -778,7 +738,7 @@
                       documentatie, is beschikbaar als open-bron software in het
                       NPM register:
                       <a
-                        class="txt-link txt-link--accent"
+                        class="txt-link"
                         href="https://www.npmjs.com/package/website-text-translator"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -804,7 +764,7 @@
                       een MongoDB database met Mongoose voor objectmodellering
                       (ODM). Bekijk de code op
                       <a
-                        class="txt-link txt-link--accent"
+                        class="txt-link"
                         href="http://github.com/jorishr/catacamp"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -819,13 +779,13 @@
                       /></a>
                       of een werkende demo-versie via deze
                       <a
-                        class="txt-link txt-link--accent"
+                        class="txt-link"
                         href="https://catacamp.liondigits.com"
                         rel="noopener noreferrer"
                         target="_blank"
                         title="Demo website van CataCamp"
                         data-txt_id__title="461"
-                        ><span data-txt_id="[613]">link</span
+                        ><span data-txt_id="[613]">Catacamp website.</span
                         ><img
                           class="txt-link__icon"
                           src="images/icons/icon_external-link_gray.png"
@@ -1412,17 +1372,19 @@
                       data-txt_id="[354]"
                       >Speel nu</a
                     >
-                    <a
+                    <button
                       class="horizontal-list__item__tooltip js-target-toggle"
                       data-target="tooltip-100"
                       title="Technische details..."
                       data-txt_id__title="402"
-                      ><img
+                    >
+                      <img
                         class="icon-info icon-info--md"
                         src="images/icons/icon_info-circle_gray.png"
                         alt="Vraagteken icoon"
                         data-txt_id__alt="403"
-                    /></a>
+                      />
+                    </button>
                   </div>
                 </div>
               </li>
@@ -1448,17 +1410,19 @@
                       data-txt_id="[356]"
                       >Naar de app</a
                     >
-                    <a
+                    <button
                       class="horizontal-list__item__tooltip js-target-toggle"
                       data-target="tooltip-101"
                       title="Technische details..."
                       data-txt_id__title="406"
-                      ><img
+                    >
+                      <img
                         class="icon-info icon-info--md"
                         src="images/icons/icon_info-circle_gray.png"
                         alt="Vraagteken icoon"
                         data-txt_id__alt="407"
-                    /></a>
+                      />
+                    </button>
                   </div>
                 </div>
               </li>
@@ -1484,17 +1448,19 @@
                       data-txt_id="[358]"
                       >Naar de app</a
                     >
-                    <a
+                    <button
                       class="horizontal-list__item__tooltip js-target-toggle"
                       data-target="tooltip-102"
                       title="Technische details..."
                       data-txt_id__title="410"
-                      ><img
+                    >
+                      <img
                         class="icon-info icon-info--md"
                         src="images/icons/icon_info-circle_gray.png"
                         alt="Vraagteken icoon"
                         data-txt_id__alt="411"
-                    /></a>
+                      />
+                    </button>
                   </div>
                 </div>
               </li>
@@ -1520,17 +1486,19 @@
                       data-txt_id="[360]"
                       >Speel nu</a
                     >
-                    <a
+                    <button
                       class="horizontal-list__item__tooltip js-target-toggle"
                       data-target="tooltip-103"
                       title="Technische details..."
                       data-txt_id__title="414"
-                      ><img
+                    >
+                      <img
                         class="icon-info icon-info--md"
                         src="images/icons/icon_info-circle_gray.png"
                         alt="Info icoon"
                         data-txt_id__alt="415"
-                    /></a>
+                      />
+                    </button>
                   </div>
                 </div>
               </li>
@@ -1539,11 +1507,12 @@
           <div class="fun-zone__tooltip-container">
             <div class="tooltip" data-target_id="tooltip-100">
               <div class="tooltip__content-container">
-                <span
+                <button
                   class="btn-close tooltip__btn-close js-btn-close"
                   data-target="tooltip-100"
-                  >&times;</span
                 >
+                  &times;
+                </button>
                 <p class="tooltip__text" data-txt_id="[361]">
                   De speler krijgt een willekeurige landvlag voorgeschoteld en
                   vier mogelijke antwoorden. Probeer de juiste te kiezen. Game
@@ -1566,11 +1535,12 @@
             </div>
             <div class="tooltip" data-target_id="tooltip-101">
               <div class="tooltip__content-container">
-                <span
+                <button
                   class="btn-close tooltip__btn-close js-btn-close"
                   data-target="tooltip-101"
-                  >&times;</span
                 >
+                  &times;
+                </button>
                 <p class="tooltip__text" data-txt_id="[362]">
                   Single page app voor taakbeheer met aangepaste JSON API.
                   Voornaamste UI-functie: selecteer meerdere items
@@ -1595,11 +1565,12 @@
             </div>
             <div class="tooltip" data-target_id="tooltip-102">
               <div class="tooltip__content-container">
-                <span
+                <button
                   class="btn-close tooltip__btn-close js-btn-close"
                   data-target="tooltip-102"
-                  >&times;</span
                 >
+                  &times;
+                </button>
                 <p class="tooltip__text" data-txt_id="[685]">
                   Verberg een tekstbericht in een afbeelding. Codeer en decodeer
                   een afbeelding naar keuze. Gebouwd met Python en React.
@@ -1620,11 +1591,12 @@
             </div>
             <div class="tooltip" data-target_id="tooltip-103">
               <div class="tooltip__content-container">
-                <span
+                <button
                   class="btn-close tooltip__btn-close js-btn-close"
                   data-target="tooltip-103"
-                  >&times;</span
                 >
+                  &times;
+                </button>
                 <p class="tooltip__text" data-txt_id="[364]">
                   Tap, klik of typ willekeurig op je toetsenbord. Elke
                   toetsaanslag produceert een vuurwerk van willekeurig

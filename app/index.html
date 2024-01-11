@@ -1,65 +1,5 @@
-<!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <title data-txt_id="[272]">Lion Digits, web ontwikkeling</title>
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <meta
-      name="description"
-      content="Lion Digits | Krachtige digitale tech. Door Joris Raymaekers."
-      data-txt_id__meta="422"
-    />
-    <meta name="author" content="Joris Raymaekers" />
-    <meta name="msapplication-TileColor" content="#2b5797" />
-    <meta name="theme-color" content="rgba(26, 27, 31, .6)" />
-
-    <meta property="og:site_name" content="Lion Digits" />
-    <meta
-      property="og:title"
-      content="Lion Digits | Powerful tech | Web development"
-    />
-    <meta
-      property="og:description"
-      content="Portfolio and profile website by Joris Raymaekers."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://liondigits.com" />
-    <meta
-      property="og:image"
-      content="https://liondigits.com/.public-images/social_card_1200x600.png"
-    />
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicon/favicon-16x16.png"
-    />
-    <link
-      rel="mask-icon"
-      href="images/favicon/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-
-    <script type="module" src="scripts/app.js"></script>
-    <script type="module" src="scripts/vendor.js"></script>
-    <link rel="stylesheet" href="styles/main.scss" />
-    <link rel="import" href="./error404.html" />
-  </head>
+  <include src="./app/_head.html"></include>
   <body>
     <noscript></noscript>
     <include src="./app/_header.html"></include>
@@ -77,12 +17,13 @@
           <a class="btn hero__link" href="profile.html" data-txt_id="[703]"
             >IT Diensten</a
           >
-          <a
+          <button
             class="btn btn--outline-blue hero__link"
             data-cal-link="liondigits/20min"
             data-txt_id="[207]"
-            >maak een afspraak</a
           >
+            maak een afspraak
+          </button>
         </div>
         <div class="scroll-down-indicator">
           <div class="chevron"></div>
@@ -116,7 +57,9 @@
               data-aos-offset="-99"
               data-txt_id="[714]"
             >
-              <span class="text-emphasis--bg text-emphasis" data-txt_id="[715]"
+              <span
+                class="text-emphasis text-emphasis--bg text-emphasis--bg-accent"
+                data-txt_id="[715]"
                 >Krachtige tech</span
               >
               op maat voor jou...
@@ -233,7 +176,9 @@
     <section class="testimonials">
       <h3 class="testimonials__title" data-txt_id="[726]">
         Voorbeelden van succesvolle realisaties met
-        <span class="text-emphasis--underline" data-txt_id="[727]"
+        <span
+          class="text-emphasis text-emphasis--bg text-emphasis--bg-white"
+          data-txt_id="[727]"
           >tevreden klanten...</span
         >
       </h3>

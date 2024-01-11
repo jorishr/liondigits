@@ -79,12 +79,16 @@ class Snowflake {
 
   // Method to draw the snowflake on the canvas
   draw = (ctx) => {
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
     // Check if the snowflake is within the visible area
     if (
-      this.x + this.h >= window.scrollX &&
-      this.x - this.h <= window.scrollX + window.innerWidth &&
-      this.y + this.h >= window.scrollY &&
-      this.y - this.h <= window.scrollY + window.innerHeight
+      this.x + this.h >= scrollX &&
+      this.x - this.h <= scrollX + windowWidth &&
+      this.y + this.h >= scrollY &&
+      this.y - this.h <= scrollY + windowHeight
     ) {
       ctx.font = this.h + "px Arial, sans-serif"; // set the font and text size
       ctx.fillText(this.t, this.x, this.y); // draw the text with the snowflake symbol
@@ -102,6 +106,7 @@ class Snowflake {
         this.x = Math.random() * canvas.width;
       }
     } else {
+      //does this ever run? Is speed ever < 0?
       if (this.y < 0) {
         this.y = canvas.height + this.h;
         this.x = Math.random() * canvas.width;
@@ -336,7 +341,7 @@ export default function runSnowfall() {
 function initSnowFall() {
   const snowfall = new Snowfall({
     // number of snowflakes
-    count: 50,
+    count: 54,
     // min/max size
     minRadius: 10,
     maxRadius: 30,
@@ -348,17 +353,22 @@ function initSnowFall() {
     // color of snowflakes
     color: "#ffffff",
     // z-index for the canvas
-    zIndex: "1000",
+    zIndex: "10",
   });
   return snowfall;
 }
 
-/* 
-  When no settings are found, the default setting should be to run the animation
-*/
 function checkUserSettings() {
   if (getUserSettings().runSnowfallAnimation) {
     return true;
   } else if (getUserSettings().runSnowfallAnimation === false) return false;
-  else return true; //fallback
+  else {
+    /* 
+      When no settings are found, the default setting should be to run the animation, but only big screens. This is a proxy condition for decent hardware. The user will see the toggles and can choose to run the animation manually.
+    */
+    if (window.innerWidth >= 768) {
+      return true;
+    }
+    return false;
+  }
 }

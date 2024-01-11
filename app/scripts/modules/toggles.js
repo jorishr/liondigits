@@ -38,7 +38,7 @@ export function toggleTarget() {
       */
     function handleToggleTarget(toggle, toggleTarget, toggleTargetClass) {
       const closeBtn = toggleTarget.querySelector(".js-btn-close");
-      toggleTarget.classList.toggle(`${toggleTargetClass}--active`);
+      toggleTarget.classList.add(`${toggleTargetClass}--active`);
 
       window.addEventListener("click", (e) => {
         if (e.target === toggleTarget) {
@@ -46,7 +46,12 @@ export function toggleTarget() {
           return;
         }
       });
-      if (closeBtn) {
+      //applies to modals and tooltips
+      if (closeBtn && !closeBtn.hasEventListener) {
+        //avoid infinite loop
+        closeBtn.hasEventListener = true;
+        closeBtn.focus();
+
         handleElementEvents(
           closeBtn,
           animateClose,
@@ -54,6 +59,12 @@ export function toggleTarget() {
           toggleTargetClass
         );
       }
+
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          animateClose(toggleTarget, toggleTargetClass);
+        }
+      });
 
       /*       
           Additional action: expand btn is an exception that is only 
@@ -74,6 +85,7 @@ function handleElementEvents(element, handler, ...args) {
   });
   element.addEventListener("keydown", (e) => {
     if (e.key === "Enter" || e.keyCode === 13) {
+      e.preventDefault(); // prevent the click event on buttons
       if (args) {
         handler(...args);
       } else handler();
@@ -82,10 +94,10 @@ function handleElementEvents(element, handler, ...args) {
 }
 /* 
   - The clickable area is set by the menuToggleContainer 
-  - The logic similar to the toggleTarget() function and animateClose but there are substantial differences, hence a separate function.
+  - The logic is similar to the toggleTarget() function and animateClose but there are substantial differences, hence a separate function.
 */
 export function toggleMenu() {
-  const menuToggleContainer = document.querySelector(".menu-toggle__container");
+  const menuToggleContainer = document.querySelector(".menu-toggle");
   const menuToggleBtn = document.querySelector(".menu-toggle__toggle");
   const menu = document.querySelector(".menu");
 

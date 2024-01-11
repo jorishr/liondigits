@@ -1,36 +1,58 @@
 .error {
   position: relative;
-  top: var(--height-header); //see layout.js
+  min-height: 80vh;
 
   &__background-image {
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background: url("../images/error404.png") center/cover no-repeat;
   }
 
-  &__text {
+  &__content-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 80%;
+    width: 100%;
 
-    background-color: rgba(255, 63, 115, 0.8);
-    padding: var(--pd-md);
+    background-color: rgba(255, 63, 115, 0.89);
     border-radius: 5px;
+    z-index: 1;
 
-    p {
-      font-size: var(--fs-2xl);
-      color: var(--txtClr-white);
-      text-shadow: 0 1px 0 rgb(0, 0, 0);
+    text-align: center;
 
-      @include pc_2xl {
-        font-size: var(--fs-4xl);
-      }
+    padding: var(--pd-base);
+
+    @include tablet_md {
+      width: 80%;
+      font-size: var(--fs-base-plus);
     }
+    @include pc_sm {
+      font-size: var(--fs-lg);
+    }
+    @include pc_lg {
+      font-size: var(--fs-xl);
+    }
+    @include pc_xl {
+      font-size: var(--fs-2xl);
+    }
+    @include pc_2xl {
+      font-size: var(--fs-4xl);
+    }
+  }
 
-    p:last-of-type {
+  &__text {
+    color: #fff;
+    text-shadow: 0 1px 0 rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: 600;
+
+    &:last-of-type {
       margin-bottom: var(--mg-base);
     }
   }

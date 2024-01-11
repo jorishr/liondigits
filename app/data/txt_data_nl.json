@@ -51,7 +51,7 @@
   "157": "Kopiëren naar klembord icoon",
   "158": "externe link icoon",
   "159": "externe link icoon",
-  "160": "maak een afspraak",
+  "160": "Maak een afspraak",
   "162": "Vertalen icoon",
   "163": "Algemene voorwaarden",
   "164": "Laatst aangepast op 01-03-2022",
@@ -339,7 +339,7 @@
   "558": " Maar met computers werken doe ik niet voor mezelf. De meeste voldoening en het grootste plezier haal ik uit het kunnen helpen van anderen met het verlichten van hun IT bekommernissen. ",
   "559": " Naast mijn werk op het web ben ik ook gefascineerd door cryptografie en de mogelijke toepassingen met digitale sleutels voor beveiliging of nieuwe vormen van geld en betalingen zoals ",
   "560": "bitcoin",
-  "561": ". Vandaar ook de verwijzingen naar zaken zoals Pretty Good Privacy of TOR die je vindt helemaal onderaan op deze pagina.",
+  "561": ". Vandaar ook de verwijzingen naar zaken zoals ",
   "562": "Wat ik kan doen voor jou",
   "563": " Gepersonaliseerd advies om ervoor te zorgen dat je online aanwezigheid precies aansluit bij jouw doelen en visie. ",
   "564": " Creëren van dynamische en moderne web apps met behulp van het uitgebreide JavaScript ecosysteem van bibliotheken en het meest recente digitale gereedschap. ",
@@ -390,7 +390,7 @@
   "610": " of een werkende demo-versie via deze ",
   "611": "CataCamp",
   "612": "Github",
-  "613": "link",
+  "613": "Catacamp website.",
   "614": "Domein en DNS configuratie",
   "615": " Je web app moet bereikbaar zijn via een server en een domeinnaam. Het configureren van domeinnamen en DNS-instellingen (Domain Name System) met subdomeinen, email en SSL certificaten is een taak die hoort bij elke website. Voor een optimaal efficiënt bereik van de website kan eventueel ook een CDN (Content Delivery Network) worden ingesteld. ",
   "616": "Serverbeheer",
@@ -507,5 +507,8 @@
   "727": "tevreden klanten...",
   "728": "Beschrijving van de functies van de website",
   "729": "Leer meer over BEM",
-  "730": "(BEM)"
+  "730": "(BEM)",
+  "731": "Pretty Good Privacy (PGP)",
+  "732": "of TOR Onion Router diensten die je vindt helemaal onderaan op deze pagina.",
+  "733": "Ontdek wat ik weet over versleutelde communicatie..."
 }

@@ -25,9 +25,10 @@
       </div>
     </div>
     <div class="header__right">
-      <div
+      <button
         class="lang-menu-toggle js-target-toggle"
         data-target="language-menu"
+        aria-labelledby="#lang-menu-toggle__text"
       >
         <img
           class="lang-menu-toggle__icon"
@@ -35,13 +36,17 @@
           alt="Vertalen icoon"
           data-txt_id__alt="162"
         />
-        <span class="js-lang-span lang-menu-toggle__text" translate="no"
+        <span
+          class="js-lang-span lang-menu-toggle__text"
+          translate="no"
+          aria-label="language menu toggle: choose nl , es, ca or en"
+          id="lang-menu-toggle__text"
           >nl</span
         >
-      </div>
-      <div class="menu-toggle__container">
+      </button>
+      <button class="menu-toggle" aria-label="navigation menu toggle">
         <div class="menu-toggle__toggle"></div>
-      </div>
+      </button>
       <div class="language" data-target_id="language-menu">
         <ul class="language__list">
           <li class="language__option" data-lang="nl">
@@ -77,12 +82,13 @@
             >
           </li>
           <li class="menu__item">
-            <a
+            <button
               class="menu__item__link"
               data-cal-link="liondigits/20min"
               data-txt_id="[160]"
-              >maak een afspraak</a
             >
+              Maak een afspraak
+            </button>
           </li>
           <li class="menu__item menu__item--alt">
             <a
@@ -93,7 +99,10 @@
             >
           </li>
           <li class="menu__item menu__item--alt">
-            <a class="menu__item__link" href="privacy.html" data-txt_id="[101]"
+            <a
+              class="menu__item__link"
+              href="privacy-policy.html"
+              data-txt_id="[101]"
               >Privacy-beleid</a
             >
           </li>
