@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.3] - 2024-01-11
+
+- Minor release with accessibility and performance improvements.
+- Website is now keyboard focusable and all modals, tooltips and menu's can now be openend and closed using the enter and escape key.
+- Style updates for error404 page
+- Minor copy changes and translation updates
+- Style updates for the introduction section: text-emphasis added.
+- Developer tools updates: NPM updates and HTML build processes tweaks.
+
 ## [1.3.2] - 2024-01-09
 
 - Adds various performance improvements for JavaScript code, including lazy loading for images and video's.
