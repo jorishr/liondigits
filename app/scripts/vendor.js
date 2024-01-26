@@ -2,7 +2,8 @@ import { setupCalJs } from "./vendor/cal.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { typewriterEffect } from "./vendor/typewriter.js";
-import runSnowfall from "./vendor/snowfall.js";
+import { snowAnimationStart } from "snowfall-js-plugin";
+import snowfallJsPluginParams from "./vendor/snowfallJsPlugin.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   typewriterEffect();
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  runSnowfall();
+  snowAnimationStart(snowfallJsPluginParams);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
