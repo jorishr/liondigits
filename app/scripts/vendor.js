@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
   AOS.init();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+requestIdleCallback(() => {
+  setupCalJs();
   snowAnimationStart(snowfallJsPluginParams);
   /* 
     The language preference check and text translation rendering happens in a different process and will have been triggered before the snow animation switches are appended to the DOM. Thus, re-render the span text element text once the snowAnimationSwitch are present in the DOM.
@@ -25,8 +26,4 @@ document.addEventListener("DOMContentLoaded", function () {
   if (switchesTextElems.length > 0) {
     reRenderTextElementText(switchesTextElems);
   }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  setupCalJs();
 });

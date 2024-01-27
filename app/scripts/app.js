@@ -27,17 +27,11 @@ import lazyLoadVideos from "./modules/lazy-load.js";
 document.addEventListener("DOMContentLoaded", function () {
   //const start = performance.now();
   processElementHeight(".header", "--height-header");
-
-  setTimeout(() => {
-    processElementHeight(".skill__heading__nav", "--height-menu");
-  }, 0);
-
-  setTimeout(() => {
-    processElementHeight(
-      ".intro__highlight__content-container",
-      "--height-highlights"
-    );
-  }, 0);
+  processElementHeight(".skill__heading__nav", "--height-menu");
+  processElementHeight(
+    ".intro__highlight__content-container",
+    "--height-highlights"
+  );
   /*   
   const end = performance.now();
   console.log("layout", end - start); 
@@ -52,13 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
 /* set other element text */
 document.addEventListener("DOMContentLoaded", function () {
   setAnchorLinks();
-  setTimeout(() => {
+  requestIdleCallback(() => {
     setCompanyInfo();
     setAddress();
     setPgpInfo();
     setOnionAddress();
     setFooterCredits();
-  }, 0);
+  });
 });
 
 /* set btns & btn handlers */
@@ -70,20 +64,17 @@ document.addEventListener("DOMContentLoaded", function () {
   setCollapseBtns();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  lazyLoadVideos();
-});
-
 /* set consent & cookie bar fn */
 document.addEventListener("DOMContentLoaded", function () {
   consent();
 });
 
-/* set helpers */
-clipboardCopy();
-
-/* set scroll items */
 stickyNavOnScroll();
 navHighlightOnScroll();
-scrollIndicator();
-scrollDown();
+
+requestIdleCallback(() => {
+  scrollDown();
+  lazyLoadVideos();
+  scrollIndicator();
+  clipboardCopy();
+});

@@ -36,21 +36,19 @@ export function setTxtContent(langPref) {
   const setLang = langPref || getLangPref();
   const data = languageData[setLang];
   const txtElems = document.querySelectorAll("[data-txt_id]");
-  setTimeout(() => {
-    setTextElems(txtElems, data);
-  }, 0);
+  setTextElems(txtElems, data);
   setDocumentLang(setLang);
   setLangIconTxt(setLang);
-  setPseudoElemTxt(setLang, "pseudo_txt_copy");
-  setEmailSubjectTxt(setLang);
-  setTimeout(() => {
-    setAttributeTxt(data, "title");
-  }, 0);
-  setTimeout(() => {
-    setAttributeTxt(data, "alt");
-  }, 0);
-  setAttributeTxt(data, "placeholder");
   setAttributeTxt(data, "meta");
+  requestIdleCallback(() => {
+    setAttributeTxt(data, "title");
+    setAttributeTxt(data, "alt");
+  });
+  requestIdleCallback(() => {
+    setAttributeTxt(data, "placeholder");
+    setPseudoElemTxt(setLang, "pseudo_txt_copy");
+    setEmailSubjectTxt(setLang);
+  });
 }
 
 function setTextElems(txtElems, data) {
