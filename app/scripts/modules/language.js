@@ -7,17 +7,20 @@ import txt_data_addendum from "../../data/addendum.json";
 import contactInfo from "../../data/contact.json";
 import { animateClose } from "./helper";
 
+export const languageData = {
+  nl: txt_data_nl,
+  en: txt_data_en,
+  es: txt_data_es,
+  ca: txt_data_ca,
+};
+
 export function handleLangMenuOptions() {
-  const langOptions = Array.from(
-    document.querySelectorAll(".language__option")
-  );
+  const langOptions = document.querySelectorAll(".language__option");
   const langMenu = document.querySelector(".language");
   langOptions.forEach((option) => {
     option.addEventListener("click", function () {
+      setTxtContent(option.dataset.lang);
       setCookie("language", option.dataset.lang);
-      setTimeout(() => {
-        setTxtContent(option.dataset.lang);
-      }, 0);
       animateClose(langMenu, "language");
     });
   });
@@ -30,17 +33,8 @@ Get and set document language
 - setTimeout additions are for performance considerations, to free up the main thread and minimize blocking
 */
 export function setTxtContent(langPref) {
-  // Import language data
-  const txt_nl = txt_data_nl;
-  const txt_en = txt_data_en;
-  const txt_es = txt_data_es;
-  const txt_ca = txt_data_ca;
-
-  let setLang = langPref;
-  if (!setLang) {
-    setLang = getLangPref();
-  }
-  const data = eval("txt_" + [setLang]);
+  const setLang = langPref || getLangPref();
+  const data = languageData[setLang];
   const txtElems = document.querySelectorAll("[data-txt_id]");
   setTimeout(() => {
     setTextElems(txtElems, data);
@@ -61,7 +55,7 @@ export function setTxtContent(langPref) {
 
 function setTextElems(txtElems, data) {
   txtElems.forEach((elem) => {
-    const idArr = eval(elem.dataset.txt_id);
+    const idArr = JSON.parse(elem.dataset.txt_id);
     if (elem.childNodes.length === 0) {
       elem.textContent = data[idArr[0]];
     } else {
@@ -76,12 +70,8 @@ function setTextElems(txtElems, data) {
 }
 
 export function reRenderTextElementText(txtElems) {
-  const txt_nl = txt_data_nl;
-  const txt_en = txt_data_en;
-  const txt_es = txt_data_es;
-  const txt_ca = txt_data_ca;
   const setLang = getLangPref();
-  const data = eval("txt_" + [setLang]);
+  const data = languageData[setLang];
   setTextElems(txtElems, data);
 }
 
@@ -110,7 +100,7 @@ function setPseudoElemTxt(setLang, target) {
 }
 
 function setEmailSubjectTxt(setLang) {
-  const anchor = document.getElementsByClassName("js-anchor-link__privacy")[0];
+  const anchor = document.querySelector(".js-anchor-link__privacy");
   if (anchor) {
     const txtData = txt_data_addendum;
     const subject = txtData[setLang].email_privacy.subject;
@@ -124,36 +114,29 @@ function setEmailSubjectTxt(setLang) {
 }
 
 export function getLangPref() {
-  const langCookie = getCookie("language");
-  const isValid =
-    langCookie === "nl" ||
-    langCookie === "en" ||
-    langCookie === "es" ||
-    langCookie === "ca";
-  if (langCookie && isValid) {
-    return langCookie;
+  const langCookieVal = getCookie("language");
+  const validOptions = ["nl", "en", "es", "ca"];
+  let preferredLang;
+
+  if (langCookieVal && validOptions.includes(langCookieVal)) {
+    preferredLang = langCookieVal;
+  } else {
+    preferredLang = getBrowserLangPref();
+    setCookie("language", preferredLang);
   }
-  if (!langCookie) {
-    const browserLang = getBrowserLangPref();
-    setCookie("language", browserLang);
-    return browserLang;
-  }
-  const langDefault = "nl";
-  return langDefault;
+
+  return preferredLang;
 }
 
 function getBrowserLangPref() {
   const browserLangs = navigator.languages;
-  const langSupportedOptions = ["nl", "en", "es", "ca"];
-  const langDefault = "nl";
-  if (browserLangs.length < 1) {
-    return langDefault;
-  } else {
-    for (let i = 0; i < browserLangs.length; i++) {
-      const lang = formatLangStr(browserLangs[i]);
-      if (langSupportedOptions.includes(lang)) {
-        return lang;
-      } else return langDefault;
+  const validOptions = ["nl", "en", "es", "ca"];
+  const defaultOption = "nl";
+  for (let i = 0; i < browserLangs.length; i++) {
+    const lang = formatLangStr(browserLangs[i]);
+    if (validOptions.includes(lang)) {
+      return lang;
     }
   }
+  return defaultOption;
 }
