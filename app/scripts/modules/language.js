@@ -75,6 +75,16 @@ function setTextElems(txtElems, data) {
   });
 }
 
+export function reRenderTextElementText(txtElems) {
+  const txt_nl = txt_data_nl;
+  const txt_en = txt_data_en;
+  const txt_es = txt_data_es;
+  const txt_ca = txt_data_ca;
+  const setLang = getLangPref();
+  const data = eval("txt_" + [setLang]);
+  setTextElems(txtElems, data);
+}
+
 function setAttributeTxt(data, target) {
   const elems = document.querySelectorAll(`[data-txt_id__${target}]`);
   let name = target;

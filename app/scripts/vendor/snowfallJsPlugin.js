@@ -4,6 +4,9 @@ export default snowfallJsPluginParams = {
   },
   switches: {
     txt: "Sneeuw",
+    txtElemAttributes: [
+      { type: "data-attribute", name: "txt_id", value: "[702]" },
+    ],
     styles: {
       bgClrOff: "#F9E3AE40",
       bgClrOn: "#003f8c",
