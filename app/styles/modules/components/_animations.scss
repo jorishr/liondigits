@@ -1,3 +1,8 @@
+#snowfall {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
