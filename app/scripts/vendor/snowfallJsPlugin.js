@@ -1,4 +1,4 @@
-export default snowfallJsPluginParams = {
+export const snowfallJsPluginParams = {
   snowfall: {
     count: 54,
     canvasHeightLimit: 4,
