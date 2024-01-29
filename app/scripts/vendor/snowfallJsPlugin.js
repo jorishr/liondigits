@@ -1,6 +1,7 @@
 export default snowfallJsPluginParams = {
   snowfall: {
-    count: 50,
+    count: 54,
+    canvasHeightLimit: 4,
   },
   switches: {
     txt: "Sneeuw",
