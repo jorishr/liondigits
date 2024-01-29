@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.4] - 2024-01-29
+
+- Minor performance improvements, bug fixes and code refactoring.
+
 ## [1.3.3] - 2024-01-11
 
 - Minor release with accessibility and performance improvements.

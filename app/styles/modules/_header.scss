@@ -133,5 +133,13 @@
         color: var(--txtClr-accent);
       }
     }
+
+    &__snow-animation-switch span {
+      color: var(--txtClr-white);
+    }
+
+    &__snow-animation-switch input:checked + label {
+      background: var(--bgClr);
+    }
   }
 }
