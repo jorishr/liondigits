@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.6] - 2024-01-30
+
+- Minor release with image optimizations and JavaScript loading improvements under adverse network conditions.
+- NPM package updates.
+
 ## [1.3.5] - 2024-01-29
 
 - Hotfix for TG-134
