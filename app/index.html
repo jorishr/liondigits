@@ -249,13 +249,22 @@
           class="intro__main__image-container profile-image"
           data-aos="zoom-in"
         >
-          <img
-            src="images/joris_raymaekers-profile_pic_2023.webp"
-            alt="Foto van Joris Raymaekers"
-            data-txt_id__alt="238"
-            class="profile-image__image"
-            loading="lazy"
-          />
+          <picture>
+            <img
+              srcset="
+                images/joris_raymaekers-profile_pic_2023-150w.webp   150w,
+                images/joris_raymaekers-profile_pic_2023-250w.webp   250w,
+                images/joris_raymaekers-profile_pic_2023-400w.webp   400w,
+                images/joris_raymaekers-profile_pic_2023-800w.webp   800w,
+                images/joris_raymaekers-profile_pic_2023-1200w.webp 1200w
+              "
+              src="images/joris_raymaekers-profile_pic_2023-800w.webp"
+              alt="Foto van Joris Raymaekers"
+              data-txt_id__alt="238"
+              class="profile-image__image"
+              loading="lazy"
+            />
+          </picture>
         </div>
         <p class="intro__main__text">
           <span class="text-emphasis" data-txt_id="[723]"
