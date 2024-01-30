@@ -19,6 +19,9 @@ import {
 import consent from "./modules/consent.js";
 import setFooterCredits from "./modules/set-footer-credits.js";
 import lazyLoadVideos from "./modules/lazy-load.js";
+import { typewriterEffect } from "./vendor/typewriter.js";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 /* 
   The goal of breaking up the tasks in various eventListeners and setTimout functions is to free up the main thread as much as possible.
@@ -41,6 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
 /* set main text */
 document.addEventListener("DOMContentLoaded", function () {
   setTxtContent();
+});
+
+/* load the hero section animation */
+document.addEventListener("DOMContentLoaded", function () {
+  typewriterEffect();
 });
 
 /* set other element text */
@@ -69,6 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
   consent();
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  AOS.init();
+});
+
 stickyNavOnScroll();
 navHighlightOnScroll();
 
@@ -78,3 +90,11 @@ requestIdleCallback(() => {
   scrollIndicator();
   clipboardCopy();
 });
+
+function loadOtherVendorScripts() {
+  import("./vendor.js").catch((error) => {
+    console.error("Error loading vendor script:", error);
+  });
+}
+
+loadOtherVendorScripts();
