@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/jorishr/liondigits#readme",
   "engines": {
-    "node": ">=18.13.0"
+    "node": ">=20.0.0"
   },
   "browserslist": [
     "last 2 versions",
@@ -33,7 +33,7 @@
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^1.7.4",
     "process": "^0.11.10",
-    "website-text-translator": "^1.0.0"
+    "website-text-translator": "^1.0.1"
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
