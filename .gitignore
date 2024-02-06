@@ -1,6 +1,7 @@
 /node_modules
 /dist
 /backup
+/.backup
 deploy-update.sh
 /.cache
 .cache
