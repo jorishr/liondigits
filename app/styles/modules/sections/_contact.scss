@@ -53,6 +53,8 @@
 
     .contact-page__note {
       padding-inline-start: calc(22px + 0.75rem);
+      font-style: italic;
+
     }
   }
 
@@ -65,10 +67,19 @@
     min-height: 48px;
     background-color: var(--bgClr-accent);
     color: var(--txtClr-white);
+
+    @include tablet_sm {
+      max-width: 18rem;
+      margin-inline: auto;
+    }
   }
 
   &__save-description {
     margin-top: 1rem;
+
+    @include tablet_sm {
+      text-align: center;
+    }
   }
 
   &__online h2 {
