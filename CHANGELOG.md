@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.0] - 2026-11-05
+- Add a mobile-first contact page at `/contact` with contact information, and a downloadable vCard.
+- Translate the contact page into Dutch, English, Spanish, and Catalan.
+- Add the contact page to the footer navigation, clarify the profile link label, and hide unused or outdated contact icons.
+- Refresh npm dependencies, including Parcel and its Sass transformer, and use the stable ngrok v3 agent for local development.
+
 ## [1.3.7] - 2024-01-31
 
 - Minor release with profile page content updates and NPM package updates.
