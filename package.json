@@ -7,7 +7,8 @@
     "dev": "npx parcel app/index.html",
     "build": "npx parcel build app/index.html app/error404.html && node .replace-html-strings.js",
     "ngrok": "npx ngrok http http://localhost:1234",
-    "wtt": "npx wtt"
+    "wtt": "npx wtt",
+    "ci:deps": "NGROK_CDN_URL=https://bin.ngrok.com NGROK_CDN_PATH=/c/bNyj1mQVY4c/ngrok-v3-stable- npm ci"
   },
   "repository": {
     "type": "git",
