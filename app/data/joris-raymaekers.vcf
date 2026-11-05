@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Raymaekers;Joris;;;
+FN:Joris Raymaekers
+ORG:Lion Digits
+EMAIL;TYPE=WORK,INTERNET:joris@liondigits.com
+TEL;TYPE=WORK,CELL:+32468578564
+URL:https://liondigits.com
+END:VCARD
